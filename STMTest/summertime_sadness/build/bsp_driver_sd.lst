@@ -1,0 +1,959 @@
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"bsp_driver_sd.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.BSP_SD_ITConfig,"ax",%progbits
+  18              		.align	1
+  19              		.global	BSP_SD_ITConfig
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	BSP_SD_ITConfig:
+  26              	.LFB125:
+  27              		.file 1 "Src/bsp_driver_sd.c"
+   1:Src/bsp_driver_sd.c **** /**
+   2:Src/bsp_driver_sd.c ****  ******************************************************************************
+   3:Src/bsp_driver_sd.c ****   * @file    bsp_driver_sd.c for F4 (based on stm324x9i_eval_sd.c)
+   4:Src/bsp_driver_sd.c ****   * @brief   This file includes a generic uSD card driver.
+   5:Src/bsp_driver_sd.c ****   ******************************************************************************
+   6:Src/bsp_driver_sd.c ****   * This notice applies to any and all portions of this file
+   7:Src/bsp_driver_sd.c ****   * that are not between comment pairs USER CODE BEGIN and
+   8:Src/bsp_driver_sd.c ****   * USER CODE END. Other portions of this file, whether 
+   9:Src/bsp_driver_sd.c ****   * inserted by the user or by software development tools
+  10:Src/bsp_driver_sd.c ****   * are owned by their respective copyright owners.
+  11:Src/bsp_driver_sd.c ****   *
+  12:Src/bsp_driver_sd.c ****   * Copyright (c) 2017 STMicroelectronics International N.V. 
+  13:Src/bsp_driver_sd.c ****   * All rights reserved.
+  14:Src/bsp_driver_sd.c ****   *
+  15:Src/bsp_driver_sd.c ****   * Redistribution and use in source and binary forms, with or without 
+  16:Src/bsp_driver_sd.c ****   * modification, are permitted, provided that the following conditions are met:
+  17:Src/bsp_driver_sd.c ****   *
+  18:Src/bsp_driver_sd.c ****   * 1. Redistribution of source code must retain the above copyright notice, 
+  19:Src/bsp_driver_sd.c ****   *    this list of conditions and the following disclaimer.
+  20:Src/bsp_driver_sd.c ****   * 2. Redistributions in binary form must reproduce the above copyright notice,
+  21:Src/bsp_driver_sd.c ****   *    this list of conditions and the following disclaimer in the documentation
+  22:Src/bsp_driver_sd.c ****   *    and/or other materials provided with the distribution.
+  23:Src/bsp_driver_sd.c ****   * 3. Neither the name of STMicroelectronics nor the names of other 
+  24:Src/bsp_driver_sd.c ****   *    contributors to this software may be used to endorse or promote products 
+  25:Src/bsp_driver_sd.c ****   *    derived from this software without specific written permission.
+  26:Src/bsp_driver_sd.c ****   * 4. This software, including modifications and/or derivative works of this 
+  27:Src/bsp_driver_sd.c ****   *    software, must execute solely and exclusively on microcontroller or
+  28:Src/bsp_driver_sd.c ****   *    microprocessor devices manufactured by or for STMicroelectronics.
+  29:Src/bsp_driver_sd.c ****   * 5. Redistribution and use of this software other than as permitted under 
+  30:Src/bsp_driver_sd.c ****   *    this license is void and will automatically terminate your rights under 
+  31:Src/bsp_driver_sd.c ****   *    this license. 
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 2
+
+
+  32:Src/bsp_driver_sd.c ****   *
+  33:Src/bsp_driver_sd.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  34:Src/bsp_driver_sd.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  35:Src/bsp_driver_sd.c ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+  36:Src/bsp_driver_sd.c ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  37:Src/bsp_driver_sd.c ****   * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
+  38:Src/bsp_driver_sd.c ****   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  39:Src/bsp_driver_sd.c ****   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  40:Src/bsp_driver_sd.c ****   * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  41:Src/bsp_driver_sd.c ****   * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  42:Src/bsp_driver_sd.c ****   * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+  43:Src/bsp_driver_sd.c ****   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  44:Src/bsp_driver_sd.c ****   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  45:Src/bsp_driver_sd.c ****   *
+  46:Src/bsp_driver_sd.c ****   ******************************************************************************
+  47:Src/bsp_driver_sd.c ****   */
+  48:Src/bsp_driver_sd.c **** 
+  49:Src/bsp_driver_sd.c **** #ifdef OLD_API
+  50:Src/bsp_driver_sd.c **** /* kept to avoid issue when migrating old projects. */
+  51:Src/bsp_driver_sd.c **** /* USER CODE BEGIN 0 */
+  52:Src/bsp_driver_sd.c **** 
+  53:Src/bsp_driver_sd.c **** /* USER CODE END 0 */
+  54:Src/bsp_driver_sd.c **** #else
+  55:Src/bsp_driver_sd.c **** /* USER CODE BEGIN FirstSection */
+  56:Src/bsp_driver_sd.c **** /* can be used to modify / undefine following code or add new definitions */
+  57:Src/bsp_driver_sd.c **** /* USER CODE END FirstSection */
+  58:Src/bsp_driver_sd.c **** /* Includes ------------------------------------------------------------------*/
+  59:Src/bsp_driver_sd.c **** #include "bsp_driver_sd.h"
+  60:Src/bsp_driver_sd.c **** 
+  61:Src/bsp_driver_sd.c **** /* Extern variables ---------------------------------------------------------*/ 
+  62:Src/bsp_driver_sd.c ****   
+  63:Src/bsp_driver_sd.c **** extern SD_HandleTypeDef hsd;
+  64:Src/bsp_driver_sd.c **** 
+  65:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeInitSection */
+  66:Src/bsp_driver_sd.c **** /* can be used to modify / undefine following code or add code */
+  67:Src/bsp_driver_sd.c **** /* USER CODE END BeforeInitSection */
+  68:Src/bsp_driver_sd.c **** /**
+  69:Src/bsp_driver_sd.c ****   * @brief  Initializes the SD card device.
+  70:Src/bsp_driver_sd.c ****   * @retval SD status
+  71:Src/bsp_driver_sd.c ****   */
+  72:Src/bsp_driver_sd.c **** uint8_t BSP_SD_Init(void)
+  73:Src/bsp_driver_sd.c **** {
+  74:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+  75:Src/bsp_driver_sd.c ****   /* Check if the SD card is plugged in the slot */
+  76:Src/bsp_driver_sd.c ****   if (BSP_SD_IsDetected() != SD_PRESENT)
+  77:Src/bsp_driver_sd.c ****   {
+  78:Src/bsp_driver_sd.c ****     return MSD_ERROR;
+  79:Src/bsp_driver_sd.c ****   }
+  80:Src/bsp_driver_sd.c ****   /* HAL SD initialization */
+  81:Src/bsp_driver_sd.c ****   sd_state = HAL_SD_Init(&hsd);
+  82:Src/bsp_driver_sd.c **** #ifdef BUS_4BITS
+  83:Src/bsp_driver_sd.c ****   /* Configure SD Bus width */
+  84:Src/bsp_driver_sd.c ****   if (sd_state == MSD_OK)
+  85:Src/bsp_driver_sd.c ****   {
+  86:Src/bsp_driver_sd.c ****     /* Enable wide operation */
+  87:Src/bsp_driver_sd.c ****     if (HAL_SD_ConfigWideBusOperation(&hsd, SDIO_BUS_WIDE_4B) != HAL_OK)
+  88:Src/bsp_driver_sd.c ****     {
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 3
+
+
+  89:Src/bsp_driver_sd.c ****       sd_state = MSD_ERROR;
+  90:Src/bsp_driver_sd.c ****     }
+  91:Src/bsp_driver_sd.c ****   }
+  92:Src/bsp_driver_sd.c **** #endif
+  93:Src/bsp_driver_sd.c ****   return sd_state;
+  94:Src/bsp_driver_sd.c **** }
+  95:Src/bsp_driver_sd.c **** /* USER CODE BEGIN AfterInitSection */
+  96:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+  97:Src/bsp_driver_sd.c **** /* USER CODE END AfterInitSection */
+  98:Src/bsp_driver_sd.c **** 
+  99:Src/bsp_driver_sd.c **** /**
+ 100:Src/bsp_driver_sd.c ****   * @brief  Configures Interrupt mode for SD detection pin.
+ 101:Src/bsp_driver_sd.c ****   * @retval Returns 0 in success otherwise 1. 
+ 102:Src/bsp_driver_sd.c ****   */
+ 103:Src/bsp_driver_sd.c **** uint8_t BSP_SD_ITConfig(void)
+ 104:Src/bsp_driver_sd.c **** {  
+  28              		.loc 1 104 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 105:Src/bsp_driver_sd.c ****   /* TBI: add user code here depending on the hardware configuration used */
+ 106:Src/bsp_driver_sd.c ****   
+ 107:Src/bsp_driver_sd.c ****   return (uint8_t)0;
+ 108:Src/bsp_driver_sd.c **** }
+  33              		.loc 1 108 0
+  34 0000 0020     		movs	r0, #0
+  35 0002 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE125:
+  39              		.section	.text.BSP_SD_DetectIT,"ax",%progbits
+  40              		.align	1
+  41              		.global	BSP_SD_DetectIT
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu fpv4-sp-d16
+  47              	BSP_SD_DetectIT:
+  48              	.LFB126:
+ 109:Src/bsp_driver_sd.c **** 
+ 110:Src/bsp_driver_sd.c **** /** @brief  SD detect IT treatment
+ 111:Src/bsp_driver_sd.c ****   */
+ 112:Src/bsp_driver_sd.c **** void BSP_SD_DetectIT(void)
+ 113:Src/bsp_driver_sd.c **** {
+  49              		.loc 1 113 0
+  50              		.cfi_startproc
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 0, uses_anonymous_args = 0
+  53              		@ link register save eliminated.
+  54 0000 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE126:
+  58              		.section	.text.BSP_SD_DetectCallback,"ax",%progbits
+  59              		.align	1
+  60              		.weak	BSP_SD_DetectCallback
+  61              		.syntax unified
+  62              		.thumb
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 4
+
+
+  63              		.thumb_func
+  64              		.fpu fpv4-sp-d16
+  66              	BSP_SD_DetectCallback:
+  67              	.LFB127:
+ 114:Src/bsp_driver_sd.c ****   /* TBI: add user code here depending on the hardware configuration used */
+ 115:Src/bsp_driver_sd.c **** }
+ 116:Src/bsp_driver_sd.c **** 
+ 117:Src/bsp_driver_sd.c **** /** @brief  SD detect IT detection callback
+ 118:Src/bsp_driver_sd.c ****   */
+ 119:Src/bsp_driver_sd.c **** __weak void BSP_SD_DetectCallback(void)
+ 120:Src/bsp_driver_sd.c **** {
+  68              		.loc 1 120 0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73 0000 7047     		bx	lr
+  74              		.cfi_endproc
+  75              	.LFE127:
+  77              		.section	.text.BSP_SD_ReadBlocks,"ax",%progbits
+  78              		.align	1
+  79              		.global	BSP_SD_ReadBlocks
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu fpv4-sp-d16
+  85              	BSP_SD_ReadBlocks:
+  86              	.LFB128:
+ 121:Src/bsp_driver_sd.c ****   /* NOTE: This function Should not be modified, when the callback is needed,
+ 122:Src/bsp_driver_sd.c ****      the BSP_SD_DetectCallback could be implemented in the user file
+ 123:Src/bsp_driver_sd.c ****   */ 
+ 124:Src/bsp_driver_sd.c **** }
+ 125:Src/bsp_driver_sd.c **** 
+ 126:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeReadBlocksSection */
+ 127:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 128:Src/bsp_driver_sd.c **** /* USER CODE END BeforeReadBlocksSection */
+ 129:Src/bsp_driver_sd.c **** /**
+ 130:Src/bsp_driver_sd.c ****   * @brief  Reads block(s) from a specified address in an SD card, in polling mode.
+ 131:Src/bsp_driver_sd.c ****   * @param  pData: Pointer to the buffer that will contain the data to transmit
+ 132:Src/bsp_driver_sd.c ****   * @param  ReadAddr: Address from where data is to be read  
+ 133:Src/bsp_driver_sd.c ****   * @param  NumOfBlocks: Number of SD blocks to read 
+ 134:Src/bsp_driver_sd.c ****   * @param  Timeout: Timeout for read operation
+ 135:Src/bsp_driver_sd.c ****   * @retval SD status
+ 136:Src/bsp_driver_sd.c ****   */
+ 137:Src/bsp_driver_sd.c **** uint8_t BSP_SD_ReadBlocks(uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks, uint32_t Timeou
+ 138:Src/bsp_driver_sd.c **** {
+  87              		.loc 1 138 0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              	.LVL0:
+  92              		.loc 1 138 0
+  93 0000 00B5     		push	{lr}
+  94              	.LCFI0:
+  95              		.cfi_def_cfa_offset 4
+  96              		.cfi_offset 14, -4
+  97 0002 83B0     		sub	sp, sp, #12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 5
+
+
+  98              	.LCFI1:
+  99              		.cfi_def_cfa_offset 16
+ 100              	.LVL1:
+ 139:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 140:Src/bsp_driver_sd.c ****   
+ 141:Src/bsp_driver_sd.c ****   if (HAL_SD_ReadBlocks(&hsd, (uint8_t *)pData, ReadAddr, NumOfBlocks, Timeout) != HAL_OK)
+ 101              		.loc 1 141 0
+ 102 0004 0093     		str	r3, [sp]
+ 103 0006 1346     		mov	r3, r2
+ 104              	.LVL2:
+ 105 0008 0A46     		mov	r2, r1
+ 106              	.LVL3:
+ 107 000a 0146     		mov	r1, r0
+ 108              	.LVL4:
+ 109 000c 0348     		ldr	r0, .L8
+ 110              	.LVL5:
+ 111 000e FFF7FEFF 		bl	HAL_SD_ReadBlocks
+ 112              	.LVL6:
+ 113 0012 00B1     		cbz	r0, .L5
+ 142:Src/bsp_driver_sd.c ****   {
+ 143:Src/bsp_driver_sd.c ****     sd_state = MSD_ERROR;
+ 114              		.loc 1 143 0
+ 115 0014 0120     		movs	r0, #1
+ 116              	.L5:
+ 117              	.LVL7:
+ 144:Src/bsp_driver_sd.c ****   }
+ 145:Src/bsp_driver_sd.c **** 
+ 146:Src/bsp_driver_sd.c ****   return sd_state;  
+ 147:Src/bsp_driver_sd.c **** }
+ 118              		.loc 1 147 0
+ 119 0016 03B0     		add	sp, sp, #12
+ 120              	.LCFI2:
+ 121              		.cfi_def_cfa_offset 4
+ 122              		@ sp needed
+ 123 0018 5DF804FB 		ldr	pc, [sp], #4
+ 124              	.L9:
+ 125              		.align	2
+ 126              	.L8:
+ 127 001c 00000000 		.word	hsd
+ 128              		.cfi_endproc
+ 129              	.LFE128:
+ 131              		.section	.text.BSP_SD_WriteBlocks,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	BSP_SD_WriteBlocks
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.fpu fpv4-sp-d16
+ 139              	BSP_SD_WriteBlocks:
+ 140              	.LFB129:
+ 148:Src/bsp_driver_sd.c **** 
+ 149:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeWriteBlocksSection */
+ 150:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 151:Src/bsp_driver_sd.c **** /* USER CODE END BeforeWriteBlocksSection */
+ 152:Src/bsp_driver_sd.c **** /**
+ 153:Src/bsp_driver_sd.c ****   * @brief  Writes block(s) to a specified address in an SD card, in polling mode. 
+ 154:Src/bsp_driver_sd.c ****   * @param  pData: Pointer to the buffer that will contain the data to transmit
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 6
+
+
+ 155:Src/bsp_driver_sd.c ****   * @param  WriteAddr: Address from where data is to be written
+ 156:Src/bsp_driver_sd.c ****   * @param  NumOfBlocks: Number of SD blocks to write
+ 157:Src/bsp_driver_sd.c ****   * @param  Timeout: Timeout for write operation
+ 158:Src/bsp_driver_sd.c ****   * @retval SD status
+ 159:Src/bsp_driver_sd.c ****   */
+ 160:Src/bsp_driver_sd.c **** uint8_t BSP_SD_WriteBlocks(uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks, uint32_t Time
+ 161:Src/bsp_driver_sd.c **** {
+ 141              		.loc 1 161 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              	.LVL8:
+ 146 0000 00B5     		push	{lr}
+ 147              	.LCFI3:
+ 148              		.cfi_def_cfa_offset 4
+ 149              		.cfi_offset 14, -4
+ 150 0002 83B0     		sub	sp, sp, #12
+ 151              	.LCFI4:
+ 152              		.cfi_def_cfa_offset 16
+ 153              	.LVL9:
+ 162:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 163:Src/bsp_driver_sd.c ****   
+ 164:Src/bsp_driver_sd.c ****   if (HAL_SD_WriteBlocks(&hsd, (uint8_t *)pData, WriteAddr, NumOfBlocks, Timeout) != HAL_OK) 
+ 154              		.loc 1 164 0
+ 155 0004 0093     		str	r3, [sp]
+ 156 0006 1346     		mov	r3, r2
+ 157              	.LVL10:
+ 158 0008 0A46     		mov	r2, r1
+ 159              	.LVL11:
+ 160 000a 0146     		mov	r1, r0
+ 161              	.LVL12:
+ 162 000c 0348     		ldr	r0, .L14
+ 163              	.LVL13:
+ 164 000e FFF7FEFF 		bl	HAL_SD_WriteBlocks
+ 165              	.LVL14:
+ 166 0012 00B1     		cbz	r0, .L11
+ 165:Src/bsp_driver_sd.c ****   {
+ 166:Src/bsp_driver_sd.c ****     sd_state = MSD_ERROR;
+ 167              		.loc 1 166 0
+ 168 0014 0120     		movs	r0, #1
+ 169              	.L11:
+ 170              	.LVL15:
+ 167:Src/bsp_driver_sd.c ****   }
+ 168:Src/bsp_driver_sd.c **** 
+ 169:Src/bsp_driver_sd.c ****   return sd_state;  
+ 170:Src/bsp_driver_sd.c **** }
+ 171              		.loc 1 170 0
+ 172 0016 03B0     		add	sp, sp, #12
+ 173              	.LCFI5:
+ 174              		.cfi_def_cfa_offset 4
+ 175              		@ sp needed
+ 176 0018 5DF804FB 		ldr	pc, [sp], #4
+ 177              	.L15:
+ 178              		.align	2
+ 179              	.L14:
+ 180 001c 00000000 		.word	hsd
+ 181              		.cfi_endproc
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 7
+
+
+ 182              	.LFE129:
+ 184              		.section	.text.BSP_SD_ReadBlocks_DMA,"ax",%progbits
+ 185              		.align	1
+ 186              		.global	BSP_SD_ReadBlocks_DMA
+ 187              		.syntax unified
+ 188              		.thumb
+ 189              		.thumb_func
+ 190              		.fpu fpv4-sp-d16
+ 192              	BSP_SD_ReadBlocks_DMA:
+ 193              	.LFB130:
+ 171:Src/bsp_driver_sd.c **** 
+ 172:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeReadDMABlocksSection */
+ 173:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 174:Src/bsp_driver_sd.c **** /* USER CODE END BeforeReadDMABlocksSection */
+ 175:Src/bsp_driver_sd.c **** /**
+ 176:Src/bsp_driver_sd.c ****   * @brief  Reads block(s) from a specified address in an SD card, in DMA mode.
+ 177:Src/bsp_driver_sd.c ****   * @param  pData: Pointer to the buffer that will contain the data to transmit
+ 178:Src/bsp_driver_sd.c ****   * @param  ReadAddr: Address from where data is to be read
+ 179:Src/bsp_driver_sd.c ****   * @param  NumOfBlocks: Number of SD blocks to read 
+ 180:Src/bsp_driver_sd.c ****   * @retval SD status
+ 181:Src/bsp_driver_sd.c ****   */
+ 182:Src/bsp_driver_sd.c **** uint8_t BSP_SD_ReadBlocks_DMA(uint32_t *pData, uint32_t ReadAddr, uint32_t NumOfBlocks)
+ 183:Src/bsp_driver_sd.c **** {
+ 194              		.loc 1 183 0
+ 195              		.cfi_startproc
+ 196              		@ args = 0, pretend = 0, frame = 0
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198              	.LVL16:
+ 199 0000 08B5     		push	{r3, lr}
+ 200              	.LCFI6:
+ 201              		.cfi_def_cfa_offset 8
+ 202              		.cfi_offset 3, -8
+ 203              		.cfi_offset 14, -4
+ 204              	.LVL17:
+ 184:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 185:Src/bsp_driver_sd.c ****   
+ 186:Src/bsp_driver_sd.c ****   /* Read block(s) in DMA transfer mode */
+ 187:Src/bsp_driver_sd.c ****   if (HAL_SD_ReadBlocks_DMA(&hsd, (uint8_t *)pData, ReadAddr, NumOfBlocks) != HAL_OK)
+ 205              		.loc 1 187 0
+ 206 0002 1346     		mov	r3, r2
+ 207 0004 0A46     		mov	r2, r1
+ 208              	.LVL18:
+ 209 0006 0146     		mov	r1, r0
+ 210              	.LVL19:
+ 211 0008 0248     		ldr	r0, .L20
+ 212              	.LVL20:
+ 213 000a FFF7FEFF 		bl	HAL_SD_ReadBlocks_DMA
+ 214              	.LVL21:
+ 215 000e 00B1     		cbz	r0, .L17
+ 188:Src/bsp_driver_sd.c ****   {
+ 189:Src/bsp_driver_sd.c ****     sd_state = MSD_ERROR;
+ 216              		.loc 1 189 0
+ 217 0010 0120     		movs	r0, #1
+ 218              	.L17:
+ 219              	.LVL22:
+ 190:Src/bsp_driver_sd.c ****   }
+ 191:Src/bsp_driver_sd.c ****   
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 8
+
+
+ 192:Src/bsp_driver_sd.c ****   return sd_state; 
+ 193:Src/bsp_driver_sd.c **** }
+ 220              		.loc 1 193 0
+ 221 0012 08BD     		pop	{r3, pc}
+ 222              	.L21:
+ 223              		.align	2
+ 224              	.L20:
+ 225 0014 00000000 		.word	hsd
+ 226              		.cfi_endproc
+ 227              	.LFE130:
+ 229              		.section	.text.BSP_SD_WriteBlocks_DMA,"ax",%progbits
+ 230              		.align	1
+ 231              		.global	BSP_SD_WriteBlocks_DMA
+ 232              		.syntax unified
+ 233              		.thumb
+ 234              		.thumb_func
+ 235              		.fpu fpv4-sp-d16
+ 237              	BSP_SD_WriteBlocks_DMA:
+ 238              	.LFB131:
+ 194:Src/bsp_driver_sd.c **** 
+ 195:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeWriteDMABlocksSection */
+ 196:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 197:Src/bsp_driver_sd.c **** /* USER CODE END BeforeWriteDMABlocksSection */
+ 198:Src/bsp_driver_sd.c **** /**
+ 199:Src/bsp_driver_sd.c ****   * @brief  Writes block(s) to a specified address in an SD card, in DMA mode.
+ 200:Src/bsp_driver_sd.c ****   * @param  pData: Pointer to the buffer that will contain the data to transmit
+ 201:Src/bsp_driver_sd.c ****   * @param  WriteAddr: Address from where data is to be written
+ 202:Src/bsp_driver_sd.c ****   * @param  NumOfBlocks: Number of SD blocks to write 
+ 203:Src/bsp_driver_sd.c ****   * @retval SD status
+ 204:Src/bsp_driver_sd.c ****   */
+ 205:Src/bsp_driver_sd.c **** uint8_t BSP_SD_WriteBlocks_DMA(uint32_t *pData, uint32_t WriteAddr, uint32_t NumOfBlocks)
+ 206:Src/bsp_driver_sd.c **** {
+ 239              		.loc 1 206 0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243              	.LVL23:
+ 244 0000 08B5     		push	{r3, lr}
+ 245              	.LCFI7:
+ 246              		.cfi_def_cfa_offset 8
+ 247              		.cfi_offset 3, -8
+ 248              		.cfi_offset 14, -4
+ 249              	.LVL24:
+ 207:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 208:Src/bsp_driver_sd.c ****   
+ 209:Src/bsp_driver_sd.c ****   /* Write block(s) in DMA transfer mode */
+ 210:Src/bsp_driver_sd.c ****   if (HAL_SD_WriteBlocks_DMA(&hsd, (uint8_t *)pData, WriteAddr, NumOfBlocks) != HAL_OK)
+ 250              		.loc 1 210 0
+ 251 0002 1346     		mov	r3, r2
+ 252 0004 0A46     		mov	r2, r1
+ 253              	.LVL25:
+ 254 0006 0146     		mov	r1, r0
+ 255              	.LVL26:
+ 256 0008 0248     		ldr	r0, .L26
+ 257              	.LVL27:
+ 258 000a FFF7FEFF 		bl	HAL_SD_WriteBlocks_DMA
+ 259              	.LVL28:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 9
+
+
+ 260 000e 00B1     		cbz	r0, .L23
+ 211:Src/bsp_driver_sd.c ****   {
+ 212:Src/bsp_driver_sd.c ****     sd_state = MSD_ERROR;
+ 261              		.loc 1 212 0
+ 262 0010 0120     		movs	r0, #1
+ 263              	.L23:
+ 264              	.LVL29:
+ 213:Src/bsp_driver_sd.c ****   }
+ 214:Src/bsp_driver_sd.c ****   
+ 215:Src/bsp_driver_sd.c ****   return sd_state; 
+ 216:Src/bsp_driver_sd.c **** }
+ 265              		.loc 1 216 0
+ 266 0012 08BD     		pop	{r3, pc}
+ 267              	.L27:
+ 268              		.align	2
+ 269              	.L26:
+ 270 0014 00000000 		.word	hsd
+ 271              		.cfi_endproc
+ 272              	.LFE131:
+ 274              		.section	.text.BSP_SD_Erase,"ax",%progbits
+ 275              		.align	1
+ 276              		.global	BSP_SD_Erase
+ 277              		.syntax unified
+ 278              		.thumb
+ 279              		.thumb_func
+ 280              		.fpu fpv4-sp-d16
+ 282              	BSP_SD_Erase:
+ 283              	.LFB132:
+ 217:Src/bsp_driver_sd.c **** 
+ 218:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeEraseSection */
+ 219:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 220:Src/bsp_driver_sd.c **** /* USER CODE END BeforeEraseSection */
+ 221:Src/bsp_driver_sd.c **** /**
+ 222:Src/bsp_driver_sd.c ****   * @brief  Erases the specified memory area of the given SD card. 
+ 223:Src/bsp_driver_sd.c ****   * @param  StartAddr: Start byte address
+ 224:Src/bsp_driver_sd.c ****   * @param  EndAddr: End byte address
+ 225:Src/bsp_driver_sd.c ****   * @retval SD status
+ 226:Src/bsp_driver_sd.c ****   */
+ 227:Src/bsp_driver_sd.c **** uint8_t BSP_SD_Erase(uint32_t StartAddr, uint32_t EndAddr)
+ 228:Src/bsp_driver_sd.c **** {
+ 284              		.loc 1 228 0
+ 285              		.cfi_startproc
+ 286              		@ args = 0, pretend = 0, frame = 0
+ 287              		@ frame_needed = 0, uses_anonymous_args = 0
+ 288              	.LVL30:
+ 289 0000 08B5     		push	{r3, lr}
+ 290              	.LCFI8:
+ 291              		.cfi_def_cfa_offset 8
+ 292              		.cfi_offset 3, -8
+ 293              		.cfi_offset 14, -4
+ 294              	.LVL31:
+ 229:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 230:Src/bsp_driver_sd.c ****   
+ 231:Src/bsp_driver_sd.c ****   if (HAL_SD_Erase(&hsd, StartAddr, EndAddr) != HAL_OK)  
+ 295              		.loc 1 231 0
+ 296 0002 0A46     		mov	r2, r1
+ 297 0004 0146     		mov	r1, r0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 10
+
+
+ 298              	.LVL32:
+ 299 0006 0348     		ldr	r0, .L32
+ 300              	.LVL33:
+ 301 0008 FFF7FEFF 		bl	HAL_SD_Erase
+ 302              	.LVL34:
+ 303 000c 00B1     		cbz	r0, .L29
+ 232:Src/bsp_driver_sd.c ****   {
+ 233:Src/bsp_driver_sd.c ****     sd_state = MSD_ERROR;
+ 304              		.loc 1 233 0
+ 305 000e 0120     		movs	r0, #1
+ 306              	.L29:
+ 307              	.LVL35:
+ 234:Src/bsp_driver_sd.c ****   }
+ 235:Src/bsp_driver_sd.c **** 
+ 236:Src/bsp_driver_sd.c ****   return sd_state;
+ 237:Src/bsp_driver_sd.c **** }
+ 308              		.loc 1 237 0
+ 309 0010 08BD     		pop	{r3, pc}
+ 310              	.L33:
+ 311 0012 00BF     		.align	2
+ 312              	.L32:
+ 313 0014 00000000 		.word	hsd
+ 314              		.cfi_endproc
+ 315              	.LFE132:
+ 317              		.section	.text.BSP_SD_IRQHandler,"ax",%progbits
+ 318              		.align	1
+ 319              		.global	BSP_SD_IRQHandler
+ 320              		.syntax unified
+ 321              		.thumb
+ 322              		.thumb_func
+ 323              		.fpu fpv4-sp-d16
+ 325              	BSP_SD_IRQHandler:
+ 326              	.LFB133:
+ 238:Src/bsp_driver_sd.c **** 
+ 239:Src/bsp_driver_sd.c **** /* USER CODE BEGIN BeforeHandlersSection */
+ 240:Src/bsp_driver_sd.c **** /* can be used to modify previous code / undefine following code / add code */
+ 241:Src/bsp_driver_sd.c **** /* USER CODE END BeforeHandlersSection */
+ 242:Src/bsp_driver_sd.c **** /**
+ 243:Src/bsp_driver_sd.c ****   * @brief  Handles SD card interrupt request.
+ 244:Src/bsp_driver_sd.c ****   */
+ 245:Src/bsp_driver_sd.c **** void BSP_SD_IRQHandler(void)
+ 246:Src/bsp_driver_sd.c **** {
+ 327              		.loc 1 246 0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331 0000 08B5     		push	{r3, lr}
+ 332              	.LCFI9:
+ 333              		.cfi_def_cfa_offset 8
+ 334              		.cfi_offset 3, -8
+ 335              		.cfi_offset 14, -4
+ 247:Src/bsp_driver_sd.c ****   HAL_SD_IRQHandler(&hsd);
+ 336              		.loc 1 247 0
+ 337 0002 0248     		ldr	r0, .L36
+ 338 0004 FFF7FEFF 		bl	HAL_SD_IRQHandler
+ 339              	.LVL36:
+ 340 0008 08BD     		pop	{r3, pc}
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 11
+
+
+ 341              	.L37:
+ 342 000a 00BF     		.align	2
+ 343              	.L36:
+ 344 000c 00000000 		.word	hsd
+ 345              		.cfi_endproc
+ 346              	.LFE133:
+ 348              		.section	.text.BSP_SD_DMA_Tx_IRQHandler,"ax",%progbits
+ 349              		.align	1
+ 350              		.global	BSP_SD_DMA_Tx_IRQHandler
+ 351              		.syntax unified
+ 352              		.thumb
+ 353              		.thumb_func
+ 354              		.fpu fpv4-sp-d16
+ 356              	BSP_SD_DMA_Tx_IRQHandler:
+ 357              	.LFB134:
+ 248:Src/bsp_driver_sd.c **** }
+ 249:Src/bsp_driver_sd.c **** 
+ 250:Src/bsp_driver_sd.c **** /**
+ 251:Src/bsp_driver_sd.c ****   * @brief  Handles SD DMA Tx transfer interrupt request.
+ 252:Src/bsp_driver_sd.c ****   */
+ 253:Src/bsp_driver_sd.c **** void BSP_SD_DMA_Tx_IRQHandler(void)
+ 254:Src/bsp_driver_sd.c **** {
+ 358              		.loc 1 254 0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362 0000 08B5     		push	{r3, lr}
+ 363              	.LCFI10:
+ 364              		.cfi_def_cfa_offset 8
+ 365              		.cfi_offset 3, -8
+ 366              		.cfi_offset 14, -4
+ 255:Src/bsp_driver_sd.c ****   HAL_DMA_IRQHandler(hsd.hdmatx); 
+ 367              		.loc 1 255 0
+ 368 0002 024B     		ldr	r3, .L40
+ 369 0004 186C     		ldr	r0, [r3, #64]
+ 370 0006 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 371              	.LVL37:
+ 372 000a 08BD     		pop	{r3, pc}
+ 373              	.L41:
+ 374              		.align	2
+ 375              	.L40:
+ 376 000c 00000000 		.word	hsd
+ 377              		.cfi_endproc
+ 378              	.LFE134:
+ 380              		.section	.text.BSP_SD_DMA_Rx_IRQHandler,"ax",%progbits
+ 381              		.align	1
+ 382              		.global	BSP_SD_DMA_Rx_IRQHandler
+ 383              		.syntax unified
+ 384              		.thumb
+ 385              		.thumb_func
+ 386              		.fpu fpv4-sp-d16
+ 388              	BSP_SD_DMA_Rx_IRQHandler:
+ 389              	.LFB135:
+ 256:Src/bsp_driver_sd.c **** }
+ 257:Src/bsp_driver_sd.c **** 
+ 258:Src/bsp_driver_sd.c **** /**
+ 259:Src/bsp_driver_sd.c ****   * @brief  Handles SD DMA Rx transfer interrupt request.
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 12
+
+
+ 260:Src/bsp_driver_sd.c ****   */
+ 261:Src/bsp_driver_sd.c **** void BSP_SD_DMA_Rx_IRQHandler(void)
+ 262:Src/bsp_driver_sd.c **** {
+ 390              		.loc 1 262 0
+ 391              		.cfi_startproc
+ 392              		@ args = 0, pretend = 0, frame = 0
+ 393              		@ frame_needed = 0, uses_anonymous_args = 0
+ 394 0000 08B5     		push	{r3, lr}
+ 395              	.LCFI11:
+ 396              		.cfi_def_cfa_offset 8
+ 397              		.cfi_offset 3, -8
+ 398              		.cfi_offset 14, -4
+ 263:Src/bsp_driver_sd.c ****   HAL_DMA_IRQHandler(hsd.hdmarx);
+ 399              		.loc 1 263 0
+ 400 0002 024B     		ldr	r3, .L44
+ 401 0004 D86B     		ldr	r0, [r3, #60]
+ 402 0006 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 403              	.LVL38:
+ 404 000a 08BD     		pop	{r3, pc}
+ 405              	.L45:
+ 406              		.align	2
+ 407              	.L44:
+ 408 000c 00000000 		.word	hsd
+ 409              		.cfi_endproc
+ 410              	.LFE135:
+ 412              		.section	.text.BSP_SD_GetCardState,"ax",%progbits
+ 413              		.align	1
+ 414              		.global	BSP_SD_GetCardState
+ 415              		.syntax unified
+ 416              		.thumb
+ 417              		.thumb_func
+ 418              		.fpu fpv4-sp-d16
+ 420              	BSP_SD_GetCardState:
+ 421              	.LFB136:
+ 264:Src/bsp_driver_sd.c **** }
+ 265:Src/bsp_driver_sd.c **** 
+ 266:Src/bsp_driver_sd.c **** /**
+ 267:Src/bsp_driver_sd.c ****   * @brief  Gets the current SD card data status.
+ 268:Src/bsp_driver_sd.c ****   * @param  None
+ 269:Src/bsp_driver_sd.c ****   * @retval Data transfer state.
+ 270:Src/bsp_driver_sd.c ****   *          This value can be one of the following values:
+ 271:Src/bsp_driver_sd.c ****   *            @arg  SD_TRANSFER_OK: No data transfer is acting
+ 272:Src/bsp_driver_sd.c ****   *            @arg  SD_TRANSFER_BUSY: Data transfer is acting
+ 273:Src/bsp_driver_sd.c ****   */
+ 274:Src/bsp_driver_sd.c **** uint8_t BSP_SD_GetCardState(void)
+ 275:Src/bsp_driver_sd.c **** {
+ 422              		.loc 1 275 0
+ 423              		.cfi_startproc
+ 424              		@ args = 0, pretend = 0, frame = 0
+ 425              		@ frame_needed = 0, uses_anonymous_args = 0
+ 426 0000 08B5     		push	{r3, lr}
+ 427              	.LCFI12:
+ 428              		.cfi_def_cfa_offset 8
+ 429              		.cfi_offset 3, -8
+ 430              		.cfi_offset 14, -4
+ 276:Src/bsp_driver_sd.c ****   return ((HAL_SD_GetCardState(&hsd) == HAL_SD_CARD_TRANSFER ) ? SD_TRANSFER_OK : SD_TRANSFER_BUSY)
+ 431              		.loc 1 276 0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 13
+
+
+ 432 0002 0348     		ldr	r0, .L48
+ 433 0004 FFF7FEFF 		bl	HAL_SD_GetCardState
+ 434              	.LVL39:
+ 277:Src/bsp_driver_sd.c **** }
+ 435              		.loc 1 277 0
+ 436 0008 0438     		subs	r0, r0, #4
+ 437 000a 18BF     		it	ne
+ 438 000c 0120     		movne	r0, #1
+ 439 000e 08BD     		pop	{r3, pc}
+ 440              	.L49:
+ 441              		.align	2
+ 442              	.L48:
+ 443 0010 00000000 		.word	hsd
+ 444              		.cfi_endproc
+ 445              	.LFE136:
+ 447              		.section	.text.BSP_SD_GetCardInfo,"ax",%progbits
+ 448              		.align	1
+ 449              		.global	BSP_SD_GetCardInfo
+ 450              		.syntax unified
+ 451              		.thumb
+ 452              		.thumb_func
+ 453              		.fpu fpv4-sp-d16
+ 455              	BSP_SD_GetCardInfo:
+ 456              	.LFB137:
+ 278:Src/bsp_driver_sd.c **** 
+ 279:Src/bsp_driver_sd.c **** /**
+ 280:Src/bsp_driver_sd.c ****   * @brief  Get SD information about specific SD card.
+ 281:Src/bsp_driver_sd.c ****   * @param  CardInfo: Pointer to HAL_SD_CardInfoTypedef structure
+ 282:Src/bsp_driver_sd.c ****   * @retval None 
+ 283:Src/bsp_driver_sd.c ****   */
+ 284:Src/bsp_driver_sd.c **** void BSP_SD_GetCardInfo(HAL_SD_CardInfoTypeDef *CardInfo)
+ 285:Src/bsp_driver_sd.c **** {
+ 457              		.loc 1 285 0
+ 458              		.cfi_startproc
+ 459              		@ args = 0, pretend = 0, frame = 0
+ 460              		@ frame_needed = 0, uses_anonymous_args = 0
+ 461              	.LVL40:
+ 462 0000 08B5     		push	{r3, lr}
+ 463              	.LCFI13:
+ 464              		.cfi_def_cfa_offset 8
+ 465              		.cfi_offset 3, -8
+ 466              		.cfi_offset 14, -4
+ 286:Src/bsp_driver_sd.c ****   /* Get SD card Information */
+ 287:Src/bsp_driver_sd.c ****   HAL_SD_GetCardInfo(&hsd, CardInfo);
+ 467              		.loc 1 287 0
+ 468 0002 0146     		mov	r1, r0
+ 469 0004 0148     		ldr	r0, .L52
+ 470              	.LVL41:
+ 471 0006 FFF7FEFF 		bl	HAL_SD_GetCardInfo
+ 472              	.LVL42:
+ 473 000a 08BD     		pop	{r3, pc}
+ 474              	.L53:
+ 475              		.align	2
+ 476              	.L52:
+ 477 000c 00000000 		.word	hsd
+ 478              		.cfi_endproc
+ 479              	.LFE137:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 14
+
+
+ 481              		.section	.text.BSP_SD_IsDetected,"ax",%progbits
+ 482              		.align	1
+ 483              		.global	BSP_SD_IsDetected
+ 484              		.syntax unified
+ 485              		.thumb
+ 486              		.thumb_func
+ 487              		.fpu fpv4-sp-d16
+ 489              	BSP_SD_IsDetected:
+ 490              	.LFB138:
+ 288:Src/bsp_driver_sd.c **** }
+ 289:Src/bsp_driver_sd.c **** #endif
+ 290:Src/bsp_driver_sd.c **** 
+ 291:Src/bsp_driver_sd.c **** /**
+ 292:Src/bsp_driver_sd.c ****  * @brief  Detects if SD card is correctly plugged in the memory slot or not.
+ 293:Src/bsp_driver_sd.c ****  * @param  None
+ 294:Src/bsp_driver_sd.c ****  * @retval Returns if SD is detected or not
+ 295:Src/bsp_driver_sd.c ****  */
+ 296:Src/bsp_driver_sd.c **** uint8_t BSP_SD_IsDetected(void)
+ 297:Src/bsp_driver_sd.c **** {
+ 491              		.loc 1 297 0
+ 492              		.cfi_startproc
+ 493              		@ args = 0, pretend = 0, frame = 8
+ 494              		@ frame_needed = 0, uses_anonymous_args = 0
+ 495              		@ link register save eliminated.
+ 496 0000 82B0     		sub	sp, sp, #8
+ 497              	.LCFI14:
+ 498              		.cfi_def_cfa_offset 8
+ 298:Src/bsp_driver_sd.c ****   __IO uint8_t status = SD_PRESENT;
+ 499              		.loc 1 298 0
+ 500 0002 0123     		movs	r3, #1
+ 501 0004 8DF80730 		strb	r3, [sp, #7]
+ 299:Src/bsp_driver_sd.c **** 
+ 300:Src/bsp_driver_sd.c ****   /* USER CODE BEGIN 1 */
+ 301:Src/bsp_driver_sd.c ****   /* user code can be inserted here */
+ 302:Src/bsp_driver_sd.c ****   /* USER CODE END 1 */    	
+ 303:Src/bsp_driver_sd.c **** 
+ 304:Src/bsp_driver_sd.c ****   return status;
+ 502              		.loc 1 304 0
+ 503 0008 9DF80700 		ldrb	r0, [sp, #7]	@ zero_extendqisi2
+ 305:Src/bsp_driver_sd.c **** }
+ 504              		.loc 1 305 0
+ 505 000c 02B0     		add	sp, sp, #8
+ 506              	.LCFI15:
+ 507              		.cfi_def_cfa_offset 0
+ 508              		@ sp needed
+ 509 000e 7047     		bx	lr
+ 510              		.cfi_endproc
+ 511              	.LFE138:
+ 513              		.section	.text.BSP_SD_Init,"ax",%progbits
+ 514              		.align	1
+ 515              		.global	BSP_SD_Init
+ 516              		.syntax unified
+ 517              		.thumb
+ 518              		.thumb_func
+ 519              		.fpu fpv4-sp-d16
+ 521              	BSP_SD_Init:
+ 522              	.LFB124:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 15
+
+
+  73:Src/bsp_driver_sd.c ****   uint8_t sd_state = MSD_OK;
+ 523              		.loc 1 73 0
+ 524              		.cfi_startproc
+ 525              		@ args = 0, pretend = 0, frame = 0
+ 526              		@ frame_needed = 0, uses_anonymous_args = 0
+ 527 0000 08B5     		push	{r3, lr}
+ 528              	.LCFI16:
+ 529              		.cfi_def_cfa_offset 8
+ 530              		.cfi_offset 3, -8
+ 531              		.cfi_offset 14, -4
+ 532              	.LVL43:
+  76:Src/bsp_driver_sd.c ****   {
+ 533              		.loc 1 76 0
+ 534 0002 FFF7FEFF 		bl	BSP_SD_IsDetected
+ 535              	.LVL44:
+ 536 0006 0128     		cmp	r0, #1
+ 537 0008 01D0     		beq	.L60
+  78:Src/bsp_driver_sd.c ****   }
+ 538              		.loc 1 78 0
+ 539 000a 0120     		movs	r0, #1
+  94:Src/bsp_driver_sd.c **** /* USER CODE BEGIN AfterInitSection */
+ 540              		.loc 1 94 0
+ 541 000c 08BD     		pop	{r3, pc}
+ 542              	.L60:
+  81:Src/bsp_driver_sd.c **** #ifdef BUS_4BITS
+ 543              		.loc 1 81 0
+ 544 000e 0248     		ldr	r0, .L61
+ 545 0010 FFF7FEFF 		bl	HAL_SD_Init
+ 546              	.LVL45:
+  93:Src/bsp_driver_sd.c **** }
+ 547              		.loc 1 93 0
+ 548 0014 08BD     		pop	{r3, pc}
+ 549              	.L62:
+ 550 0016 00BF     		.align	2
+ 551              	.L61:
+ 552 0018 00000000 		.word	hsd
+ 553              		.cfi_endproc
+ 554              	.LFE124:
+ 556              		.text
+ 557              	.Letext0:
+ 558              		.file 2 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 559              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 560              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 561              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 562              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 563              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 564              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 565              		.file 9 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
+ 566              		.file 10 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/in
+ 567              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 568              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 569              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h"
+ 570              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 16
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 bsp_driver_sd.c
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:18     .text.BSP_SD_ITConfig:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:25     .text.BSP_SD_ITConfig:0000000000000000 BSP_SD_ITConfig
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:40     .text.BSP_SD_DetectIT:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:47     .text.BSP_SD_DetectIT:0000000000000000 BSP_SD_DetectIT
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:59     .text.BSP_SD_DetectCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:66     .text.BSP_SD_DetectCallback:0000000000000000 BSP_SD_DetectCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:78     .text.BSP_SD_ReadBlocks:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:85     .text.BSP_SD_ReadBlocks:0000000000000000 BSP_SD_ReadBlocks
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:127    .text.BSP_SD_ReadBlocks:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:132    .text.BSP_SD_WriteBlocks:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:139    .text.BSP_SD_WriteBlocks:0000000000000000 BSP_SD_WriteBlocks
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:180    .text.BSP_SD_WriteBlocks:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:185    .text.BSP_SD_ReadBlocks_DMA:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:192    .text.BSP_SD_ReadBlocks_DMA:0000000000000000 BSP_SD_ReadBlocks_DMA
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:225    .text.BSP_SD_ReadBlocks_DMA:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:230    .text.BSP_SD_WriteBlocks_DMA:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:237    .text.BSP_SD_WriteBlocks_DMA:0000000000000000 BSP_SD_WriteBlocks_DMA
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:270    .text.BSP_SD_WriteBlocks_DMA:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:275    .text.BSP_SD_Erase:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:282    .text.BSP_SD_Erase:0000000000000000 BSP_SD_Erase
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:313    .text.BSP_SD_Erase:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:318    .text.BSP_SD_IRQHandler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:325    .text.BSP_SD_IRQHandler:0000000000000000 BSP_SD_IRQHandler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:344    .text.BSP_SD_IRQHandler:000000000000000c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:349    .text.BSP_SD_DMA_Tx_IRQHandler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:356    .text.BSP_SD_DMA_Tx_IRQHandler:0000000000000000 BSP_SD_DMA_Tx_IRQHandler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:376    .text.BSP_SD_DMA_Tx_IRQHandler:000000000000000c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:381    .text.BSP_SD_DMA_Rx_IRQHandler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:388    .text.BSP_SD_DMA_Rx_IRQHandler:0000000000000000 BSP_SD_DMA_Rx_IRQHandler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:408    .text.BSP_SD_DMA_Rx_IRQHandler:000000000000000c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:413    .text.BSP_SD_GetCardState:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:420    .text.BSP_SD_GetCardState:0000000000000000 BSP_SD_GetCardState
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:443    .text.BSP_SD_GetCardState:0000000000000010 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:448    .text.BSP_SD_GetCardInfo:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:455    .text.BSP_SD_GetCardInfo:0000000000000000 BSP_SD_GetCardInfo
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:477    .text.BSP_SD_GetCardInfo:000000000000000c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:482    .text.BSP_SD_IsDetected:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:489    .text.BSP_SD_IsDetected:0000000000000000 BSP_SD_IsDetected
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:514    .text.BSP_SD_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:521    .text.BSP_SD_Init:0000000000000000 BSP_SD_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s:552    .text.BSP_SD_Init:0000000000000018 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_SD_ReadBlocks
+hsd
+HAL_SD_WriteBlocks
+HAL_SD_ReadBlocks_DMA
+HAL_SD_WriteBlocks_DMA
+HAL_SD_Erase
+HAL_SD_IRQHandler
+HAL_DMA_IRQHandler
+HAL_SD_GetCardState
+HAL_SD_GetCardInfo
+HAL_SD_Init
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc61H7OQ.s 			page 17
+
+
