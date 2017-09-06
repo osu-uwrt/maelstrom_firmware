@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****     (+) The WWDG counter input clock is derived from the APB clock divided 
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****         by a programmable prescaler.
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****     (+) WWDG clock (Hz) = PCLK1 / (4096 * Prescaler)
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 2
 
 
   32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****     (+) WWDG timeout (mS) = 1000 * Counter / WWDG clock
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****       (+) __HAL_WWDG_GET_FLAG: Get the selected WWDG's flag status.
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****       (+) __HAL_WWDG_CLEAR_FLAG: Clear the WWDG's pending flags.
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 3
 
 
   89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   @endverbatim
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c **** 
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c **** /** @defgroup WWDG_Exported_Functions_Group1 Initialization and Configuration functions
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   *  @brief    Initialization and Configuration functions.
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 4
 
 
  146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   *
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   * @note   When rewriting this function in user file, mechanism may be added
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   *         to avoid multiple initialize when HAL_WWDG_Init function is called
  202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   *         again to change parameters.
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 5
 
 
  203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   * @retval None
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
   74 001a 0B43     		orrs	r3, r3, r1
   75 001c A168     		ldr	r1, [r4, #8]
   76 001e 0B43     		orrs	r3, r3, r1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 6
 
 
   77 0020 5360     		str	r3, [r2, #4]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  234:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c **** 
  235:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c **** /**
  236:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   * @brief  Refresh the WWDG.
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 7
 
 
  237:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   * @param  hwwdg  pointer to a WWDG_HandleTypeDef structure that contains
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   /* Check if Early Wakeup Interrupt is enable */
  267:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   if(__HAL_WWDG_GET_IT_SOURCE(hwwdg, WWDG_IT_EWI) != RESET)
  268:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****   {
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 8
 
 
  269:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****     /* Check if WWDG Early Wakeup Interrupt occurred */
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  164 0004 5A68     		ldr	r2, [r3, #4]
  165 0006 12F4007F 		tst	r2, #512
  166 000a 03D0     		beq	.L11
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 9
 
 
  270:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c ****     {
@@ -506,33 +506,33 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 1
  185              	.LFE127:
  187              		.text
  188              	.Letext0:
- 189              		.file 2 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 190              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 189              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 190              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
  191              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  192              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  193              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
- 194              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 195              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 196              		.file 9 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
- 197              		.file 10 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/in
+ 194              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 195              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 196              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 197              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2
  198              		.file 11 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  199              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  200              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_wwdg.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_wwdg.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:18     .text.HAL_WWDG_MspInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:25     .text.HAL_WWDG_MspInit:0000000000000000 HAL_WWDG_MspInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:39     .text.HAL_WWDG_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:46     .text.HAL_WWDG_Init:0000000000000000 HAL_WWDG_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:95     .text.HAL_WWDG_Refresh:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:102    .text.HAL_WWDG_Refresh:0000000000000000 HAL_WWDG_Refresh
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:122    .text.HAL_WWDG_EarlyWakeupCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:129    .text.HAL_WWDG_EarlyWakeupCallback:0000000000000000 HAL_WWDG_EarlyWakeupCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:142    .text.HAL_WWDG_IRQHandler:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGEwCCi.s:149    .text.HAL_WWDG_IRQHandler:0000000000000000 HAL_WWDG_IRQHandler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:18     .text.HAL_WWDG_MspInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:25     .text.HAL_WWDG_MspInit:0000000000000000 HAL_WWDG_MspInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:39     .text.HAL_WWDG_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:46     .text.HAL_WWDG_Init:0000000000000000 HAL_WWDG_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:95     .text.HAL_WWDG_Refresh:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:102    .text.HAL_WWDG_Refresh:0000000000000000 HAL_WWDG_Refresh
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:122    .text.HAL_WWDG_EarlyWakeupCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:129    .text.HAL_WWDG_EarlyWakeupCallback:0000000000000000 HAL_WWDG_EarlyWakeupCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:142    .text.HAL_WWDG_IRQHandler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsV61IP.s:149    .text.HAL_WWDG_IRQHandler:0000000000000000 HAL_WWDG_IRQHandler
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

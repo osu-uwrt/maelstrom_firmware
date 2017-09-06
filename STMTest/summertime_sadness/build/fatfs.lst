@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 1
   29:Src/fatfs.c   ****   * 5. Redistribution and use of this software other than as permitted under 
   30:Src/fatfs.c   ****   *    this license is void and will automatically terminate your rights under 
   31:Src/fatfs.c   ****   *    this license. 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s 			page 2
 
 
   32:Src/fatfs.c   ****   *
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 1
   52              	.LFE129:
   54              		.section	.text.get_fattime,"ax",%progbits
   55              		.align	1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s 			page 3
 
 
   56              		.global	get_fattime
@@ -160,30 +160,30 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 1
   77              		.text
   78              	.Letext0:
   79              		.file 2 "Middlewares/Third_Party/FatFs/src/integer.h"
-  80              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
-  81              		.file 4 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+  80              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+  81              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
   82              		.file 5 "Drivers/CMSIS/Include/core_cm4.h"
   83              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-  84              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
-  85              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
-  86              		.file 9 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
-  87              		.file 10 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/in
+  84              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+  85              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+  86              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+  87              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2
   88              		.file 11 "Middlewares/Third_Party/FatFs/src/diskio.h"
   89              		.file 12 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
   90              		.file 13 "Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h"
   91              		.file 14 "Inc/fatfs.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 fatfs.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s:18     .text.MX_FATFS_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s:25     .text.MX_FATFS_Init:0000000000000000 MX_FATFS_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s:48     .text.MX_FATFS_Init:0000000000000010 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s:18     .text.MX_FATFS_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s:25     .text.MX_FATFS_Init:0000000000000000 MX_FATFS_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s:48     .text.MX_FATFS_Init:0000000000000010 $d
                             *COM*:0000000000000004 SD_Path
                             *COM*:0000000000000001 retSD
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s:55     .text.get_fattime:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccAJoXAy.s:62     .text.get_fattime:0000000000000000 get_fattime
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s:55     .text.get_fattime:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0gkj2q.s:62     .text.get_fattime:0000000000000000 get_fattime
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

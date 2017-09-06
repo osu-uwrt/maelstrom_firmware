@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
   30:Src/usbd_cdc_if.c ****   *    this license is void and will automatically terminate your rights under 
   31:Src/usbd_cdc_if.c ****   *    this license. 
   32:Src/usbd_cdc_if.c ****   *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 2
 
 
   33:Src/usbd_cdc_if.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
   87:Src/usbd_cdc_if.c ****   */ 
   88:Src/usbd_cdc_if.c **** /* USER CODE BEGIN PRIVATE_MACRO */
   89:Src/usbd_cdc_if.c **** /* USER CODE END PRIVATE_MACRO */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 3
 
 
   90:Src/usbd_cdc_if.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  144:Src/usbd_cdc_if.c ****   CDC_DeInit_HS,
  145:Src/usbd_cdc_if.c ****   CDC_Control_HS,  
  146:Src/usbd_cdc_if.c ****   CDC_Receive_HS
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 4
 
 
  147:Src/usbd_cdc_if.c **** };
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  183:Src/usbd_cdc_if.c ****   * @param  cmd: Command code            
  184:Src/usbd_cdc_if.c ****   * @param  pbuf: Buffer containing command data (request parameters)
  185:Src/usbd_cdc_if.c ****   * @param  length: Number of data to be sent (in bytes)
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 5
 
 
  186:Src/usbd_cdc_if.c ****   * @retval Result of the operation: USBD_OK if all operations are OK else USBD_FAIL
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  234:Src/usbd_cdc_if.c ****   case CDC_GET_LINE_CODING:     
  235:Src/usbd_cdc_if.c **** 
  236:Src/usbd_cdc_if.c ****     break;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 6
 
 
  237:Src/usbd_cdc_if.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
   75              	.LCFI0:
   76              		.cfi_def_cfa_offset 8
   77              		.cfi_offset 4, -8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 7
 
 
   78              		.cfi_offset 14, -4
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  162:Src/usbd_cdc_if.c ****   return (USBD_OK);
  126              		.loc 1 162 0
  127 000e 0549     		ldr	r1, .L9+8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 8
 
 
  128 0010 2046     		mov	r0, r4
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  294:Src/usbd_cdc_if.c ****     return USBD_BUSY;
  166              		.loc 1 294 0
  167 000c 0120     		movs	r0, #1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 9
 
 
  168              	.LVL12:
@@ -531,14 +531,14 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  212 000c 00000000 		.word	CDC_Receive_HS
  213              		.text
  214              	.Letext0:
- 215              		.file 2 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 216              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 217              		.file 4 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 218              		.file 5 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
- 219              		.file 6 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 220              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 221              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 10
+ 215              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 216              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 217              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 218              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 219              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 220              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 221              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 10
 
 
  222              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
@@ -546,28 +546,28 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 1
  224              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  225              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
  226              		.file 13 "Inc/usbd_cdc_if.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_cdc_if.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:18     .text.CDC_DeInit_HS:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:24     .text.CDC_DeInit_HS:0000000000000000 CDC_DeInit_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:39     .text.CDC_Control_HS:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:45     .text.CDC_Control_HS:0000000000000000 CDC_Control_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:61     .text.CDC_Receive_HS:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:67     .text.CDC_Receive_HS:0000000000000000 CDC_Receive_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:97     .text.CDC_Receive_HS:0000000000000018 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:102    .text.CDC_Init_HS:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:108    .text.CDC_Init_HS:0000000000000000 CDC_Init_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:137    .text.CDC_Init_HS:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:18     .text.CDC_DeInit_HS:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:24     .text.CDC_DeInit_HS:0000000000000000 CDC_DeInit_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:39     .text.CDC_Control_HS:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:45     .text.CDC_Control_HS:0000000000000000 CDC_Control_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:61     .text.CDC_Receive_HS:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:67     .text.CDC_Receive_HS:0000000000000000 CDC_Receive_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:97     .text.CDC_Receive_HS:0000000000000018 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:102    .text.CDC_Init_HS:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:108    .text.CDC_Init_HS:0000000000000000 CDC_Init_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:137    .text.CDC_Init_HS:000000000000001c $d
                             *COM*:0000000000000004 UserTxBufferHS
                             *COM*:0000000000000004 UserRxBufferHS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:144    .text.CDC_Transmit_HS:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:151    .text.CDC_Transmit_HS:0000000000000000 CDC_Transmit_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:197    .text.CDC_Transmit_HS:0000000000000028 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:208    .data.USBD_Interface_fops_HS:0000000000000000 USBD_Interface_fops_HS
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccwMce4h.s:205    .data.USBD_Interface_fops_HS:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:144    .text.CDC_Transmit_HS:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:151    .text.CDC_Transmit_HS:0000000000000000 CDC_Transmit_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:197    .text.CDC_Transmit_HS:0000000000000028 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:208    .data.USBD_Interface_fops_HS:0000000000000000 USBD_Interface_fops_HS
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccaIcO4g.s:205    .data.USBD_Interface_fops_HS:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

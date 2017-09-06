@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
   29:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** #include "usbd_ioreq.h"
   30:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** 
   31:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** /** @addtogroup STM32_USB_DEVICE_LIBRARY
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 2
 
 
   32:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c ****   * @{
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
   86:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** 
   87:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** /**
   88:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @brief  USBD_CtlSendData
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 3
 
 
   89:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** *         send data on the ctl pipe
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
   64              		.thumb_func
   65              		.fpu fpv4-sp-d16
   67              	USBD_CtlContinueSendData:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 4
 
 
   68              	.LFB125:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  129:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** *         receive data on the ctl pipe
  130:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @param  pdev: device instance
  131:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @param  buff: pointer to data buffer
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 5
 
 
  132:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @param  len: length of data to be received
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  139              		.thumb_func
  140              		.fpu fpv4-sp-d16
  142              	USBD_CtlContinueRx:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 6
 
 
  143              	.LFB127:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  172:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @brief  USBD_CtlSendStatus
  173:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** *         send zero lzngth packet on the ctl pipe
  174:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @param  pdev: device instance
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 7
 
 
  175:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** * @retval status
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  196:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c **** {
  213              		.loc 1 196 0
  214              		.cfi_startproc
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 8
 
 
  215              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  249              		.cfi_startproc
  250              		@ args = 0, pretend = 0, frame = 0
  251              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 9
 
 
  252              	.LVL20:
@@ -499,36 +499,36 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 1
  265              	.LFE130:
  267              		.text
  268              	.Letext0:
- 269              		.file 2 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 270              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 271              		.file 4 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 272              		.file 5 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
- 273              		.file 6 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 274              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 275              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 269              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 270              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 271              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 272              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 273              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 274              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 275              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
  276              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
  277              		.file 10 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  278              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  279              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_ioreq.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:18     .text.USBD_CtlSendData:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:25     .text.USBD_CtlSendData:0000000000000000 USBD_CtlSendData
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:60     .text.USBD_CtlContinueSendData:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:67     .text.USBD_CtlContinueSendData:0000000000000000 USBD_CtlContinueSendData
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:94     .text.USBD_CtlPrepareRx:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:101    .text.USBD_CtlPrepareRx:0000000000000000 USBD_CtlPrepareRx
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:135    .text.USBD_CtlContinueRx:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:142    .text.USBD_CtlContinueRx:0000000000000000 USBD_CtlContinueRx
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:169    .text.USBD_CtlSendStatus:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:176    .text.USBD_CtlSendStatus:0000000000000000 USBD_CtlSendStatus
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:204    .text.USBD_CtlReceiveStatus:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:211    .text.USBD_CtlReceiveStatus:0000000000000000 USBD_CtlReceiveStatus
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:239    .text.USBD_GetRxCount:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccIxLILz.s:246    .text.USBD_GetRxCount:0000000000000000 USBD_GetRxCount
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:18     .text.USBD_CtlSendData:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:25     .text.USBD_CtlSendData:0000000000000000 USBD_CtlSendData
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:60     .text.USBD_CtlContinueSendData:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:67     .text.USBD_CtlContinueSendData:0000000000000000 USBD_CtlContinueSendData
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:94     .text.USBD_CtlPrepareRx:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:101    .text.USBD_CtlPrepareRx:0000000000000000 USBD_CtlPrepareRx
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:135    .text.USBD_CtlContinueRx:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:142    .text.USBD_CtlContinueRx:0000000000000000 USBD_CtlContinueRx
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:169    .text.USBD_CtlSendStatus:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:176    .text.USBD_CtlSendStatus:0000000000000000 USBD_CtlSendStatus
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:204    .text.USBD_CtlReceiveStatus:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:211    .text.USBD_CtlReceiveStatus:0000000000000000 USBD_CtlReceiveStatus
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:239    .text.USBD_GetRxCount:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccJua9Hm.s:246    .text.USBD_GetRxCount:0000000000000000 USBD_GetRxCount
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

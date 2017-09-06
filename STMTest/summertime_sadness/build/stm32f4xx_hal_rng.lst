@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   ******************************************************************************
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @attention
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 2
 
 
   32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * <h2><center>&copy; COPYRIGHT(c) 2017 STMicroelectronics</center></h2>
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** #define RNG_TIMEOUT_VALUE     2U
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** /**
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @}
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 3
 
 
   89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   */ 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** 
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   /* Enable the RNG Peripheral */
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   __HAL_RNG_ENABLE(hrng);
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 4
 
 
  146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
   32              		@ link register save eliminated.
   33              	.LVL0:
   34 0000 7047     		bx	lr
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 5
 
 
   35              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
   82              		.loc 1 148 0
   83 0022 0123     		movs	r3, #1
   84 0024 6371     		strb	r3, [r4, #5]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 6
 
 
  150:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  198:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   /* NOTE : This function should not be modified. When the callback is needed,
  199:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****             function HAL_RNG_MspInit must be implemented in the user file.
  200:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****    */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 7
 
 
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** }
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  173 0012 5368     		ldr	r3, [r2, #4]
  174 0014 23F06003 		bic	r3, r3, #96
  175 0018 5360     		str	r3, [r2, #4]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 8
 
 
  176:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  229:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     [..]  This section provides functions allowing to:
  230:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****       (+) Get the 32 bit Random number
  231:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****       (+) Get the 32 bit Random number with interrupt enabled
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 9
 
 
  232:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****       (+) Handle RNG interrupt request 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   {
  259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     /* Change RNG peripheral state */  
  260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     hrng->State = HAL_RNG_STATE_BUSY;  
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 10
 
 
  261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** 
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  255              	.L23:
  266:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     {
  256              		.loc 1 266 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 11
 
 
  257 002a 2368     		ldr	r3, [r4]
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  302              	.LFE128:
  304              		.section	.text.HAL_RNG_GenerateRandomNumber_IT,"ax",%progbits
  305              		.align	1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 12
 
 
  306              		.global	HAL_RNG_GenerateRandomNumber_IT
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  323:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     /* Process Unlocked */
  324:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     __HAL_UNLOCK(hrng);
  332              		.loc 1 324 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 13
 
 
  333 0012 0023     		movs	r3, #0
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  332:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c **** /**
  333:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @brief  Handles RNG interrupt request.
  334:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @note   In the case of a clock error, the RNG is no more able to generate 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 14
 
 
  335:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   *         random numbers because the PLL48CLK clock is not correct. User has 
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  389:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @brief  Returns generated random number in polling mode (Obsolete)
  390:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   *         Use HAL_RNG_GenerateRandomNumber() API instead.
  391:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @param  hrng: pointer to a RNG_HandleTypeDef structure that contains
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 15
 
 
  392:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   *                the configuration information for RNG.
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  410:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @param  hrng: pointer to a RNG_HandleTypeDef structure that contains
  411:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   *                the configuration information for RNG.
  412:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   * @retval 32-bit random number
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 16
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 16
 
 
  413:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   */
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  448              		.cfi_endproc
  449              	.LFE132:
  451              		.section	.text.HAL_RNG_ReadLastRandomNumber,"ax",%progbits
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 17
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 17
 
 
  452              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  488              		@ link register save eliminated.
  489              	.LVL39:
  490 0000 7047     		bx	lr
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 18
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 18
 
 
  491              		.cfi_endproc
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  531              	.LCFI8:
  532              		.cfi_def_cfa_offset 8
  533              		.cfi_offset 4, -8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 19
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 19
 
 
  534              		.cfi_offset 14, -4
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  578 0048 0123     		movs	r3, #1
  579 004a 6371     		strb	r3, [r4, #5]
  383:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****     } 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 20
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 20
 
 
  580              		.loc 1 383 0
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  602              		@ frame_needed = 0, uses_anonymous_args = 0
  603              		@ link register save eliminated.
  604              	.LVL45:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 21
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 21
 
 
  504:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c ****   return hrng->State;
@@ -1212,50 +1212,50 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 1
  611              	.LFE136:
  613              		.text
  614              	.Letext0:
- 615              		.file 2 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 616              		.file 3 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
+ 615              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 616              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
  617              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  618              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  619              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
- 620              		.file 7 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 621              		.file 8 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/inc
- 622              		.file 9 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/lib/gcc/arm-none-
- 623              		.file 10 "/Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/arm-none-eabi/in
+ 620              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 621              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 622              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 623              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2
  624              		.file 11 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  625              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  626              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h"
  627              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s 			page 22
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_rng.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:18     .text.HAL_RNG_MspInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:25     .text.HAL_RNG_MspInit:0000000000000000 HAL_RNG_MspInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:39     .text.HAL_RNG_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:46     .text.HAL_RNG_Init:0000000000000000 HAL_RNG_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:123    .text.HAL_RNG_MspDeInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:130    .text.HAL_RNG_MspDeInit:0000000000000000 HAL_RNG_MspDeInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:143    .text.HAL_RNG_DeInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:150    .text.HAL_RNG_DeInit:0000000000000000 HAL_RNG_DeInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:200    .text.HAL_RNG_GenerateRandomNumber:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:207    .text.HAL_RNG_GenerateRandomNumber:0000000000000000 HAL_RNG_GenerateRandomNumber
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:305    .text.HAL_RNG_GenerateRandomNumber_IT:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:312    .text.HAL_RNG_GenerateRandomNumber_IT:0000000000000000 HAL_RNG_GenerateRandomNumber_IT
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:368    .text.HAL_RNG_GetRandomNumber:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:375    .text.HAL_RNG_GetRandomNumber:0000000000000000 HAL_RNG_GetRandomNumber
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:406    .text.HAL_RNG_GetRandomNumber_IT:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:413    .text.HAL_RNG_GetRandomNumber_IT:0000000000000000 HAL_RNG_GetRandomNumber_IT
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:452    .text.HAL_RNG_ReadLastRandomNumber:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:459    .text.HAL_RNG_ReadLastRandomNumber:0000000000000000 HAL_RNG_ReadLastRandomNumber
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:475    .text.HAL_RNG_ReadyDataCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:482    .text.HAL_RNG_ReadyDataCallback:0000000000000000 HAL_RNG_ReadyDataCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:495    .text.HAL_RNG_ErrorCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:502    .text.HAL_RNG_ErrorCallback:0000000000000000 HAL_RNG_ErrorCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:515    .text.HAL_RNG_IRQHandler:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:522    .text.HAL_RNG_IRQHandler:0000000000000000 HAL_RNG_IRQHandler
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:590    .text.HAL_RNG_GetState:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxTlZKk.s:597    .text.HAL_RNG_GetState:0000000000000000 HAL_RNG_GetState
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:18     .text.HAL_RNG_MspInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:25     .text.HAL_RNG_MspInit:0000000000000000 HAL_RNG_MspInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:39     .text.HAL_RNG_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:46     .text.HAL_RNG_Init:0000000000000000 HAL_RNG_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:123    .text.HAL_RNG_MspDeInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:130    .text.HAL_RNG_MspDeInit:0000000000000000 HAL_RNG_MspDeInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:143    .text.HAL_RNG_DeInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:150    .text.HAL_RNG_DeInit:0000000000000000 HAL_RNG_DeInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:200    .text.HAL_RNG_GenerateRandomNumber:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:207    .text.HAL_RNG_GenerateRandomNumber:0000000000000000 HAL_RNG_GenerateRandomNumber
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:305    .text.HAL_RNG_GenerateRandomNumber_IT:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:312    .text.HAL_RNG_GenerateRandomNumber_IT:0000000000000000 HAL_RNG_GenerateRandomNumber_IT
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:368    .text.HAL_RNG_GetRandomNumber:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:375    .text.HAL_RNG_GetRandomNumber:0000000000000000 HAL_RNG_GetRandomNumber
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:406    .text.HAL_RNG_GetRandomNumber_IT:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:413    .text.HAL_RNG_GetRandomNumber_IT:0000000000000000 HAL_RNG_GetRandomNumber_IT
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:452    .text.HAL_RNG_ReadLastRandomNumber:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:459    .text.HAL_RNG_ReadLastRandomNumber:0000000000000000 HAL_RNG_ReadLastRandomNumber
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:475    .text.HAL_RNG_ReadyDataCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:482    .text.HAL_RNG_ReadyDataCallback:0000000000000000 HAL_RNG_ReadyDataCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:495    .text.HAL_RNG_ErrorCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:502    .text.HAL_RNG_ErrorCallback:0000000000000000 HAL_RNG_ErrorCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:515    .text.HAL_RNG_IRQHandler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:522    .text.HAL_RNG_IRQHandler:0000000000000000 HAL_RNG_IRQHandler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:590    .text.HAL_RNG_GetState:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cciqwzJ4.s:597    .text.HAL_RNG_GetState:0000000000000000 HAL_RNG_GetState
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

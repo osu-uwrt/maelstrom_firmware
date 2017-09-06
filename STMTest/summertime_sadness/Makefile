@@ -124,7 +124,7 @@ PERIFLIB_SOURCES =
 #######################################
 # binaries
 #######################################
-BINPATH = /Users/augustmason/Documents/STMTest/gcc-arm-none-eabi-6-2017-q2-update/bin
+BINPATH = /Users/augustmason/Documents/Github/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-update/bin
 PREFIX = arm-none-eabi-
 CC = $(BINPATH)/$(PREFIX)gcc
 AS = $(BINPATH)/$(PREFIX)gcc -x assembler-with-cpp

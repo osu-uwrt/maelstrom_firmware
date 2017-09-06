@@ -114,7 +114,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+void vLEDBTNTask(void *pvParameters );
 /* USER CODE END 0 */
 
 int main(void)
@@ -158,7 +158,7 @@ int main(void)
   MX_ADC3_Init();
 
   /* USER CODE BEGIN 2 */
-
+  xTaskCreate( vLEDBTNTask, "BTNx", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -179,7 +179,7 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -621,7 +621,12 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void vLEDBTNTask(void *pvParameters ){
+  int i;
+  for( ;; ){
+    i = i+1;
+  }
+}
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */
