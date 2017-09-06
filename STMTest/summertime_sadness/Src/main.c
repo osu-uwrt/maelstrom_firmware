@@ -51,6 +51,7 @@
 #include "cmsis_os.h"
 #include "fatfs.h"
 #include "usb_device.h"
+#include "FreeRTOS.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -114,7 +115,9 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-void vLEDBTNTask(void *pvParameters );
+void vHeartbeat(void *pvParameters );
+void vKillStatus(void *pvParammeters);
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -158,7 +161,8 @@ int main(void)
   MX_ADC3_Init();
 
   /* USER CODE BEGIN 2 */
-  xTaskCreate( vLEDBTNTask, "BTNx", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
+  xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
+  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -621,9 +625,20 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void vLEDBTNTask(void *pvParameters ){
-  int i;
+void vHeartbeat(void *pvParameters ){
+
   for( ;; ){
+    //HAL_GPIO should be initialized and this should just work
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12); //This toggles the spcific pin number from high to low, an LED
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+    HAL_Delay(1000);
+  }
+}
+
+void vKillStatus(void *pvParameters ){
+  //take your GPIO pins here
+  int i;
+  for ( ;; ){
     i = i+1;
   }
 }
