@@ -1,0 +1,116 @@
+#include <Servo.h>
+#include <ros.h>
+#include <riptide_msgs/PwmStamped.h>
+#include <std_msgs/Int8.h>
+#include <std_msgs/Empty.h>
+
+
+//function prototypes
+int16_t valid(int16_t pwm);
+void pwm_callback(const riptide_msgs::PwmStamped &cmd);
+//Globals
+int STOP = 1500;  //thruster stop value
+int killVal = 0;  //kill switch read value, default to KS out of bot
+int missVal = 0;  //mission switch read value, default to MS out of bot
+//individual values of pins plugged in
+int killPin = 46;
+int missPin = 12;
+int spl_pin = 7;
+int ssl_pin = 3;  //5
+int hpa_pin = 8;
+int hsa_pin = 4; //sus
+int hpf_pin = 9;
+int hsf_pin = 5;
+int swf_pin = 6;  //sus 8
+int swa_pin = 2;
+
+//using a PWM set the servo
+Servo servo_spl, servo_ssl, servo_hpa, servo_hsa, servo_hpf, servo_hsf, servo_swf, servo_swa;
+// ROS is the best
+ros::NodeHandle nh;
+std_msgs::Empty kill;
+std_msgs::Empty mission;
+ros::Publisher mission_pub("state/mission", &mission);
+ros::Publisher kill_pub("state/kill", &kill);
+ros::Subscriber<riptide_msgs::PwmStamped> pwm_sub("command/pwm", &pwm_callback);
+
+void setup() {
+  Serial.begin(9600);
+  //pins for the mission and kill
+  pinMode(killPin, INPUT); 
+  pinMode(missPin, INPUT); 
+  //pin assignments for the ESCs->thrusters
+  servo_spl.attach(spl_pin);
+  servo_ssl.attach(ssl_pin);
+  servo_hpa.attach(hpa_pin);
+  servo_hsa.attach(hsa_pin);
+  servo_hpf.attach(hpf_pin);
+  servo_hsf.attach(hsf_pin);
+  servo_swf.attach(swf_pin);
+  servo_swa.attach(swa_pin);
+  //ROS node handler setup
+  nh.initNode();
+  nh.subscribe(pwm_sub);
+  nh.advertise(mission_pub);
+  nh.advertise(kill_pub);
+   
+  
+}
+
+void loop() {
+  //check for callback
+  nh.spinOnce();
+  //Serial.println("I've got ROS going");
+  killVal = digitalRead(killPin);
+  missVal = digitalRead (missPin);
+  //heartbeat for kill switch
+  if (killVal == 1) {
+     kill_pub.publish(&kill);
+  }
+  //if heartbeat gone (KS removed) write stop
+  else {
+    servo_spl.writeMicroseconds(valid(STOP));
+    servo_ssl.writeMicroseconds(valid(STOP));
+    servo_hpa.writeMicroseconds(valid(STOP));
+    servo_hsa.writeMicroseconds(valid(STOP));
+    servo_hpf.writeMicroseconds(valid(STOP));
+    servo_hsf.writeMicroseconds(valid(STOP));
+    servo_swf.writeMicroseconds(valid(STOP));
+    servo_swa.writeMicroseconds(valid(STOP));
+  }
+  //second heartbeat for the mission start
+  if(missVal ==1) {
+      mission_pub.publish(&mission);
+  }
+
+}
+
+void pwm_callback(const riptide_msgs::PwmStamped &cmd){
+  /*
+   * List of thrusters:
+   *  surge_port_hi   surge_port_lo
+   *  surge_stbd_hi   surge_stbd_lo
+   *  sway_aft        sway_fwd
+   *  heave_port_aft  heave_stdb_aft
+   *  heave_port_fwd  heave_stdb_fwd
+   */
+   servo_spl.writeMicroseconds(valid(cmd.pwm.surge_port_lo));
+   servo_ssl.writeMicroseconds(valid(cmd.pwm.surge_stbd_lo));
+   servo_hpa.writeMicroseconds(valid(cmd.pwm.heave_port_aft));
+   servo_hsa.writeMicroseconds(valid(cmd.pwm.heave_stbd_aft));
+   servo_hpf.writeMicroseconds(valid(cmd.pwm.heave_port_fwd));
+   servo_hsf.writeMicroseconds(valid(cmd.pwm.heave_stbd_fwd));
+   servo_swf.writeMicroseconds(valid(cmd.pwm.sway_fwd));
+   servo_swa.writeMicroseconds(valid(cmd.pwm.sway_aft));
+   
+  
+}
+
+// Ensure 1100 <= pwm <= 1900
+int16_t valid(int16_t pwm)
+{
+  pwm = pwm > 1900 ? 1900 : pwm;
+  pwm = pwm < 1100 ? 1100 : pwm;
+  return pwm;
+}
+
