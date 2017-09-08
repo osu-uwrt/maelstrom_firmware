@@ -60,7 +60,7 @@ build/main.d: Src/main.c Inc/main.h \
  Middlewares/Third_Party/FatFs/src/ff.h \
  Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h Inc/usb_device.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- Inc/usbd_conf.h
+ Inc/usbd_conf.h Inc/teamThreads.h
 
 Inc/main.h:
 
@@ -201,3 +201,5 @@ Inc/usb_device.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
 Inc/usbd_conf.h:
+
+Inc/teamThreads.h:
