@@ -41,14 +41,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stm32f4xx_hal_gpio.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stm32f4xx_hal_gpio.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="321" column="0" lean-forward="true" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="293" column="24" lean-forward="true" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
               <folding>
                 <element signature="e#13264#13265#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="126" column="107" lean-forward="true" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="107" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +100,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summertime_sadness.ioc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summertime_sadness/summertime_sadness.ioc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -595,12 +595,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504703028885</updated>
       <workItem from="1504703030941" duration="2613000" />
-      <workItem from="1504816800604" duration="6531000" />
+      <workItem from="1504816800604" duration="6713000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9144000" />
+    <option name="totallyTimeSpent" value="9326000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="125" column="39" lean-forward="false" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/summertime_sadness.ioc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -846,11 +838,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="321" column="0" lean-forward="true" selection-start-line="321" selection-start-column="0" selection-end-line="321" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="293" column="24" lean-forward="true" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
           <folding>
             <element signature="e#13264#13265#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="126" column="107" lean-forward="true" selection-start-line="126" selection-start-column="63" selection-end-line="126" selection-end-column="107" />
+          <folding />
         </state>
       </provider>
     </entry>
