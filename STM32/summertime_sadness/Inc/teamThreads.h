@@ -4,5 +4,5 @@
 
 #ifndef STM32_TEAMTHREADS_H
 #define STM32_TEAMTHREADS_H
-
+void vHeartbeat(void *pvParameters );
 #endif //STM32_TEAMTHREADS_H

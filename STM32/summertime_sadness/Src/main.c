@@ -116,7 +116,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-void vHeartbeat(void *pvParameters );
+//void vHeartbeat(void *pvParameters );
 void vKillStatus(void *pvParammeters);
 
 /* USER CODE END 0 */
@@ -627,6 +627,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/*
 void vHeartbeat(void *pvParameters ){
     //it's an arduino, setup then loop
     //initialize the GPIO Bus clock should be initialized but re-
@@ -640,7 +641,7 @@ void vHeartbeat(void *pvParameters ){
 
     //Initialize your GPIO!
     HAL_GPIO_Init(GPIOC, &GPIO_InitDef);
-    //**********END SETUP***********************//
+
     //this is really void (loop) trust me
 
     for( ;; ){
@@ -650,7 +651,7 @@ void vHeartbeat(void *pvParameters ){
         HAL_Delay(1000);
   }
 }
-
+*/
 void vKillStatus(void *pvParameters ){
   //take your GPIO pins here
   int i;
