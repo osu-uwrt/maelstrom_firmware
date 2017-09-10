@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
   34              	.LCFI0:
   35              		.cfi_def_cfa_offset 8
   36              		.cfi_offset 4, -8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 2
 
 
   37              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
   39:Middlewares/Third_Party/FatFs/src/option/syscall.c **** /  returned, the f_mount function fails with FR_INT_ERR.
   40:Middlewares/Third_Party/FatFs/src/option/syscall.c **** */
   41:Middlewares/Third_Party/FatFs/src/option/syscall.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 3
 
 
   42:Middlewares/Third_Party/FatFs/src/option/syscall.c **** int ff_del_syncobj (	/* TRUE:Function succeeded, FALSE:Could not delete due to any error */
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
  112              	.LCFI4:
  113              		.cfi_def_cfa_offset 8
  114              		.cfi_offset 3, -8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 4
 
 
  115              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
  148              		@ frame_needed = 0, uses_anonymous_args = 0
  149              	.LVL13:
  150 0000 08B5     		push	{r3, lr}
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 5
 
 
  151              	.LCFI5:
@@ -254,32 +254,32 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 1
  160              	.LFE132:
  162              		.text
  163              	.Letext0:
- 164              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 165              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 166              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 167              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 168              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 169              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 164              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 165              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 166              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 167              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 168              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 169              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  170              		.file 8 "Middlewares/Third_Party/FatFs/src/option/../integer.h"
- 171              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 171              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  172              		.file 10 "Drivers/CMSIS/Include/core_cm4.h"
  173              		.file 11 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  174              		.file 12 "Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
  175              		.file 13 "Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"
  176              		.file 14 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 syscall.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:18     .text.ff_cre_syncobj:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:25     .text.ff_cre_syncobj:0000000000000000 ff_cre_syncobj
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:68     .text.ff_del_syncobj:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:75     .text.ff_del_syncobj:0000000000000000 ff_del_syncobj
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:97     .text.ff_req_grant:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:104    .text.ff_req_grant:0000000000000000 ff_req_grant
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:136    .text.ff_rel_grant:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccGkDcbV.s:143    .text.ff_rel_grant:0000000000000000 ff_rel_grant
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:18     .text.ff_cre_syncobj:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:25     .text.ff_cre_syncobj:0000000000000000 ff_cre_syncobj
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:68     .text.ff_del_syncobj:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:75     .text.ff_del_syncobj:0000000000000000 ff_del_syncobj
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:97     .text.ff_req_grant:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:104    .text.ff_req_grant:0000000000000000 ff_req_grant
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:136    .text.ff_rel_grant:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccvpYfj4.s:143    .text.ff_rel_grant:0000000000000000 ff_rel_grant
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

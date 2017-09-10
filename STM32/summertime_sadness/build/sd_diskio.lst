@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
   29:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   *    this license. 
   30:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   *
   31:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 2
 
 
   32:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
   86:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   * @param  lun : not used 
   87:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   * @retval DSTATUS: Operation status
   88:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 3
 
 
   89:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c **** DSTATUS SD_initialize(BYTE lun)
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
   72              	SD_status:
   73              	.LFB130:
  101:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 4
 
 
  102:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  113              		.syntax unified
  114              		.thumb
  115              		.thumb_func
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 5
 
 
  116              		.fpu fpv4-sp-d16
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  150 0018 631E     		subs	r3, r4, #1
  151              	.LVL12:
  152 001a 24B1     		cbz	r4, .L16
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 6
 
 
  153 001c 1C46     		mov	r4, r3
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  187              		.loc 1 159 0
  188              		.cfi_startproc
  189              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 7
 
 
  190              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  171:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****         return RES_ERROR;
  232              		.loc 1 171 0
  233 0026 0120     		movs	r0, #1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 8
 
 
  172:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****       }
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  267              	.LVL30:
  268              	.L46:
  190:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   DRESULT res = RES_ERROR;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 9
 
 
  269              		.loc 1 190 0
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  224:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   default:
  225:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****     res = RES_PARERR;
  226:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   }
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 10
 
 
  227:Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.c ****   
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  336 0042 6846     		mov	r0, sp
  337              	.LVL41:
  338 0044 FFF7FEFF 		bl	BSP_SD_GetCardInfo
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 11
 
 
  339              	.LVL42:
@@ -641,44 +641,44 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 1
  377 0010 00000000 		.word	SD_ioctl
  378              		.text
  379              	.Letext0:
- 380              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 381              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 382              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 383              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
- 384              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 380              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 381              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 382              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 383              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 384              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  385              		.file 7 "Middlewares/Third_Party/FatFs/src/integer.h"
  386              		.file 8 "Middlewares/Third_Party/FatFs/src/diskio.h"
- 387              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STMTest/gcc-arm-none-eabi-6-2017-q2-
+ 387              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  388              		.file 10 "Drivers/CMSIS/Include/core_cm4.h"
  389              		.file 11 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  390              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h"
  391              		.file 13 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
  392              		.file 14 "Inc/bsp_driver_sd.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sd_diskio.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:18     .text.SD_initialize:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:25     .text.SD_initialize:0000000000000000 SD_initialize
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:60     .text.SD_initialize:0000000000000020 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:65     .text.SD_status:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:72     .text.SD_status:0000000000000000 SD_status
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:106    .text.SD_status:0000000000000020 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:111    .text.SD_read:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:118    .text.SD_read:0000000000000000 SD_read
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:172    .text.SD_read:000000000000002c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:178    .text.SD_write:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:185    .text.SD_write:0000000000000000 SD_write
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:239    .text.SD_write:000000000000002c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:245    .text.SD_ioctl:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:252    .text.SD_ioctl:0000000000000000 SD_ioctl
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:284    .text.SD_ioctl:000000000000001c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:288    .text.SD_ioctl:0000000000000020 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:357    .text.SD_ioctl:0000000000000054 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:372    .rodata.SD_Driver:0000000000000000 SD_Driver
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:366    .data.Stat:0000000000000000 Stat
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc7PifXH.s:369    .rodata.SD_Driver:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:18     .text.SD_initialize:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:25     .text.SD_initialize:0000000000000000 SD_initialize
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:60     .text.SD_initialize:0000000000000020 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:65     .text.SD_status:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:72     .text.SD_status:0000000000000000 SD_status
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:106    .text.SD_status:0000000000000020 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:111    .text.SD_read:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:118    .text.SD_read:0000000000000000 SD_read
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:172    .text.SD_read:000000000000002c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:178    .text.SD_write:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:185    .text.SD_write:0000000000000000 SD_write
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:239    .text.SD_write:000000000000002c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:245    .text.SD_ioctl:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:252    .text.SD_ioctl:0000000000000000 SD_ioctl
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:284    .text.SD_ioctl:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:288    .text.SD_ioctl:0000000000000020 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:357    .text.SD_ioctl:0000000000000054 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:372    .rodata.SD_Driver:0000000000000000 SD_Driver
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:366    .data.Stat:0000000000000000 Stat
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccChUkmx.s:369    .rodata.SD_Driver:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
