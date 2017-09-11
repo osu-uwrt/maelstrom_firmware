@@ -55,7 +55,7 @@
 #include "teamThreads.h"
 
 /* USER CODE BEGIN Includes */
-
+//#include "task.h" //think about this just in case the FreeRTOS.h does not have everything we need
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -116,8 +116,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-//void vHeartbeat(void *pvParameters );
-void vKillStatus(void *pvParammeters);
+
+void vKillStatus(void *pvParameters);
 
 /* USER CODE END 0 */
 
@@ -163,8 +163,12 @@ int main(void)
   MX_ADC3_Init();
 
   /* USER CODE BEGIN 2 */
-  xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
-  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
+  //create task handleers for different tasks
+  xTaskHandle xKillStatusHandle;
+  xTaskHandle xHearbeatStatus;
+
+  //xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
+  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 0, &xKillStatusHandle);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
