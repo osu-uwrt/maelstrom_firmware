@@ -97,6 +97,7 @@ Src/usbd_desc.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c \
 Src/main.c \
+Src/teamThreads.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_wwdg.c \
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
 Middlewares/Third_Party/FreeRTOS/Source/list.c \

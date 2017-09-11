@@ -1,0 +1,173 @@
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"teamThreads.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.vHeartbeat,"ax",%progbits
+  18              		.align	1
+  19              		.global	vHeartbeat
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	vHeartbeat:
+  26              	.LFB129:
+  27              		.file 1 "Src/teamThreads.c"
+   1:Src/teamThreads.c **** //
+   2:Src/teamThreads.c **** // Created by August R. Mason on 9/8/17.
+   3:Src/teamThreads.c **** //
+   4:Src/teamThreads.c **** #include "main.h"
+   5:Src/teamThreads.c **** #include "stm32f4xx_hal.h"
+   6:Src/teamThreads.c **** #include "cmsis_os.h"
+   7:Src/teamThreads.c **** #include "fatfs.h"
+   8:Src/teamThreads.c **** #include "usb_device.h"
+   9:Src/teamThreads.c **** #include "FreeRTOS.h"
+  10:Src/teamThreads.c **** #include "teamThreads.h"
+  11:Src/teamThreads.c **** 
+  12:Src/teamThreads.c **** //Heartbeat thread function
+  13:Src/teamThreads.c **** 
+  14:Src/teamThreads.c **** 
+  15:Src/teamThreads.c **** void vHeartbeat(void *pvParameters ){
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 24
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34 0000 00B5     		push	{lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 4
+  37              		.cfi_offset 14, -4
+  38 0002 87B0     		sub	sp, sp, #28
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 32
+  41              	.LBB2:
+  16:Src/teamThreads.c ****     //it's an arduino, setup then loop
+  17:Src/teamThreads.c ****     //initialize the GPIO Bus clock should be initialized but re-
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 2
+
+
+  18:Src/teamThreads.c ****     __HAL_RCC_GPIOC_CLK_ENABLE(); //we are using bus C for this
+  42              		.loc 1 18 0
+  43 0004 0021     		movs	r1, #0
+  44 0006 0091     		str	r1, [sp]
+  45 0008 124B     		ldr	r3, .L4
+  46 000a 1A6B     		ldr	r2, [r3, #48]
+  47 000c 42F00402 		orr	r2, r2, #4
+  48 0010 1A63     		str	r2, [r3, #48]
+  49 0012 1B6B     		ldr	r3, [r3, #48]
+  50 0014 03F00403 		and	r3, r3, #4
+  51 0018 0093     		str	r3, [sp]
+  52 001a 009B     		ldr	r3, [sp]
+  53              	.LBE2:
+  19:Src/teamThreads.c ****     //this struct is what is needed by the HAL_GPIO_Init()
+  20:Src/teamThreads.c ****     GPIO_InitTypeDef GPIO_InitDef;
+  21:Src/teamThreads.c ****     GPIO_InitDef.Pin = GPIO_PIN_12 | GPIO_PIN_13;
+  54              		.loc 1 21 0
+  55 001c 4FF44053 		mov	r3, #12288
+  56 0020 0193     		str	r3, [sp, #4]
+  22:Src/teamThreads.c ****     GPIO_InitDef.Mode = GPIO_MODE_OUTPUT_PP;
+  57              		.loc 1 22 0
+  58 0022 0123     		movs	r3, #1
+  59 0024 0293     		str	r3, [sp, #8]
+  23:Src/teamThreads.c ****     GPIO_InitDef.Pull = GPIO_NOPULL;
+  60              		.loc 1 23 0
+  61 0026 0391     		str	r1, [sp, #12]
+  24:Src/teamThreads.c ****     GPIO_InitDef.Speed = GPIO_SPEED_FREQ_HIGH;
+  62              		.loc 1 24 0
+  63 0028 0223     		movs	r3, #2
+  64 002a 0493     		str	r3, [sp, #16]
+  25:Src/teamThreads.c **** 
+  26:Src/teamThreads.c ****     //Initialize your GPIO!
+  27:Src/teamThreads.c ****     HAL_GPIO_Init(GPIOC, &GPIO_InitDef);
+  65              		.loc 1 27 0
+  66 002c 01A9     		add	r1, sp, #4
+  67 002e 0A48     		ldr	r0, .L4+4
+  68              	.LVL1:
+  69 0030 FFF7FEFF 		bl	HAL_GPIO_Init
+  70              	.LVL2:
+  71              	.L2:
+  28:Src/teamThreads.c ****     //**********END SETUP***********************//
+  29:Src/teamThreads.c ****     //this is really void (loop) trust me
+  30:Src/teamThreads.c **** 
+  31:Src/teamThreads.c ****     for( ;; ){
+  32:Src/teamThreads.c ****         //HAL_GPIO should be initialized and this should just work
+  33:Src/teamThreads.c ****         HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12); //This toggles the spcific pin number from high to 
+  72              		.loc 1 33 0 discriminator 1
+  73 0034 094C     		ldr	r4, .L4+8
+  74 0036 4FF48051 		mov	r1, #4096
+  75 003a 2046     		mov	r0, r4
+  76 003c FFF7FEFF 		bl	HAL_GPIO_TogglePin
+  77              	.LVL3:
+  34:Src/teamThreads.c ****         HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
+  78              		.loc 1 34 0 discriminator 1
+  79 0040 4FF40051 		mov	r1, #8192
+  80 0044 2046     		mov	r0, r4
+  81 0046 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 3
+
+
+  82              	.LVL4:
+  35:Src/teamThreads.c ****         HAL_Delay(1000);
+  83              		.loc 1 35 0 discriminator 1
+  84 004a 4FF47A70 		mov	r0, #1000
+  85 004e FFF7FEFF 		bl	HAL_Delay
+  86              	.LVL5:
+  87 0052 EFE7     		b	.L2
+  88              	.L5:
+  89              		.align	2
+  90              	.L4:
+  91 0054 00380240 		.word	1073887232
+  92 0058 00080240 		.word	1073874944
+  93 005c 000C0240 		.word	1073875968
+  94              		.cfi_endproc
+  95              	.LFE129:
+  97              		.text
+  98              	.Letext0:
+  99              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 100              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 101              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 102              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 103              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 104              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 105              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 106              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 107              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 108              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 109              		.file 12 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 110              		.file 13 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 111              		.file 14 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 112              		.file 15 "Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h"
+ 113              		.file 16 "Inc/fatfs.h"
+ 114              		.file 17 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 115              		.file 18 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 116              		.file 19 "Inc/usb_device.h"
+ 117              		.file 20 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 teamThreads.c
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:18     .text.vHeartbeat:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:91     .text.vHeartbeat:0000000000000054 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_Init
+HAL_GPIO_TogglePin
+HAL_Delay

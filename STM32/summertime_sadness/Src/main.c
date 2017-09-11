@@ -165,10 +165,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //create task handleers for different tasks
   xTaskHandle xKillStatusHandle;
-  xTaskHandle xHearbeatStatus;
+  xTaskHandle xHeartbeatStatus;
 
-  //xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
-  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 0, &xKillStatusHandle);
+  xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeatStatus);
+  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 1, &xKillStatusHandle);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -662,6 +662,7 @@ void vKillStatus(void *pvParameters ){
   for ( ;; ){
     i = i+1;
   }
+  vTaskDelete(NULL);
 }
 /* USER CODE END 4 */
 
