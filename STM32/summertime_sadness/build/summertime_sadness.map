@@ -2017,7 +2017,7 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000188                . = ALIGN (0x4)
 
-.text           0x0000000008000190     0x658c
+.text           0x0000000008000190     0x657c
                 0x0000000008000190                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000190       0x6c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
@@ -2770,332 +2770,333 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
  .text.SystemClock_Config
                 0x00000000080055d0       0xcc build/main.o
                 0x00000000080055d0                SystemClock_Config
- .text.main     0x000000000800569c       0x98 build/main.o
+ .text.main     0x000000000800569c       0x84 build/main.o
                 0x000000000800569c                main
  .text.HAL_WWDG_Init
-                0x0000000008005734       0x2a build/stm32f4xx_hal_wwdg.o
-                0x0000000008005734                HAL_WWDG_Init
+                0x0000000008005720       0x2a build/stm32f4xx_hal_wwdg.o
+                0x0000000008005720                HAL_WWDG_Init
  .text.vListInitialise
-                0x000000000800575e       0x16 build/list.o
-                0x000000000800575e                vListInitialise
+                0x000000000800574a       0x16 build/list.o
+                0x000000000800574a                vListInitialise
  .text.vListInitialiseItem
-                0x0000000008005774        0x6 build/list.o
-                0x0000000008005774                vListInitialiseItem
+                0x0000000008005760        0x6 build/list.o
+                0x0000000008005760                vListInitialiseItem
  .text.vListInsertEnd
-                0x000000000800577a       0x18 build/list.o
-                0x000000000800577a                vListInsertEnd
+                0x0000000008005766       0x18 build/list.o
+                0x0000000008005766                vListInsertEnd
  .text.vListInsert
-                0x0000000008005792       0x34 build/list.o
-                0x0000000008005792                vListInsert
+                0x000000000800577e       0x34 build/list.o
+                0x000000000800577e                vListInsert
  .text.uxListRemove
-                0x00000000080057c6       0x26 build/list.o
-                0x00000000080057c6                uxListRemove
+                0x00000000080057b2       0x26 build/list.o
+                0x00000000080057b2                uxListRemove
  .text.prvTaskExitError
-                0x00000000080057ec       0x34 build/port.o
+                0x00000000080057d8       0x34 build/port.o
  .text.prvPortStartFirstTask
-                0x0000000008005820       0x20 build/port.o
+                0x000000000800580c       0x20 build/port.o
  .text.vPortEnableVFP
-                0x0000000008005840       0x14 build/port.o
+                0x000000000800582c       0x14 build/port.o
  .text.pxPortInitialiseStack
-                0x0000000008005854       0x2c build/port.o
-                0x0000000008005854                pxPortInitialiseStack
+                0x0000000008005840       0x2c build/port.o
+                0x0000000008005840                pxPortInitialiseStack
+ *fill*         0x000000000800586c        0x4 
  .text.SVC_Handler
-                0x0000000008005880       0x24 build/port.o
-                0x0000000008005880                SVC_Handler
+                0x0000000008005870       0x24 build/port.o
+                0x0000000008005870                SVC_Handler
  .text.vPortEnterCritical
-                0x00000000080058a4       0x44 build/port.o
-                0x00000000080058a4                vPortEnterCritical
+                0x0000000008005894       0x44 build/port.o
+                0x0000000008005894                vPortEnterCritical
  .text.vPortExitCritical
-                0x00000000080058e8       0x2c build/port.o
-                0x00000000080058e8                vPortExitCritical
- *fill*         0x0000000008005914        0xc 
+                0x00000000080058d8       0x2c build/port.o
+                0x00000000080058d8                vPortExitCritical
+ *fill*         0x0000000008005904        0xc 
  .text.PendSV_Handler
-                0x0000000008005920       0x64 build/port.o
-                0x0000000008005920                PendSV_Handler
+                0x0000000008005910       0x64 build/port.o
+                0x0000000008005910                PendSV_Handler
  .text.xPortSysTickHandler
-                0x0000000008005984       0x2c build/port.o
-                0x0000000008005984                xPortSysTickHandler
+                0x0000000008005974       0x2c build/port.o
+                0x0000000008005974                xPortSysTickHandler
  .text.vPortSetupTimerInterrupt
-                0x00000000080059b0       0x2c build/port.o
-                0x00000000080059b0                vPortSetupTimerInterrupt
+                0x00000000080059a0       0x2c build/port.o
+                0x00000000080059a0                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x00000000080059dc       0xec build/port.o
-                0x00000000080059dc                xPortStartScheduler
+                0x00000000080059cc       0xec build/port.o
+                0x00000000080059cc                xPortStartScheduler
  .text.prvHeapInit
-                0x0000000008005ac8       0x64 build/heap_4.o
+                0x0000000008005ab8       0x64 build/heap_4.o
  .text.prvInsertBlockIntoFreeList
-                0x0000000008005b2c       0x58 build/heap_4.o
+                0x0000000008005b1c       0x58 build/heap_4.o
  .text.pvPortMalloc
-                0x0000000008005b84      0x108 build/heap_4.o
-                0x0000000008005b84                pvPortMalloc
+                0x0000000008005b74      0x108 build/heap_4.o
+                0x0000000008005b74                pvPortMalloc
  .text.vPortFree
-                0x0000000008005c8c       0x70 build/heap_4.o
-                0x0000000008005c8c                vPortFree
+                0x0000000008005c7c       0x70 build/heap_4.o
+                0x0000000008005c7c                vPortFree
  .text.makeFreeRtosPriority
-                0x0000000008005cfc        0xc build/cmsis_os.o
+                0x0000000008005cec        0xc build/cmsis_os.o
  .text.osKernelStart
-                0x0000000008005d08        0xa build/cmsis_os.o
-                0x0000000008005d08                osKernelStart
+                0x0000000008005cf8        0xa build/cmsis_os.o
+                0x0000000008005cf8                osKernelStart
  .text.osThreadCreate
-                0x0000000008005d12       0x34 build/cmsis_os.o
-                0x0000000008005d12                osThreadCreate
- .text.osDelay  0x0000000008005d46       0x12 build/cmsis_os.o
-                0x0000000008005d46                osDelay
+                0x0000000008005d02       0x34 build/cmsis_os.o
+                0x0000000008005d02                osThreadCreate
+ .text.osDelay  0x0000000008005d36       0x12 build/cmsis_os.o
+                0x0000000008005d36                osDelay
  .text.osSystickHandler
-                0x0000000008005d58       0x10 build/cmsis_os.o
-                0x0000000008005d58                osSystickHandler
+                0x0000000008005d48       0x10 build/cmsis_os.o
+                0x0000000008005d48                osSystickHandler
  .text.HAL_RNG_Init
-                0x0000000008005d68       0x3c build/stm32f4xx_hal_rng.o
-                0x0000000008005d68                HAL_RNG_Init
+                0x0000000008005d58       0x3c build/stm32f4xx_hal_rng.o
+                0x0000000008005d58                HAL_RNG_Init
  .text.prvResetNextTaskUnblockTime
-                0x0000000008005da4       0x34 build/tasks.o
+                0x0000000008005d94       0x34 build/tasks.o
  .text.prvDeleteTCB
-                0x0000000008005dd8       0x12 build/tasks.o
+                0x0000000008005dc8       0x12 build/tasks.o
  .text.prvInitialiseNewTask
-                0x0000000008005dea       0x80 build/tasks.o
- *fill*         0x0000000008005e6a        0x2 
+                0x0000000008005dda       0x80 build/tasks.o
+ *fill*         0x0000000008005e5a        0x2 
  .text.prvInitialiseTaskLists
-                0x0000000008005e6c       0x68 build/tasks.o
+                0x0000000008005e5c       0x68 build/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x0000000008005ed4       0xa8 build/tasks.o
+                0x0000000008005ec4       0xa8 build/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x0000000008005f7c       0x98 build/tasks.o
+                0x0000000008005f6c       0x98 build/tasks.o
  .text.xTaskCreate
-                0x0000000008006014       0x62 build/tasks.o
-                0x0000000008006014                xTaskCreate
- *fill*         0x0000000008006076        0x2 
+                0x0000000008006004       0x62 build/tasks.o
+                0x0000000008006004                xTaskCreate
+ *fill*         0x0000000008006066        0x2 
  .text.vTaskStartScheduler
-                0x0000000008006078       0x7c build/tasks.o
-                0x0000000008006078                vTaskStartScheduler
+                0x0000000008006068       0x7c build/tasks.o
+                0x0000000008006068                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x00000000080060f4       0x10 build/tasks.o
-                0x00000000080060f4                vTaskSuspendAll
+                0x00000000080060e4       0x10 build/tasks.o
+                0x00000000080060e4                vTaskSuspendAll
  .text.xTaskIncrementTick
-                0x0000000008006104      0x120 build/tasks.o
-                0x0000000008006104                xTaskIncrementTick
+                0x00000000080060f4      0x120 build/tasks.o
+                0x00000000080060f4                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x0000000008006224       0xfc build/tasks.o
-                0x0000000008006224                xTaskResumeAll
+                0x0000000008006214       0xfc build/tasks.o
+                0x0000000008006214                xTaskResumeAll
  .text.vTaskDelay
-                0x0000000008006320       0x50 build/tasks.o
-                0x0000000008006320                vTaskDelay
+                0x0000000008006310       0x50 build/tasks.o
+                0x0000000008006310                vTaskDelay
  .text.prvCheckTasksWaitingTermination
-                0x0000000008006370       0x5c build/tasks.o
+                0x0000000008006360       0x5c build/tasks.o
  .text.prvIdleTask
-                0x00000000080063cc       0x28 build/tasks.o
+                0x00000000080063bc       0x28 build/tasks.o
  .text.vTaskSwitchContext
-                0x00000000080063f4       0x9c build/tasks.o
-                0x00000000080063f4                vTaskSwitchContext
+                0x00000000080063e4       0x9c build/tasks.o
+                0x00000000080063e4                vTaskSwitchContext
  .text.xTaskGetSchedulerState
-                0x0000000008006490       0x20 build/tasks.o
-                0x0000000008006490                xTaskGetSchedulerState
+                0x0000000008006480       0x20 build/tasks.o
+                0x0000000008006480                xTaskGetSchedulerState
  .text.Reset_Handler
-                0x00000000080064b0       0x50 build/startup_stm32f405xx.o
-                0x00000000080064b0                Reset_Handler
+                0x00000000080064a0       0x50 build/startup_stm32f405xx.o
+                0x00000000080064a0                Reset_Handler
  .text.Default_Handler
-                0x0000000008006500        0x2 build/startup_stm32f405xx.o
-                0x0000000008006500                DMA1_Stream3_IRQHandler
-                0x0000000008006500                HASH_RNG_IRQHandler
-                0x0000000008006500                EXTI2_IRQHandler
-                0x0000000008006500                TIM8_CC_IRQHandler
-                0x0000000008006500                TIM1_CC_IRQHandler
-                0x0000000008006500                DMA2_Stream5_IRQHandler
-                0x0000000008006500                DMA1_Stream5_IRQHandler
-                0x0000000008006500                PVD_IRQHandler
-                0x0000000008006500                SDIO_IRQHandler
-                0x0000000008006500                TAMP_STAMP_IRQHandler
-                0x0000000008006500                CAN2_RX1_IRQHandler
-                0x0000000008006500                EXTI3_IRQHandler
-                0x0000000008006500                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0000000008006500                TIM8_UP_TIM13_IRQHandler
-                0x0000000008006500                I2C3_ER_IRQHandler
-                0x0000000008006500                EXTI0_IRQHandler
-                0x0000000008006500                I2C2_EV_IRQHandler
-                0x0000000008006500                DMA1_Stream2_IRQHandler
-                0x0000000008006500                CAN1_RX0_IRQHandler
-                0x0000000008006500                FPU_IRQHandler
-                0x0000000008006500                OTG_HS_WKUP_IRQHandler
-                0x0000000008006500                CAN2_SCE_IRQHandler
-                0x0000000008006500                DMA2_Stream2_IRQHandler
-                0x0000000008006500                SPI1_IRQHandler
-                0x0000000008006500                TIM6_DAC_IRQHandler
-                0x0000000008006500                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008006500                CAN2_RX0_IRQHandler
-                0x0000000008006500                DMA2_Stream3_IRQHandler
-                0x0000000008006500                USART6_IRQHandler
-                0x0000000008006500                USART3_IRQHandler
-                0x0000000008006500                CAN1_RX1_IRQHandler
-                0x0000000008006500                UART5_IRQHandler
-                0x0000000008006500                DMA2_Stream0_IRQHandler
-                0x0000000008006500                TIM4_IRQHandler
-                0x0000000008006500                I2C1_EV_IRQHandler
-                0x0000000008006500                DMA1_Stream6_IRQHandler
-                0x0000000008006500                DMA1_Stream1_IRQHandler
-                0x0000000008006500                UART4_IRQHandler
-                0x0000000008006500                TIM3_IRQHandler
-                0x0000000008006500                RCC_IRQHandler
-                0x0000000008006500                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008006500                Default_Handler
-                0x0000000008006500                EXTI15_10_IRQHandler
-                0x0000000008006500                ADC_IRQHandler
-                0x0000000008006500                DMA1_Stream7_IRQHandler
-                0x0000000008006500                TIM7_IRQHandler
-                0x0000000008006500                CAN2_TX_IRQHandler
-                0x0000000008006500                TIM5_IRQHandler
-                0x0000000008006500                DMA2_Stream7_IRQHandler
-                0x0000000008006500                I2C3_EV_IRQHandler
-                0x0000000008006500                EXTI9_5_IRQHandler
-                0x0000000008006500                RTC_WKUP_IRQHandler
-                0x0000000008006500                SPI2_IRQHandler
-                0x0000000008006500                OTG_HS_EP1_IN_IRQHandler
-                0x0000000008006500                DMA1_Stream0_IRQHandler
-                0x0000000008006500                CAN1_TX_IRQHandler
-                0x0000000008006500                EXTI4_IRQHandler
-                0x0000000008006500                FSMC_IRQHandler
-                0x0000000008006500                OTG_HS_EP1_OUT_IRQHandler
-                0x0000000008006500                WWDG_IRQHandler
-                0x0000000008006500                TIM2_IRQHandler
-                0x0000000008006500                OTG_FS_WKUP_IRQHandler
-                0x0000000008006500                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008006500                EXTI1_IRQHandler
-                0x0000000008006500                USART2_IRQHandler
-                0x0000000008006500                I2C2_ER_IRQHandler
-                0x0000000008006500                DMA2_Stream1_IRQHandler
-                0x0000000008006500                CAN1_SCE_IRQHandler
-                0x0000000008006500                FLASH_IRQHandler
-                0x0000000008006500                DMA2_Stream4_IRQHandler
-                0x0000000008006500                USART1_IRQHandler
-                0x0000000008006500                OTG_FS_IRQHandler
-                0x0000000008006500                SPI3_IRQHandler
-                0x0000000008006500                DMA1_Stream4_IRQHandler
-                0x0000000008006500                I2C1_ER_IRQHandler
-                0x0000000008006500                DMA2_Stream6_IRQHandler
-                0x0000000008006500                RTC_Alarm_IRQHandler
- *fill*         0x0000000008006502        0x2 
+                0x00000000080064f0        0x2 build/startup_stm32f405xx.o
+                0x00000000080064f0                DMA1_Stream3_IRQHandler
+                0x00000000080064f0                HASH_RNG_IRQHandler
+                0x00000000080064f0                EXTI2_IRQHandler
+                0x00000000080064f0                TIM8_CC_IRQHandler
+                0x00000000080064f0                TIM1_CC_IRQHandler
+                0x00000000080064f0                DMA2_Stream5_IRQHandler
+                0x00000000080064f0                DMA1_Stream5_IRQHandler
+                0x00000000080064f0                PVD_IRQHandler
+                0x00000000080064f0                SDIO_IRQHandler
+                0x00000000080064f0                TAMP_STAMP_IRQHandler
+                0x00000000080064f0                CAN2_RX1_IRQHandler
+                0x00000000080064f0                EXTI3_IRQHandler
+                0x00000000080064f0                TIM8_TRG_COM_TIM14_IRQHandler
+                0x00000000080064f0                TIM8_UP_TIM13_IRQHandler
+                0x00000000080064f0                I2C3_ER_IRQHandler
+                0x00000000080064f0                EXTI0_IRQHandler
+                0x00000000080064f0                I2C2_EV_IRQHandler
+                0x00000000080064f0                DMA1_Stream2_IRQHandler
+                0x00000000080064f0                CAN1_RX0_IRQHandler
+                0x00000000080064f0                FPU_IRQHandler
+                0x00000000080064f0                OTG_HS_WKUP_IRQHandler
+                0x00000000080064f0                CAN2_SCE_IRQHandler
+                0x00000000080064f0                DMA2_Stream2_IRQHandler
+                0x00000000080064f0                SPI1_IRQHandler
+                0x00000000080064f0                TIM6_DAC_IRQHandler
+                0x00000000080064f0                TIM1_BRK_TIM9_IRQHandler
+                0x00000000080064f0                CAN2_RX0_IRQHandler
+                0x00000000080064f0                DMA2_Stream3_IRQHandler
+                0x00000000080064f0                USART6_IRQHandler
+                0x00000000080064f0                USART3_IRQHandler
+                0x00000000080064f0                CAN1_RX1_IRQHandler
+                0x00000000080064f0                UART5_IRQHandler
+                0x00000000080064f0                DMA2_Stream0_IRQHandler
+                0x00000000080064f0                TIM4_IRQHandler
+                0x00000000080064f0                I2C1_EV_IRQHandler
+                0x00000000080064f0                DMA1_Stream6_IRQHandler
+                0x00000000080064f0                DMA1_Stream1_IRQHandler
+                0x00000000080064f0                UART4_IRQHandler
+                0x00000000080064f0                TIM3_IRQHandler
+                0x00000000080064f0                RCC_IRQHandler
+                0x00000000080064f0                TIM8_BRK_TIM12_IRQHandler
+                0x00000000080064f0                Default_Handler
+                0x00000000080064f0                EXTI15_10_IRQHandler
+                0x00000000080064f0                ADC_IRQHandler
+                0x00000000080064f0                DMA1_Stream7_IRQHandler
+                0x00000000080064f0                TIM7_IRQHandler
+                0x00000000080064f0                CAN2_TX_IRQHandler
+                0x00000000080064f0                TIM5_IRQHandler
+                0x00000000080064f0                DMA2_Stream7_IRQHandler
+                0x00000000080064f0                I2C3_EV_IRQHandler
+                0x00000000080064f0                EXTI9_5_IRQHandler
+                0x00000000080064f0                RTC_WKUP_IRQHandler
+                0x00000000080064f0                SPI2_IRQHandler
+                0x00000000080064f0                OTG_HS_EP1_IN_IRQHandler
+                0x00000000080064f0                DMA1_Stream0_IRQHandler
+                0x00000000080064f0                CAN1_TX_IRQHandler
+                0x00000000080064f0                EXTI4_IRQHandler
+                0x00000000080064f0                FSMC_IRQHandler
+                0x00000000080064f0                OTG_HS_EP1_OUT_IRQHandler
+                0x00000000080064f0                WWDG_IRQHandler
+                0x00000000080064f0                TIM2_IRQHandler
+                0x00000000080064f0                OTG_FS_WKUP_IRQHandler
+                0x00000000080064f0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x00000000080064f0                EXTI1_IRQHandler
+                0x00000000080064f0                USART2_IRQHandler
+                0x00000000080064f0                I2C2_ER_IRQHandler
+                0x00000000080064f0                DMA2_Stream1_IRQHandler
+                0x00000000080064f0                CAN1_SCE_IRQHandler
+                0x00000000080064f0                FLASH_IRQHandler
+                0x00000000080064f0                DMA2_Stream4_IRQHandler
+                0x00000000080064f0                USART1_IRQHandler
+                0x00000000080064f0                OTG_FS_IRQHandler
+                0x00000000080064f0                SPI3_IRQHandler
+                0x00000000080064f0                DMA1_Stream4_IRQHandler
+                0x00000000080064f0                I2C1_ER_IRQHandler
+                0x00000000080064f0                DMA2_Stream6_IRQHandler
+                0x00000000080064f0                RTC_Alarm_IRQHandler
+ *fill*         0x00000000080064f2        0x2 
  .text.__libc_init_array
-                0x0000000008006504       0x48 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                0x0000000008006504                __libc_init_array
- .text.malloc   0x000000000800654c       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-                0x000000000800654c                malloc
- .text.free     0x000000000800655c       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-                0x000000000800655c                free
- .text._free_r  0x000000000800656c       0x9c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-                0x000000000800656c                _free_r
+                0x00000000080064f4       0x48 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x00000000080064f4                __libc_init_array
+ .text.malloc   0x000000000800653c       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000800653c                malloc
+ .text.free     0x000000000800654c       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000800654c                free
+ .text._free_r  0x000000000800655c       0x9c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+                0x000000000800655c                _free_r
  .text._malloc_r
-                0x0000000008006608       0xbc /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008006608                _malloc_r
- .text._sbrk_r  0x00000000080066c4       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-                0x00000000080066c4                _sbrk_r
+                0x00000000080065f8       0xbc /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000080065f8                _malloc_r
+ .text._sbrk_r  0x00000000080066b4       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+                0x00000000080066b4                _sbrk_r
  .text.__malloc_lock
-                0x00000000080066e4        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                0x00000000080066e4                __malloc_lock
+                0x00000000080066d4        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                0x00000000080066d4                __malloc_lock
  .text.__malloc_unlock
-                0x00000000080066e6        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                0x00000000080066e6                __malloc_unlock
- .text._sbrk    0x00000000080066e8       0x1c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
-                0x00000000080066e8                _sbrk
+                0x00000000080066d6        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                0x00000000080066d6                __malloc_unlock
+ .text._sbrk    0x00000000080066d8       0x1c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                0x00000000080066d8                _sbrk
  *(.glue_7)
- .glue_7        0x0000000008006704        0x0 linker stubs
+ .glue_7        0x00000000080066f4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008006704        0x0 linker stubs
+ .glue_7t       0x00000000080066f4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008006704        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x00000000080066f4        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x0000000008006704        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0000000008006704                _init
- .init          0x0000000008006708        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x00000000080066f4        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x00000000080066f4                _init
+ .init          0x00000000080066f8        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008006710        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0000000008006710                _fini
- .fini          0x0000000008006714        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x000000000800671c                . = ALIGN (0x4)
-                0x000000000800671c                _etext = .
+ .fini          0x0000000008006700        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000008006700                _fini
+ .fini          0x0000000008006704        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x000000000800670c                . = ALIGN (0x4)
+                0x000000000800670c                _etext = .
 
-.vfp11_veneer   0x000000000800671c        0x0
- .vfp11_veneer  0x000000000800671c        0x0 linker stubs
+.vfp11_veneer   0x000000000800670c        0x0
+ .vfp11_veneer  0x000000000800670c        0x0 linker stubs
 
-.v4_bx          0x000000000800671c        0x0
- .v4_bx         0x000000000800671c        0x0 linker stubs
+.v4_bx          0x000000000800670c        0x0
+ .v4_bx         0x000000000800670c        0x0 linker stubs
 
-.iplt           0x000000000800671c        0x0
- .iplt          0x000000000800671c        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x000000000800670c        0x0
+ .iplt          0x000000000800670c        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x000000000800671c       0xe0
-                0x000000000800671c                . = ALIGN (0x4)
+.rodata         0x000000000800670c       0xd4
+                0x000000000800670c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800671c       0x14 build/main.o
+ .rodata        0x000000000800670c       0x14 build/main.o
  *(.rodata*)
  .rodata.SD_Driver
-                0x0000000008006730       0x14 build/sd_diskio.o
-                0x0000000008006730                SD_Driver
+                0x0000000008006720       0x14 build/sd_diskio.o
+                0x0000000008006720                SD_Driver
  .rodata.AHBPrescTable
-                0x0000000008006744       0x10 build/system_stm32f4xx.o
-                0x0000000008006744                AHBPrescTable
+                0x0000000008006734       0x10 build/system_stm32f4xx.o
+                0x0000000008006734                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008006754        0x8 build/system_stm32f4xx.o
-                0x0000000008006754                APBPrescTable
+                0x0000000008006744        0x8 build/system_stm32f4xx.o
+                0x0000000008006744                APBPrescTable
  .rodata.USBD_LL_Init.str1.4
-                0x000000000800675c       0x10 build/usbd_conf.o
+                0x000000000800674c       0x10 build/usbd_conf.o
  .rodata.USBD_HS_ConfigStrDescriptor.str1.4
-                0x000000000800676c        0xb build/usbd_desc.o
- *fill*         0x0000000008006777        0x1 
+                0x000000000800675c        0xb build/usbd_desc.o
+ *fill*         0x0000000008006767        0x1 
  .rodata.USBD_HS_InterfaceStrDescriptor.str1.4
-                0x0000000008006778        0xe build/usbd_desc.o
- *fill*         0x0000000008006786        0x2 
+                0x0000000008006768        0xe build/usbd_desc.o
+ *fill*         0x0000000008006776        0x2 
  .rodata.USBD_HS_ManufacturerStrDescriptor.str1.4
-                0x0000000008006788       0x13 build/usbd_desc.o
- *fill*         0x000000000800679b        0x1 
+                0x0000000008006778       0x13 build/usbd_desc.o
+ *fill*         0x000000000800678b        0x1 
  .rodata.USBD_HS_ProductStrDescriptor.str1.4
-                0x000000000800679c       0x16 build/usbd_desc.o
- *fill*         0x00000000080067b2        0x2 
+                0x000000000800678c       0x16 build/usbd_desc.o
+ *fill*         0x00000000080067a2        0x2 
  .rodata.USBD_HS_SerialStrDescriptor.str1.4
-                0x00000000080067b4        0xd build/usbd_desc.o
- *fill*         0x00000000080067c1        0x3 
+                0x00000000080067a4        0xd build/usbd_desc.o
+ *fill*         0x00000000080067b1        0x3 
  .rodata.MX_TIM5_Init.str1.4
-                0x00000000080067c4        0xb build/main.o
- *fill*         0x00000000080067cf        0x1 
+                0x00000000080067b4        0xb build/main.o
+ *fill*         0x00000000080067bf        0x1 
  .rodata.main.str1.4
-                0x00000000080067d0       0x17 build/main.o
- *fill*         0x00000000080067e7        0x1 
+                0x00000000080067c0        0xb build/main.o
+ *fill*         0x00000000080067cb        0x1 
  .rodata.str1.4
-                0x00000000080067e8        0xc build/main.o
+                0x00000000080067cc        0xc build/main.o
  .rodata.vTaskStartScheduler.str1.4
-                0x00000000080067f4        0x8 build/tasks.o
+                0x00000000080067d8        0x8 build/tasks.o
                                           0x5 (size before relaxing)
-                0x00000000080067fc                . = ALIGN (0x4)
+                0x00000000080067e0                . = ALIGN (0x4)
 
-.rel.dyn        0x00000000080067fc        0x0
- .rel.iplt      0x00000000080067fc        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x00000000080067e0        0x0
+ .rel.iplt      0x00000000080067e0        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00000000080067fc        0x0
-                0x00000000080067fc                __exidx_start = .
+.ARM            0x00000000080067e0        0x0
+                0x00000000080067e0                __exidx_start = .
  *(.ARM.exidx*)
-                0x00000000080067fc                __exidx_end = .
+                0x00000000080067e0                __exidx_end = .
 
-.preinit_array  0x00000000080067fc        0x0
-                0x00000000080067fc                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00000000080067e0        0x0
+                0x00000000080067e0                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x00000000080067fc                PROVIDE (__preinit_array_end, .)
+                0x00000000080067e0                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00000000080067fc        0x4
-                0x00000000080067fc                PROVIDE (__init_array_start, .)
+.init_array     0x00000000080067e0        0x4
+                0x00000000080067e0                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x00000000080067fc        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x0000000008006800                PROVIDE (__init_array_end, .)
+ .init_array    0x00000000080067e0        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x00000000080067e4                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008006800        0x4
+.fini_array     0x00000000080067e4        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008006800        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x00000000080067e4        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008006804                _sidata = LOADADDR (.data)
+                0x00000000080067e8                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x1c4 load address 0x0000000008006804
+.data           0x0000000020000000      0x1c4 load address 0x00000000080067e8
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3144,15 +3145,15 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000020000164       0x60 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
                 0x00000000200001c4                . = ALIGN (0x4)
                 0x00000000200001c4                _edata = .
-                0x00000000080069c8                _siccmram = LOADADDR (.ccmram)
+                0x00000000080069ac                _siccmram = LOADADDR (.ccmram)
 
-.jcr            0x00000000200001c4        0x0 load address 0x00000000080069c8
+.jcr            0x00000000200001c4        0x0 load address 0x00000000080069ac
  .jcr           0x00000000200001c4        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.igot.plt       0x00000000200001c4        0x0 load address 0x00000000080069c8
+.igot.plt       0x00000000200001c4        0x0 load address 0x00000000080069ac
  .igot.plt      0x00000000200001c4        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.ccmram         0x0000000010000000        0x0 load address 0x00000000080069c8
+.ccmram         0x0000000010000000        0x0 load address 0x00000000080069ac
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sccmram = .
  *(.ccmram)
@@ -3401,7 +3402,7 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000000000afa       0x22 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(build/summertime_sadness.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x3d297
+.debug_info     0x0000000000000000    0x3d275
  .debug_info    0x0000000000000000     0x1908 build/stm32f4xx_hal_cortex.o
  .debug_info    0x0000000000001908     0x1242 build/usbd_cdc_if.o
  .debug_info    0x0000000000002b4a     0x1d72 build/stm32f4xx_hal_tim_ex.o
@@ -3433,15 +3434,15 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_info    0x000000000002c819      0xe80 build/usbd_desc.o
  .debug_info    0x000000000002d699     0x16bd build/stm32f4xx_hal_rcc.o
  .debug_info    0x000000000002ed56     0x1f07 build/stm32f4xx_hal_pcd.o
- .debug_info    0x0000000000030c5d     0x3b62 build/main.o
- .debug_info    0x00000000000347bf      0xc2e build/stm32f4xx_hal_wwdg.o
- .debug_info    0x00000000000353ed      0xbe3 build/list.o
- .debug_info    0x0000000000035fd0      0x56e build/port.o
- .debug_info    0x000000000003653e      0xd82 build/heap_4.o
- .debug_info    0x00000000000372c0     0x258a build/cmsis_os.o
- .debug_info    0x000000000003984a      0xe8c build/stm32f4xx_hal_rng.o
- .debug_info    0x000000000003a6d6     0x2b39 build/tasks.o
- .debug_info    0x000000000003d20f       0x88 build/startup_stm32f405xx.o
+ .debug_info    0x0000000000030c5d     0x3b40 build/main.o
+ .debug_info    0x000000000003479d      0xc2e build/stm32f4xx_hal_wwdg.o
+ .debug_info    0x00000000000353cb      0xbe3 build/list.o
+ .debug_info    0x0000000000035fae      0x56e build/port.o
+ .debug_info    0x000000000003651c      0xd82 build/heap_4.o
+ .debug_info    0x000000000003729e     0x258a build/cmsis_os.o
+ .debug_info    0x0000000000039828      0xe8c build/stm32f4xx_hal_rng.o
+ .debug_info    0x000000000003a6b4     0x2b39 build/tasks.o
+ .debug_info    0x000000000003d1ed       0x88 build/startup_stm32f405xx.o
 
 .debug_abbrev   0x0000000000000000     0x6d61
  .debug_abbrev  0x0000000000000000      0x3da build/stm32f4xx_hal_cortex.o
@@ -3650,7 +3651,7 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_ranges  0x0000000000001990      0x228 build/tasks.o
  .debug_ranges  0x0000000000001bb8       0x20 build/startup_stm32f405xx.o
 
-.debug_line     0x0000000000000000     0xf55c
+.debug_line     0x0000000000000000     0xf55b
  .debug_line    0x0000000000000000      0x4f8 build/stm32f4xx_hal_cortex.o
  .debug_line    0x00000000000004f8      0x3d3 build/usbd_cdc_if.o
  .debug_line    0x00000000000008cb      0x8ce build/stm32f4xx_hal_tim_ex.o
@@ -3682,17 +3683,17 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_line    0x000000000000b225      0x3c9 build/usbd_desc.o
  .debug_line    0x000000000000b5ee      0x64a build/stm32f4xx_hal_rcc.o
  .debug_line    0x000000000000bc38      0x80e build/stm32f4xx_hal_pcd.o
- .debug_line    0x000000000000c446      0x822 build/main.o
- .debug_line    0x000000000000cc68      0x351 build/stm32f4xx_hal_wwdg.o
- .debug_line    0x000000000000cfb9      0x3b8 build/list.o
- .debug_line    0x000000000000d371      0x35b build/port.o
- .debug_line    0x000000000000d6cc      0x45f build/heap_4.o
- .debug_line    0x000000000000db2b      0x956 build/cmsis_os.o
- .debug_line    0x000000000000e481      0x478 build/stm32f4xx_hal_rng.o
- .debug_line    0x000000000000e8f9      0xbef build/tasks.o
- .debug_line    0x000000000000f4e8       0x74 build/startup_stm32f405xx.o
+ .debug_line    0x000000000000c446      0x821 build/main.o
+ .debug_line    0x000000000000cc67      0x351 build/stm32f4xx_hal_wwdg.o
+ .debug_line    0x000000000000cfb8      0x3b8 build/list.o
+ .debug_line    0x000000000000d370      0x35b build/port.o
+ .debug_line    0x000000000000d6cb      0x45f build/heap_4.o
+ .debug_line    0x000000000000db2a      0x956 build/cmsis_os.o
+ .debug_line    0x000000000000e480      0x478 build/stm32f4xx_hal_rng.o
+ .debug_line    0x000000000000e8f8      0xbef build/tasks.o
+ .debug_line    0x000000000000f4e7       0x74 build/startup_stm32f405xx.o
 
-.debug_str      0x0000000000000000     0x8ab4
+.debug_str      0x0000000000000000     0x8ac6
  .debug_str     0x0000000000000000      0xe86 build/stm32f4xx_hal_cortex.o
                                        0x103f (size before relaxing)
  .debug_str     0x0000000000000e86      0x4aa build/usbd_cdc_if.o
@@ -3755,21 +3756,21 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
                                         0xaeb (size before relaxing)
  .debug_str     0x0000000000006e17       0xec build/stm32f4xx_hal_pcd.o
                                        0x1039 (size before relaxing)
- .debug_str     0x0000000000006f03      0x2aa build/main.o
-                                       0x2486 (size before relaxing)
- .debug_str     0x00000000000071ad       0x78 build/stm32f4xx_hal_wwdg.o
+ .debug_str     0x0000000000006f03      0x2bc build/main.o
+                                       0x2498 (size before relaxing)
+ .debug_str     0x00000000000071bf       0x78 build/stm32f4xx_hal_wwdg.o
                                         0x72d (size before relaxing)
- .debug_str     0x0000000000007225      0x163 build/list.o
+ .debug_str     0x0000000000007237      0x163 build/list.o
                                         0x71d (size before relaxing)
- .debug_str     0x0000000000007388      0x282 build/port.o
+ .debug_str     0x000000000000739a      0x282 build/port.o
                                         0x48c (size before relaxing)
- .debug_str     0x000000000000760a      0x21b build/heap_4.o
+ .debug_str     0x000000000000761c      0x21b build/heap_4.o
                                         0x806 (size before relaxing)
- .debug_str     0x0000000000007825      0x93d build/cmsis_os.o
+ .debug_str     0x0000000000007837      0x93d build/cmsis_os.o
                                        0x11d0 (size before relaxing)
- .debug_str     0x0000000000008162      0x131 build/stm32f4xx_hal_rng.o
+ .debug_str     0x0000000000008174      0x131 build/stm32f4xx_hal_rng.o
                                         0x893 (size before relaxing)
- .debug_str     0x0000000000008293      0x821 build/tasks.o
+ .debug_str     0x00000000000082a5      0x821 build/tasks.o
                                        0x1218 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
@@ -5072,7 +5073,6 @@ uxTaskResetEventItemValue                         build/tasks.o
 vEventGroupClearBitsCallback                      build/event_groups.o
 vEventGroupDelete                                 build/event_groups.o
 vEventGroupSetBitsCallback                        build/event_groups.o
-vHeartbeat                                        build/main.o
 vKillStatus                                       build/main.o
 vListInitialise                                   build/list.o
                                                   build/queue.o
