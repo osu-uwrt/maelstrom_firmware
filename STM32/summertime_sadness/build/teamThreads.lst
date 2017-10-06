@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 1
   41              	.LBB2:
   16:Src/teamThreads.c ****     //it's an arduino, setup then loop
   17:Src/teamThreads.c ****     //initialize the GPIO Bus clock should be initialized but re-
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s 			page 2
 
 
   18:Src/teamThreads.c ****     __HAL_RCC_GPIOC_CLK_ENABLE(); //we are using bus C for this
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 1
   79 0040 4FF40051 		mov	r1, #8192
   80 0044 2046     		mov	r0, r4
   81 0046 FFF7FEFF 		bl	HAL_GPIO_TogglePin
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s 			page 3
 
 
   82              	.LVL4:
@@ -136,35 +136,65 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 1
   93 005c 000C0240 		.word	1073875968
   94              		.cfi_endproc
   95              	.LFE129:
-  97              		.text
-  98              	.Letext0:
-  99              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 100              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 101              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
- 102              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
- 103              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
- 104              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 105              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 106              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 107              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
- 108              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
- 109              		.file 12 "Middlewares/Third_Party/FatFs/src/integer.h"
- 110              		.file 13 "Middlewares/Third_Party/FatFs/src/diskio.h"
- 111              		.file 14 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 112              		.file 15 "Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h"
- 113              		.file 16 "Inc/fatfs.h"
- 114              		.file 17 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
- 115              		.file 18 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 116              		.file 19 "Inc/usb_device.h"
- 117              		.file 20 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s 			page 4
+  97              		.section	.text.vKillStatus,"ax",%progbits
+  98              		.align	1
+  99              		.global	vKillStatus
+ 100              		.syntax unified
+ 101              		.thumb
+ 102              		.thumb_func
+ 103              		.fpu fpv4-sp-d16
+ 105              	vKillStatus:
+ 106              	.LFB130:
+  36:Src/teamThreads.c ****     }
+  37:Src/teamThreads.c **** }
+  38:Src/teamThreads.c **** 
+  39:Src/teamThreads.c **** 
+  40:Src/teamThreads.c **** void vKillStatus(void *pvParameters )
+  41:Src/teamThreads.c **** {
+ 107              		.loc 1 41 0
+ 108              		.cfi_startproc
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ 111              		@ link register save eliminated.
+ 112              	.LVL6:
+ 113              	.L7:
+ 114 0000 FEE7     		b	.L7
+ 115              		.cfi_endproc
+ 116              	.LFE130:
+ 118              		.text
+ 119              	.Letext0:
+ 120              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 121              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 122              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 123              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 124              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 125              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 126              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 127              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 128              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 129              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 130              		.file 12 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 131              		.file 13 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 132              		.file 14 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 133              		.file 15 "Middlewares/Third_Party/FatFs/src/drivers/sd_diskio.h"
+ 134              		.file 16 "Inc/fatfs.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s 			page 4
+
+
+ 135              		.file 17 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 136              		.file 18 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 137              		.file 19 "Inc/usb_device.h"
+ 138              		.file 20 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 teamThreads.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:18     .text.vHeartbeat:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccm54oN8.s:91     .text.vHeartbeat:0000000000000054 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s:18     .text.vHeartbeat:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s:91     .text.vHeartbeat:0000000000000054 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s:98     .text.vKillStatus:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMiQJdE.s:105    .text.vKillStatus:0000000000000000 vKillStatus
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

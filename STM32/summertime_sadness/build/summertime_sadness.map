@@ -2737,12 +2737,10 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x00000000080050e0       0x20 build/main.o
  .text.MX_GPIO_Init
                 0x0000000008005100       0x74 build/main.o
- .text.vKillStatus
-                0x0000000008005174        0x2 build/main.o
-                0x0000000008005174                vKillStatus
  .text.StartDefaultTask
-                0x0000000008005176       0x12 build/main.o
-                0x0000000008005176                StartDefaultTask
+                0x0000000008005174       0x12 build/main.o
+                0x0000000008005174                StartDefaultTask
+ *fill*         0x0000000008005186        0x2 
  .text.HAL_TIM_PeriodElapsedCallback
                 0x0000000008005188       0x18 build/main.o
                 0x0000000008005188                HAL_TIM_PeriodElapsedCallback
@@ -2780,34 +2778,37 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
  .text.vHeartbeat
                 0x0000000008005740       0x60 build/teamThreads.o
                 0x0000000008005740                vHeartbeat
+ .text.vKillStatus
+                0x00000000080057a0        0x2 build/teamThreads.o
+                0x00000000080057a0                vKillStatus
  .text.HAL_WWDG_Init
-                0x00000000080057a0       0x2a build/stm32f4xx_hal_wwdg.o
-                0x00000000080057a0                HAL_WWDG_Init
+                0x00000000080057a2       0x2a build/stm32f4xx_hal_wwdg.o
+                0x00000000080057a2                HAL_WWDG_Init
  .text.vListInitialise
-                0x00000000080057ca       0x16 build/list.o
-                0x00000000080057ca                vListInitialise
+                0x00000000080057cc       0x16 build/list.o
+                0x00000000080057cc                vListInitialise
  .text.vListInitialiseItem
-                0x00000000080057e0        0x6 build/list.o
-                0x00000000080057e0                vListInitialiseItem
+                0x00000000080057e2        0x6 build/list.o
+                0x00000000080057e2                vListInitialiseItem
  .text.vListInsertEnd
-                0x00000000080057e6       0x18 build/list.o
-                0x00000000080057e6                vListInsertEnd
+                0x00000000080057e8       0x18 build/list.o
+                0x00000000080057e8                vListInsertEnd
  .text.vListInsert
-                0x00000000080057fe       0x34 build/list.o
-                0x00000000080057fe                vListInsert
+                0x0000000008005800       0x34 build/list.o
+                0x0000000008005800                vListInsert
  .text.uxListRemove
-                0x0000000008005832       0x26 build/list.o
-                0x0000000008005832                uxListRemove
+                0x0000000008005834       0x26 build/list.o
+                0x0000000008005834                uxListRemove
+ *fill*         0x000000000800585a        0x2 
  .text.prvTaskExitError
-                0x0000000008005858       0x34 build/port.o
+                0x000000000800585c       0x34 build/port.o
  .text.prvPortStartFirstTask
-                0x000000000800588c       0x20 build/port.o
+                0x0000000008005890       0x20 build/port.o
  .text.vPortEnableVFP
-                0x00000000080058ac       0x14 build/port.o
+                0x00000000080058b0       0x14 build/port.o
  .text.pxPortInitialiseStack
-                0x00000000080058c0       0x2c build/port.o
-                0x00000000080058c0                pxPortInitialiseStack
- *fill*         0x00000000080058ec        0x4 
+                0x00000000080058c4       0x2c build/port.o
+                0x00000000080058c4                pxPortInitialiseStack
  .text.SVC_Handler
                 0x00000000080058f0       0x24 build/port.o
                 0x00000000080058f0                SVC_Handler
@@ -3412,7 +3413,7 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000000000b33       0x22 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(build/summertime_sadness.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x3e68d
+.debug_info     0x0000000000000000    0x3e681
  .debug_info    0x0000000000000000     0x1908 build/stm32f4xx_hal_cortex.o
  .debug_info    0x0000000000001908     0x1242 build/usbd_cdc_if.o
  .debug_info    0x0000000000002b4a     0x1d72 build/stm32f4xx_hal_tim_ex.o
@@ -3444,18 +3445,18 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_info    0x000000000002c819      0xe80 build/usbd_desc.o
  .debug_info    0x000000000002d699     0x16bd build/stm32f4xx_hal_rcc.o
  .debug_info    0x000000000002ed56     0x1f07 build/stm32f4xx_hal_pcd.o
- .debug_info    0x0000000000030c5d     0x3b7c build/main.o
- .debug_info    0x00000000000347d9     0x13dc build/teamThreads.o
- .debug_info    0x0000000000035bb5      0xc2e build/stm32f4xx_hal_wwdg.o
- .debug_info    0x00000000000367e3      0xbe3 build/list.o
- .debug_info    0x00000000000373c6      0x56e build/port.o
- .debug_info    0x0000000000037934      0xd82 build/heap_4.o
- .debug_info    0x00000000000386b6     0x258a build/cmsis_os.o
- .debug_info    0x000000000003ac40      0xe8c build/stm32f4xx_hal_rng.o
- .debug_info    0x000000000003bacc     0x2b39 build/tasks.o
- .debug_info    0x000000000003e605       0x88 build/startup_stm32f405xx.o
+ .debug_info    0x0000000000030c5d     0x3b40 build/main.o
+ .debug_info    0x000000000003479d     0x140c build/teamThreads.o
+ .debug_info    0x0000000000035ba9      0xc2e build/stm32f4xx_hal_wwdg.o
+ .debug_info    0x00000000000367d7      0xbe3 build/list.o
+ .debug_info    0x00000000000373ba      0x56e build/port.o
+ .debug_info    0x0000000000037928      0xd82 build/heap_4.o
+ .debug_info    0x00000000000386aa     0x258a build/cmsis_os.o
+ .debug_info    0x000000000003ac34      0xe8c build/stm32f4xx_hal_rng.o
+ .debug_info    0x000000000003bac0     0x2b39 build/tasks.o
+ .debug_info    0x000000000003e5f9       0x88 build/startup_stm32f405xx.o
 
-.debug_abbrev   0x0000000000000000     0x6f7b
+.debug_abbrev   0x0000000000000000     0x6fa4
  .debug_abbrev  0x0000000000000000      0x3da build/stm32f4xx_hal_cortex.o
  .debug_abbrev  0x00000000000003da      0x2ba build/usbd_cdc_if.o
  .debug_abbrev  0x0000000000000694      0x2f4 build/stm32f4xx_hal_tim_ex.o
@@ -3487,16 +3488,16 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_abbrev  0x0000000000004c4c      0x270 build/usbd_desc.o
  .debug_abbrev  0x0000000000004ebc      0x388 build/stm32f4xx_hal_rcc.o
  .debug_abbrev  0x0000000000005244      0x34e build/stm32f4xx_hal_pcd.o
- .debug_abbrev  0x0000000000005592      0x335 build/main.o
- .debug_abbrev  0x00000000000058c7      0x21a build/teamThreads.o
- .debug_abbrev  0x0000000000005ae1      0x28c build/stm32f4xx_hal_wwdg.o
- .debug_abbrev  0x0000000000005d6d      0x217 build/list.o
- .debug_abbrev  0x0000000000005f84      0x21f build/port.o
- .debug_abbrev  0x00000000000061a3      0x312 build/heap_4.o
- .debug_abbrev  0x00000000000064b5      0x3cf build/cmsis_os.o
- .debug_abbrev  0x0000000000006884      0x2e7 build/stm32f4xx_hal_rng.o
- .debug_abbrev  0x0000000000006b6b      0x3fe build/tasks.o
- .debug_abbrev  0x0000000000006f69       0x12 build/startup_stm32f405xx.o
+ .debug_abbrev  0x0000000000005592      0x328 build/main.o
+ .debug_abbrev  0x00000000000058ba      0x250 build/teamThreads.o
+ .debug_abbrev  0x0000000000005b0a      0x28c build/stm32f4xx_hal_wwdg.o
+ .debug_abbrev  0x0000000000005d96      0x217 build/list.o
+ .debug_abbrev  0x0000000000005fad      0x21f build/port.o
+ .debug_abbrev  0x00000000000061cc      0x312 build/heap_4.o
+ .debug_abbrev  0x00000000000064de      0x3cf build/cmsis_os.o
+ .debug_abbrev  0x00000000000068ad      0x2e7 build/stm32f4xx_hal_rng.o
+ .debug_abbrev  0x0000000000006b94      0x3fe build/tasks.o
+ .debug_abbrev  0x0000000000006f92       0x12 build/startup_stm32f405xx.o
 
 .debug_loc      0x0000000000000000    0x1a7c4
  .debug_loc     0x0000000000000000      0x65e build/stm32f4xx_hal_cortex.o
@@ -3604,9 +3605,9 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000001600      0x120 build/stm32f4xx_hal_pcd.o
  .debug_aranges
-                0x0000000000001720       0xb0 build/main.o
+                0x0000000000001720       0xa8 build/main.o
  .debug_aranges
-                0x00000000000017d0       0x20 build/teamThreads.o
+                0x00000000000017c8       0x28 build/teamThreads.o
  .debug_aranges
                 0x00000000000017f0       0x40 build/stm32f4xx_hal_wwdg.o
  .debug_aranges
@@ -3656,8 +3657,8 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_ranges  0x00000000000013c8       0x40 build/usbd_desc.o
  .debug_ranges  0x0000000000001408       0x78 build/stm32f4xx_hal_rcc.o
  .debug_ranges  0x0000000000001480      0x110 build/stm32f4xx_hal_pcd.o
- .debug_ranges  0x0000000000001590       0xa0 build/main.o
- .debug_ranges  0x0000000000001630       0x10 build/teamThreads.o
+ .debug_ranges  0x0000000000001590       0x98 build/main.o
+ .debug_ranges  0x0000000000001628       0x18 build/teamThreads.o
  .debug_ranges  0x0000000000001640       0x30 build/stm32f4xx_hal_wwdg.o
  .debug_ranges  0x0000000000001670       0x30 build/list.o
  .debug_ranges  0x00000000000016a0       0x88 build/port.o
@@ -3667,7 +3668,7 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_ranges  0x00000000000019a0      0x228 build/tasks.o
  .debug_ranges  0x0000000000001bc8       0x20 build/startup_stm32f405xx.o
 
-.debug_line     0x0000000000000000     0xf999
+.debug_line     0x0000000000000000     0xf997
  .debug_line    0x0000000000000000      0x4f8 build/stm32f4xx_hal_cortex.o
  .debug_line    0x00000000000004f8      0x3d3 build/usbd_cdc_if.o
  .debug_line    0x00000000000008cb      0x8ce build/stm32f4xx_hal_tim_ex.o
@@ -3699,16 +3700,16 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_line    0x000000000000b225      0x3c9 build/usbd_desc.o
  .debug_line    0x000000000000b5ee      0x64a build/stm32f4xx_hal_rcc.o
  .debug_line    0x000000000000bc38      0x80e build/stm32f4xx_hal_pcd.o
- .debug_line    0x000000000000c446      0x822 build/main.o
- .debug_line    0x000000000000cc68      0x43d build/teamThreads.o
- .debug_line    0x000000000000d0a5      0x351 build/stm32f4xx_hal_wwdg.o
- .debug_line    0x000000000000d3f6      0x3b8 build/list.o
- .debug_line    0x000000000000d7ae      0x35b build/port.o
- .debug_line    0x000000000000db09      0x45f build/heap_4.o
- .debug_line    0x000000000000df68      0x956 build/cmsis_os.o
- .debug_line    0x000000000000e8be      0x478 build/stm32f4xx_hal_rng.o
- .debug_line    0x000000000000ed36      0xbef build/tasks.o
- .debug_line    0x000000000000f925       0x74 build/startup_stm32f405xx.o
+ .debug_line    0x000000000000c446      0x811 build/main.o
+ .debug_line    0x000000000000cc57      0x44c build/teamThreads.o
+ .debug_line    0x000000000000d0a3      0x351 build/stm32f4xx_hal_wwdg.o
+ .debug_line    0x000000000000d3f4      0x3b8 build/list.o
+ .debug_line    0x000000000000d7ac      0x35b build/port.o
+ .debug_line    0x000000000000db07      0x45f build/heap_4.o
+ .debug_line    0x000000000000df66      0x956 build/cmsis_os.o
+ .debug_line    0x000000000000e8bc      0x478 build/stm32f4xx_hal_rng.o
+ .debug_line    0x000000000000ed34      0xbef build/tasks.o
+ .debug_line    0x000000000000f923       0x74 build/startup_stm32f405xx.o
 
 .debug_str      0x0000000000000000     0x8b01
  .debug_str     0x0000000000000000      0xe86 build/stm32f4xx_hal_cortex.o
@@ -3773,10 +3774,10 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
                                         0xaeb (size before relaxing)
  .debug_str     0x0000000000006e17       0xec build/stm32f4xx_hal_pcd.o
                                        0x1039 (size before relaxing)
- .debug_str     0x0000000000006f03      0x2cd build/main.o
-                                       0x24a9 (size before relaxing)
- .debug_str     0x00000000000071d0       0x2a build/teamThreads.o
-                                        0xc14 (size before relaxing)
+ .debug_str     0x0000000000006f03      0x2b4 build/main.o
+                                       0x2490 (size before relaxing)
+ .debug_str     0x00000000000071b7       0x43 build/teamThreads.o
+                                        0xc20 (size before relaxing)
  .debug_str     0x00000000000071fa       0x78 build/stm32f4xx_hal_wwdg.o
                                         0x72d (size before relaxing)
  .debug_str     0x0000000000007272      0x163 build/list.o
@@ -3867,8 +3868,8 @@ OUTPUT(build/summertime_sadness.elf elf32-littlearm)
  .debug_frame   0x00000000000040c8       0xbc build/usbd_desc.o
  .debug_frame   0x0000000000004184      0x158 build/stm32f4xx_hal_rcc.o
  .debug_frame   0x00000000000042dc      0x338 build/stm32f4xx_hal_pcd.o
- .debug_frame   0x0000000000004614      0x21c build/main.o
- .debug_frame   0x0000000000004830       0x2c build/teamThreads.o
+ .debug_frame   0x0000000000004614      0x20c build/main.o
+ .debug_frame   0x0000000000004820       0x3c build/teamThreads.o
  .debug_frame   0x000000000000485c       0x7c build/stm32f4xx_hal_wwdg.o
  .debug_frame   0x00000000000048d8       0x70 build/list.o
  .debug_frame   0x0000000000004948      0x100 build/port.o
@@ -5099,7 +5100,8 @@ vEventGroupDelete                                 build/event_groups.o
 vEventGroupSetBitsCallback                        build/event_groups.o
 vHeartbeat                                        build/teamThreads.o
                                                   build/main.o
-vKillStatus                                       build/main.o
+vKillStatus                                       build/teamThreads.o
+                                                  build/main.o
 vListInitialise                                   build/list.o
                                                   build/queue.o
                                                   build/tasks.o

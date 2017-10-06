@@ -1,14 +1,9 @@
 #include <Servo.h>
 #include <ros.h>
 #include <riptide_msgs/PwmStamped.h>
-#include <riptide_msgs/Depth.h>
 #include <std_msgs/Int8.h>
 #include <std_msgs/Empty.h>
-//for dpeth sensor
-#include "MS5837.h"
-#include "Wire.h"
 
-MS5837 sensor;
 
 //function prototypes
 int16_t valid(int16_t pwm);
@@ -20,13 +15,13 @@ int missVal = 0;  //mission switch read value, default to MS out of bot
 //individual values of pins plugged in
 int killPin = 46;
 int missPin = 12;
-int spl_pin = 7;
-int ssl_pin = 3;  //5
-int hpa_pin = 8;
-int hsa_pin = 4; //sus
-int hpf_pin = 9;
+int spl_pin = 9;
+int ssl_pin = 3;
+int hpa_pin = 7;
+int hsa_pin = 4; 
+int hpf_pin = 10;
 int hsf_pin = 5;
-int swf_pin = 6;  //sus 8
+int swf_pin = 6;
 int swa_pin = 2;
 
 //using a PWM set the servo
@@ -35,11 +30,9 @@ Servo servo_spl, servo_ssl, servo_hpa, servo_hsa, servo_hpf, servo_hsf, servo_sw
 ros::NodeHandle nh;
 std_msgs::Empty kill;
 std_msgs::Empty mission;
-riptide_msgs::Depth depth; //Benji is this riptide_msgs or std_msgs?
 ros::Publisher mission_pub("state/mission", &mission);
 ros::Publisher kill_pub("state/kill", &kill);
 ros::Subscriber<riptide_msgs::PwmStamped> pwm_sub("command/pwm", &pwm_callback);
-ros::Publisher state_pub("state/depth", &depth);
 
 void setup() {
   Serial.begin(9600);
@@ -60,11 +53,7 @@ void setup() {
   nh.subscribe(pwm_sub);
   nh.advertise(mission_pub);
   nh.advertise(kill_pub);
-  nh.advertise(state_pub);
-  //for depth sensor
-  Wire.begin();
-  sensor.init();
-  sensor.setFluidDensity(997); //fluid density of freshwater in kg/m^3
+   
   
 }
 
@@ -74,18 +63,6 @@ void loop() {
   //Serial.println("I've got ROS going");
   killVal = digitalRead(killPin);
   missVal = digitalRead (missPin);
-
-  //depth sensor stuffs
-  sensor.read();  //read the sensor
-  //build the ROS depth state, depth. is the mission computer stuff while sensor. is actually read off the sensor
-  depth.depth = sensor.depth();
-  depth.temp = sensor.temperature();
-  depth.pressure = sensor.pressure();
-  depth.altitude = sensor.altitude();
-
-  //publish!
-  state_pub.publish(&depth);
-  
   //heartbeat for kill switch
   if (killVal == 1) {
      kill_pub.publish(&kill);
