@@ -5,41 +5,41 @@
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether
+  * USER CODE END. Other portions of this file, whether 
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2017 STMicroelectronics International N.V.
+  * Copyright (c) 2017 STMicroelectronics International N.V. 
   * All rights reserved.
   *
-  * Redistribution and use in source and binary forms, with or without
+  * Redistribution and use in source and binary forms, with or without 
   * modification, are permitted, provided that the following conditions are met:
   *
-  * 1. Redistribution of source code must retain the above copyright notice,
+  * 1. Redistribution of source code must retain the above copyright notice, 
   *    this list of conditions and the following disclaimer.
   * 2. Redistributions in binary form must reproduce the above copyright notice,
   *    this list of conditions and the following disclaimer in the documentation
   *    and/or other materials provided with the distribution.
-  * 3. Neither the name of STMicroelectronics nor the names of other
-  *    contributors to this software may be used to endorse or promote products
+  * 3. Neither the name of STMicroelectronics nor the names of other 
+  *    contributors to this software may be used to endorse or promote products 
   *    derived from this software without specific written permission.
-  * 4. This software, including modifications and/or derivative works of this
+  * 4. This software, including modifications and/or derivative works of this 
   *    software, must execute solely and exclusively on microcontroller or
   *    microprocessor devices manufactured by or for STMicroelectronics.
-  * 5. Redistribution and use of this software other than as permitted under
-  *    this license is void and will automatically terminate your rights under
-  *    this license.
+  * 5. Redistribution and use of this software other than as permitted under 
+  *    this license is void and will automatically terminate your rights under 
+  *    this license. 
   *
-  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS"
-  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT
-  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
-  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT
+  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
-  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
@@ -51,8 +51,6 @@
 #include "cmsis_os.h"
 #include "fatfs.h"
 #include "usb_device.h"
-#include "FreeRTOS.h"
-#include "teamThreads.h"
 
 /* USER CODE BEGIN Includes */
 //#include "task.h" //think about this just in case the FreeRTOS.h does not have everything we need
@@ -104,11 +102,11 @@ static void MX_ADC3_Init(void);
 void StartDefaultTask(void const * argument);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
-
-
-
-
+                                
+                                
+                                
+                                
+                                
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -117,10 +115,9 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN 0 */
 
-void vKillStatus(void *pvParameters);
+
 
 /* USER CODE END 0 */
-
 
 int main(void)
 {
@@ -132,9 +129,7 @@ int main(void)
   /* MCU Configuration----------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init(); //This initializes our Hardware Abstraction Layer
-
-
+  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -165,10 +160,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //create task handleers for different tasks
   xTaskHandle xKillStatusHandle;
-  xTaskHandle xHearbeatStatus;
+  xTaskHandle xHeartbeatStatus;
+  xTaskHandle xMoveRobot;
 
-  //xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 0, ( TaskHandle_t * ) NULL);
-  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 0, &xKillStatusHandle);
+  xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeatStatus);
+  xTaskCreate( vKillStatus, "KillStatus", configMINIMAL_STACK_SIZE, NULL, 1, &xKillStatusHandle);
+  xTaskCreate ( vMoveRobot, "MoveRobot", configMIni )
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -195,11 +192,11 @@ int main(void)
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
-
+ 
 
   /* Start scheduler */
   osKernelStart();
-
+  
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
@@ -223,13 +220,13 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct;
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
 
-    /**Configure the main internal regulator output voltage
+    /**Configure the main internal regulator output voltage 
     */
   __HAL_RCC_PWR_CLK_ENABLE();
 
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -245,7 +242,7 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -259,11 +256,11 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure the Systick interrupt time
+    /**Configure the Systick interrupt time 
     */
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
-    /**Configure the Systick
+    /**Configure the Systick 
     */
   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 
@@ -277,7 +274,7 @@ static void MX_ADC3_Init(void)
 
   ADC_ChannelConfTypeDef sConfig;
 
-    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
+    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
     */
   hadc3.Instance = ADC3;
   hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
@@ -296,7 +293,7 @@ static void MX_ADC3_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
+    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time. 
     */
   sConfig.Channel = ADC_CHANNEL_10;
   sConfig.Rank = 1;
@@ -611,15 +608,17 @@ static void MX_WWDG_Init(void)
 
 }
 
-/** Configure pins as
-        * Analog
-        * Input
+/** Configure pins as 
+        * Analog 
+        * Input 
         * Output
         * EVENT_OUT
         * EXTI
 */
 static void MX_GPIO_Init(void)
 {
+
+  GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
@@ -628,41 +627,21 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PC6 PC7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
-/*
-void vHeartbeat(void *pvParameters ){
-    //it's an arduino, setup then loop
-    //initialize the GPIO Bus clock should be initialized but re-
-    __HAL_RCC_GPIOC_CLK_ENABLE(); //we are using bus C for this
-    //this struct is what is needed by the HAL_GPIO_Init()
-    GPIO_InitTypeDef GPIO_InitDef;
-    GPIO_InitDef.Pin = GPIO_PIN_12 | GPIO_PIN_13;
-    GPIO_InitDef.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitDef.Pull = GPIO_NOPULL;
-    GPIO_InitDef.Speed = GPIO_SPEED_FREQ_HIGH;
 
-    //Initialize your GPIO!
-    HAL_GPIO_Init(GPIOC, &GPIO_InitDef);
 
-    //this is really void (loop) trust me
-
-    for( ;; ){
-      //HAL_GPIO should be initialized and this should just work
-      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12); //This toggles the spcific pin number from high to low, an LED
-      HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
-        HAL_Delay(1000);
-  }
-}
-*/
-void vKillStatus(void *pvParameters ){
-  //take your GPIO pins here
-  int i;
-  for ( ;; ){
-    i = i+1;
-  }
-}
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */
@@ -680,7 +659,7 @@ void StartDefaultTask(void const * argument)
   {
     osDelay(1);
   }
-  /* USER CODE END 5 */
+  /* USER CODE END 5 */ 
 }
 
 /**
@@ -716,7 +695,7 @@ void _Error_Handler(char * file, int line)
   while(1)
   {
   }
-  /* USER CODE END Error_Handler_Debug */
+  /* USER CODE END Error_Handler_Debug */ 
 }
 
 #ifdef USE_FULL_ASSERT
@@ -741,10 +720,10 @@ void assert_failed(uint8_t* file, uint32_t line)
 
 /**
   * @}
-  */
+  */ 
 
 /**
   * @}
-*/
+*/ 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

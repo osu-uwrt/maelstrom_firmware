@@ -27,16 +27,31 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="165" column="45" lean-forward="false" selection-start-line="165" selection-start-column="45" selection-end-line="165" selection-end-column="45" />
+            <state relative-caret-position="4776">
+              <caret line="688" column="3" lean-forward="true" selection-start-line="688" selection-start-column="3" selection-end-line="688" selection-end-column="3" />
               <folding>
-                <element signature="e#6682#8413#0" expanded="false" />
-                <element signature="e#8415#9593#0" expanded="false" />
-                <element signature="e#9595#10103#0" expanded="false" />
-                <element signature="e#10105#10632#0" expanded="false" />
-                <element signature="e#15726#16503#0" expanded="false" />
-                <element signature="e#16505#16815#0" expanded="false" />
+                <element signature="e#6718#8449#0" expanded="false" />
+                <element signature="e#8451#9629#0" expanded="false" />
+                <element signature="e#9631#10139#0" expanded="false" />
+                <element signature="e#10141#10668#0" expanded="false" />
+                <element signature="e#10670#10914#0" expanded="false" />
+                <element signature="e#10916#11083#0" expanded="false" />
+                <element signature="e#11085#11463#0" expanded="false" />
+                <element signature="e#15762#16539#0" expanded="false" />
+                <element signature="e#16541#16851#0" expanded="false" />
+                <element signature="e#16853#17191#0" expanded="false" />
+                <element signature="e#17242#17534#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stm32f4xx_hal_msp_template.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-749">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,9 +59,11 @@
       <file leaf-file-name="tasks.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7207">
+            <state relative-caret-position="883">
               <caret line="673" column="21" lean-forward="false" selection-start-line="673" selection-start-column="5" selection-end-line="673" selection-end-column="21" />
-              <folding />
+              <folding>
+                <element signature="e#14101#17452#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,7 +71,7 @@
       <file leaf-file-name="FreeRTOS.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10054">
+            <state relative-caret-position="11685">
               <caret line="779" column="24" lean-forward="false" selection-start-line="779" selection-start-column="8" selection-end-line="779" selection-end-column="24" />
               <folding />
             </state>
@@ -64,7 +81,7 @@
       <file leaf-file-name="stm32f4xx_hal_gpio.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="1605">
               <caret line="107" column="52" lean-forward="false" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
               <folding>
                 <element signature="e#13264#13265#0" expanded="true" />
@@ -76,8 +93,8 @@
       <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+            <state relative-caret-position="1485">
+              <caret line="99" column="19" lean-forward="false" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -86,7 +103,7 @@
       <file leaf-file-name="ff.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FatFs/src/ff.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6886">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -96,7 +113,7 @@
       <file leaf-file-name="stm32f4xx_hal_gpio_ex.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-455">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#18804#23066#0" expanded="true" />
@@ -108,8 +125,8 @@
       <file leaf-file-name="teamThreads.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -118,8 +135,8 @@
       <file leaf-file-name="teamThreads.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="708">
+              <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -132,15 +149,16 @@
       <find>HAL_I</find>
       <find>configSU</find>
       <find>configSUPPORT_DY</find>
+      <find>main.c</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/summertime_sadness/Makefile" />
-        <option value="$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c" />
         <option value="$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h" />
         <option value="$PROJECT_DIR$/summertime_sadness/Src/main.c" />
+        <option value="$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c" />
       </list>
     </option>
   </component>
@@ -228,111 +246,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Middlewares" />
+              <option name="myItemId" value="Drivers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Third_Party" />
+              <option name="myItemId" value="STM32F4xx_HAL_Driver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FreeRTOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="summertime_sadness" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middlewares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Third_Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FreeRTOS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="summertime_sadness" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middlewares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Third_Party" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="summertime_sadness" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middlewares" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="STM32" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="summertime_sadness" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Inc" />
+              <option name="myItemId" value="Src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,6 +273,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STM32F4xx_HAL_Driver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STM32" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STM32" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="summertime_sadness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STM32" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STM32" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmake-build-debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CMakeFiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -574,12 +536,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504703028885</updated>
       <workItem from="1504703030941" duration="2613000" />
-      <workItem from="1504816800604" duration="10731000" />
+      <workItem from="1504816800604" duration="12986000" />
+      <workItem from="1505226642889" duration="2607000" />
+      <workItem from="1506007131635" duration="2473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13344000" />
+    <option name="totallyTimeSpent" value="20679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -594,23 +558,23 @@
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14583333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24898621" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18386817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3521249" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3516999" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870772" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -628,16 +592,6 @@
           <line>124</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/summertime_sadness/Src/main.c</url>
-          <line>639</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/summertime_sadness/Src/main.c</url>
-          <line>634</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FatFs/src/ff.c</url>
           <line>322</line>
           <option name="timeStamp" value="4" />
@@ -650,15 +604,200 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/main.c">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="e#6718#8449#0" expanded="false" />
+            <element signature="e#8451#9629#0" expanded="false" />
+            <element signature="e#9631#10139#0" expanded="false" />
+            <element signature="e#10141#10668#0" expanded="false" />
+            <element signature="e#10670#10914#0" expanded="false" />
+            <element signature="e#10916#11083#0" expanded="false" />
+            <element signature="e#11085#11463#0" expanded="false" />
+            <element signature="e#15762#16539#0" expanded="false" />
+            <element signature="e#16541#16851#0" expanded="false" />
+            <element signature="e#16853#17191#0" expanded="false" />
+            <element signature="e#17242#17534#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10095">
+          <caret line="673" column="21" lean-forward="false" selection-start-line="673" selection-start-column="5" selection-end-line="673" selection-end-column="21" />
+          <folding>
+            <element signature="e#14101#17452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11685">
+          <caret line="779" column="24" lean-forward="false" selection-start-line="779" selection-start-column="8" selection-end-line="779" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="52" lean-forward="false" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+          <folding>
+            <element signature="e#13264#13265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" column="19" lean-forward="true" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FatFs/src/ff.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6682#8413#0" expanded="false" />
-            <element signature="e#8415#9593#0" expanded="false" />
-            <element signature="e#9595#10103#0" expanded="false" />
-            <element signature="e#10105#10632#0" expanded="false" />
-            <element signature="e#15726#16503#0" expanded="false" />
-            <element signature="e#16505#16815#0" expanded="false" />
+            <element signature="e#18804#23066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6718#8449#0" expanded="false" />
+            <element signature="e#8451#9629#0" expanded="false" />
+            <element signature="e#9631#10139#0" expanded="false" />
+            <element signature="e#10141#10668#0" expanded="false" />
+            <element signature="e#10670#10914#0" expanded="false" />
+            <element signature="e#10916#11083#0" expanded="false" />
+            <element signature="e#11085#11463#0" expanded="false" />
+            <element signature="e#15762#16539#0" expanded="false" />
+            <element signature="e#16541#16851#0" expanded="false" />
+            <element signature="e#16853#17191#0" expanded="false" />
+            <element signature="e#17242#17534#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10095">
+          <caret line="673" column="21" lean-forward="false" selection-start-line="673" selection-start-column="5" selection-end-line="673" selection-end-column="21" />
+          <folding>
+            <element signature="e#14101#17452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11685">
+          <caret line="779" column="24" lean-forward="false" selection-start-line="779" selection-start-column="8" selection-end-line="779" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="52" lean-forward="false" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+          <folding>
+            <element signature="e#13264#13265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" column="19" lean-forward="false" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FatFs/src/ff.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#18804#23066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6718#8449#0" expanded="false" />
+            <element signature="e#8451#9629#0" expanded="false" />
+            <element signature="e#9631#10139#0" expanded="false" />
+            <element signature="e#10141#10668#0" expanded="false" />
+            <element signature="e#10670#10914#0" expanded="false" />
+            <element signature="e#10916#11083#0" expanded="false" />
+            <element signature="e#11085#11463#0" expanded="false" />
+            <element signature="e#15762#16539#0" expanded="false" />
+            <element signature="e#16541#16851#0" expanded="false" />
+            <element signature="e#16853#17191#0" expanded="false" />
+            <element signature="e#17242#17534#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -667,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,9 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1063">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2073#12005#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2937">
           <caret line="141" column="52" lean-forward="false" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
           <caret line="188" column="57" lean-forward="false" selection-start-line="188" selection-start-column="41" selection-end-line="188" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,29 +883,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2761">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FatFs/src/ff.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6886">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="81" column="35" lean-forward="false" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#18804#23066#0" expanded="true" />
@@ -787,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="1605">
           <caret line="107" column="52" lean-forward="false" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
           <folding>
             <element signature="e#13264#13265#0" expanded="true" />
@@ -795,57 +914,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOSConfig_template.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-673">
           <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11685">
+          <caret line="779" column="24" lean-forward="false" selection-start-line="779" selection-start-column="8" selection-end-line="779" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" column="19" lean-forward="false" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7207">
+        <state relative-caret-position="883">
           <caret line="673" column="21" lean-forward="false" selection-start-line="673" selection-start-column="5" selection-end-line="673" selection-end-column="21" />
+          <folding>
+            <element signature="e#14101#17452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Inc/teamThreads.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summertime_sadness/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_msp_template.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10054">
-          <caret line="779" column="24" lean-forward="false" selection-start-line="779" selection-start-column="8" selection-end-line="779" selection-end-column="24" />
+        <state relative-caret-position="-749">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/teamThreads.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/summertime_sadness/Src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="165" column="45" lean-forward="false" selection-start-line="165" selection-start-column="45" selection-end-line="165" selection-end-column="45" />
+        <state relative-caret-position="4776">
+          <caret line="688" column="3" lean-forward="true" selection-start-line="688" selection-start-column="3" selection-end-line="688" selection-end-column="3" />
           <folding>
-            <element signature="e#6682#8413#0" expanded="false" />
-            <element signature="e#8415#9593#0" expanded="false" />
-            <element signature="e#9595#10103#0" expanded="false" />
-            <element signature="e#10105#10632#0" expanded="false" />
-            <element signature="e#15726#16503#0" expanded="false" />
-            <element signature="e#16505#16815#0" expanded="false" />
+            <element signature="e#6718#8449#0" expanded="false" />
+            <element signature="e#8451#9629#0" expanded="false" />
+            <element signature="e#9631#10139#0" expanded="false" />
+            <element signature="e#10141#10668#0" expanded="false" />
+            <element signature="e#10670#10914#0" expanded="false" />
+            <element signature="e#10916#11083#0" expanded="false" />
+            <element signature="e#11085#11463#0" expanded="false" />
+            <element signature="e#15762#16539#0" expanded="false" />
+            <element signature="e#16541#16851#0" expanded="false" />
+            <element signature="e#16853#17191#0" expanded="false" />
+            <element signature="e#17242#17534#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
   29:Src/usbd_desc.c ****   *    microprocessor devices manufactured by or for STMicroelectronics.
   30:Src/usbd_desc.c ****   * 5. Redistribution and use of this software other than as permitted under 
   31:Src/usbd_desc.c ****   *    this license is void and will automatically terminate your rights under 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 2
 
 
   32:Src/usbd_desc.c ****   *    this license. 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
   86:Src/usbd_desc.c **** 
   87:Src/usbd_desc.c **** /* USER CODE END 0*/
   88:Src/usbd_desc.c **** /**
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 3
 
 
   89:Src/usbd_desc.c ****   * @}
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  143:Src/usbd_desc.c ****                                                resume test of USBCV3.0*/
  144:Src/usbd_desc.c **** #else  
  145:Src/usbd_desc.c ****     0x00,                       /* bcdUSB */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 4
 
 
  146:Src/usbd_desc.c **** #endif
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  200:Src/usbd_desc.c **** 
  201:Src/usbd_desc.c **** #if defined ( __ICCARM__ ) /*!< IAR Compiler */
  202:Src/usbd_desc.c ****   #pragma data_alignment=4   
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 5
 
 
  203:Src/usbd_desc.c **** #endif
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
   56              	USBD_HS_LangIDStrDescriptor:
   57              	.LFB125:
  231:Src/usbd_desc.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 6
 
 
  232:Src/usbd_desc.c **** /**
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
   92              	.LVL4:
   93 0000 08B5     		push	{r3, lr}
   94              	.LCFI0:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 7
 
 
   95              		.cfi_def_cfa_offset 8
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  264:Src/usbd_desc.c **** 
  265:Src/usbd_desc.c **** /**
  266:Src/usbd_desc.c **** * @brief  USBD_HS_ManufacturerStrDescriptor 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 8
 
 
  267:Src/usbd_desc.c **** *         return the manufacturer string descriptor
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  283:Src/usbd_desc.c **** * @retval pointer to descriptor buffer
  284:Src/usbd_desc.c **** */
  285:Src/usbd_desc.c **** uint8_t *  USBD_HS_SerialStrDescriptor( USBD_SpeedTypeDef speed , uint16_t *length)
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 9
 
 
  286:Src/usbd_desc.c **** {
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  223              		.align	1
  224              		.global	USBD_HS_ConfigStrDescriptor
  225              		.syntax unified
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 10
 
 
  226              		.thumb
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  260              	.LVL29:
  261 0014 0248     		ldr	r0, .L30+4
  262              	.LVL30:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 11
 
 
  263 0016 FFF7FEFF 		bl	USBD_GetString
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  302 000a FFF7FEFF 		bl	USBD_GetString
  303              	.LVL35:
  304              	.L34:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 12
 
 
  334:Src/usbd_desc.c ****   }
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  360 000c 00       		.byte	0
  361 000d 02       		.byte	2
  362 000e 01       		.byte	1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 13
 
 
  363 000f 02       		.byte	2
@@ -778,51 +778,51 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 1
  403              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  404              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  405              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 14
 
 
  406              		.file 10 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  407              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  408              		.file 12 "Inc/usbd_desc.h"
  409              		.file 13 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_desc.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:18     .text.USBD_HS_DeviceDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:25     .text.USBD_HS_DeviceDescriptor:0000000000000000 USBD_HS_DeviceDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:44     .text.USBD_HS_DeviceDescriptor:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:49     .text.USBD_HS_LangIDStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:56     .text.USBD_HS_LangIDStrDescriptor:0000000000000000 USBD_HS_LangIDStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:74     .text.USBD_HS_LangIDStrDescriptor:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:79     .text.USBD_HS_ProductStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:86     .text.USBD_HS_ProductStrDescriptor:0000000000000000 USBD_HS_ProductStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:125    .text.USBD_HS_ProductStrDescriptor:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:18     .text.USBD_HS_DeviceDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:25     .text.USBD_HS_DeviceDescriptor:0000000000000000 USBD_HS_DeviceDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:44     .text.USBD_HS_DeviceDescriptor:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:49     .text.USBD_HS_LangIDStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:56     .text.USBD_HS_LangIDStrDescriptor:0000000000000000 USBD_HS_LangIDStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:74     .text.USBD_HS_LangIDStrDescriptor:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:79     .text.USBD_HS_ProductStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:86     .text.USBD_HS_ProductStrDescriptor:0000000000000000 USBD_HS_ProductStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:125    .text.USBD_HS_ProductStrDescriptor:000000000000001c $d
                             *COM*:0000000000000200 USBD_StrDesc
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:131    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:138    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000000 USBD_HS_ManufacturerStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:165    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000014 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:171    .text.USBD_HS_SerialStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:178    .text.USBD_HS_SerialStrDescriptor:0000000000000000 USBD_HS_SerialStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:217    .text.USBD_HS_SerialStrDescriptor:000000000000001c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:223    .text.USBD_HS_ConfigStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:230    .text.USBD_HS_ConfigStrDescriptor:0000000000000000 USBD_HS_ConfigStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:269    .text.USBD_HS_ConfigStrDescriptor:000000000000001c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:275    .text.USBD_HS_InterfaceStrDescriptor:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:282    .text.USBD_HS_InterfaceStrDescriptor:0000000000000000 USBD_HS_InterfaceStrDescriptor
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:321    .text.USBD_HS_InterfaceStrDescriptor:000000000000001c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:371    .data.USBD_LangIDDesc:0000000000000000 USBD_LangIDDesc
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:347    .data.USBD_HS_DeviceDesc:0000000000000000 USBD_HS_DeviceDesc
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:334    .data.HS_Desc:0000000000000000 HS_Desc
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:331    .data.HS_Desc:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:343    .data.USBD_HS_DeviceDesc:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:367    .data.USBD_LangIDDesc:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:377    .rodata.USBD_HS_ConfigStrDescriptor.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:381    .rodata.USBD_HS_InterfaceStrDescriptor.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:385    .rodata.USBD_HS_ManufacturerStrDescriptor.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:389    .rodata.USBD_HS_ProductStrDescriptor.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0lujUJ.s:393    .rodata.USBD_HS_SerialStrDescriptor.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:131    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:138    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000000 USBD_HS_ManufacturerStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:165    .text.USBD_HS_ManufacturerStrDescriptor:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:171    .text.USBD_HS_SerialStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:178    .text.USBD_HS_SerialStrDescriptor:0000000000000000 USBD_HS_SerialStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:217    .text.USBD_HS_SerialStrDescriptor:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:223    .text.USBD_HS_ConfigStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:230    .text.USBD_HS_ConfigStrDescriptor:0000000000000000 USBD_HS_ConfigStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:269    .text.USBD_HS_ConfigStrDescriptor:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:275    .text.USBD_HS_InterfaceStrDescriptor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:282    .text.USBD_HS_InterfaceStrDescriptor:0000000000000000 USBD_HS_InterfaceStrDescriptor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:321    .text.USBD_HS_InterfaceStrDescriptor:000000000000001c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:371    .data.USBD_LangIDDesc:0000000000000000 USBD_LangIDDesc
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:347    .data.USBD_HS_DeviceDesc:0000000000000000 USBD_HS_DeviceDesc
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:334    .data.HS_Desc:0000000000000000 HS_Desc
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:331    .data.HS_Desc:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:343    .data.USBD_HS_DeviceDesc:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:367    .data.USBD_LangIDDesc:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:377    .rodata.USBD_HS_ConfigStrDescriptor.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:381    .rodata.USBD_HS_InterfaceStrDescriptor.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:385    .rodata.USBD_HS_ManufacturerStrDescriptor.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:389    .rodata.USBD_HS_ProductStrDescriptor.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cchR78nN.s:393    .rodata.USBD_HS_SerialStrDescriptor.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

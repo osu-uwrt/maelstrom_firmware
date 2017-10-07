@@ -34,4 +34,45 @@ void vHeartbeat(void *pvParameters ){
         HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_13);
         HAL_Delay(1000);
     }
+
+}
+
+
+void vKillStatus(void *pvParameters )
+{
+    //take your GPIO pins here
+    int i;
+    for ( ;; ){
+        i = i+1;
+    }
+    vTaskDelete(NULL);
+}
+
+void vMoveRobot(void *pvParameters )
+{
+    //group the PWM values into sets of two
+    /*
+     * surge_stbd_low, surge_port_low
+     * surge_stbd_high, surge_stbd_high
+     *
+     */
+
+    for ( ;; ){
+
+    }
+
+    vTaskDelete(NULL);
+}
+
+//This function is to set the pwm value from the ros callback
+void user_pwm_setvalue(uint16_t value)
+{
+    TIM_OC_InitTypeDef sConfigOC;
+
+    sConfigOC.OCMode = TIM_OCMODE_PWM1;
+    sConfigOC.Pulse = value;
+    sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+    sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+    HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
 }

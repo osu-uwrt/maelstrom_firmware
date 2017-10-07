@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Associate the initialized DMA handle to the ADC DMA handle
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  using  __HAL_LINKDMA()
   32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****              (+++) Configure the priority and enable the NVIC for the transfer complete
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 2
 
 
   33:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                  interrupt on the two DMA Streams. The output stream should have higher
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @attention
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
   89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * <h2><center>&copy; COPYRIGHT(c) 2017 STMicroelectronics</center></h2>
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 3
 
 
   90:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
  145:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /* Exported functions --------------------------------------------------------*/
  146:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /** @defgroup ADCEx_Exported_Functions ADC Exported Functions
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 4
 
 
  147:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @{
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  201:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
  202:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
  203:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 5
 
 
  204:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Start conversion if ADC is effectively enabled */
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  258:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
  259:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
  260:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 6
 
 
  261:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Return function status */
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  315:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Reset ADC all error code fields */
  316:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       ADC_CLEAR_ERRORCODE(hadc);
  317:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 7
 
 
  318:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  372:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: ADC handle
  373:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @retval None
  374:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 8
 
 
  375:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedStop(ADC_HandleTypeDef* hadc)
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  429:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** HAL_StatusTypeDef HAL_ADCEx_InjectedPollForConversion(ADC_HandleTypeDef* hadc, uint32_t Timeout)
  430:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** {
  431:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   uint32_t tickstart = 0U;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 9
 
 
  432:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  486:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         end-of-conversion. Disable ADC peripheral if no regular conversion
  487:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         is on going.
  488:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @note   If ADC must be disabled and if conversion is on going on 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 10
 
 
  489:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *         regular group, function HAL_ADC_Stop must be used to stop both
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  543:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return tmp_hal_status;
  544:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
  545:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 11
 
 
  546:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  600:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * 
  601:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @note   Caution: This function must be used only with the ADC master.  
  602:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 12
 
 
  603:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   * @param  hadc: pointer to a ADC_HandleTypeDef structure that contains
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  657:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     {
  658:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Reset ADC error code fields related to conversions on group regular */
  659:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       CLEAR_BIT(hadc->ErrorCode, (HAL_ADC_ERROR_OVR | HAL_ADC_ERROR_DMA));         
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 13
 
 
  660:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  714:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->CR2 |= (uint32_t)ADC_CR2_SWSTART;
  715:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
  716:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 14
 
 
  717:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  771:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   return tmp_hal_status;
  772:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** }
  773:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 15
 
 
  774:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c **** /**
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  828:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_CHANNEL(sConfigInjected->InjectedChannel));
  829:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_INJECTED_RANK(sConfigInjected->InjectedRank));
  830:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_SAMPLE_TIME(sConfigInjected->InjectedSamplingTime));
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 16
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 16
 
 
  831:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   assert_param(IS_ADC_EXT_INJEC_TRIG(sConfigInjected->ExternalTrigInjecConv));
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  885:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
  886:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Select external trigger to start conversion */
  887:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTSEL);
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 17
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 17
 
 
  888:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 |=  sConfigInjected->ExternalTrigInjecConv;
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  942:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR4 &= ~(ADC_JOFR4_JOFFSET4);
  943:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       hadc->Instance->JOFR4 |= sConfigInjected->InjectedOffset;
  944:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       break;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 18
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 18
 
 
  945:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   }
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  999:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   /* Set ADC mode */
 1000:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   tmpADC_Common->CCR &= ~(ADC_CCR_MULTI);
 1001:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   tmpADC_Common->CCR |= multimode->Mode;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 19
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 19
 
 
 1002:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
 1056:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       /* Set ADC state */
 1057:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       CLEAR_BIT(hadc->State, HAL_ADC_STATE_REG_BUSY);   
 1058:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 20
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 20
 
 
 1059:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       if (HAL_IS_BIT_CLR(hadc->State, HAL_ADC_STATE_INJ_BUSY))
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
   42 0006 0364     		str	r3, [r0, #64]
 1098:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     /* Set ADC error code to DMA error */
 1099:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->ErrorCode |= HAL_ADC_ERROR_DMA;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 21
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 21
 
 
   43              		.loc 1 1099 0
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
   97 0000 08B5     		push	{r3, lr}
   98              	.LCFI2:
   99              		.cfi_def_cfa_offset 8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 22
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 22
 
 
  100              		.cfi_offset 3, -8
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  141              		.loc 1 1059 0
  142 0042 1A6C     		ldr	r2, [r3, #64]
  143 0044 12F4805F 		tst	r2, #4096
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 23
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 23
 
 
  144 0048 03D1     		bne	.L7
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  194 000c 5CD0     		beq	.L18
  184:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
  195              		.loc 1 184 0 is_stmt 0 discriminator 2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 24
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 24
 
 
  196 000e 0123     		movs	r3, #1
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  241 0062 13F4807F 		tst	r3, #256
  242 0066 01D1     		bne	.L16
  221:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     }
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 25
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 25
 
 
  243              		.loc 1 221 0
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  287              	.LVL22:
  252:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       if((hadc->Instance == ADC1) && tmp1 && tmp2)  
  288              		.loc 1 252 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 26
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 26
 
 
  289 00a8 5968     		ldr	r1, [r3, #4]
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  334              	.LVL30:
  335              	.L20:
  336 00d2 0020     		movs	r0, #0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 27
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 27
 
 
  337              	.LVL31:
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  389 000e 0123     		movs	r3, #1
  390 0010 80F83C30 		strb	r3, [r0, #60]
  285:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   {  
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 28
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 28
 
 
  391              		.loc 1 285 0 is_stmt 1 discriminator 2
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  436              		.loc 1 316 0
  437 0068 0023     		movs	r3, #0
  438 006a 4364     		str	r3, [r0, #68]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 29
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 29
 
 
  439              	.L34:
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  482 00aa 0368     		ldr	r3, [r0]
  483 00ac 9A68     		ldr	r2, [r3, #8]
  484 00ae 02F44012 		and	r2, r2, #3145728
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 30
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 30
 
 
  485              	.LVL43:
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  529 00d8 0020     		movs	r0, #0
  530              	.LVL50:
  531 00da FBE7     		b	.L30
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 31
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 31
 
 
  532              	.LVL51:
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  584              		.loc 1 391 0 is_stmt 1 discriminator 2
  585 0010 026C     		ldr	r2, [r0, #64]
  586 0012 12F4807F 		tst	r2, #256
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 32
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 32
 
 
  587 0016 17D1     		bne	.L49
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  377:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
  631              		.loc 1 377 0
  632 005a 0020     		movs	r0, #0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 33
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 33
 
 
  633              	.LVL63:
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  683 001a F7D0     		beq	.L55
  442:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       {
  684              		.loc 1 442 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 34
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 34
 
 
  685 001c 25B1     		cbz	r5, .L56
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  727              		.loc 1 467 0
  728 005e 5A68     		ldr	r2, [r3, #4]
  466:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****      (HAL_IS_BIT_CLR(hadc->Instance->CR1, ADC_CR1_JAUTO) &&
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 35
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 35
 
 
  729              		.loc 1 466 0
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  775 00a0 70BD     		pop	{r4, r5, r6, pc}
  776              	.LVL77:
  777              	.L65:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 36
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 36
 
 
  778 00a2 0020     		movs	r0, #0
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  825 002c 9168     		ldr	r1, [r2, #8]
  826 002e 11F0010F 		tst	r1, #1
  827 0032 16D1     		bne	.L73
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 37
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 37
 
 
  523:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****       
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  872              	.LFE128:
  874              		.section	.text.HAL_ADCEx_InjectedGetValue,"ax",%progbits
  875              		.align	1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 38
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 38
 
 
  876              		.global	HAL_ADCEx_InjectedGetValue
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  924              		.cfi_remember_state
  925              		.cfi_def_cfa_offset 0
  926              		@ sp needed
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 39
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 39
 
 
  927 0026 7047     		bx	lr
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  976              	.LCFI14:
  977              		.cfi_def_cfa_offset 16
  611:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   ADC_Common_TypeDef *tmpADC_Common;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 40
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 40
 
 
  978              		.loc 1 611 0
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  644:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****                       HAL_ADC_STATE_READY | HAL_ADC_STATE_REG_EOC | HAL_ADC_STATE_REG_OVR,
  1023              		.loc 1 644 0
  1024 0052 046C     		ldr	r4, [r0, #64]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 41
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 41
 
 
  1025 0054 24F4E064 		bic	r4, r4, #1792
@@ -2458,7 +2458,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1069 00a8 6368     		ldr	r3, [r4, #4]
  1070 00aa 43F08063 		orr	r3, r3, #67108864
  1071 00ae 6360     		str	r3, [r4, #4]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 42
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 42
 
 
  1072              	.LVL93:
@@ -2518,7 +2518,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1118 00f2 E4E7     		b	.L91
  1119              	.LVL100:
  1120              	.L92:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 43
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 43
 
 
  620:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****   
@@ -2578,7 +2578,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1172              		.loc 1 737 0
  1173 0000 90F83C30 		ldrb	r3, [r0, #60]	@ zero_extendqisi2
  1174 0004 012B     		cmp	r3, #1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 44
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 44
 
 
  1175 0006 29D0     		beq	.L101
@@ -2638,7 +2638,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1219 0040 2268     		ldr	r2, [r4]
  1220 0042 5368     		ldr	r3, [r2, #4]
  1221 0044 23F08063 		bic	r3, r3, #67108864
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 45
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 45
 
 
  1222 0048 5360     		str	r3, [r2, #4]
@@ -2698,7 +2698,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1273              		.cfi_endproc
  1274              	.LFE132:
  1276              		.section	.text.HAL_ADCEx_InjectedConvCpltCallback,"ax",%progbits
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 46
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 46
 
 
  1277              		.align	1
@@ -2758,7 +2758,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1328 0016 7DD9     		bls	.L116
  853:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     
  1329              		.loc 1 853 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 47
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 47
 
 
  1330 0018 0568     		ldr	r5, [r0]
@@ -2818,7 +2818,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1379 0082 4B68     		ldr	r3, [r1, #4]
  1380 0084 0C69     		ldr	r4, [r1, #16]
  1381 0086 1B1B     		subs	r3, r3, r4
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 48
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 48
 
 
  1382 0088 DBB2     		uxtb	r3, r3
@@ -2878,7 +2878,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1428              		.loc 1 912 0
  1429 00dc 4B69     		ldr	r3, [r1, #20]
  1430 00de 002B     		cmp	r3, #0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 49
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 49
 
 
  1431 00e0 3FD0     		beq	.L122
@@ -2938,7 +2938,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1478 013c 2B61     		str	r3, [r5, #16]
  1479 013e 82E7     		b	.L117
  1480              	.L118:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 50
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 50
 
 
  897:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     hadc->Instance->CR2 &= ~(ADC_CR2_JEXTEN);  
@@ -2998,7 +2998,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1527              		.loc 1 960 0
  1528 018e 0268     		ldr	r2, [r0]
  1529 0190 1C4B     		ldr	r3, .L140+4
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 51
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 51
 
 
  1530 0192 9A42     		cmp	r2, r3
@@ -3058,7 +3058,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1576 01d0 2343     		orrs	r3, r3, r4
  1577 01d2 D361     		str	r3, [r2, #28]
  939:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c ****     default:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 52
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 52
 
 
  1578              		.loc 1 939 0
@@ -3118,7 +3118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1628              		.thumb_func
  1629              		.fpu fpv4-sp-d16
  1631              	HAL_ADCEx_MultiModeConfigChannel:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 53
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 53
 
 
  1632              	.LFB135:
@@ -3178,7 +3178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1676 003a 5A68     		ldr	r2, [r3, #4]
  1677 003c 8968     		ldr	r1, [r1, #8]
  1678              	.LVL125:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 54
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 54
 
 
  1679 003e 0A43     		orrs	r2, r2, r1
@@ -3228,50 +3228,50 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 1
  1720              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h"
  1721              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h"
  1722              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s 			page 55
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s 			page 55
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_adc_ex.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:18     .text.ADC_MultiModeDMAError:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:24     .text.ADC_MultiModeDMAError:0000000000000000 ADC_MultiModeDMAError
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:55     .text.ADC_MultiModeDMAHalfConvCplt:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:61     .text.ADC_MultiModeDMAHalfConvCplt:0000000000000000 ADC_MultiModeDMAHalfConvCplt
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:84     .text.ADC_MultiModeDMAConvCplt:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:90     .text.ADC_MultiModeDMAConvCplt:0000000000000000 ADC_MultiModeDMAConvCplt
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:169    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:176    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:354    .text.HAL_ADCEx_InjectedStart:00000000000000e4 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:362    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:369    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:552    .text.HAL_ADCEx_InjectedStart_IT:00000000000000ec $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:560    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:567    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:646    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:653    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:785    .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:792    .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:875    .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:882    .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:907    .text.HAL_ADCEx_InjectedGetValue:0000000000000018 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:911    .text.HAL_ADCEx_InjectedGetValue:000000000000001c $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:956    .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:963    .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1147   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000104 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1158   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1165   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1243   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000060 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1248   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1255   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1272   .text.HAL_ADCEx_MultiModeGetValue:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1277   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1284   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1297   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1304   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1617   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000200 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1624   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1631   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCpG4Jx.s:1702   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000054 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:18     .text.ADC_MultiModeDMAError:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:24     .text.ADC_MultiModeDMAError:0000000000000000 ADC_MultiModeDMAError
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:55     .text.ADC_MultiModeDMAHalfConvCplt:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:61     .text.ADC_MultiModeDMAHalfConvCplt:0000000000000000 ADC_MultiModeDMAHalfConvCplt
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:84     .text.ADC_MultiModeDMAConvCplt:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:90     .text.ADC_MultiModeDMAConvCplt:0000000000000000 ADC_MultiModeDMAConvCplt
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:169    .text.HAL_ADCEx_InjectedStart:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:176    .text.HAL_ADCEx_InjectedStart:0000000000000000 HAL_ADCEx_InjectedStart
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:354    .text.HAL_ADCEx_InjectedStart:00000000000000e4 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:362    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:369    .text.HAL_ADCEx_InjectedStart_IT:0000000000000000 HAL_ADCEx_InjectedStart_IT
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:552    .text.HAL_ADCEx_InjectedStart_IT:00000000000000ec $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:560    .text.HAL_ADCEx_InjectedStop:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:567    .text.HAL_ADCEx_InjectedStop:0000000000000000 HAL_ADCEx_InjectedStop
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:646    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:653    .text.HAL_ADCEx_InjectedPollForConversion:0000000000000000 HAL_ADCEx_InjectedPollForConversion
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:785    .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:792    .text.HAL_ADCEx_InjectedStop_IT:0000000000000000 HAL_ADCEx_InjectedStop_IT
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:875    .text.HAL_ADCEx_InjectedGetValue:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:882    .text.HAL_ADCEx_InjectedGetValue:0000000000000000 HAL_ADCEx_InjectedGetValue
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:907    .text.HAL_ADCEx_InjectedGetValue:0000000000000018 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:911    .text.HAL_ADCEx_InjectedGetValue:000000000000001c $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:956    .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:963    .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000000 HAL_ADCEx_MultiModeStart_DMA
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1147   .text.HAL_ADCEx_MultiModeStart_DMA:0000000000000104 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1158   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1165   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000000 HAL_ADCEx_MultiModeStop_DMA
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1243   .text.HAL_ADCEx_MultiModeStop_DMA:0000000000000060 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1248   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1255   .text.HAL_ADCEx_MultiModeGetValue:0000000000000000 HAL_ADCEx_MultiModeGetValue
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1272   .text.HAL_ADCEx_MultiModeGetValue:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1277   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1284   .text.HAL_ADCEx_InjectedConvCpltCallback:0000000000000000 HAL_ADCEx_InjectedConvCpltCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1297   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1304   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000000 HAL_ADCEx_InjectedConfigChannel
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1617   .text.HAL_ADCEx_InjectedConfigChannel:0000000000000200 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1624   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1631   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000000 HAL_ADCEx_MultiModeConfigChannel
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccsZvju1.s:1702   .text.HAL_ADCEx_MultiModeConfigChannel:0000000000000054 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
   29:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   *    this license. 
   30:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   *
   31:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 2
 
 
   32:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
   70:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   uint8_t ret = 1;
   40              		.loc 1 70 0
   41 000a 0120     		movs	r0, #1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 3
 
 
   42              	.LVL1:
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
   87 003c 8A70     		strb	r2, [r1, #2]
   82:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****     path[3] = 0;
   88              		.loc 1 82 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 4
 
 
   89 003e CB70     		strb	r3, [r1, #3]
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
  128              		.loc 1 99 0
  129 0002 0022     		movs	r2, #0
  130 0004 FFF7FEFF 		bl	FATFS_LinkDriverEx
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 5
 
 
  131              	.LVL13:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
  167              		.loc 1 119 0
  168 0016 084A     		ldr	r2, .L17
  169 0018 02EB8301 		add	r1, r2, r3, lsl #2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 6
 
 
  170              	.LVL16:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
  132:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * @param  path: pointer to the logical drive path  
  133:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   * @retval Returns 0 in case of success, otherwise 1.
  134:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c ****   */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 7
 
 
  135:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** uint8_t FATFS_UnLinkDriver(char *path)
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
  255 0008 00000000 		.word	.LANCHOR0
  256              		.cfi_endproc
  257              	.LFE133:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 8
 
 
  259              		.global	disk
@@ -442,26 +442,26 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 1
  277              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
  278              		.file 11 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
  279              		.file 12 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ff_gen_drv.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:18     .text.FATFS_LinkDriverEx:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:25     .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:104    .text.FATFS_LinkDriverEx:0000000000000048 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:109    .text.FATFS_LinkDriver:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:116    .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:138    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:145    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:199    .text.FATFS_UnLinkDriverEx:0000000000000038 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:204    .text.FATFS_UnLinkDriver:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:211    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:233    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:240    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:255    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:265    .bss.disk:0000000000000000 disk
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdDOGoG.s:261    .bss.disk:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:18     .text.FATFS_LinkDriverEx:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:25     .text.FATFS_LinkDriverEx:0000000000000000 FATFS_LinkDriverEx
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:104    .text.FATFS_LinkDriverEx:0000000000000048 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:109    .text.FATFS_LinkDriver:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:116    .text.FATFS_LinkDriver:0000000000000000 FATFS_LinkDriver
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:138    .text.FATFS_UnLinkDriverEx:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:145    .text.FATFS_UnLinkDriverEx:0000000000000000 FATFS_UnLinkDriverEx
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:199    .text.FATFS_UnLinkDriverEx:0000000000000038 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:204    .text.FATFS_UnLinkDriver:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:211    .text.FATFS_UnLinkDriver:0000000000000000 FATFS_UnLinkDriver
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:233    .text.FATFS_GetAttachedDriversNbr:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:240    .text.FATFS_GetAttachedDriversNbr:0000000000000000 FATFS_GetAttachedDriversNbr
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:255    .text.FATFS_GetAttachedDriversNbr:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:265    .bss.disk:0000000000000000 disk
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccPJQTFf.s:261    .bss.disk:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS
