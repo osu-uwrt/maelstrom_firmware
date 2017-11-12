@@ -1,0 +1,106 @@
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxp6jIh.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"teamDepthSensor.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.initializeSensor,"ax",%progbits
+  18              		.align	1
+  19              		.global	initializeSensor
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	initializeSensor:
+  26              	.LFB129:
+  27              		.file 1 "Src/teamDepthSensor.c"
+   1:Src/teamDepthSensor.c **** //
+   2:Src/teamDepthSensor.c **** // Created by August R. Mason on 10/14/17.
+   3:Src/teamDepthSensor.c **** //
+   4:Src/teamDepthSensor.c **** #include "teamDepthSensor.h"
+   5:Src/teamDepthSensor.c **** #include "main.h" //main.h holds the inits
+   6:Src/teamDepthSensor.c **** #include "stm32f4xx_hal.h"
+   7:Src/teamDepthSensor.c **** #include "cmsis_os.h"
+   8:Src/teamDepthSensor.c **** #define MS5837_ADDR               0x76
+   9:Src/teamDepthSensor.c **** #define MS5837_RESET              0x1E
+  10:Src/teamDepthSensor.c **** #define MS5837_ADC_READ           0x00
+  11:Src/teamDepthSensor.c **** #define MS5837_PROM_READ          0xA0
+  12:Src/teamDepthSensor.c **** #define MS5837_CONVERT_D1_8192    0x4A
+  13:Src/teamDepthSensor.c **** #define MS5837_CONVERT_D2_8192    0x5A
+  14:Src/teamDepthSensor.c **** 
+  15:Src/teamDepthSensor.c **** /*
+  16:Src/teamDepthSensor.c ****  * Things to do:
+  17:Src/teamDepthSensor.c ****  *
+  18:Src/teamDepthSensor.c ****  */
+  19:Src/teamDepthSensor.c **** //function prototypes
+  20:Src/teamDepthSensor.c **** //only need to initialize sensor and then read off of it
+  21:Src/teamDepthSensor.c **** 
+  22:Src/teamDepthSensor.c **** 
+  23:Src/teamDepthSensor.c **** 
+  24:Src/teamDepthSensor.c **** //void depthReading (struct depthSensor *depthSensor);
+  25:Src/teamDepthSensor.c **** /*
+  26:Src/teamDepthSensor.c ****  * initializeSensor sets the values of the SDA and SCL pin along with fluid density and other thing
+  27:Src/teamDepthSensor.c ****  * that are deemed fit. This passes a struct through reference and sets all the stuff we want "cons
+  28:Src/teamDepthSensor.c ****  * We need:
+  29:Src/teamDepthSensor.c ****  *  struct depthSensor  - the sensor structure that you will be using
+  30:Src/teamDepthSensor.c ****  *  char SDAPIN         - the SDA pin the sensor is on
+  31:Src/teamDepthSensor.c ****  *  char SCLPIN         - the SCL pin the sensor is on
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxp6jIh.s 			page 2
+
+
+  32:Src/teamDepthSensor.c ****  *  float density       - the fluid density the sensor will need
+  33:Src/teamDepthSensor.c ****  */
+  34:Src/teamDepthSensor.c **** void initializeSensor(struct depthSensor *depthSensorSet, I2C_HandleTypeDef *I2CLines, float densit
+  28              		.loc 1 34 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  35:Src/teamDepthSensor.c ****     //set that shit
+  36:Src/teamDepthSensor.c ****     depthSensorSet->fluidDensity = density;
+  34              		.loc 1 36 0
+  35 0000 80ED000A 		vstr.32	s0, [r0]
+  36 0004 7047     		bx	lr
+  37              		.cfi_endproc
+  38              	.LFE129:
+  40              		.comm	depthSensor,20,4
+  41              		.text
+  42              	.Letext0:
+  43              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  44              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  45              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+  46              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+  47              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+  48              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  49              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  50              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  51              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+  52              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+  53              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+  54              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h"
+  55              		.file 14 "Inc/teamDepthSensor.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxp6jIh.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 teamDepthSensor.c
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxp6jIh.s:18     .text.initializeSensor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccxp6jIh.s:25     .text.initializeSensor:0000000000000000 initializeSensor
+                            *COM*:0000000000000014 depthSensor
+                     .debug_frame:0000000000000010 $d
+
+NO UNDEFINED SYMBOLS
