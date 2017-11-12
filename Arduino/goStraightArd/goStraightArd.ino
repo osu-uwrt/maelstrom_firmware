@@ -1,4 +1,5 @@
 #include <Servo.h>
+
 #include <ros.h>
 #include <riptide_msgs/PwmStamped.h>
 #include <std_msgs/Int8.h>
@@ -43,7 +44,7 @@ ros::Publisher state_pub("state/depth", &depth);
 
 void setup() {
   
-  Serial.begin(9600);
+  Serial.begin(57600);
   //pins for the mission and kill
   pinMode(killPin, INPUT); 
   pinMode(missPin, INPUT); 
@@ -61,7 +62,7 @@ void setup() {
   nh.subscribe(pwm_sub);
   nh.advertise(mission_pub);
   nh.advertise(kill_pub);
-   
+  nh.advertise(state_pub); 
   Wire.begin();
   sensor.init();
   sensor.setFluidDensity(997); //fluid density of freshwater in kg/m^3
