@@ -1,0 +1,3 @@
+/Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles/sauron.dir
