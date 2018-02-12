@@ -9,7 +9,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2017 STMicroelectronics International N.V. 
+  * Copyright (c) 2018 STMicroelectronics International N.V. 
   * All rights reserved.
   *
   * Redistribution and use in source and binary forms, with or without 
@@ -49,7 +49,8 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
-
+#include "usb_device.h"
+#include "teamThreads.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -67,8 +68,6 @@ TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim13;
 TIM_HandleTypeDef htim14;
-
-PCD_HandleTypeDef hpcd_USB_OTG_HS;
 
 osThreadId defaultTaskHandle;
 
@@ -88,7 +87,6 @@ static void MX_TIM3_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_TIM13_Init(void);
 static void MX_TIM14_Init(void);
-static void MX_USB_OTG_HS_PCD_Init(void);
 static void MX_I2C3_Init(void);
 void StartDefaultTask(void const * argument);
 
@@ -141,11 +139,11 @@ int main(void)
   MX_TIM5_Init();
   MX_TIM13_Init();
   MX_TIM14_Init();
-  MX_USB_OTG_HS_PCD_Init();
   MX_I2C3_Init();
 
   /* USER CODE BEGIN 2 */
-
+  xTaskHandle xHeartbeat;
+  xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
   /* USER CODE END 2 */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -532,29 +530,6 @@ static void MX_TIM14_Init(void)
 
 }
 
-/* USB_OTG_HS init function */
-static void MX_USB_OTG_HS_PCD_Init(void)
-{
-
-  hpcd_USB_OTG_HS.Instance = USB_OTG_HS;
-  hpcd_USB_OTG_HS.Init.dev_endpoints = 6;
-  hpcd_USB_OTG_HS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_OTG_HS.Init.dma_enable = DISABLE;
-  hpcd_USB_OTG_HS.Init.ep0_mps = DEP0CTL_MPS_64;
-  hpcd_USB_OTG_HS.Init.phy_itface = USB_OTG_EMBEDDED_PHY;
-  hpcd_USB_OTG_HS.Init.Sof_enable = DISABLE;
-  hpcd_USB_OTG_HS.Init.low_power_enable = DISABLE;
-  hpcd_USB_OTG_HS.Init.lpm_enable = DISABLE;
-  hpcd_USB_OTG_HS.Init.vbus_sensing_enable = DISABLE;
-  hpcd_USB_OTG_HS.Init.use_dedicated_ep1 = DISABLE;
-  hpcd_USB_OTG_HS.Init.use_external_vbus = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_OTG_HS) != HAL_OK)
-  {
-    _Error_Handler(__FILE__, __LINE__);
-  }
-
-}
-
 /** Configure pins as 
         * Analog 
         * Input 
@@ -575,7 +550,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, Heartbeat1_Pin|Heartbeat2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, HeartBeat1_Pin|Heartbeat2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : KillSwitch_Pin MissionStart_Pin Switch3_Pin Siwtch4_Pin 
                            Switch5_Pin */
@@ -585,8 +560,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Heartbeat1_Pin Heartbeat2_Pin */
-  GPIO_InitStruct.Pin = Heartbeat1_Pin|Heartbeat2_Pin;
+  /*Configure GPIO pins : HeartBeat1_Pin Heartbeat2_Pin */
+  GPIO_InitStruct.Pin = HeartBeat1_Pin|Heartbeat2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -601,6 +576,8 @@ static void MX_GPIO_Init(void)
 /* StartDefaultTask function */
 void StartDefaultTask(void const * argument)
 {
+  /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
@@ -641,7 +618,7 @@ void _Error_Handler(char * file, int line)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-  while(1) 
+  while(1)
   {
   }
   /* USER CODE END Error_Handler_Debug */ 

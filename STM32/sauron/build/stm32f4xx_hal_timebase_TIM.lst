@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -38,7 +38,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
    9:Src/stm32f4xx_hal_timebase_TIM.c ****   * inserted by the user or by software development tools
   10:Src/stm32f4xx_hal_timebase_TIM.c ****   * are owned by their respective copyright owners.
   11:Src/stm32f4xx_hal_timebase_TIM.c ****   *
-  12:Src/stm32f4xx_hal_timebase_TIM.c ****   * Copyright (c) 2017 STMicroelectronics International N.V. 
+  12:Src/stm32f4xx_hal_timebase_TIM.c ****   * Copyright (c) 2018 STMicroelectronics International N.V. 
   13:Src/stm32f4xx_hal_timebase_TIM.c ****   * All rights reserved.
   14:Src/stm32f4xx_hal_timebase_TIM.c ****   *
   15:Src/stm32f4xx_hal_timebase_TIM.c ****   * Redistribution and use in source and binary forms, with or without 
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
   29:Src/stm32f4xx_hal_timebase_TIM.c ****   * 5. Redistribution and use of this software other than as permitted under 
   30:Src/stm32f4xx_hal_timebase_TIM.c ****   *    this license is void and will automatically terminate your rights under 
   31:Src/stm32f4xx_hal_timebase_TIM.c ****   *    this license. 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 2
 
 
   32:Src/stm32f4xx_hal_timebase_TIM.c ****   *
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
   34              	.LCFI0:
   35              		.cfi_def_cfa_offset 8
   36              		.cfi_offset 4, -8
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 3
 
 
   37              		.cfi_offset 14, -4
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
   72 0034 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
   73              	.LVL6:
   74 0038 4300     		lsls	r3, r0, #1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 4
 
 
   75              	.LVL7:
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
  103              		.loc 1 124 0
  104 005e 08B0     		add	sp, sp, #32
  105              	.LCFI2:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 5
 
 
  106              		.cfi_remember_state
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
  150              	.L10:
  151 000e 00BF     		.align	2
  152              	.L9:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 6
 
 
  153 0010 00000000 		.word	htim1
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
  200              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
  201              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  202              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 7
 
 
  203              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
@@ -368,23 +368,23 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 1
  207              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
  208              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
  209              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_timebase_TIM.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:18     .text.HAL_InitTick:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:25     .text.HAL_InitTick:0000000000000000 HAL_InitTick
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:121    .text.HAL_InitTick:000000000000006c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:18     .text.HAL_InitTick:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:25     .text.HAL_InitTick:0000000000000000 HAL_InitTick
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:121    .text.HAL_InitTick:000000000000006c $d
                             *COM*:000000000000003c htim1
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:129    .text.HAL_SuspendTick:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:136    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:153    .text.HAL_SuspendTick:0000000000000010 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:158    .text.HAL_ResumeTick:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:165    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:182    .text.HAL_ResumeTick:0000000000000010 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:192    .bss.uwIncrementState:0000000000000000 uwIncrementState
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccubBVpj.s:189    .bss.uwIncrementState:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:129    .text.HAL_SuspendTick:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:136    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:153    .text.HAL_SuspendTick:0000000000000010 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:158    .text.HAL_ResumeTick:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:165    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:182    .text.HAL_ResumeTick:0000000000000010 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:192    .bss.uwIncrementState:0000000000000000 uwIncrementState
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccy7HouT.s:189    .bss.uwIncrementState:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

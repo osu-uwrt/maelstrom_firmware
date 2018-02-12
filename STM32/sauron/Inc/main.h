@@ -9,7 +9,7 @@
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2017 STMicroelectronics International N.V. 
+  * Copyright (c) 2018 STMicroelectronics International N.V. 
   * All rights reserved.
   *
   * Redistribution and use in source and binary forms, with or without 
@@ -86,8 +86,8 @@
 #define SwAft_GPIO_Port GPIOB
 #define SwFwd_Pin GPIO_PIN_11
 #define SwFwd_GPIO_Port GPIOB
-#define Heartbeat1_Pin GPIO_PIN_6
-#define Heartbeat1_GPIO_Port GPIOC
+#define HeartBeat1_Pin GPIO_PIN_6
+#define HeartBeat1_GPIO_Port GPIOC
 #define Heartbeat2_Pin GPIO_PIN_7
 #define Heartbeat2_GPIO_Port GPIOC
 #define SDA_Bkpln_Pin GPIO_PIN_9

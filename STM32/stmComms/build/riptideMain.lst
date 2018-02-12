@@ -1,0 +1,127 @@
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"riptideMain.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.riptideMain,"ax",%progbits
+  18              		.align	1
+  19              		.global	riptideMain
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu fpv4-sp-d16
+  25              	riptideMain:
+  26              	.LFB129:
+  27              		.file 1 "riptideSTM/src/riptideMain.c"
+   1:riptideSTM/src/riptideMain.c **** //
+   2:riptideSTM/src/riptideMain.c **** // Created by August R. Mason on 2/11/18.
+   3:riptideSTM/src/riptideMain.c **** //
+   4:riptideSTM/src/riptideMain.c **** 
+   5:riptideSTM/src/riptideMain.c **** //setup all your stuff here, so we barely touch main.h
+   6:riptideSTM/src/riptideMain.c **** #include "main.h"
+   7:riptideSTM/src/riptideMain.c **** #include "stm32f4xx_hal.h"
+   8:riptideSTM/src/riptideMain.c **** #include "cmsis_os.h"
+   9:riptideSTM/src/riptideMain.c **** #include "usb_device.h"
+  10:riptideSTM/src/riptideMain.c **** #include "usbd_cdc_if.h"
+  11:riptideSTM/src/riptideMain.c **** 
+  12:riptideSTM/src/riptideMain.c **** #include "riptideMain.h"
+  13:riptideSTM/src/riptideMain.c **** #include "riptideFunctions.h"
+  14:riptideSTM/src/riptideMain.c **** #include "riptidethreads.h"
+  15:riptideSTM/src/riptideMain.c **** 
+  16:riptideSTM/src/riptideMain.c **** void riptideMain(){
+  28              		.loc 1 16 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 00B5     		push	{lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 4
+  35              		.cfi_offset 14, -4
+  36 0002 85B0     		sub	sp, sp, #20
+  37              	.LCFI1:
+  38              		.cfi_def_cfa_offset 24
+  17:riptideSTM/src/riptideMain.c ****     //create tasks here
+  18:riptideSTM/src/riptideMain.c ****     xTaskHandle xHeartbeat;
+  19:riptideSTM/src/riptideMain.c ****     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
+  39              		.loc 1 19 0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 2
+
+
+  40 0004 03AB     		add	r3, sp, #12
+  41 0006 0193     		str	r3, [sp, #4]
+  42 0008 0123     		movs	r3, #1
+  43 000a 0093     		str	r3, [sp]
+  44 000c 0023     		movs	r3, #0
+  45 000e 8022     		movs	r2, #128
+  46 0010 0349     		ldr	r1, .L3
+  47 0012 0448     		ldr	r0, .L3+4
+  48 0014 FFF7FEFF 		bl	xTaskCreate
+  49              	.LVL0:
+  20:riptideSTM/src/riptideMain.c ****     //create queues here
+  21:riptideSTM/src/riptideMain.c ****     //create mutexes here
+  22:riptideSTM/src/riptideMain.c ****     //create semaphores here
+  23:riptideSTM/src/riptideMain.c ****     return;
+  24:riptideSTM/src/riptideMain.c **** }...
+  50              		.loc 1 24 0
+  51 0018 05B0     		add	sp, sp, #20
+  52              	.LCFI2:
+  53              		.cfi_def_cfa_offset 4
+  54              		@ sp needed
+  55 001a 5DF804FB 		ldr	pc, [sp], #4
+  56              	.L4:
+  57 001e 00BF     		.align	2
+  58              	.L3:
+  59 0020 00000000 		.word	.LC0
+  60 0024 00000000 		.word	vHeartbeat
+  61              		.cfi_endproc
+  62              	.LFE129:
+  64              		.section	.rodata.riptideMain.str1.4,"aMS",%progbits,1
+  65              		.align	2
+  66              	.LC0:
+  67 0000 48656172 		.ascii	"Heartbeat\000"
+  67      74626561 
+  67      7400
+  68              		.text
+  69              	.Letext0:
+  70              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  71              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  72              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+  73              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+  74              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  75              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  76              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  77              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  78              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+  79              		.file 11 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+  80              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+  81              		.file 13 "Inc/usb_device.h"
+  82              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+  83              		.file 15 "Inc/usbd_cdc_if.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 riptideMain.c
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:18     .text.riptideMain:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:25     .text.riptideMain:0000000000000000 riptideMain
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:59     .text.riptideMain:0000000000000020 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:65     .rodata.riptideMain.str1.4:0000000000000000 $d
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+xTaskCreate
+vHeartbeat
