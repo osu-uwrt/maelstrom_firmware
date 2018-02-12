@@ -1,0 +1,12 @@
+#git ignore attempt
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+#######################
+# IDE generated files #
+#######################
+.idea
