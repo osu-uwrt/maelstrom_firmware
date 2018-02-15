@@ -10,3 +10,15 @@
 # IDE generated files #
 #######################
 .idea
+
+Debug/
+Drivers/
+.cproject
+.mxproject
+.project
+.settings
+mx.scratch
+*.launch
+startup/
+*.ld
+
