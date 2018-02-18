@@ -1,38 +1,38 @@
 Archive member included to satisfy reference by file (symbol)
 
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (exit)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (__libc_init_array)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (exit)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (__libc_init_array)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
                               build/usbd_cdc.o (malloc)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
                               build/queue.o (memcpy)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o) (_free_r)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o) (_malloc_r)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o) (errno)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o) (_sbrk)
-/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
-                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o) (_exit)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o) (_free_r)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o) (_malloc_r)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o) (errno)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o) (_sbrk)
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o) (_exit)
 
 Allocating common symbols
 Common symbol       size              file
 
 defaultTaskHandle   0x4               build/main.o
 UserRxBufferHS      0x800             build/usbd_cdc_if.o
-errno               0x4               /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+errno               0x4               /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
 hpcd_USB_OTG_HS     0x3f0             build/usbd_conf.o
 uwTick              0x4               build/stm32f4xx_hal.o
 xQueueRegistry      0x40              build/queue.o
@@ -44,17 +44,17 @@ USBD_StrDesc        0x200             build/usbd_desc.o
 
 Discarded input sections
 
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
- .data          0x0000000000000000        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
- .text          0x0000000000000000       0x74 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
- .ARM.extab     0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
- .ARM.exidx     0x0000000000000000        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .data          0x0000000000000000        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .text          0x0000000000000000       0x74 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
  .ARM.attributes
-                0x0000000000000000       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+                0x0000000000000000       0x20 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
  .text          0x0000000000000000        0x0 build/freertos.o
  .data          0x0000000000000000        0x0 build/freertos.o
  .bss           0x0000000000000000        0x0 build/freertos.o
@@ -1188,80 +1188,82 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/riptideThreads.o
  .data          0x0000000000000000        0x0 build/riptideThreads.o
  .bss           0x0000000000000000        0x0 build/riptideThreads.o
+ .text.vSwitches
+                0x0000000000000000        0x2 build/riptideThreads.o
  .text          0x0000000000000000       0x14 build/startup_stm32f405xx.o
  .data          0x0000000000000000        0x0 build/startup_stm32f405xx.o
  .bss           0x0000000000000000        0x0 build/startup_stm32f405xx.o
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
- .text.exit     0x0000000000000000       0x28 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
- .debug_frame   0x0000000000000000       0x28 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x28 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
  .ARM.attributes
-                0x0000000000000000       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000000000000       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
  .rodata._global_impure_ptr
-                0x0000000000000000        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .text.memcpy   0x0000000000000000       0x16 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000000000       0x28 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000000000000        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .text.memcpy   0x0000000000000000       0x16 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000000000       0x28 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x0000000000000000       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .text.memset   0x0000000000000000       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000000000       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+                0x0000000000000000       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000       0x10 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x20 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x0000000000000000       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                0x0000000000000000       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
  .text.cleanup_glue
-                0x0000000000000000       0x1a /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                0x0000000000000000       0x1a /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
  .text._reclaim_reent
-                0x0000000000000000       0xb8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
- .text._exit    0x0000000000000000        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
- .debug_frame   0x0000000000000000       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+                0x0000000000000000       0xb8 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .text._exit    0x0000000000000000        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
  .ARM.attributes
-                0x0000000000000000       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
- .eh_frame      0x0000000000000000        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
- .jcr           0x0000000000000000        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+                0x0000000000000000       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .jcr           0x0000000000000000        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
  .ARM.attributes
-                0x0000000000000000       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
- .text          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
- .data          0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
- .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x0000000000000000       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .text          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .data          0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .bss           0x0000000000000000        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 
 Memory Configuration
 
@@ -1273,9 +1275,9 @@ FLASH            0x0000000008000000 0x0000000000100000 xr
 
 Linker script and memory map
 
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 LOAD build/freertos.o
 LOAD build/stm32f4xx_hal_msp.o
 LOAD build/stm32f4xx_hal_timebase_TIM.o
@@ -1320,19 +1322,19 @@ LOAD build/riptideFunctions.o
 LOAD build/riptideMain.o
 LOAD build/riptideThreads.o
 LOAD build/startup_stm32f405xx.o
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a
 START GROUP
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
 END GROUP
 START GROUP
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a
 END GROUP
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
-LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+LOAD /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
                 0x0000000020020000                _estack = 0x20020000
                 0x0000000000000200                _Min_Heap_Size = 0x200
                 0x0000000000000400                _Min_Stack_Size = 0x400
@@ -1344,10 +1346,10 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000188                . = ALIGN (0x4)
 
-.text           0x0000000008000190     0x43b8
+.text           0x0000000008000190     0x43cc
                 0x0000000008000190                . = ALIGN (0x4)
  *(.text)
- .text          0x0000000008000190       0x6c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .text          0x0000000008000190       0x6c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.text*)
  .text.HAL_MspInit
                 0x00000000080001fc       0x5e build/stm32f4xx_hal_msp.o
@@ -1735,467 +1737,470 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x000000000800332c        0x4 build/usbd_cdc_if.o
  .text.CDC_Control_HS
                 0x0000000008003330        0x4 build/usbd_cdc_if.o
- .text.CDC_Init_HS
-                0x0000000008003334       0x28 build/usbd_cdc_if.o
- .text.CDC_Transmit_HS
-                0x000000000800335c       0x2c build/usbd_cdc_if.o
-                0x000000000800335c                CDC_Transmit_HS
  .text.CDC_Receive_HS
-                0x0000000008003388       0x84 build/usbd_cdc_if.o
+                0x0000000008003334       0x28 build/usbd_cdc_if.o
+ .text.CDC_Init_HS
+                0x000000000800335c       0x28 build/usbd_cdc_if.o
+ .text.CDC_Transmit_HS
+                0x0000000008003384       0x2c build/usbd_cdc_if.o
+                0x0000000008003384                CDC_Transmit_HS
  .text.USBD_HS_DeviceDescriptor
-                0x000000000800340c        0xc build/usbd_desc.o
-                0x000000000800340c                USBD_HS_DeviceDescriptor
+                0x00000000080033b0        0xc build/usbd_desc.o
+                0x00000000080033b0                USBD_HS_DeviceDescriptor
  .text.USBD_HS_LangIDStrDescriptor
-                0x0000000008003418        0xc build/usbd_desc.o
-                0x0000000008003418                USBD_HS_LangIDStrDescriptor
+                0x00000000080033bc        0xc build/usbd_desc.o
+                0x00000000080033bc                USBD_HS_LangIDStrDescriptor
  .text.USBD_HS_ProductStrDescriptor
-                0x0000000008003424       0x24 build/usbd_desc.o
-                0x0000000008003424                USBD_HS_ProductStrDescriptor
+                0x00000000080033c8       0x24 build/usbd_desc.o
+                0x00000000080033c8                USBD_HS_ProductStrDescriptor
  .text.USBD_HS_ManufacturerStrDescriptor
-                0x0000000008003448       0x1c build/usbd_desc.o
-                0x0000000008003448                USBD_HS_ManufacturerStrDescriptor
+                0x00000000080033ec       0x1c build/usbd_desc.o
+                0x00000000080033ec                USBD_HS_ManufacturerStrDescriptor
  .text.USBD_HS_SerialStrDescriptor
-                0x0000000008003464       0x24 build/usbd_desc.o
-                0x0000000008003464                USBD_HS_SerialStrDescriptor
+                0x0000000008003408       0x24 build/usbd_desc.o
+                0x0000000008003408                USBD_HS_SerialStrDescriptor
  .text.USBD_HS_ConfigStrDescriptor
-                0x0000000008003488       0x24 build/usbd_desc.o
-                0x0000000008003488                USBD_HS_ConfigStrDescriptor
+                0x000000000800342c       0x24 build/usbd_desc.o
+                0x000000000800342c                USBD_HS_ConfigStrDescriptor
  .text.USBD_HS_InterfaceStrDescriptor
-                0x00000000080034ac       0x24 build/usbd_desc.o
-                0x00000000080034ac                USBD_HS_InterfaceStrDescriptor
+                0x0000000008003450       0x24 build/usbd_desc.o
+                0x0000000008003450                USBD_HS_InterfaceStrDescriptor
  .text.HAL_PCD_MspInit
-                0x00000000080034d0       0x64 build/usbd_conf.o
-                0x00000000080034d0                HAL_PCD_MspInit
+                0x0000000008003474       0x64 build/usbd_conf.o
+                0x0000000008003474                HAL_PCD_MspInit
  .text.HAL_PCD_SetupStageCallback
-                0x0000000008003534       0x10 build/usbd_conf.o
-                0x0000000008003534                HAL_PCD_SetupStageCallback
+                0x00000000080034d8       0x10 build/usbd_conf.o
+                0x00000000080034d8                HAL_PCD_SetupStageCallback
  .text.HAL_PCD_DataOutStageCallback
-                0x0000000008003544       0x18 build/usbd_conf.o
-                0x0000000008003544                HAL_PCD_DataOutStageCallback
+                0x00000000080034e8       0x18 build/usbd_conf.o
+                0x00000000080034e8                HAL_PCD_DataOutStageCallback
  .text.HAL_PCD_DataInStageCallback
-                0x000000000800355c       0x16 build/usbd_conf.o
-                0x000000000800355c                HAL_PCD_DataInStageCallback
+                0x0000000008003500       0x16 build/usbd_conf.o
+                0x0000000008003500                HAL_PCD_DataInStageCallback
  .text.HAL_PCD_SOFCallback
-                0x0000000008003572        0xc build/usbd_conf.o
-                0x0000000008003572                HAL_PCD_SOFCallback
+                0x0000000008003516        0xc build/usbd_conf.o
+                0x0000000008003516                HAL_PCD_SOFCallback
  .text.HAL_PCD_ResetCallback
-                0x000000000800357e       0x20 build/usbd_conf.o
-                0x000000000800357e                HAL_PCD_ResetCallback
- *fill*         0x000000000800359e        0x2 
+                0x0000000008003522       0x20 build/usbd_conf.o
+                0x0000000008003522                HAL_PCD_ResetCallback
+ *fill*         0x0000000008003542        0x2 
  .text.HAL_PCD_SuspendCallback
-                0x00000000080035a0       0x30 build/usbd_conf.o
-                0x00000000080035a0                HAL_PCD_SuspendCallback
+                0x0000000008003544       0x30 build/usbd_conf.o
+                0x0000000008003544                HAL_PCD_SuspendCallback
  .text.HAL_PCD_ResumeCallback
-                0x00000000080035d0        0xc build/usbd_conf.o
-                0x00000000080035d0                HAL_PCD_ResumeCallback
+                0x0000000008003574        0xc build/usbd_conf.o
+                0x0000000008003574                HAL_PCD_ResumeCallback
  .text.HAL_PCD_ISOOUTIncompleteCallback
-                0x00000000080035dc        0xc build/usbd_conf.o
-                0x00000000080035dc                HAL_PCD_ISOOUTIncompleteCallback
+                0x0000000008003580        0xc build/usbd_conf.o
+                0x0000000008003580                HAL_PCD_ISOOUTIncompleteCallback
  .text.HAL_PCD_ISOINIncompleteCallback
-                0x00000000080035e8        0xc build/usbd_conf.o
-                0x00000000080035e8                HAL_PCD_ISOINIncompleteCallback
+                0x000000000800358c        0xc build/usbd_conf.o
+                0x000000000800358c                HAL_PCD_ISOINIncompleteCallback
  .text.HAL_PCD_ConnectCallback
-                0x00000000080035f4        0xc build/usbd_conf.o
-                0x00000000080035f4                HAL_PCD_ConnectCallback
+                0x0000000008003598        0xc build/usbd_conf.o
+                0x0000000008003598                HAL_PCD_ConnectCallback
  .text.HAL_PCD_DisconnectCallback
-                0x0000000008003600        0xc build/usbd_conf.o
-                0x0000000008003600                HAL_PCD_DisconnectCallback
+                0x00000000080035a4        0xc build/usbd_conf.o
+                0x00000000080035a4                HAL_PCD_DisconnectCallback
  .text.USBD_LL_Init
-                0x000000000800360c       0x7c build/usbd_conf.o
-                0x000000000800360c                USBD_LL_Init
+                0x00000000080035b0       0x7c build/usbd_conf.o
+                0x00000000080035b0                USBD_LL_Init
  .text.USBD_LL_Start
-                0x0000000008003688       0x1c build/usbd_conf.o
-                0x0000000008003688                USBD_LL_Start
+                0x000000000800362c       0x1c build/usbd_conf.o
+                0x000000000800362c                USBD_LL_Start
  .text.USBD_LL_OpenEP
-                0x00000000080036a4       0x22 build/usbd_conf.o
-                0x00000000080036a4                USBD_LL_OpenEP
+                0x0000000008003648       0x22 build/usbd_conf.o
+                0x0000000008003648                USBD_LL_OpenEP
  .text.USBD_LL_CloseEP
-                0x00000000080036c6       0x1c build/usbd_conf.o
-                0x00000000080036c6                USBD_LL_CloseEP
+                0x000000000800366a       0x1c build/usbd_conf.o
+                0x000000000800366a                USBD_LL_CloseEP
  .text.USBD_LL_StallEP
-                0x00000000080036e2       0x1c build/usbd_conf.o
-                0x00000000080036e2                USBD_LL_StallEP
+                0x0000000008003686       0x1c build/usbd_conf.o
+                0x0000000008003686                USBD_LL_StallEP
  .text.USBD_LL_ClearStallEP
-                0x00000000080036fe       0x1c build/usbd_conf.o
-                0x00000000080036fe                USBD_LL_ClearStallEP
+                0x00000000080036a2       0x1c build/usbd_conf.o
+                0x00000000080036a2                USBD_LL_ClearStallEP
  .text.USBD_LL_IsStallEP
-                0x000000000800371a       0x2e build/usbd_conf.o
-                0x000000000800371a                USBD_LL_IsStallEP
+                0x00000000080036be       0x2e build/usbd_conf.o
+                0x00000000080036be                USBD_LL_IsStallEP
  .text.USBD_LL_SetUSBAddress
-                0x0000000008003748       0x1c build/usbd_conf.o
-                0x0000000008003748                USBD_LL_SetUSBAddress
+                0x00000000080036ec       0x1c build/usbd_conf.o
+                0x00000000080036ec                USBD_LL_SetUSBAddress
  .text.USBD_LL_Transmit
-                0x0000000008003764       0x1c build/usbd_conf.o
-                0x0000000008003764                USBD_LL_Transmit
+                0x0000000008003708       0x1c build/usbd_conf.o
+                0x0000000008003708                USBD_LL_Transmit
  .text.USBD_LL_PrepareReceive
-                0x0000000008003780       0x1c build/usbd_conf.o
-                0x0000000008003780                USBD_LL_PrepareReceive
+                0x0000000008003724       0x1c build/usbd_conf.o
+                0x0000000008003724                USBD_LL_PrepareReceive
  .text.USBD_LL_GetRxDataSize
-                0x000000000800379c        0xc build/usbd_conf.o
-                0x000000000800379c                USBD_LL_GetRxDataSize
+                0x0000000008003740        0xc build/usbd_conf.o
+                0x0000000008003740                USBD_LL_GetRxDataSize
  .text.USBD_Init
-                0x00000000080037a8       0x2e build/usbd_core.o
-                0x00000000080037a8                USBD_Init
+                0x000000000800374c       0x2e build/usbd_core.o
+                0x000000000800374c                USBD_Init
  .text.USBD_RegisterClass
-                0x00000000080037d6        0xe build/usbd_core.o
-                0x00000000080037d6                USBD_RegisterClass
+                0x000000000800377a        0xe build/usbd_core.o
+                0x000000000800377a                USBD_RegisterClass
  .text.USBD_Start
-                0x00000000080037e4        0xa build/usbd_core.o
-                0x00000000080037e4                USBD_Start
+                0x0000000008003788        0xa build/usbd_core.o
+                0x0000000008003788                USBD_Start
  .text.USBD_SetClassConfig
-                0x00000000080037ee       0x1a build/usbd_core.o
-                0x00000000080037ee                USBD_SetClassConfig
+                0x0000000008003792       0x1a build/usbd_core.o
+                0x0000000008003792                USBD_SetClassConfig
  .text.USBD_ClrClassConfig
-                0x0000000008003808        0xe build/usbd_core.o
-                0x0000000008003808                USBD_ClrClassConfig
+                0x00000000080037ac        0xe build/usbd_core.o
+                0x00000000080037ac                USBD_ClrClassConfig
  .text.USBD_LL_SetupStage
-                0x0000000008003816       0x5a build/usbd_core.o
-                0x0000000008003816                USBD_LL_SetupStage
+                0x00000000080037ba       0x5a build/usbd_core.o
+                0x00000000080037ba                USBD_LL_SetupStage
  .text.USBD_LL_DataOutStage
-                0x0000000008003870       0x6a build/usbd_core.o
-                0x0000000008003870                USBD_LL_DataOutStage
+                0x0000000008003814       0x6a build/usbd_core.o
+                0x0000000008003814                USBD_LL_DataOutStage
  .text.USBD_LL_DataInStage
-                0x00000000080038da       0xb2 build/usbd_core.o
-                0x00000000080038da                USBD_LL_DataInStage
+                0x000000000800387e       0xb2 build/usbd_core.o
+                0x000000000800387e                USBD_LL_DataInStage
  .text.USBD_LL_Reset
-                0x000000000800398c       0x3e build/usbd_core.o
-                0x000000000800398c                USBD_LL_Reset
+                0x0000000008003930       0x3e build/usbd_core.o
+                0x0000000008003930                USBD_LL_Reset
  .text.USBD_LL_SetSpeed
-                0x00000000080039ca        0x6 build/usbd_core.o
-                0x00000000080039ca                USBD_LL_SetSpeed
+                0x000000000800396e        0x6 build/usbd_core.o
+                0x000000000800396e                USBD_LL_SetSpeed
  .text.USBD_LL_Suspend
-                0x00000000080039d0       0x12 build/usbd_core.o
-                0x00000000080039d0                USBD_LL_Suspend
+                0x0000000008003974       0x12 build/usbd_core.o
+                0x0000000008003974                USBD_LL_Suspend
  .text.USBD_LL_Resume
-                0x00000000080039e2        0xc build/usbd_core.o
-                0x00000000080039e2                USBD_LL_Resume
+                0x0000000008003986        0xc build/usbd_core.o
+                0x0000000008003986                USBD_LL_Resume
  .text.USBD_LL_SOF
-                0x00000000080039ee       0x1c build/usbd_core.o
-                0x00000000080039ee                USBD_LL_SOF
+                0x0000000008003992       0x1c build/usbd_core.o
+                0x0000000008003992                USBD_LL_SOF
  .text.USBD_LL_IsoINIncomplete
-                0x0000000008003a0a        0x4 build/usbd_core.o
-                0x0000000008003a0a                USBD_LL_IsoINIncomplete
+                0x00000000080039ae        0x4 build/usbd_core.o
+                0x00000000080039ae                USBD_LL_IsoINIncomplete
  .text.USBD_LL_IsoOUTIncomplete
-                0x0000000008003a0e        0x4 build/usbd_core.o
-                0x0000000008003a0e                USBD_LL_IsoOUTIncomplete
+                0x00000000080039b2        0x4 build/usbd_core.o
+                0x00000000080039b2                USBD_LL_IsoOUTIncomplete
  .text.USBD_LL_DevConnected
-                0x0000000008003a12        0x4 build/usbd_core.o
-                0x0000000008003a12                USBD_LL_DevConnected
+                0x00000000080039b6        0x4 build/usbd_core.o
+                0x00000000080039b6                USBD_LL_DevConnected
  .text.USBD_LL_DevDisconnected
-                0x0000000008003a16       0x16 build/usbd_core.o
-                0x0000000008003a16                USBD_LL_DevDisconnected
+                0x00000000080039ba       0x16 build/usbd_core.o
+                0x00000000080039ba                USBD_LL_DevDisconnected
  .text.USBD_GetLen
-                0x0000000008003a2c       0x14 build/usbd_ctlreq.o
+                0x00000000080039d0       0x14 build/usbd_ctlreq.o
  .text.USBD_SetFeature
-                0x0000000008003a40       0x20 build/usbd_ctlreq.o
+                0x00000000080039e4       0x20 build/usbd_ctlreq.o
  .text.USBD_ParseSetupRequest
-                0x0000000008003a60       0x28 build/usbd_ctlreq.o
-                0x0000000008003a60                USBD_ParseSetupRequest
+                0x0000000008003a04       0x28 build/usbd_ctlreq.o
+                0x0000000008003a04                USBD_ParseSetupRequest
  .text.USBD_CtlError
-                0x0000000008003a88       0x14 build/usbd_ctlreq.o
-                0x0000000008003a88                USBD_CtlError
+                0x0000000008003a2c       0x14 build/usbd_ctlreq.o
+                0x0000000008003a2c                USBD_CtlError
  .text.USBD_GetDescriptor
-                0x0000000008003a9c      0x132 build/usbd_ctlreq.o
+                0x0000000008003a40      0x132 build/usbd_ctlreq.o
  .text.USBD_SetAddress
-                0x0000000008003bce       0x4a build/usbd_ctlreq.o
+                0x0000000008003b72       0x4a build/usbd_ctlreq.o
  .text.USBD_SetConfig
-                0x0000000008003c18       0xa4 build/usbd_ctlreq.o
+                0x0000000008003bbc       0xa4 build/usbd_ctlreq.o
  .text.USBD_GetConfig
-                0x0000000008003cbc       0x3a build/usbd_ctlreq.o
+                0x0000000008003c60       0x3a build/usbd_ctlreq.o
  .text.USBD_GetStatus
-                0x0000000008003cf6       0x2c build/usbd_ctlreq.o
+                0x0000000008003c9a       0x2c build/usbd_ctlreq.o
  .text.USBD_ClrFeature
-                0x0000000008003d22       0x32 build/usbd_ctlreq.o
+                0x0000000008003cc6       0x32 build/usbd_ctlreq.o
  .text.USBD_StdDevReq
-                0x0000000008003d54       0x48 build/usbd_ctlreq.o
-                0x0000000008003d54                USBD_StdDevReq
+                0x0000000008003cf8       0x48 build/usbd_ctlreq.o
+                0x0000000008003cf8                USBD_StdDevReq
  .text.USBD_StdItfReq
-                0x0000000008003d9c       0x38 build/usbd_ctlreq.o
-                0x0000000008003d9c                USBD_StdItfReq
+                0x0000000008003d40       0x38 build/usbd_ctlreq.o
+                0x0000000008003d40                USBD_StdItfReq
  .text.USBD_StdEPReq
-                0x0000000008003dd4      0x118 build/usbd_ctlreq.o
-                0x0000000008003dd4                USBD_StdEPReq
+                0x0000000008003d78      0x118 build/usbd_ctlreq.o
+                0x0000000008003d78                USBD_StdEPReq
  .text.USBD_GetString
-                0x0000000008003eec       0x3a build/usbd_ctlreq.o
-                0x0000000008003eec                USBD_GetString
+                0x0000000008003e90       0x3a build/usbd_ctlreq.o
+                0x0000000008003e90                USBD_GetString
  .text.USBD_CtlSendData
-                0x0000000008003f26       0x1a build/usbd_ioreq.o
-                0x0000000008003f26                USBD_CtlSendData
+                0x0000000008003eca       0x1a build/usbd_ioreq.o
+                0x0000000008003eca                USBD_CtlSendData
  .text.USBD_CtlContinueSendData
-                0x0000000008003f40       0x10 build/usbd_ioreq.o
-                0x0000000008003f40                USBD_CtlContinueSendData
+                0x0000000008003ee4       0x10 build/usbd_ioreq.o
+                0x0000000008003ee4                USBD_CtlContinueSendData
  .text.USBD_CtlPrepareRx
-                0x0000000008003f50       0x1e build/usbd_ioreq.o
-                0x0000000008003f50                USBD_CtlPrepareRx
+                0x0000000008003ef4       0x1e build/usbd_ioreq.o
+                0x0000000008003ef4                USBD_CtlPrepareRx
  .text.USBD_CtlContinueRx
-                0x0000000008003f6e       0x10 build/usbd_ioreq.o
-                0x0000000008003f6e                USBD_CtlContinueRx
+                0x0000000008003f12       0x10 build/usbd_ioreq.o
+                0x0000000008003f12                USBD_CtlContinueRx
  .text.USBD_CtlSendStatus
-                0x0000000008003f7e       0x16 build/usbd_ioreq.o
-                0x0000000008003f7e                USBD_CtlSendStatus
+                0x0000000008003f22       0x16 build/usbd_ioreq.o
+                0x0000000008003f22                USBD_CtlSendStatus
  .text.USBD_CtlReceiveStatus
-                0x0000000008003f94       0x16 build/usbd_ioreq.o
-                0x0000000008003f94                USBD_CtlReceiveStatus
+                0x0000000008003f38       0x16 build/usbd_ioreq.o
+                0x0000000008003f38                USBD_CtlReceiveStatus
  .text.USBD_CDC_DataIn
-                0x0000000008003faa       0x12 build/usbd_cdc.o
+                0x0000000008003f4e       0x12 build/usbd_cdc.o
  .text.USBD_CDC_EP0_RxReady
-                0x0000000008003fbc       0x28 build/usbd_cdc.o
+                0x0000000008003f60       0x28 build/usbd_cdc.o
  .text.USBD_CDC_GetFSCfgDesc
-                0x0000000008003fe4        0xc build/usbd_cdc.o
+                0x0000000008003f88        0xc build/usbd_cdc.o
  .text.USBD_CDC_GetHSCfgDesc
-                0x0000000008003ff0        0xc build/usbd_cdc.o
+                0x0000000008003f94        0xc build/usbd_cdc.o
  .text.USBD_CDC_GetOtherSpeedCfgDesc
-                0x0000000008003ffc        0xc build/usbd_cdc.o
+                0x0000000008003fa0        0xc build/usbd_cdc.o
  .text.USBD_CDC_GetDeviceQualifierDescriptor
-                0x0000000008004008        0xc build/usbd_cdc.o
-                0x0000000008004008                USBD_CDC_GetDeviceQualifierDescriptor
+                0x0000000008003fac        0xc build/usbd_cdc.o
+                0x0000000008003fac                USBD_CDC_GetDeviceQualifierDescriptor
  .text.USBD_CDC_DataOut
-                0x0000000008004014       0x2e build/usbd_cdc.o
- *fill*         0x0000000008004042        0x2 
+                0x0000000008003fb8       0x2e build/usbd_cdc.o
+ *fill*         0x0000000008003fe6        0x2 
  .text.USBD_CDC_Setup
-                0x0000000008004044       0x74 build/usbd_cdc.o
+                0x0000000008003fe8       0x74 build/usbd_cdc.o
  .text.USBD_CDC_DeInit
-                0x00000000080040b8       0x3a build/usbd_cdc.o
+                0x000000000800405c       0x3a build/usbd_cdc.o
  .text.USBD_CDC_Init
-                0x00000000080040f2       0x96 build/usbd_cdc.o
+                0x0000000008004096       0x96 build/usbd_cdc.o
  .text.USBD_CDC_RegisterInterface
-                0x0000000008004188        0xe build/usbd_cdc.o
-                0x0000000008004188                USBD_CDC_RegisterInterface
+                0x000000000800412c        0xe build/usbd_cdc.o
+                0x000000000800412c                USBD_CDC_RegisterInterface
  .text.USBD_CDC_SetTxBuffer
-                0x0000000008004196       0x10 build/usbd_cdc.o
-                0x0000000008004196                USBD_CDC_SetTxBuffer
+                0x000000000800413a       0x10 build/usbd_cdc.o
+                0x000000000800413a                USBD_CDC_SetTxBuffer
  .text.USBD_CDC_SetRxBuffer
-                0x00000000080041a6        0xc build/usbd_cdc.o
-                0x00000000080041a6                USBD_CDC_SetRxBuffer
+                0x000000000800414a        0xc build/usbd_cdc.o
+                0x000000000800414a                USBD_CDC_SetRxBuffer
  .text.USBD_CDC_TransmitPacket
-                0x00000000080041b2       0x2e build/usbd_cdc.o
-                0x00000000080041b2                USBD_CDC_TransmitPacket
+                0x0000000008004156       0x2e build/usbd_cdc.o
+                0x0000000008004156                USBD_CDC_TransmitPacket
  .text.USBD_CDC_ReceivePacket
-                0x00000000080041e0       0x32 build/usbd_cdc.o
-                0x00000000080041e0                USBD_CDC_ReceivePacket
- *fill*         0x0000000008004212        0x2 
+                0x0000000008004184       0x32 build/usbd_cdc.o
+                0x0000000008004184                USBD_CDC_ReceivePacket
+ *fill*         0x00000000080041b6        0x2 
  .text.MX_USB_DEVICE_Init
-                0x0000000008004214       0x38 build/usb_device.o
-                0x0000000008004214                MX_USB_DEVICE_Init
+                0x00000000080041b8       0x38 build/usb_device.o
+                0x00000000080041b8                MX_USB_DEVICE_Init
  .text.MessageCheck
-                0x000000000800424c       0x32 build/riptideFunctions.o
-                0x000000000800424c                MessageCheck
- *fill*         0x000000000800427e        0x2 
+                0x00000000080041f0       0x32 build/riptideFunctions.o
+                0x00000000080041f0                MessageCheck
+ *fill*         0x0000000008004222        0x2 
+ .text.Riptide_CDC_Receive
+                0x0000000008004224       0x70 build/riptideFunctions.o
+                0x0000000008004224                Riptide_CDC_Receive
  .text.riptideMain
-                0x0000000008004280       0x28 build/riptideMain.o
-                0x0000000008004280                riptideMain
+                0x0000000008004294       0x28 build/riptideMain.o
+                0x0000000008004294                riptideMain
  .text.vHeartbeat
-                0x00000000080042a8       0x34 build/riptideThreads.o
-                0x00000000080042a8                vHeartbeat
+                0x00000000080042bc       0x34 build/riptideThreads.o
+                0x00000000080042bc                vHeartbeat
  .text.Reset_Handler
-                0x00000000080042dc       0x50 build/startup_stm32f405xx.o
-                0x00000000080042dc                Reset_Handler
+                0x00000000080042f0       0x50 build/startup_stm32f405xx.o
+                0x00000000080042f0                Reset_Handler
  .text.Default_Handler
-                0x000000000800432c        0x2 build/startup_stm32f405xx.o
-                0x000000000800432c                DMA1_Stream3_IRQHandler
-                0x000000000800432c                HASH_RNG_IRQHandler
-                0x000000000800432c                EXTI2_IRQHandler
-                0x000000000800432c                TIM8_CC_IRQHandler
-                0x000000000800432c                TIM1_CC_IRQHandler
-                0x000000000800432c                DMA2_Stream5_IRQHandler
-                0x000000000800432c                DMA1_Stream5_IRQHandler
-                0x000000000800432c                PVD_IRQHandler
-                0x000000000800432c                SDIO_IRQHandler
-                0x000000000800432c                TAMP_STAMP_IRQHandler
-                0x000000000800432c                CAN2_RX1_IRQHandler
-                0x000000000800432c                EXTI3_IRQHandler
-                0x000000000800432c                TIM8_TRG_COM_TIM14_IRQHandler
-                0x000000000800432c                TIM8_UP_TIM13_IRQHandler
-                0x000000000800432c                I2C3_ER_IRQHandler
-                0x000000000800432c                EXTI0_IRQHandler
-                0x000000000800432c                I2C2_EV_IRQHandler
-                0x000000000800432c                DMA1_Stream2_IRQHandler
-                0x000000000800432c                CAN1_RX0_IRQHandler
-                0x000000000800432c                FPU_IRQHandler
-                0x000000000800432c                OTG_HS_WKUP_IRQHandler
-                0x000000000800432c                CAN2_SCE_IRQHandler
-                0x000000000800432c                DMA2_Stream2_IRQHandler
-                0x000000000800432c                SPI1_IRQHandler
-                0x000000000800432c                TIM6_DAC_IRQHandler
-                0x000000000800432c                TIM1_BRK_TIM9_IRQHandler
-                0x000000000800432c                CAN2_RX0_IRQHandler
-                0x000000000800432c                DMA2_Stream3_IRQHandler
-                0x000000000800432c                USART6_IRQHandler
-                0x000000000800432c                USART3_IRQHandler
-                0x000000000800432c                CAN1_RX1_IRQHandler
-                0x000000000800432c                UART5_IRQHandler
-                0x000000000800432c                DMA2_Stream0_IRQHandler
-                0x000000000800432c                TIM4_IRQHandler
-                0x000000000800432c                I2C1_EV_IRQHandler
-                0x000000000800432c                DMA1_Stream6_IRQHandler
-                0x000000000800432c                DMA1_Stream1_IRQHandler
-                0x000000000800432c                UART4_IRQHandler
-                0x000000000800432c                TIM3_IRQHandler
-                0x000000000800432c                RCC_IRQHandler
-                0x000000000800432c                TIM8_BRK_TIM12_IRQHandler
-                0x000000000800432c                Default_Handler
-                0x000000000800432c                EXTI15_10_IRQHandler
-                0x000000000800432c                ADC_IRQHandler
-                0x000000000800432c                DMA1_Stream7_IRQHandler
-                0x000000000800432c                TIM7_IRQHandler
-                0x000000000800432c                CAN2_TX_IRQHandler
-                0x000000000800432c                TIM5_IRQHandler
-                0x000000000800432c                DMA2_Stream7_IRQHandler
-                0x000000000800432c                I2C3_EV_IRQHandler
-                0x000000000800432c                EXTI9_5_IRQHandler
-                0x000000000800432c                RTC_WKUP_IRQHandler
-                0x000000000800432c                SPI2_IRQHandler
-                0x000000000800432c                OTG_HS_EP1_IN_IRQHandler
-                0x000000000800432c                DMA1_Stream0_IRQHandler
-                0x000000000800432c                CAN1_TX_IRQHandler
-                0x000000000800432c                EXTI4_IRQHandler
-                0x000000000800432c                FSMC_IRQHandler
-                0x000000000800432c                OTG_HS_EP1_OUT_IRQHandler
-                0x000000000800432c                WWDG_IRQHandler
-                0x000000000800432c                TIM2_IRQHandler
-                0x000000000800432c                OTG_FS_WKUP_IRQHandler
-                0x000000000800432c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x000000000800432c                EXTI1_IRQHandler
-                0x000000000800432c                USART2_IRQHandler
-                0x000000000800432c                I2C2_ER_IRQHandler
-                0x000000000800432c                DMA2_Stream1_IRQHandler
-                0x000000000800432c                CAN1_SCE_IRQHandler
-                0x000000000800432c                FLASH_IRQHandler
-                0x000000000800432c                DMA2_Stream4_IRQHandler
-                0x000000000800432c                USART1_IRQHandler
-                0x000000000800432c                OTG_FS_IRQHandler
-                0x000000000800432c                SPI3_IRQHandler
-                0x000000000800432c                DMA1_Stream4_IRQHandler
-                0x000000000800432c                I2C1_ER_IRQHandler
-                0x000000000800432c                DMA2_Stream6_IRQHandler
-                0x000000000800432c                RTC_Alarm_IRQHandler
- *fill*         0x000000000800432e        0x2 
+                0x0000000008004340        0x2 build/startup_stm32f405xx.o
+                0x0000000008004340                DMA1_Stream3_IRQHandler
+                0x0000000008004340                HASH_RNG_IRQHandler
+                0x0000000008004340                EXTI2_IRQHandler
+                0x0000000008004340                TIM8_CC_IRQHandler
+                0x0000000008004340                TIM1_CC_IRQHandler
+                0x0000000008004340                DMA2_Stream5_IRQHandler
+                0x0000000008004340                DMA1_Stream5_IRQHandler
+                0x0000000008004340                PVD_IRQHandler
+                0x0000000008004340                SDIO_IRQHandler
+                0x0000000008004340                TAMP_STAMP_IRQHandler
+                0x0000000008004340                CAN2_RX1_IRQHandler
+                0x0000000008004340                EXTI3_IRQHandler
+                0x0000000008004340                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008004340                TIM8_UP_TIM13_IRQHandler
+                0x0000000008004340                I2C3_ER_IRQHandler
+                0x0000000008004340                EXTI0_IRQHandler
+                0x0000000008004340                I2C2_EV_IRQHandler
+                0x0000000008004340                DMA1_Stream2_IRQHandler
+                0x0000000008004340                CAN1_RX0_IRQHandler
+                0x0000000008004340                FPU_IRQHandler
+                0x0000000008004340                OTG_HS_WKUP_IRQHandler
+                0x0000000008004340                CAN2_SCE_IRQHandler
+                0x0000000008004340                DMA2_Stream2_IRQHandler
+                0x0000000008004340                SPI1_IRQHandler
+                0x0000000008004340                TIM6_DAC_IRQHandler
+                0x0000000008004340                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008004340                CAN2_RX0_IRQHandler
+                0x0000000008004340                DMA2_Stream3_IRQHandler
+                0x0000000008004340                USART6_IRQHandler
+                0x0000000008004340                USART3_IRQHandler
+                0x0000000008004340                CAN1_RX1_IRQHandler
+                0x0000000008004340                UART5_IRQHandler
+                0x0000000008004340                DMA2_Stream0_IRQHandler
+                0x0000000008004340                TIM4_IRQHandler
+                0x0000000008004340                I2C1_EV_IRQHandler
+                0x0000000008004340                DMA1_Stream6_IRQHandler
+                0x0000000008004340                DMA1_Stream1_IRQHandler
+                0x0000000008004340                UART4_IRQHandler
+                0x0000000008004340                TIM3_IRQHandler
+                0x0000000008004340                RCC_IRQHandler
+                0x0000000008004340                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008004340                Default_Handler
+                0x0000000008004340                EXTI15_10_IRQHandler
+                0x0000000008004340                ADC_IRQHandler
+                0x0000000008004340                DMA1_Stream7_IRQHandler
+                0x0000000008004340                TIM7_IRQHandler
+                0x0000000008004340                CAN2_TX_IRQHandler
+                0x0000000008004340                TIM5_IRQHandler
+                0x0000000008004340                DMA2_Stream7_IRQHandler
+                0x0000000008004340                I2C3_EV_IRQHandler
+                0x0000000008004340                EXTI9_5_IRQHandler
+                0x0000000008004340                RTC_WKUP_IRQHandler
+                0x0000000008004340                SPI2_IRQHandler
+                0x0000000008004340                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008004340                DMA1_Stream0_IRQHandler
+                0x0000000008004340                CAN1_TX_IRQHandler
+                0x0000000008004340                EXTI4_IRQHandler
+                0x0000000008004340                FSMC_IRQHandler
+                0x0000000008004340                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008004340                WWDG_IRQHandler
+                0x0000000008004340                TIM2_IRQHandler
+                0x0000000008004340                OTG_FS_WKUP_IRQHandler
+                0x0000000008004340                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008004340                EXTI1_IRQHandler
+                0x0000000008004340                USART2_IRQHandler
+                0x0000000008004340                I2C2_ER_IRQHandler
+                0x0000000008004340                DMA2_Stream1_IRQHandler
+                0x0000000008004340                CAN1_SCE_IRQHandler
+                0x0000000008004340                FLASH_IRQHandler
+                0x0000000008004340                DMA2_Stream4_IRQHandler
+                0x0000000008004340                USART1_IRQHandler
+                0x0000000008004340                OTG_FS_IRQHandler
+                0x0000000008004340                SPI3_IRQHandler
+                0x0000000008004340                DMA1_Stream4_IRQHandler
+                0x0000000008004340                I2C1_ER_IRQHandler
+                0x0000000008004340                DMA2_Stream6_IRQHandler
+                0x0000000008004340                RTC_Alarm_IRQHandler
+ *fill*         0x0000000008004342        0x2 
  .text.__libc_init_array
-                0x0000000008004330       0x48 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-                0x0000000008004330                __libc_init_array
- .text.malloc   0x0000000008004378       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-                0x0000000008004378                malloc
- .text.free     0x0000000008004388       0x10 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-                0x0000000008004388                free
- .text._free_r  0x0000000008004398       0x9c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000008004398                _free_r
+                0x0000000008004344       0x48 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x0000000008004344                __libc_init_array
+ .text.malloc   0x000000000800438c       0x10 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000800438c                malloc
+ .text.free     0x000000000800439c       0x10 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000800439c                free
+ .text._free_r  0x00000000080043ac       0x9c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+                0x00000000080043ac                _free_r
  .text._malloc_r
-                0x0000000008004434       0xbc /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008004434                _malloc_r
- .text._sbrk_r  0x00000000080044f0       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-                0x00000000080044f0                _sbrk_r
+                0x0000000008004448       0xbc /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008004448                _malloc_r
+ .text._sbrk_r  0x0000000008004504       0x20 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000008004504                _sbrk_r
  .text.__malloc_lock
-                0x0000000008004510        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                0x0000000008004510                __malloc_lock
+                0x0000000008004524        0x2 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000008004524                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008004512        0x2 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                0x0000000008004512                __malloc_unlock
- .text._sbrk    0x0000000008004514       0x1c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
-                0x0000000008004514                _sbrk
+                0x0000000008004526        0x2 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000008004526                __malloc_unlock
+ .text._sbrk    0x0000000008004528       0x1c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                0x0000000008004528                _sbrk
  *(.glue_7)
- .glue_7        0x0000000008004530        0x0 linker stubs
+ .glue_7        0x0000000008004544        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008004530        0x0 linker stubs
+ .glue_7t       0x0000000008004544        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008004530        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .eh_frame      0x0000000008004544        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.init)
- .init          0x0000000008004530        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x0000000008004530                _init
- .init          0x0000000008004534        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .init          0x0000000008004544        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000008004544                _init
+ .init          0x0000000008004548        0x8 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
  *(.fini)
- .fini          0x000000000800453c        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                0x000000000800453c                _fini
- .fini          0x0000000008004540        0x8 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
-                0x0000000008004548                . = ALIGN (0x4)
-                0x0000000008004548                _etext = .
+ .fini          0x0000000008004550        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000008004550                _fini
+ .fini          0x0000000008004554        0x8 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x000000000800455c                . = ALIGN (0x4)
+                0x000000000800455c                _etext = .
 
-.vfp11_veneer   0x0000000008004548        0x0
- .vfp11_veneer  0x0000000008004548        0x0 linker stubs
+.vfp11_veneer   0x000000000800455c        0x0
+ .vfp11_veneer  0x000000000800455c        0x0 linker stubs
 
-.v4_bx          0x0000000008004548        0x0
- .v4_bx         0x0000000008004548        0x0 linker stubs
+.v4_bx          0x000000000800455c        0x0
+ .v4_bx         0x000000000800455c        0x0 linker stubs
 
-.iplt           0x0000000008004548        0x0
- .iplt          0x0000000008004548        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.iplt           0x000000000800455c        0x0
+ .iplt          0x000000000800455c        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.rodata         0x0000000008004548      0x100
-                0x0000000008004548                . = ALIGN (0x4)
+.rodata         0x000000000800455c      0x100
+                0x000000000800455c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008004548       0x14 build/main.o
+ .rodata        0x000000000800455c       0x14 build/main.o
  *(.rodata*)
  .rodata.vTaskStartScheduler.str1.4
-                0x000000000800455c        0x5 build/tasks.o
- *fill*         0x0000000008004561        0x3 
+                0x0000000008004570        0x5 build/tasks.o
+ *fill*         0x0000000008004575        0x3 
  .rodata.AHBPrescTable
-                0x0000000008004564       0x10 build/system_stm32f4xx.o
-                0x0000000008004564                AHBPrescTable
+                0x0000000008004578       0x10 build/system_stm32f4xx.o
+                0x0000000008004578                AHBPrescTable
  .rodata.APBPrescTable
-                0x0000000008004574        0x8 build/system_stm32f4xx.o
-                0x0000000008004574                APBPrescTable
+                0x0000000008004588        0x8 build/system_stm32f4xx.o
+                0x0000000008004588                APBPrescTable
  .rodata.SystemClock_Config.str1.4
-                0x000000000800457c        0xb build/main.o
- *fill*         0x0000000008004587        0x1 
+                0x0000000008004590        0xb build/main.o
+ *fill*         0x000000000800459b        0x1 
  .rodata.str1.4
-                0x0000000008004588        0xc build/main.o
- .rodata.CDC_Receive_HS.str1.4
-                0x0000000008004594       0x32 build/usbd_cdc_if.o
- *fill*         0x00000000080045c6        0x2 
+                0x000000000800459c        0xc build/main.o
  .rodata.USBD_HS_ConfigStrDescriptor.str1.4
-                0x00000000080045c8        0xb build/usbd_desc.o
- *fill*         0x00000000080045d3        0x1 
+                0x00000000080045a8        0xb build/usbd_desc.o
+ *fill*         0x00000000080045b3        0x1 
  .rodata.USBD_HS_InterfaceStrDescriptor.str1.4
-                0x00000000080045d4        0xe build/usbd_desc.o
- *fill*         0x00000000080045e2        0x2 
+                0x00000000080045b4        0xe build/usbd_desc.o
+ *fill*         0x00000000080045c2        0x2 
  .rodata.USBD_HS_ManufacturerStrDescriptor.str1.4
-                0x00000000080045e4       0x13 build/usbd_desc.o
- *fill*         0x00000000080045f7        0x1 
+                0x00000000080045c4       0x13 build/usbd_desc.o
+ *fill*         0x00000000080045d7        0x1 
  .rodata.USBD_HS_ProductStrDescriptor.str1.4
-                0x00000000080045f8       0x16 build/usbd_desc.o
- *fill*         0x000000000800460e        0x2 
+                0x00000000080045d8       0x16 build/usbd_desc.o
+ *fill*         0x00000000080045ee        0x2 
  .rodata.USBD_HS_SerialStrDescriptor.str1.4
-                0x0000000008004610        0xd build/usbd_desc.o
- *fill*         0x000000000800461d        0x3 
+                0x00000000080045f0        0xd build/usbd_desc.o
+ *fill*         0x00000000080045fd        0x3 
  .rodata.USBD_LL_Init.str1.4
-                0x0000000008004620       0x10 build/usbd_conf.o
+                0x0000000008004600       0x10 build/usbd_conf.o
+ .rodata.Riptide_CDC_Receive.str1.4
+                0x0000000008004610       0x32 build/riptideFunctions.o
+ *fill*         0x0000000008004642        0x2 
  .rodata.riptideMain.str1.4
-                0x0000000008004630        0xa build/riptideMain.o
- *fill*         0x000000000800463a        0x2 
+                0x0000000008004644        0xa build/riptideMain.o
+ *fill*         0x000000000800464e        0x2 
  .rodata.vHeartbeat.str1.4
-                0x000000000800463c        0xc build/riptideThreads.o
-                0x0000000008004648                . = ALIGN (0x4)
+                0x0000000008004650        0xc build/riptideThreads.o
+                0x000000000800465c                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008004648        0x0
- .rel.iplt      0x0000000008004648        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.rel.dyn        0x000000000800465c        0x0
+ .rel.iplt      0x000000000800465c        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008004648        0x0
-                0x0000000008004648                __exidx_start = .
+.ARM            0x000000000800465c        0x0
+                0x000000000800465c                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008004648                __exidx_end = .
+                0x000000000800465c                __exidx_end = .
 
-.preinit_array  0x0000000008004648        0x0
-                0x0000000008004648                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000800465c        0x0
+                0x000000000800465c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008004648                PROVIDE (__preinit_array_end, .)
+                0x000000000800465c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008004648        0x4
-                0x0000000008004648                PROVIDE (__init_array_start, .)
+.init_array     0x000000000800465c        0x4
+                0x000000000800465c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008004648        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-                0x000000000800464c                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000800465c        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0000000008004660                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000800464c        0x4
+.fini_array     0x0000000008004660        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000800464c        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .fini_array    0x0000000008004660        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008004650                _sidata = LOADADDR (.data)
+                0x0000000008004664                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x1c0 load address 0x0000000008004650
+.data           0x0000000020000000      0x1c0 load address 0x0000000008004664
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -2236,21 +2241,21 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000020000118                USBD_CDC_OtherSpeedCfgDesc
  *fill*         0x000000002000015b        0x1 
  .data._impure_ptr
-                0x000000002000015c        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                0x000000002000015c        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
                 0x000000002000015c                _impure_ptr
  .data.impure_data
-                0x0000000020000160       0x60 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000020000160       0x60 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
                 0x00000000200001c0                . = ALIGN (0x4)
                 0x00000000200001c0                _edata = .
-                0x0000000008004810                _siccmram = LOADADDR (.ccmram)
+                0x0000000008004824                _siccmram = LOADADDR (.ccmram)
 
-.jcr            0x00000000200001c0        0x0 load address 0x0000000008004810
- .jcr           0x00000000200001c0        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.jcr            0x00000000200001c0        0x0 load address 0x0000000008004824
+ .jcr           0x00000000200001c0        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.igot.plt       0x00000000200001c0        0x0 load address 0x0000000008004810
- .igot.plt      0x00000000200001c0        0x0 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+.igot.plt       0x00000000200001c0        0x0 load address 0x0000000008004824
+ .igot.plt      0x00000000200001c0        0x0 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
 
-.ccmram         0x0000000010000000        0x0 load address 0x0000000008004810
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008004824
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sccmram = .
  *(.ccmram)
@@ -2263,7 +2268,7 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x00000000200001c0                _sbss = .
                 0x00000000200001c0                __bss_start__ = _sbss
  *(.bss)
- .bss           0x00000000200001c0       0x1c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .bss           0x00000000200001c0       0x1c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  *(.bss*)
  .bss.ucMaxSysCallPriority
                 0x00000000200001dc        0x1 build/port.o
@@ -2328,13 +2333,13 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000020003f29        0x1 build/usbd_cdc.o
  *fill*         0x0000000020003f2a        0x2 
  .bss.__malloc_free_list
-                0x0000000020003f2c        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020003f2c        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
                 0x0000000020003f2c                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x0000000020003f30        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020003f30        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
                 0x0000000020003f30                __malloc_sbrk_start
  .bss.heap_end.5239
-                0x0000000020003f34        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                0x0000000020003f34        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
  *(COMMON)
  COMMON         0x0000000020003f38       0x3c build/stm32f4xx_hal_timebase_TIM.o
                 0x0000000020003f38                htim1
@@ -2351,7 +2356,7 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x000000002000517c                hpcd_USB_OTG_HS
  COMMON         0x000000002000556c      0x224 build/usb_device.o
                 0x000000002000556c                hUsbDeviceHS
- COMMON         0x0000000020005790        0x4 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ COMMON         0x0000000020005790        0x4 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
                 0x0000000020005790                errno
                 0x0000000020005794                . = ALIGN (0x4)
                 0x0000000020005794                _ebss = .
@@ -2378,9 +2383,9 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
                 0x0000000000000000       0x30
  *(.ARM.attributes)
  .ARM.attributes
-                0x0000000000000000       0x22 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x0000000000000000       0x22 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
  .ARM.attributes
-                0x0000000000000022       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x0000000000000022       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
  .ARM.attributes
                 0x0000000000000056       0x39 build/stm32f4xx_hal_msp.o
  .ARM.attributes
@@ -2444,28 +2449,28 @@ LOAD /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eab
  .ARM.attributes
                 0x0000000000000704       0x21 build/startup_stm32f405xx.o
  .ARM.attributes
-                0x0000000000000725       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000000000725       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x0000000000000759       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+                0x0000000000000759       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x000000000000078d       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                0x000000000000078d       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000000000007c1       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+                0x00000000000007c1       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000000000007f5       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x00000000000007f5       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x0000000000000829       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000000829       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x000000000000085d       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                0x000000000000085d       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x0000000000000891       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                0x0000000000000891       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000000000008c5       0x34 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                0x00000000000008c5       0x34 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
  .ARM.attributes
-                0x00000000000008f9       0x22 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x00000000000008f9       0x22 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(build/stmComms.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x2a295
+.debug_info     0x0000000000000000    0x2b1b2
  .debug_info    0x0000000000000000      0xd54 build/stm32f4xx_hal_msp.o
  .debug_info    0x0000000000000d54     0x158d build/stm32f4xx_hal_timebase_TIM.o
  .debug_info    0x00000000000022e1     0x1f07 build/stm32f4xx_hal_pcd.o
@@ -2485,20 +2490,20 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_info    0x0000000000017787     0x1d72 build/stm32f4xx_hal_tim_ex.o
  .debug_info    0x00000000000194f9     0x16bd build/stm32f4xx_hal_rcc.o
  .debug_info    0x000000000001abb6     0x258a build/cmsis_os.o
- .debug_info    0x000000000001d140     0x1419 build/usbd_cdc_if.o
- .debug_info    0x000000000001e559      0xe80 build/usbd_desc.o
- .debug_info    0x000000000001f3d9     0x258d build/usbd_conf.o
- .debug_info    0x0000000000021966     0x165f build/usbd_core.o
- .debug_info    0x0000000000022fc5     0x1807 build/usbd_ctlreq.o
- .debug_info    0x00000000000247cc     0x1157 build/usbd_ioreq.o
- .debug_info    0x0000000000025923     0x174f build/usbd_cdc.o
- .debug_info    0x0000000000027072     0x1006 build/usb_device.o
- .debug_info    0x0000000000028078      0x12d build/riptideFunctions.o
- .debug_info    0x00000000000281a5      0xfb8 build/riptideMain.o
- .debug_info    0x000000000002915d     0x10ba build/riptideThreads.o
- .debug_info    0x000000000002a217       0x7e build/startup_stm32f405xx.o
+ .debug_info    0x000000000001d140     0x1269 build/usbd_cdc_if.o
+ .debug_info    0x000000000001e3a9      0xe80 build/usbd_desc.o
+ .debug_info    0x000000000001f229     0x258d build/usbd_conf.o
+ .debug_info    0x00000000000217b6     0x165f build/usbd_core.o
+ .debug_info    0x0000000000022e15     0x1807 build/usbd_ctlreq.o
+ .debug_info    0x000000000002461c     0x1157 build/usbd_ioreq.o
+ .debug_info    0x0000000000025773     0x174f build/usbd_cdc.o
+ .debug_info    0x0000000000026ec2     0x1006 build/usb_device.o
+ .debug_info    0x0000000000027ec8     0x11d3 build/riptideFunctions.o
+ .debug_info    0x000000000002909b      0xfb8 build/riptideMain.o
+ .debug_info    0x000000000002a053     0x10e1 build/riptideThreads.o
+ .debug_info    0x000000000002b134       0x7e build/startup_stm32f405xx.o
 
-.debug_abbrev   0x0000000000000000     0x5098
+.debug_abbrev   0x0000000000000000     0x525f
  .debug_abbrev  0x0000000000000000      0x1eb build/stm32f4xx_hal_msp.o
  .debug_abbrev  0x00000000000001eb      0x277 build/stm32f4xx_hal_timebase_TIM.o
  .debug_abbrev  0x0000000000000462      0x34e build/stm32f4xx_hal_pcd.o
@@ -2518,20 +2523,20 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_abbrev  0x0000000000002c19      0x2f4 build/stm32f4xx_hal_tim_ex.o
  .debug_abbrev  0x0000000000002f0d      0x388 build/stm32f4xx_hal_rcc.o
  .debug_abbrev  0x0000000000003295      0x3cf build/cmsis_os.o
- .debug_abbrev  0x0000000000003664      0x2f0 build/usbd_cdc_if.o
- .debug_abbrev  0x0000000000003954      0x270 build/usbd_desc.o
- .debug_abbrev  0x0000000000003bc4      0x2ea build/usbd_conf.o
- .debug_abbrev  0x0000000000003eae      0x2e0 build/usbd_core.o
- .debug_abbrev  0x000000000000418e      0x323 build/usbd_ctlreq.o
- .debug_abbrev  0x00000000000044b1      0x1f5 build/usbd_ioreq.o
- .debug_abbrev  0x00000000000046a6      0x32a build/usbd_cdc.o
- .debug_abbrev  0x00000000000049d0      0x1f8 build/usb_device.o
- .debug_abbrev  0x0000000000004bc8       0xa9 build/riptideFunctions.o
- .debug_abbrev  0x0000000000004c71      0x1eb build/riptideMain.o
- .debug_abbrev  0x0000000000004e5c      0x22a build/riptideThreads.o
- .debug_abbrev  0x0000000000005086       0x12 build/startup_stm32f405xx.o
+ .debug_abbrev  0x0000000000003664      0x2c3 build/usbd_cdc_if.o
+ .debug_abbrev  0x0000000000003927      0x270 build/usbd_desc.o
+ .debug_abbrev  0x0000000000003b97      0x2ea build/usbd_conf.o
+ .debug_abbrev  0x0000000000003e81      0x2e0 build/usbd_core.o
+ .debug_abbrev  0x0000000000004161      0x323 build/usbd_ctlreq.o
+ .debug_abbrev  0x0000000000004484      0x1f5 build/usbd_ioreq.o
+ .debug_abbrev  0x0000000000004679      0x32a build/usbd_cdc.o
+ .debug_abbrev  0x00000000000049a3      0x1f8 build/usb_device.o
+ .debug_abbrev  0x0000000000004b9b      0x274 build/riptideFunctions.o
+ .debug_abbrev  0x0000000000004e0f      0x1eb build/riptideMain.o
+ .debug_abbrev  0x0000000000004ffa      0x253 build/riptideThreads.o
+ .debug_abbrev  0x000000000000524d       0x12 build/startup_stm32f405xx.o
 
-.debug_loc      0x0000000000000000     0xfdbc
+.debug_loc      0x0000000000000000     0xfe34
  .debug_loc     0x0000000000000000       0x20 build/stm32f4xx_hal_msp.o
  .debug_loc     0x0000000000000020       0xae build/stm32f4xx_hal_timebase_TIM.o
  .debug_loc     0x00000000000000ce      0xed9 build/stm32f4xx_hal_pcd.o
@@ -2551,19 +2556,19 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_loc     0x000000000000995d     0x1298 build/stm32f4xx_hal_tim_ex.o
  .debug_loc     0x000000000000abf5      0x643 build/stm32f4xx_hal_rcc.o
  .debug_loc     0x000000000000b238     0x16ee build/cmsis_os.o
- .debug_loc     0x000000000000c926      0x1bd build/usbd_cdc_if.o
- .debug_loc     0x000000000000cae3      0x357 build/usbd_desc.o
- .debug_loc     0x000000000000ce3a      0xf5f build/usbd_conf.o
- .debug_loc     0x000000000000dd99      0x8a8 build/usbd_core.o
- .debug_loc     0x000000000000e641      0xd28 build/usbd_ctlreq.o
- .debug_loc     0x000000000000f369      0x31c build/usbd_ioreq.o
- .debug_loc     0x000000000000f685      0x5b1 build/usbd_cdc.o
- .debug_loc     0x000000000000fc36       0x20 build/usb_device.o
- .debug_loc     0x000000000000fc56       0xe1 build/riptideFunctions.o
- .debug_loc     0x000000000000fd37       0x38 build/riptideMain.o
- .debug_loc     0x000000000000fd6f       0x4d build/riptideThreads.o
+ .debug_loc     0x000000000000c926      0x189 build/usbd_cdc_if.o
+ .debug_loc     0x000000000000caaf      0x357 build/usbd_desc.o
+ .debug_loc     0x000000000000ce06      0xf5f build/usbd_conf.o
+ .debug_loc     0x000000000000dd65      0x8a8 build/usbd_core.o
+ .debug_loc     0x000000000000e60d      0xd28 build/usbd_ctlreq.o
+ .debug_loc     0x000000000000f335      0x31c build/usbd_ioreq.o
+ .debug_loc     0x000000000000f651      0x5b1 build/usbd_cdc.o
+ .debug_loc     0x000000000000fc02       0x20 build/usb_device.o
+ .debug_loc     0x000000000000fc22      0x18d build/riptideFunctions.o
+ .debug_loc     0x000000000000fdaf       0x38 build/riptideMain.o
+ .debug_loc     0x000000000000fde7       0x4d build/riptideThreads.o
 
-.debug_aranges  0x0000000000000000     0x13a8
+.debug_aranges  0x0000000000000000     0x13b8
  .debug_aranges
                 0x0000000000000000       0x20 build/stm32f4xx_hal_msp.o
  .debug_aranges
@@ -2619,15 +2624,15 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000001300       0x20 build/usb_device.o
  .debug_aranges
-                0x0000000000001320       0x20 build/riptideFunctions.o
+                0x0000000000001320       0x28 build/riptideFunctions.o
  .debug_aranges
-                0x0000000000001340       0x20 build/riptideMain.o
+                0x0000000000001348       0x20 build/riptideMain.o
  .debug_aranges
-                0x0000000000001360       0x20 build/riptideThreads.o
+                0x0000000000001368       0x28 build/riptideThreads.o
  .debug_aranges
-                0x0000000000001380       0x28 build/startup_stm32f405xx.o
+                0x0000000000001390       0x28 build/startup_stm32f405xx.o
 
-.debug_ranges   0x0000000000000000     0x12e0
+.debug_ranges   0x0000000000000000     0x12f0
  .debug_ranges  0x0000000000000000       0x10 build/stm32f4xx_hal_msp.o
  .debug_ranges  0x0000000000000010       0x20 build/stm32f4xx_hal_timebase_TIM.o
  .debug_ranges  0x0000000000000030      0x110 build/stm32f4xx_hal_pcd.o
@@ -2655,12 +2660,12 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_ranges  0x00000000000011c0       0x40 build/usbd_ioreq.o
  .debug_ranges  0x0000000000001200       0x80 build/usbd_cdc.o
  .debug_ranges  0x0000000000001280       0x10 build/usb_device.o
- .debug_ranges  0x0000000000001290       0x10 build/riptideFunctions.o
- .debug_ranges  0x00000000000012a0       0x10 build/riptideMain.o
- .debug_ranges  0x00000000000012b0       0x10 build/riptideThreads.o
- .debug_ranges  0x00000000000012c0       0x20 build/startup_stm32f405xx.o
+ .debug_ranges  0x0000000000001290       0x18 build/riptideFunctions.o
+ .debug_ranges  0x00000000000012a8       0x10 build/riptideMain.o
+ .debug_ranges  0x00000000000012b8       0x18 build/riptideThreads.o
+ .debug_ranges  0x00000000000012d0       0x20 build/startup_stm32f405xx.o
 
-.debug_line     0x0000000000000000     0xa940
+.debug_line     0x0000000000000000     0xab8e
  .debug_line    0x0000000000000000      0x2c3 build/stm32f4xx_hal_msp.o
  .debug_line    0x00000000000002c3      0x352 build/stm32f4xx_hal_timebase_TIM.o
  .debug_line    0x0000000000000615      0x80e build/stm32f4xx_hal_pcd.o
@@ -2680,20 +2685,20 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_line    0x000000000000608a      0x8ce build/stm32f4xx_hal_tim_ex.o
  .debug_line    0x0000000000006958      0x649 build/stm32f4xx_hal_rcc.o
  .debug_line    0x0000000000006fa1      0x956 build/cmsis_os.o
- .debug_line    0x00000000000078f7      0x44b build/usbd_cdc_if.o
- .debug_line    0x0000000000007d42      0x3c9 build/usbd_desc.o
- .debug_line    0x000000000000810b      0x691 build/usbd_conf.o
- .debug_line    0x000000000000879c      0x570 build/usbd_core.o
- .debug_line    0x0000000000008d0c      0x574 build/usbd_ctlreq.o
- .debug_line    0x0000000000009280      0x3da build/usbd_ioreq.o
- .debug_line    0x000000000000965a      0x541 build/usbd_cdc.o
- .debug_line    0x0000000000009b9b      0x3b2 build/usb_device.o
- .debug_line    0x0000000000009f4d      0x174 build/riptideFunctions.o
- .debug_line    0x000000000000a0c1      0x3d8 build/riptideMain.o
- .debug_line    0x000000000000a499      0x433 build/riptideThreads.o
- .debug_line    0x000000000000a8cc       0x74 build/startup_stm32f405xx.o
+ .debug_line    0x00000000000078f7      0x3fb build/usbd_cdc_if.o
+ .debug_line    0x0000000000007cf2      0x3c9 build/usbd_desc.o
+ .debug_line    0x00000000000080bb      0x691 build/usbd_conf.o
+ .debug_line    0x000000000000874c      0x570 build/usbd_core.o
+ .debug_line    0x0000000000008cbc      0x574 build/usbd_ctlreq.o
+ .debug_line    0x0000000000009230      0x3da build/usbd_ioreq.o
+ .debug_line    0x000000000000960a      0x541 build/usbd_cdc.o
+ .debug_line    0x0000000000009b4b      0x3b2 build/usb_device.o
+ .debug_line    0x0000000000009efd      0x403 build/riptideFunctions.o
+ .debug_line    0x000000000000a300      0x3d8 build/riptideMain.o
+ .debug_line    0x000000000000a6d8      0x442 build/riptideThreads.o
+ .debug_line    0x000000000000ab1a       0x74 build/startup_stm32f405xx.o
 
-.debug_str      0x0000000000000000     0x6224
+.debug_str      0x0000000000000000     0x6286
  .debug_str     0x0000000000000000      0xa9f build/stm32f4xx_hal_msp.o
                                         0xb10 (size before relaxing)
  .debug_str     0x0000000000000a9f      0x664 build/stm32f4xx_hal_timebase_TIM.o
@@ -2712,48 +2717,48 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
                                        0x120e (size before relaxing)
  .debug_str     0x0000000000002f0f       0x53 build/system_stm32f4xx.o
                                         0x78b (size before relaxing)
- .debug_str     0x0000000000002f62      0x69b build/main.o
+ .debug_str     0x0000000000002f62      0x6df build/main.o
                                        0x183e (size before relaxing)
- .debug_str     0x00000000000035fd      0x130 build/stm32f4xx_hal_gpio.o
+ .debug_str     0x0000000000003641      0x130 build/stm32f4xx_hal_gpio.o
                                         0x927 (size before relaxing)
- .debug_str     0x000000000000372d      0x1e9 build/heap_4.o
+ .debug_str     0x0000000000003771      0x1e9 build/heap_4.o
                                         0x7fc (size before relaxing)
- .debug_str     0x0000000000003916      0xcf5 build/stm32f4xx_hal_tim.o
+ .debug_str     0x000000000000395a      0xcf5 build/stm32f4xx_hal_tim.o
                                        0x17ec (size before relaxing)
- .debug_str     0x000000000000460b       0x6f build/stm32f4xx_hal_pcd_ex.o
+ .debug_str     0x000000000000464f       0x6f build/stm32f4xx_hal_pcd_ex.o
                                         0x9b3 (size before relaxing)
- .debug_str     0x000000000000467a       0x6c build/list.o
+ .debug_str     0x00000000000046be       0x6c build/list.o
                                         0x713 (size before relaxing)
- .debug_str     0x00000000000046e6      0x3b5 build/stm32f4xx_ll_usb.o
+ .debug_str     0x000000000000472a      0x3b5 build/stm32f4xx_ll_usb.o
                                         0xfd7 (size before relaxing)
- .debug_str     0x0000000000004a9b      0x50a build/stm32f4xx_hal_tim_ex.o
+ .debug_str     0x0000000000004adf      0x50a build/stm32f4xx_hal_tim_ex.o
                                        0x10ac (size before relaxing)
- .debug_str     0x0000000000004fa5      0x117 build/stm32f4xx_hal_rcc.o
+ .debug_str     0x0000000000004fe9      0x117 build/stm32f4xx_hal_rcc.o
                                         0xae1 (size before relaxing)
- .debug_str     0x00000000000050bc      0x7a3 build/cmsis_os.o
+ .debug_str     0x0000000000005100      0x7a3 build/cmsis_os.o
                                        0x11c6 (size before relaxing)
- .debug_str     0x000000000000585f      0x196 build/usbd_cdc_if.o
-                                        0xbf3 (size before relaxing)
- .debug_str     0x00000000000059f5      0x122 build/usbd_desc.o
+ .debug_str     0x00000000000058a3      0x158 build/usbd_cdc_if.o
+                                        0xb70 (size before relaxing)
+ .debug_str     0x00000000000059fb      0x122 build/usbd_desc.o
                                         0x83d (size before relaxing)
- .debug_str     0x0000000000005b17      0x22b build/usbd_conf.o
+ .debug_str     0x0000000000005b1d      0x22b build/usbd_conf.o
                                        0x189d (size before relaxing)
- .debug_str     0x0000000000005d42      0x166 build/usbd_core.o
+ .debug_str     0x0000000000005d48      0x166 build/usbd_core.o
                                         0xc82 (size before relaxing)
- .debug_str     0x0000000000005ea8       0xe2 build/usbd_ctlreq.o
+ .debug_str     0x0000000000005eae       0xe2 build/usbd_ctlreq.o
                                         0xb9c (size before relaxing)
- .debug_str     0x0000000000005f8a       0x60 build/usbd_ioreq.o
+ .debug_str     0x0000000000005f90       0x60 build/usbd_ioreq.o
                                         0xac9 (size before relaxing)
- .debug_str     0x0000000000005fea      0x1a3 build/usbd_cdc.o
+ .debug_str     0x0000000000005ff0      0x1a3 build/usbd_cdc.o
                                         0xcf8 (size before relaxing)
- .debug_str     0x000000000000618d       0x11 build/usb_device.o
+ .debug_str     0x0000000000006193       0x11 build/usb_device.o
                                         0xa62 (size before relaxing)
- .debug_str     0x000000000000619e       0x2d build/riptideFunctions.o
-                                        0x1f2 (size before relaxing)
- .debug_str     0x00000000000061cb       0x28 build/riptideMain.o
+ .debug_str     0x00000000000061a4       0x7f build/riptideFunctions.o
+                                        0xadd (size before relaxing)
+ .debug_str     0x0000000000006223       0x28 build/riptideMain.o
                                         0xa40 (size before relaxing)
- .debug_str     0x00000000000061f3       0x31 build/riptideThreads.o
-                                        0xa91 (size before relaxing)
+ .debug_str     0x000000000000624b       0x3b build/riptideThreads.o
+                                        0xa9b (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
  .comment       0x0000000000000000       0x7f build/stm32f4xx_hal_msp.o
@@ -2788,7 +2793,7 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 build/riptideMain.o
  .comment       0x000000000000007f       0x80 build/riptideThreads.o
 
-.debug_frame    0x0000000000000000     0x3974
+.debug_frame    0x0000000000000000     0x39a4
  .debug_frame   0x0000000000000000       0x2c build/stm32f4xx_hal_msp.o
  .debug_frame   0x000000000000002c       0x54 build/stm32f4xx_hal_timebase_TIM.o
  .debug_frame   0x0000000000000080      0x338 build/stm32f4xx_hal_pcd.o
@@ -2808,25 +2813,25 @@ OUTPUT(build/stmComms.elf elf32-littlearm)
  .debug_frame   0x0000000000002168      0x3f0 build/stm32f4xx_hal_tim_ex.o
  .debug_frame   0x0000000000002558      0x158 build/stm32f4xx_hal_rcc.o
  .debug_frame   0x00000000000026b0      0x62c build/cmsis_os.o
- .debug_frame   0x0000000000002cdc       0x94 build/usbd_cdc_if.o
- .debug_frame   0x0000000000002d70       0xbc build/usbd_desc.o
- .debug_frame   0x0000000000002e2c      0x318 build/usbd_conf.o
- .debug_frame   0x0000000000003144      0x1ec build/usbd_core.o
- .debug_frame   0x0000000000003330      0x1ac build/usbd_ctlreq.o
- .debug_frame   0x00000000000034dc       0xd4 build/usbd_ioreq.o
- .debug_frame   0x00000000000035b0      0x168 build/usbd_cdc.o
- .debug_frame   0x0000000000003718       0x2c build/usb_device.o
- .debug_frame   0x0000000000003744       0x40 build/riptideFunctions.o
- .debug_frame   0x0000000000003784       0x2c build/riptideMain.o
- .debug_frame   0x00000000000037b0       0x2c build/riptideThreads.o
- .debug_frame   0x00000000000037dc       0x2c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000003808       0x30 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x0000000000003838       0x38 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000003870       0x2c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x000000000000389c       0x2c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000000000038c8       0x30 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x00000000000038f8       0x5c /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000003954       0x20 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000002cdc       0x88 build/usbd_cdc_if.o
+ .debug_frame   0x0000000000002d64       0xbc build/usbd_desc.o
+ .debug_frame   0x0000000000002e20      0x318 build/usbd_conf.o
+ .debug_frame   0x0000000000003138      0x1ec build/usbd_core.o
+ .debug_frame   0x0000000000003324      0x1ac build/usbd_ctlreq.o
+ .debug_frame   0x00000000000034d0       0xd4 build/usbd_ioreq.o
+ .debug_frame   0x00000000000035a4      0x168 build/usbd_cdc.o
+ .debug_frame   0x000000000000370c       0x2c build/usb_device.o
+ .debug_frame   0x0000000000003738       0x6c build/riptideFunctions.o
+ .debug_frame   0x00000000000037a4       0x2c build/riptideMain.o
+ .debug_frame   0x00000000000037d0       0x3c build/riptideThreads.o
+ .debug_frame   0x000000000000380c       0x2c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000003838       0x30 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000003868       0x38 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000000000038a0       0x2c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000000000038cc       0x2c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000000000038f8       0x30 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000003928       0x5c /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000003984       0x20 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
 
 Cross Reference Table
 
@@ -2847,6 +2852,7 @@ CAN2_SCE_IRQHandler                               build/startup_stm32f405xx.o
 CAN2_TX_IRQHandler                                build/startup_stm32f405xx.o
 CDC_Transmit_HS                                   build/usbd_cdc_if.o
                                                   build/riptideThreads.o
+                                                  build/riptideFunctions.o
 DMA1_Stream0_IRQHandler                           build/startup_stm32f405xx.o
 DMA1_Stream1_IRQHandler                           build/startup_stm32f405xx.o
 DMA1_Stream2_IRQHandler                           build/startup_stm32f405xx.o
@@ -2938,7 +2944,7 @@ HAL_GPIO_LockPin                                  build/stm32f4xx_hal_gpio.o
 HAL_GPIO_ReadPin                                  build/stm32f4xx_hal_gpio.o
 HAL_GPIO_TogglePin                                build/stm32f4xx_hal_gpio.o
                                                   build/riptideThreads.o
-                                                  build/usbd_cdc_if.o
+                                                  build/riptideFunctions.o
 HAL_GPIO_WritePin                                 build/stm32f4xx_hal_gpio.o
                                                   build/main.o
 HAL_GetDEVID                                      build/stm32f4xx_hal.o
@@ -3241,7 +3247,6 @@ MX_USB_DEVICE_Init                                build/usb_device.o
                                                   build/main.o
 MemManage_Handler                                 build/stm32f4xx_it.o
 MessageCheck                                      build/riptideFunctions.o
-                                                  build/usbd_cdc_if.o
 NMI_Handler                                       build/stm32f4xx_it.o
 OTG_FS_IRQHandler                                 build/startup_stm32f405xx.o
 OTG_FS_WKUP_IRQHandler                            build/startup_stm32f405xx.o
@@ -3255,6 +3260,8 @@ RCC_IRQHandler                                    build/startup_stm32f405xx.o
 RTC_Alarm_IRQHandler                              build/startup_stm32f405xx.o
 RTC_WKUP_IRQHandler                               build/startup_stm32f405xx.o
 Reset_Handler                                     build/startup_stm32f405xx.o
+Riptide_CDC_Receive                               build/riptideFunctions.o
+                                                  build/usbd_cdc_if.o
 SDIO_IRQHandler                                   build/startup_stm32f405xx.o
 SPI1_IRQHandler                                   build/startup_stm32f405xx.o
 SPI2_IRQHandler                                   build/startup_stm32f405xx.o
@@ -3512,89 +3519,89 @@ UserTxBufferHS                                    build/usbd_cdc_if.o
 WWDG_IRQHandler                                   build/startup_stm32f405xx.o
 _Error_Handler                                    build/main.o
                                                   build/usbd_conf.o
-_Jv_RegisterClasses                               /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-__bss_end__                                       /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-__bss_start__                                     /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-__call_exitprocs                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
-__deregister_frame_info                           /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-__dso_handle                                      /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-__init_array_end                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-__init_array_start                                /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-__libc_fini_array                                 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-__libc_init_array                                 /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+_Jv_RegisterClasses                               /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+__bss_end__                                       /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+__bss_start__                                     /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+__call_exitprocs                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+__deregister_frame_info                           /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+__dso_handle                                      /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+__init_array_end                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+__init_array_start                                /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+__libc_fini_array                                 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+__libc_init_array                                 /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
                                                   build/startup_stm32f405xx.o
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-__malloc_free_list                                /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-__malloc_lock                                     /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-__malloc_sbrk_start                               /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-__malloc_unlock                                   /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-__preinit_array_end                               /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-__preinit_array_start                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-__register_frame_info                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
-__sf_fake_stderr                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-__sf_fake_stdin                                   /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-__sf_fake_stdout                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-__stack                                           /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+__malloc_free_list                                /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+__malloc_lock                                     /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+__malloc_sbrk_start                               /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+__malloc_unlock                                   /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-mlock.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+__preinit_array_end                               /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+__preinit_array_start                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+__register_frame_info                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+__sf_fake_stderr                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+__sf_fake_stdin                                   /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+__sf_fake_stdout                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+__stack                                           /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 _ebss                                             build/startup_stm32f405xx.o
 _edata                                            build/startup_stm32f405xx.o
 _estack                                           build/startup_stm32f405xx.o
-_exit                                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
-_fini                                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-_free_r                                           /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-_global_impure_ptr                                /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
-_impure_ptr                                       /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-_init                                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
-_mainCRTStartup                                   /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-_malloc_r                                         /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
-_reclaim_reent                                    /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
-_sbrk                                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-_sbrk_r                                           /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+_exit                                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(_exit.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+_fini                                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+_free_r                                           /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-freer.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+_global_impure_ptr                                /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+_impure_ptr                                       /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-impure.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+_init                                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+_mainCRTStartup                                   /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+_malloc_r                                         /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+_reclaim_reent                                    /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+_sbrk                                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+_sbrk_r                                           /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-nano-mallocr.o)
 _sbss                                             build/startup_stm32f405xx.o
 _sdata                                            build/startup_stm32f405xx.o
 _sidata                                           build/startup_stm32f405xx.o
-_start                                            /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-atexit                                            /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-cleanup_glue                                      /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+_start                                            /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+atexit                                            /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+cleanup_glue                                      /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
 defaultTaskHandle                                 build/main.o
-end                                               /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
-errno                                             /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
-exit                                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-free                                              /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+end                                               /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+errno                                             /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-reent.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-sbrkr.o)
+exit                                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-exit.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+free                                              /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
                                                   build/usbd_cdc.o
 g_pfnVectors                                      build/startup_stm32f405xx.o
 hUsbDeviceHS                                      build/usb_device.o
                                                   build/usbd_cdc_if.o
-hardware_init_hook                                /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+hardware_init_hook                                /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 hpcd_USB_OTG_HS                                   build/usbd_conf.o
                                                   build/stm32f4xx_it.o
 htim1                                             build/stm32f4xx_hal_timebase_TIM.o
                                                   build/stm32f4xx_it.o
 main                                              build/main.o
                                                   build/startup_stm32f405xx.o
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
-malloc                                            /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+malloc                                            /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-malloc.o)
                                                   build/usbd_cdc.o
-memcpy                                            /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
+memcpy                                            /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memcpy-stub.o)
                                                   build/queue.o
-memset                                            /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
-                                                  /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+memset                                            /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+                                                  /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 osAbortDelay                                      build/cmsis_os.o
 osDelay                                           build/cmsis_os.o
                                                   build/main.o
@@ -3669,7 +3676,7 @@ pxPortInitialiseStack                             build/port.o
                                                   build/tasks.o
 riptideMain                                       build/riptideMain.o
                                                   build/main.o
-software_init_hook                                /Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+software_init_hook                                /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
 ulTaskNotifyTake                                  build/tasks.o
 uwIncrementState                                  build/stm32f4xx_hal_timebase_TIM.o
 uwTick                                            build/stm32f4xx_hal.o
@@ -3729,6 +3736,7 @@ vQueueAddToRegistry                               build/queue.o
 vQueueDelete                                      build/queue.o
                                                   build/cmsis_os.o
 vQueueUnregisterQueue                             build/queue.o
+vSwitches                                         build/riptideThreads.o
 vTaskDelay                                        build/tasks.o
                                                   build/riptideThreads.o
                                                   build/cmsis_os.o

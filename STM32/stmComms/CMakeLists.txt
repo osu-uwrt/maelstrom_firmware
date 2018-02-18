@@ -598,6 +598,12 @@ set(SOURCE_FILES
         Src/usbd_cdc_if.c
         Src/usbd_conf.c
         Src/usbd_desc.c
+        riptideSTM/src/riptideFunctions.c
+        riptideSTM/src/riptideMain.c
+        riptideSTM/src/riptideThreads.c
+        riptideSTM/inc/riptideFunctions.h
+        riptideSTM/inc/riptideMain.h
+        riptideSTM/inc/riptideThreads.h
         Makefile)
 
 add_executable(stmComms ${SOURCE_FILES})

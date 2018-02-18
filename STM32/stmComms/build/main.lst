@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
   30:Src/main.c    ****   *    this license is void and will automatically terminate your rights under 
   31:Src/main.c    ****   *    this license. 
   32:Src/main.c    ****   *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 2
 
 
   33:Src/main.c    ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
   87:Src/main.c    ****   /* USER CODE END 1 */
   88:Src/main.c    **** 
   89:Src/main.c    ****   /* MCU Configuration----------------------------------------------------------*/
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 3
 
 
   90:Src/main.c    **** 
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  144:Src/main.c    ****   /* USER CODE BEGIN WHILE */
  145:Src/main.c    ****   while (1)
  146:Src/main.c    ****   {
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 4
 
 
  147:Src/main.c    ****   /* USER CODE END WHILE */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  201:Src/main.c    ****   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
  202:Src/main.c    **** 
  203:Src/main.c    ****     /**Configure the Systick 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 5
 
 
  204:Src/main.c    ****     */
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
   59 0026 1A6B     		ldr	r2, [r3, #48]
   60 0028 02F00202 		and	r2, r2, #2
   61 002c 0292     		str	r2, [sp, #8]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 6
 
 
   62 002e 029A     		ldr	r2, [sp, #8]
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  104 0070 05A9     		add	r1, sp, #20
  105 0072 2846     		mov	r0, r5
  106 0074 FFF7FEFF 		bl	HAL_GPIO_Init
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 7
 
 
  107              	.LVL1:
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  254:Src/main.c    ****   for(;;) {
  255:Src/main.c    ****     //for the love of god leave the osDelay in
  256:Src/main.c    ****       osDelay(1);
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 8
 
 
  147              		.loc 1 256 0 discriminator 1
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  184              	.L11:
  276:Src/main.c    ****     HAL_IncTick();
  185              		.loc 1 276 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 9
 
 
  186 000c FFF7FEFF 		bl	HAL_IncTick
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  230              		.cfi_startproc
  231              		@ args = 0, pretend = 0, frame = 80
  232              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 10
 
 
  159:Src/main.c    **** 
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  279 0046 0822     		movs	r2, #8
  280 0048 1092     		str	r2, [sp, #64]
  177:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 11
 
 
  281              		.loc 1 177 0
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  324              	.LVL14:
  208:Src/main.c    **** }
  325              		.loc 1 208 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 12
 
 
  326 008e 0022     		movs	r2, #0
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  378              	.LCFI9:
  379              		.cfi_def_cfa_offset 4
  380              		.cfi_offset 14, -4
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 13
 
 
  381 0002 87B0     		sub	sp, sp, #28
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  429 0004 00000000 		.word	StartDefaultTask
  430 0008 0000     		.short	0
  431 000a 0000     		.space	2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 14
 
 
  432 000c 00000000 		.word	0
@@ -797,15 +797,15 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  441      61736B00 
  442              		.text
  443              	.Letext0:
- 444              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 445              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 444              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 445              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  446              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
  447              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  448              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
- 449              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 450              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 451              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 452              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 449              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 450              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 451              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 452              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
  453              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  454              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
  455              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
@@ -814,7 +814,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  458              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
  459              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
  460              		.file 18 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
- 461              		.file 19 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 461              		.file 19 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
  462              		.file 20 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  463              		.file 21 "Inc/usb_device.h"
  464              		.file 22 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
@@ -822,31 +822,31 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 1
  466              		.file 24 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
  467              		.file 25 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
  468              		.file 26 "riptideSTM/inc/riptideMain.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:18     .text.MX_GPIO_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:117    .text.MX_GPIO_Init:000000000000007c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:123    .text.StartDefaultTask:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:130    .text.StartDefaultTask:0000000000000000 StartDefaultTask
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:156    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:163    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:193    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:198    .text._Error_Handler:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:205    .text._Error_Handler:0000000000000000 _Error_Handler
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:220    .text.SystemClock_Config:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:227    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:355    .text.SystemClock_Config:00000000000000b0 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:363    .text.main:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:370    .text.main:0000000000000000 main
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:418    .text.main:0000000000000034 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:18     .text.MX_GPIO_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:117    .text.MX_GPIO_Init:000000000000007c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:123    .text.StartDefaultTask:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:130    .text.StartDefaultTask:0000000000000000 StartDefaultTask
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:156    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:163    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:193    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:198    .text._Error_Handler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:205    .text._Error_Handler:0000000000000000 _Error_Handler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:220    .text.SystemClock_Config:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:227    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:355    .text.SystemClock_Config:00000000000000b0 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:363    .text.main:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:370    .text.main:0000000000000000 main
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:418    .text.main:0000000000000034 $d
                             *COM*:0000000000000004 defaultTaskHandle
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:425    .rodata:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:435    .rodata.SystemClock_Config.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccVt9REa.s:439    .rodata.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:425    .rodata:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:435    .rodata.SystemClock_Config.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:439    .rodata.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

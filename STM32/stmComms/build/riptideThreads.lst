@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   40              		.cfi_def_cfa_offset 24
   17:riptideSTM/src/riptideThreads.c **** 
   18:riptideSTM/src/riptideThreads.c ****     uint8_t HiMsg[] = "heartbeat\r\n";
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s 			page 2
 
 
   41              		.loc 1 18 0
@@ -68,24 +68,23 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   45 000a 04AB     		add	r3, sp, #16
   46 000c 03E90700 		stmdb	r3, {r0, r1, r2}
   47              	.L2:
-  19:riptideSTM/src/riptideThreads.c **** 
-  20:riptideSTM/src/riptideThreads.c ****     /* Infinite loop */
-  21:riptideSTM/src/riptideThreads.c ****     for(;;) {
-  22:riptideSTM/src/riptideThreads.c ****         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
-  48              		.loc 1 22 0 discriminator 1
+  19:riptideSTM/src/riptideThreads.c ****     /* Infinite loop */
+  20:riptideSTM/src/riptideThreads.c ****     for(;;) {
+  21:riptideSTM/src/riptideThreads.c ****         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
+  48              		.loc 1 21 0 discriminator 1
   49 0010 4021     		movs	r1, #64
   50 0012 0748     		ldr	r0, .L4+4
   51 0014 FFF7FEFF 		bl	HAL_GPIO_TogglePin
   52              	.LVL2:
-  23:riptideSTM/src/riptideThreads.c ****         //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
-  24:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
-  53              		.loc 1 24 0 discriminator 1
+  22:riptideSTM/src/riptideThreads.c ****         //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
+  23:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
+  53              		.loc 1 23 0 discriminator 1
   54 0018 0C21     		movs	r1, #12
   55 001a 01A8     		add	r0, sp, #4
   56 001c FFF7FEFF 		bl	CDC_Transmit_HS
   57              	.LVL3:
-  25:riptideSTM/src/riptideThreads.c ****         vTaskDelay(1000);
-  58              		.loc 1 25 0 discriminator 1
+  24:riptideSTM/src/riptideThreads.c ****         vTaskDelay(1000);
+  58              		.loc 1 24 0 discriminator 1
   59 0020 4FF47A70 		mov	r0, #1000
   60 0024 FFF7FEFF 		bl	vTaskDelay
   61              	.LVL4:
@@ -97,42 +96,68 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   67 0030 00080240 		.word	1073874944
   68              		.cfi_endproc
   69              	.LFE129:
-  71              		.section	.rodata.vHeartbeat.str1.4,"aMS",%progbits,1
-  72              		.align	2
-  73              	.LC0:
-  74 0000 68656172 		.ascii	"heartbeat\015\012\000"
-  74      74626561 
-  74      740D0A00 
-  75              		.text
-  76              	.Letext0:
-  77              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  78              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  79              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
-  80              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-  81              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
-  82              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  83              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  84              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  85              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
-  86              		.file 11 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
-  87              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
-  88              		.file 13 "Inc/usb_device.h"
-  89              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 3
+  71              		.section	.text.vSwitches,"ax",%progbits
+  72              		.align	1
+  73              		.global	vSwitches
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu fpv4-sp-d16
+  79              	vSwitches:
+  80              	.LFB130:
+  25:riptideSTM/src/riptideThreads.c **** 
+  26:riptideSTM/src/riptideThreads.c ****     }
+  27:riptideSTM/src/riptideThreads.c **** 
+  28:riptideSTM/src/riptideThreads.c **** }
+  29:riptideSTM/src/riptideThreads.c **** 
+  30:riptideSTM/src/riptideThreads.c **** void vSwitches(void *pvParameters){
+  81              		.loc 1 30 0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  86              	.LVL5:
+  87 0000 7047     		bx	lr
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s 			page 3
 
 
-  90              		.file 15 "Inc/usbd_cdc_if.h"
-  91              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-  92              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 4
+  88              		.cfi_endproc
+  89              	.LFE130:
+  91              		.section	.rodata.vHeartbeat.str1.4,"aMS",%progbits,1
+  92              		.align	2
+  93              	.LC0:
+  94 0000 68656172 		.ascii	"heartbeat\015\012\000"
+  94      74626561 
+  94      740D0A00 
+  95              		.text
+  96              	.Letext0:
+  97              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  98              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  99              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 100              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 101              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 102              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 103              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 104              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 105              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 106              		.file 11 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 107              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 108              		.file 13 "Inc/usb_device.h"
+ 109              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 110              		.file 15 "Inc/usbd_cdc_if.h"
+ 111              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 112              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 riptideThreads.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:18     .text.vHeartbeat:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:66     .text.vHeartbeat:000000000000002c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:72     .rodata.vHeartbeat.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:18     .text.vHeartbeat:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:66     .text.vHeartbeat:000000000000002c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:72     .text.vSwitches:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:79     .text.vSwitches:0000000000000000 vSwitches
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1lgUaL.s:92     .rodata.vHeartbeat.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

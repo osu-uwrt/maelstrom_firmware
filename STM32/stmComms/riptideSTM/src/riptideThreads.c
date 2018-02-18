@@ -16,7 +16,6 @@
 void vHeartbeat(void *pvParameters ){
 
     uint8_t HiMsg[] = "heartbeat\r\n";
-
     /* Infinite loop */
     for(;;) {
         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
@@ -26,4 +25,8 @@ void vHeartbeat(void *pvParameters ){
 
     }
 
-  }
+}
+
+void vSwitches(void *pvParameters){
+
+}
