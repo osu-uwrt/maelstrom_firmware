@@ -132,6 +132,16 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the thread(s) */
@@ -186,10 +196,10 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 25;
-  RCC_OscInitStruct.PLL.PLLN = 336;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 72;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
+  RCC_OscInitStruct.PLL.PLLQ = 3;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
@@ -201,10 +211,10 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
@@ -229,7 +239,7 @@ static void MX_TIM2_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 210;
+  htim2.Init.Prescaler = 90;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 2000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -281,7 +291,7 @@ static void MX_TIM3_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 210;
+  htim3.Init.Prescaler = 90;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 2000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -333,7 +343,7 @@ static void MX_TIM5_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim5.Instance = TIM5;
-  htim5.Init.Prescaler = 210;
+  htim5.Init.Prescaler = 90;
   htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim5.Init.Period = 2000;
   htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -407,7 +417,7 @@ void CDC_Receive(uint8_t* buf, uint32_t len){
 
 	if (buf[0] == *start && buf[1] == *start && buf[2] == *start && buf[3] == *start && buf[len - 1] == *end && buf[len - 2] == *end && buf[len - 3] == *end && buf[len - 4] == *end)
 	{
-		uint8_t data[] = malloc(4 * sizeof(uint8_t));
+		uint8_t data[4];
 		uint16_t value;
 		for (int i = 1; i <= 10; i++ ) {
 			data[0] = buf[i * 4];
@@ -418,43 +428,40 @@ void CDC_Receive(uint8_t* buf, uint32_t len){
 
 			switch(i) {
 				case 1:
-					&htim2.Instance->CCR1 = value;
+					htim2.Instance->CCR1 = value;
 					break;
 				case 2:
-					&htim2.Instance->CCR3 = value;
+					htim2.Instance->CCR3 = value;
 					break;
 				case 3:
-					&htim5.Instance->CCR4 = value;
+					htim5.Instance->CCR4 = value;
 					break;
 				case 4:
-					&htim5.Instance->CCR3 = value;
+					htim5.Instance->CCR3 = value;
 					break;
 				case 5:
-					&htim2.Instance->CCR4 = value;
+					htim2.Instance->CCR4 = value;
 					break;
 				case 6:
-					&htim2.Instance->CCR3 = value;
+					htim2.Instance->CCR3 = value;
 					break;
 				case 7:
-					&htim3.Instance->CCR4 = value;
+					htim3.Instance->CCR4 = value;
 					break;
 				case 8:
-					&htim3.Instance->CCR2 = value;
+					htim3.Instance->CCR2 = value;
 					break;
 				case 9:
-					&htim3.Instance->CCR1 = value;
+					htim3.Instance->CCR1 = value;
 					break;
 				case 10:
-					&htim3.Instance->CCR3 = value;
+					htim3.Instance->CCR3 = value;
 					break;
 			}
 		}
 
-		free(data);
-		free(value);
-
 	} else {
-		CDC_Transmit_FS(error, strlen(error));
+		CDC_Transmit_HS(error, strlen(error));
 	}
 
 }
@@ -468,9 +475,6 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_ALL);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_ALL);
-  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_ALL);
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
