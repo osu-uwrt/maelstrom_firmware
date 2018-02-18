@@ -6,4 +6,5 @@
 #define STMCOMMS_RIPTIDETHREADS_H
 
 #endif //STMCOMMS_RIPTIDETHREADS_H
-void vHeartbeat( void *pvParameters );
+void vHeartbeat ( void *pvParameters );
+void vSwitches  ( void *pvParameters );

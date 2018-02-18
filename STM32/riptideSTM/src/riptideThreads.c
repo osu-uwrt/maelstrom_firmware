@@ -14,11 +14,8 @@
 #include "riptidethreads.h"
 
 void vHeartbeat(void *pvParameters ){
-    /* init code for USB_DEVICE */
-    //MX_USB_DEVICE_Init();
+
     uint8_t HiMsg[] = "heartbeat\r\n";
-    //uint8_t TestMsg[] = "test\r\n";
-    /* USER CODE BEGIN 5 */
     /* Infinite loop */
     for(;;) {
         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
@@ -28,4 +25,8 @@ void vHeartbeat(void *pvParameters ){
 
     }
 
-  }
+}
+
+void vSwitches(void *pvParameters){
+
+}
