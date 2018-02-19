@@ -47,12 +47,7 @@
 */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "stm32f4xx_hal.h"
-#include "cmsis_os.h"
 #include "usbd_cdc_if.h"
-#include <stdbool.h>
-#include "riptideFunctions.h"
 /* USER CODE BEGIN INCLUDE */
 /* USER CODE END INCLUDE */
 

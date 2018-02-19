@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
   30:Src/main.c    ****   *    this license is void and will automatically terminate your rights under 
   31:Src/main.c    ****   *    this license. 
   32:Src/main.c    ****   *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 2
 
 
   33:Src/main.c    ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
@@ -81,183 +81,182 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
   50:Src/main.c    **** #include "stm32f4xx_hal.h"
   51:Src/main.c    **** #include "cmsis_os.h"
   52:Src/main.c    **** #include "usb_device.h"
-  53:Src/main.c    **** #include "usbd_cdc_if.h"
-  54:Src/main.c    **** 
-  55:Src/main.c    **** /* USER CODE BEGIN Includes */
-  56:Src/main.c    **** #include "riptideMain.h"
-  57:Src/main.c    **** 
-  58:Src/main.c    **** /* USER CODE END Includes */
-  59:Src/main.c    **** 
-  60:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
-  61:Src/main.c    **** osThreadId defaultTaskHandle;
-  62:Src/main.c    **** 
-  63:Src/main.c    **** /* USER CODE BEGIN PV */
-  64:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
-  65:Src/main.c    **** 
-  66:Src/main.c    **** /* USER CODE END PV */
-  67:Src/main.c    **** 
-  68:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
-  69:Src/main.c    **** void SystemClock_Config(void);
-  70:Src/main.c    **** static void MX_GPIO_Init(void);
-  71:Src/main.c    **** void StartDefaultTask(void const * argument);
-  72:Src/main.c    **** 
-  73:Src/main.c    **** /* USER CODE BEGIN PFP */
-  74:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
-  75:Src/main.c    **** 
-  76:Src/main.c    **** /* USER CODE END PFP */
-  77:Src/main.c    **** 
-  78:Src/main.c    **** /* USER CODE BEGIN 0 */
-  79:Src/main.c    **** 
-  80:Src/main.c    **** /* USER CODE END 0 */
-  81:Src/main.c    **** 
-  82:Src/main.c    **** int main(void)
-  83:Src/main.c    **** {
-  84:Src/main.c    **** 
-  85:Src/main.c    ****   /* USER CODE BEGIN 1 */
-  86:Src/main.c    **** 
-  87:Src/main.c    ****   /* USER CODE END 1 */
-  88:Src/main.c    **** 
-  89:Src/main.c    ****   /* MCU Configuration----------------------------------------------------------*/
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 3
+  53:Src/main.c    **** 
+  54:Src/main.c    **** /* USER CODE BEGIN Includes */
+  55:Src/main.c    **** #include "riptideMain.h"
+  56:Src/main.c    **** 
+  57:Src/main.c    **** /* USER CODE END Includes */
+  58:Src/main.c    **** 
+  59:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  60:Src/main.c    **** osThreadId defaultTaskHandle;
+  61:Src/main.c    **** 
+  62:Src/main.c    **** /* USER CODE BEGIN PV */
+  63:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  64:Src/main.c    **** 
+  65:Src/main.c    **** /* USER CODE END PV */
+  66:Src/main.c    **** 
+  67:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  68:Src/main.c    **** void SystemClock_Config(void);
+  69:Src/main.c    **** static void MX_GPIO_Init(void);
+  70:Src/main.c    **** void StartDefaultTask(void const * argument);
+  71:Src/main.c    **** 
+  72:Src/main.c    **** /* USER CODE BEGIN PFP */
+  73:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+  74:Src/main.c    **** 
+  75:Src/main.c    **** /* USER CODE END PFP */
+  76:Src/main.c    **** 
+  77:Src/main.c    **** /* USER CODE BEGIN 0 */
+  78:Src/main.c    **** 
+  79:Src/main.c    **** /* USER CODE END 0 */
+  80:Src/main.c    **** 
+  81:Src/main.c    **** int main(void)
+  82:Src/main.c    **** {
+  83:Src/main.c    **** 
+  84:Src/main.c    ****   /* USER CODE BEGIN 1 */
+  85:Src/main.c    **** 
+  86:Src/main.c    ****   /* USER CODE END 1 */
+  87:Src/main.c    **** 
+  88:Src/main.c    ****   /* MCU Configuration----------------------------------------------------------*/
+  89:Src/main.c    **** 
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 3
 
 
-  90:Src/main.c    **** 
-  91:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  92:Src/main.c    ****   HAL_Init();
-  93:Src/main.c    **** 
-  94:Src/main.c    ****   /* USER CODE BEGIN Init */
-  95:Src/main.c    **** 
-  96:Src/main.c    ****   /* USER CODE END Init */
-  97:Src/main.c    **** 
-  98:Src/main.c    ****   /* Configure the system clock */
-  99:Src/main.c    ****   SystemClock_Config();
- 100:Src/main.c    **** 
- 101:Src/main.c    ****   /* USER CODE BEGIN SysInit */
- 102:Src/main.c    **** 
- 103:Src/main.c    ****   /* USER CODE END SysInit */
- 104:Src/main.c    **** 
- 105:Src/main.c    ****   /* Initialize all configured peripherals */
- 106:Src/main.c    ****   MX_GPIO_Init();
- 107:Src/main.c    **** 
- 108:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 109:Src/main.c    **** 
- 110:Src/main.c    ****   /* USER CODE END 2 */
- 111:Src/main.c    ****     riptideMain();
- 112:Src/main.c    ****   /* USER CODE BEGIN RTOS_MUTEX */
- 113:Src/main.c    ****   /* add mutexes, ... */
- 114:Src/main.c    ****   /* USER CODE END RTOS_MUTEX */
- 115:Src/main.c    **** 
- 116:Src/main.c    ****   /* USER CODE BEGIN RTOS_SEMAPHORES */
- 117:Src/main.c    ****   /* add semaphores, ... */
- 118:Src/main.c    ****   /* USER CODE END RTOS_SEMAPHORES */
- 119:Src/main.c    **** 
- 120:Src/main.c    ****   /* USER CODE BEGIN RTOS_TIMERS */
- 121:Src/main.c    ****   /* start timers, add new ones, ... */
- 122:Src/main.c    ****   /* USER CODE END RTOS_TIMERS */
- 123:Src/main.c    **** 
- 124:Src/main.c    ****   /* Create the thread(s) */
- 125:Src/main.c    ****   /* definition and creation of defaultTask */
- 126:Src/main.c    ****   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
- 127:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
- 128:Src/main.c    **** 
- 129:Src/main.c    ****   /* USER CODE BEGIN RTOS_THREADS */
- 130:Src/main.c    ****     //riptideMain();
- 131:Src/main.c    ****   /* USER CODE END RTOS_THREADS */
- 132:Src/main.c    **** 
- 133:Src/main.c    ****   /* USER CODE BEGIN RTOS_QUEUES */
- 134:Src/main.c    **** 
- 135:Src/main.c    ****   /* USER CODE END RTOS_QUEUES */
- 136:Src/main.c    ****  
- 137:Src/main.c    **** 
- 138:Src/main.c    ****   /* Start scheduler */
- 139:Src/main.c    ****   osKernelStart();
- 140:Src/main.c    ****   
- 141:Src/main.c    ****   /* We should never get here as control is now taken by the scheduler */
- 142:Src/main.c    **** 
- 143:Src/main.c    ****   /* Infinite loop */
- 144:Src/main.c    ****   /* USER CODE BEGIN WHILE */
- 145:Src/main.c    ****   while (1)
- 146:Src/main.c    ****   {
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 4
+  90:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  91:Src/main.c    ****   HAL_Init();
+  92:Src/main.c    **** 
+  93:Src/main.c    ****   /* USER CODE BEGIN Init */
+  94:Src/main.c    **** 
+  95:Src/main.c    ****   /* USER CODE END Init */
+  96:Src/main.c    **** 
+  97:Src/main.c    ****   /* Configure the system clock */
+  98:Src/main.c    ****   SystemClock_Config();
+  99:Src/main.c    **** 
+ 100:Src/main.c    ****   /* USER CODE BEGIN SysInit */
+ 101:Src/main.c    **** 
+ 102:Src/main.c    ****   /* USER CODE END SysInit */
+ 103:Src/main.c    **** 
+ 104:Src/main.c    ****   /* Initialize all configured peripherals */
+ 105:Src/main.c    ****   MX_GPIO_Init();
+ 106:Src/main.c    **** 
+ 107:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 108:Src/main.c    **** 
+ 109:Src/main.c    ****   /* USER CODE END 2 */
+ 110:Src/main.c    **** 
+ 111:Src/main.c    ****   /* USER CODE BEGIN RTOS_MUTEX */
+ 112:Src/main.c    ****   /* add mutexes, ... */
+ 113:Src/main.c    ****   /* USER CODE END RTOS_MUTEX */
+ 114:Src/main.c    **** 
+ 115:Src/main.c    ****   /* USER CODE BEGIN RTOS_SEMAPHORES */
+ 116:Src/main.c    ****   /* add semaphores, ... */
+ 117:Src/main.c    ****   /* USER CODE END RTOS_SEMAPHORES */
+ 118:Src/main.c    **** 
+ 119:Src/main.c    ****   /* USER CODE BEGIN RTOS_TIMERS */
+ 120:Src/main.c    ****   /* start timers, add new ones, ... */
+ 121:Src/main.c    ****   /* USER CODE END RTOS_TIMERS */
+ 122:Src/main.c    **** 
+ 123:Src/main.c    ****   /* Create the thread(s) */
+ 124:Src/main.c    ****   /* definition and creation of defaultTask */
+ 125:Src/main.c    ****   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+ 126:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+ 127:Src/main.c    **** 
+ 128:Src/main.c    ****   /* USER CODE BEGIN RTOS_THREADS */
+ 129:Src/main.c    ****     riptideMain();
+ 130:Src/main.c    ****   /* USER CODE END RTOS_THREADS */
+ 131:Src/main.c    **** 
+ 132:Src/main.c    ****   /* USER CODE BEGIN RTOS_QUEUES */
+ 133:Src/main.c    **** 
+ 134:Src/main.c    ****   /* USER CODE END RTOS_QUEUES */
+ 135:Src/main.c    ****  
+ 136:Src/main.c    **** 
+ 137:Src/main.c    ****   /* Start scheduler */
+ 138:Src/main.c    ****   osKernelStart();
+ 139:Src/main.c    ****   
+ 140:Src/main.c    ****   /* We should never get here as control is now taken by the scheduler */
+ 141:Src/main.c    **** 
+ 142:Src/main.c    ****   /* Infinite loop */
+ 143:Src/main.c    ****   /* USER CODE BEGIN WHILE */
+ 144:Src/main.c    ****   while (1)
+ 145:Src/main.c    ****   {
+ 146:Src/main.c    ****   /* USER CODE END WHILE */
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 4
 
 
- 147:Src/main.c    ****   /* USER CODE END WHILE */
- 148:Src/main.c    **** 
- 149:Src/main.c    ****   /* USER CODE BEGIN 3 */
- 150:Src/main.c    **** 
- 151:Src/main.c    ****   }
- 152:Src/main.c    ****   /* USER CODE END 3 */
- 153:Src/main.c    **** 
- 154:Src/main.c    **** }
- 155:Src/main.c    **** 
- 156:Src/main.c    **** /** System Clock Configuration
- 157:Src/main.c    **** */
- 158:Src/main.c    **** void SystemClock_Config(void)
- 159:Src/main.c    **** {
- 160:Src/main.c    **** 
- 161:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct;
- 162:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct;
- 163:Src/main.c    **** 
- 164:Src/main.c    ****     /**Configure the main internal regulator output voltage 
- 165:Src/main.c    ****     */
- 166:Src/main.c    ****   __HAL_RCC_PWR_CLK_ENABLE();
- 167:Src/main.c    **** 
- 168:Src/main.c    ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 169:Src/main.c    **** 
- 170:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
- 171:Src/main.c    ****     */
- 172:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
- 173:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 174:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 175:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
- 176:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 8;
- 177:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 72;
- 178:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
- 179:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 3;
- 180:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 181:Src/main.c    ****   {
- 182:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
- 183:Src/main.c    ****   }
- 184:Src/main.c    **** 
- 185:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
- 186:Src/main.c    ****     */
- 187:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 188:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 189:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
- 190:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 191:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
- 192:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 193:Src/main.c    **** 
- 194:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
- 195:Src/main.c    ****   {
- 196:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
- 197:Src/main.c    ****   }
- 198:Src/main.c    **** 
- 199:Src/main.c    ****     /**Configure the Systick interrupt time 
- 200:Src/main.c    ****     */
- 201:Src/main.c    ****   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
- 202:Src/main.c    **** 
- 203:Src/main.c    ****     /**Configure the Systick 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 5
+ 147:Src/main.c    **** 
+ 148:Src/main.c    ****   /* USER CODE BEGIN 3 */
+ 149:Src/main.c    **** 
+ 150:Src/main.c    ****   }
+ 151:Src/main.c    ****   /* USER CODE END 3 */
+ 152:Src/main.c    **** 
+ 153:Src/main.c    **** }
+ 154:Src/main.c    **** 
+ 155:Src/main.c    **** /** System Clock Configuration
+ 156:Src/main.c    **** */
+ 157:Src/main.c    **** void SystemClock_Config(void)
+ 158:Src/main.c    **** {
+ 159:Src/main.c    **** 
+ 160:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct;
+ 161:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct;
+ 162:Src/main.c    **** 
+ 163:Src/main.c    ****     /**Configure the main internal regulator output voltage 
+ 164:Src/main.c    ****     */
+ 165:Src/main.c    ****   __HAL_RCC_PWR_CLK_ENABLE();
+ 166:Src/main.c    **** 
+ 167:Src/main.c    ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 168:Src/main.c    **** 
+ 169:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
+ 170:Src/main.c    ****     */
+ 171:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+ 172:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 173:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 174:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 175:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 8;
+ 176:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 72;
+ 177:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 178:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 3;
+ 179:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 180:Src/main.c    ****   {
+ 181:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 182:Src/main.c    ****   }
+ 183:Src/main.c    **** 
+ 184:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks 
+ 185:Src/main.c    ****     */
+ 186:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 187:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 188:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 189:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 190:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 191:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 192:Src/main.c    **** 
+ 193:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+ 194:Src/main.c    ****   {
+ 195:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 196:Src/main.c    ****   }
+ 197:Src/main.c    **** 
+ 198:Src/main.c    ****     /**Configure the Systick interrupt time 
+ 199:Src/main.c    ****     */
+ 200:Src/main.c    ****   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
+ 201:Src/main.c    **** 
+ 202:Src/main.c    ****     /**Configure the Systick 
+ 203:Src/main.c    ****     */
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 5
 
 
- 204:Src/main.c    ****     */
- 205:Src/main.c    ****   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
- 206:Src/main.c    **** 
- 207:Src/main.c    ****   /* SysTick_IRQn interrupt configuration */
- 208:Src/main.c    ****   HAL_NVIC_SetPriority(SysTick_IRQn, 15, 0);
- 209:Src/main.c    **** }
- 210:Src/main.c    **** 
- 211:Src/main.c    **** /** Configure pins as 
- 212:Src/main.c    ****         * Analog 
- 213:Src/main.c    ****         * Input 
- 214:Src/main.c    ****         * Output
- 215:Src/main.c    ****         * EVENT_OUT
- 216:Src/main.c    ****         * EXTI
- 217:Src/main.c    **** */
- 218:Src/main.c    **** static void MX_GPIO_Init(void)
- 219:Src/main.c    **** {
-  27              		.loc 1 219 0
+ 204:Src/main.c    ****   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+ 205:Src/main.c    **** 
+ 206:Src/main.c    ****   /* SysTick_IRQn interrupt configuration */
+ 207:Src/main.c    ****   HAL_NVIC_SetPriority(SysTick_IRQn, 15, 0);
+ 208:Src/main.c    **** }
+ 209:Src/main.c    **** 
+ 210:Src/main.c    **** /** Configure pins as 
+ 211:Src/main.c    ****         * Analog 
+ 212:Src/main.c    ****         * Input 
+ 213:Src/main.c    ****         * Output
+ 214:Src/main.c    ****         * EVENT_OUT
+ 215:Src/main.c    ****         * EXTI
+ 216:Src/main.c    **** */
+ 217:Src/main.c    **** static void MX_GPIO_Init(void)
+ 218:Src/main.c    **** {
+  27              		.loc 1 218 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 40
   30              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -271,53 +270,53 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
   38              	.LCFI1:
   39              		.cfi_def_cfa_offset 56
   40              	.LBB2:
- 220:Src/main.c    **** 
- 221:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct;
- 222:Src/main.c    **** 
- 223:Src/main.c    ****   /* GPIO Ports Clock Enable */
- 224:Src/main.c    ****   __HAL_RCC_GPIOH_CLK_ENABLE();
-  41              		.loc 1 224 0
+ 219:Src/main.c    **** 
+ 220:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct;
+ 221:Src/main.c    **** 
+ 222:Src/main.c    ****   /* GPIO Ports Clock Enable */
+ 223:Src/main.c    ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  41              		.loc 1 223 0
   42 0004 0024     		movs	r4, #0
   43 0006 0194     		str	r4, [sp, #4]
-  44 0008 1C4B     		ldr	r3, .L3
+  44 0008 214B     		ldr	r3, .L3
   45 000a 1A6B     		ldr	r2, [r3, #48]
-  46 000c 42F08002 		orr	r2, r2, #128
+  46 000c 42F00402 		orr	r2, r2, #4
   47 0010 1A63     		str	r2, [r3, #48]
   48 0012 1A6B     		ldr	r2, [r3, #48]
-  49 0014 02F08002 		and	r2, r2, #128
+  49 0014 02F00402 		and	r2, r2, #4
   50 0018 0192     		str	r2, [sp, #4]
   51 001a 019A     		ldr	r2, [sp, #4]
   52              	.LBE2:
   53              	.LBB3:
- 225:Src/main.c    ****   __HAL_RCC_GPIOB_CLK_ENABLE();
-  54              		.loc 1 225 0
+ 224:Src/main.c    ****   __HAL_RCC_GPIOH_CLK_ENABLE();
+  54              		.loc 1 224 0
   55 001c 0294     		str	r4, [sp, #8]
   56 001e 1A6B     		ldr	r2, [r3, #48]
-  57 0020 42F00202 		orr	r2, r2, #2
+  57 0020 42F08002 		orr	r2, r2, #128
   58 0024 1A63     		str	r2, [r3, #48]
   59 0026 1A6B     		ldr	r2, [r3, #48]
-  60 0028 02F00202 		and	r2, r2, #2
+  60 0028 02F08002 		and	r2, r2, #128
   61 002c 0292     		str	r2, [sp, #8]
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 6
-
-
   62 002e 029A     		ldr	r2, [sp, #8]
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 6
+
+
   63              	.LBE3:
   64              	.LBB4:
- 226:Src/main.c    ****   __HAL_RCC_GPIOC_CLK_ENABLE();
-  65              		.loc 1 226 0
+ 225:Src/main.c    ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  65              		.loc 1 225 0
   66 0030 0394     		str	r4, [sp, #12]
   67 0032 1A6B     		ldr	r2, [r3, #48]
-  68 0034 42F00402 		orr	r2, r2, #4
+  68 0034 42F00202 		orr	r2, r2, #2
   69 0038 1A63     		str	r2, [r3, #48]
   70 003a 1A6B     		ldr	r2, [r3, #48]
-  71 003c 02F00402 		and	r2, r2, #4
+  71 003c 02F00202 		and	r2, r2, #2
   72 0040 0392     		str	r2, [sp, #12]
   73 0042 039A     		ldr	r2, [sp, #12]
   74              	.LBE4:
   75              	.LBB5:
- 227:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
-  76              		.loc 1 227 0
+ 226:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  76              		.loc 1 226 0
   77 0044 0494     		str	r4, [sp, #16]
   78 0046 1A6B     		ldr	r2, [r3, #48]
   79 0048 42F00102 		orr	r2, r2, #1
@@ -327,526 +326,546 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 1
   83 0054 0493     		str	r3, [sp, #16]
   84 0056 049B     		ldr	r3, [sp, #16]
   85              	.LBE5:
- 228:Src/main.c    **** 
- 229:Src/main.c    ****   /*Configure GPIO pin Output Level */
- 230:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
-  86              		.loc 1 230 0
-  87 0058 094D     		ldr	r5, .L3+4
+ 227:Src/main.c    **** 
+ 228:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 229:Src/main.c    ****   HAL_GPIO_WritePin(GPIOC, HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
+  86              		.loc 1 229 0
+  87 0058 0E4D     		ldr	r5, .L3+4
   88 005a 2246     		mov	r2, r4
   89 005c C021     		movs	r1, #192
   90 005e 2846     		mov	r0, r5
   91 0060 FFF7FEFF 		bl	HAL_GPIO_WritePin
   92              	.LVL0:
- 231:Src/main.c    **** 
- 232:Src/main.c    ****   /*Configure GPIO pins : HeartBeat1_Pin HeartBeat2_Pin */
- 233:Src/main.c    ****   GPIO_InitStruct.Pin = HeartBeat1_Pin|HeartBeat2_Pin;
+ 230:Src/main.c    **** 
+ 231:Src/main.c    ****   /*Configure GPIO pins : KillSwitch_Pin Switch1_Pin Switch2_Pin Switch3_Pin 
+ 232:Src/main.c    ****                            Switch4_Pin */
+ 233:Src/main.c    ****   GPIO_InitStruct.Pin = KillSwitch_Pin|Switch1_Pin|Switch2_Pin|Switch3_Pin 
   93              		.loc 1 233 0
-  94 0064 C023     		movs	r3, #192
-  95 0066 0593     		str	r3, [sp, #20]
- 234:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  96              		.loc 1 234 0
-  97 0068 0123     		movs	r3, #1
-  98 006a 0693     		str	r3, [sp, #24]
- 235:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  99              		.loc 1 235 0
- 100 006c 0794     		str	r4, [sp, #28]
- 236:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 101              		.loc 1 236 0
- 102 006e 0894     		str	r4, [sp, #32]
+  94 0064 48F20F03 		movw	r3, #32783
+  95 0068 0593     		str	r3, [sp, #20]
+ 234:Src/main.c    ****                           |Switch4_Pin;
+ 235:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  96              		.loc 1 235 0
+  97 006a 0694     		str	r4, [sp, #24]
+ 236:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  98              		.loc 1 236 0
+  99 006c 0794     		str	r4, [sp, #28]
  237:Src/main.c    ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
- 103              		.loc 1 237 0
- 104 0070 05A9     		add	r1, sp, #20
- 105 0072 2846     		mov	r0, r5
- 106 0074 FFF7FEFF 		bl	HAL_GPIO_Init
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 7
-
-
- 107              	.LVL1:
+ 100              		.loc 1 237 0
+ 101 006e 05A9     		add	r1, sp, #20
+ 102 0070 2846     		mov	r0, r5
+ 103 0072 FFF7FEFF 		bl	HAL_GPIO_Init
+ 104              	.LVL1:
  238:Src/main.c    **** 
- 239:Src/main.c    **** }
- 108              		.loc 1 239 0
- 109 0078 0BB0     		add	sp, sp, #44
- 110              	.LCFI2:
- 111              		.cfi_def_cfa_offset 12
- 112              		@ sp needed
- 113 007a 30BD     		pop	{r4, r5, pc}
- 114              	.L4:
- 115              		.align	2
- 116              	.L3:
- 117 007c 00380240 		.word	1073887232
- 118 0080 00080240 		.word	1073874944
- 119              		.cfi_endproc
- 120              	.LFE131:
- 122              		.section	.text.StartDefaultTask,"ax",%progbits
- 123              		.align	1
- 124              		.global	StartDefaultTask
- 125              		.syntax unified
- 126              		.thumb
- 127              		.thumb_func
- 128              		.fpu fpv4-sp-d16
- 130              	StartDefaultTask:
- 131              	.LFB132:
- 240:Src/main.c    **** 
- 241:Src/main.c    **** /* USER CODE BEGIN 4 */
- 242:Src/main.c    **** 
- 243:Src/main.c    **** /* USER CODE END 4 */
- 244:Src/main.c    **** 
- 245:Src/main.c    **** /* StartDefaultTask function */
- 246:Src/main.c    **** void StartDefaultTask(void const * argument)
- 247:Src/main.c    **** {
- 132              		.loc 1 247 0
- 133              		.cfi_startproc
- 134              		@ Volatile: function does not return.
- 135              		@ args = 0, pretend = 0, frame = 0
- 136              		@ frame_needed = 0, uses_anonymous_args = 0
- 137              	.LVL2:
- 138 0000 08B5     		push	{r3, lr}
- 139              	.LCFI3:
- 140              		.cfi_def_cfa_offset 8
- 141              		.cfi_offset 3, -8
- 142              		.cfi_offset 14, -4
- 248:Src/main.c    ****   /* init code for USB_DEVICE */
- 249:Src/main.c    ****   MX_USB_DEVICE_Init();
- 143              		.loc 1 249 0
- 144 0002 FFF7FEFF 		bl	MX_USB_DEVICE_Init
- 145              	.LVL3:
- 146              	.L6:
- 250:Src/main.c    **** 
+ 239:Src/main.c    ****   /*Configure GPIO pins : HeartBeat1_Pin HeartBeat2_Pin */
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 7
+
+
+ 240:Src/main.c    ****   GPIO_InitStruct.Pin = HeartBeat1_Pin|HeartBeat2_Pin;
+ 105              		.loc 1 240 0
+ 106 0076 C023     		movs	r3, #192
+ 107 0078 0593     		str	r3, [sp, #20]
+ 241:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 108              		.loc 1 241 0
+ 109 007a 0123     		movs	r3, #1
+ 110 007c 0693     		str	r3, [sp, #24]
+ 242:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 111              		.loc 1 242 0
+ 112 007e 0794     		str	r4, [sp, #28]
+ 243:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 113              		.loc 1 243 0
+ 114 0080 0894     		str	r4, [sp, #32]
+ 244:Src/main.c    ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 115              		.loc 1 244 0
+ 116 0082 05A9     		add	r1, sp, #20
+ 117 0084 2846     		mov	r0, r5
+ 118 0086 FFF7FEFF 		bl	HAL_GPIO_Init
+ 119              	.LVL2:
+ 245:Src/main.c    **** 
+ 246:Src/main.c    **** }
+ 120              		.loc 1 246 0
+ 121 008a 0BB0     		add	sp, sp, #44
+ 122              	.LCFI2:
+ 123              		.cfi_def_cfa_offset 12
+ 124              		@ sp needed
+ 125 008c 30BD     		pop	{r4, r5, pc}
+ 126              	.L4:
+ 127 008e 00BF     		.align	2
+ 128              	.L3:
+ 129 0090 00380240 		.word	1073887232
+ 130 0094 00080240 		.word	1073874944
+ 131              		.cfi_endproc
+ 132              	.LFE131:
+ 134              		.section	.text.StartDefaultTask,"ax",%progbits
+ 135              		.align	1
+ 136              		.global	StartDefaultTask
+ 137              		.syntax unified
+ 138              		.thumb
+ 139              		.thumb_func
+ 140              		.fpu fpv4-sp-d16
+ 142              	StartDefaultTask:
+ 143              	.LFB132:
+ 247:Src/main.c    **** 
+ 248:Src/main.c    **** /* USER CODE BEGIN 4 */
+ 249:Src/main.c    **** 
+ 250:Src/main.c    **** /* USER CODE END 4 */
  251:Src/main.c    **** 
- 252:Src/main.c    ****   /* USER CODE BEGIN 5 */
- 253:Src/main.c    ****   /* Infinite loop */
- 254:Src/main.c    ****   for(;;) {
- 255:Src/main.c    ****     //for the love of god leave the osDelay in
- 256:Src/main.c    ****       osDelay(1);
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 8
+ 252:Src/main.c    **** /* StartDefaultTask function */
+ 253:Src/main.c    **** void StartDefaultTask(void const * argument)
+ 254:Src/main.c    **** {
+ 144              		.loc 1 254 0
+ 145              		.cfi_startproc
+ 146              		@ Volatile: function does not return.
+ 147              		@ args = 0, pretend = 0, frame = 0
+ 148              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 8
 
 
- 147              		.loc 1 256 0 discriminator 1
- 148 0006 0120     		movs	r0, #1
- 149 0008 FFF7FEFF 		bl	osDelay
- 150              	.LVL4:
- 151 000c FBE7     		b	.L6
- 152              		.cfi_endproc
- 153              	.LFE132:
- 155              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
- 156              		.align	1
- 157              		.global	HAL_TIM_PeriodElapsedCallback
- 158              		.syntax unified
- 159              		.thumb
- 160              		.thumb_func
- 161              		.fpu fpv4-sp-d16
- 163              	HAL_TIM_PeriodElapsedCallback:
- 164              	.LFB133:
+ 149              	.LVL3:
+ 150 0000 08B5     		push	{r3, lr}
+ 151              	.LCFI3:
+ 152              		.cfi_def_cfa_offset 8
+ 153              		.cfi_offset 3, -8
+ 154              		.cfi_offset 14, -4
+ 255:Src/main.c    ****   /* init code for USB_DEVICE */
+ 256:Src/main.c    ****   MX_USB_DEVICE_Init();
+ 155              		.loc 1 256 0
+ 156 0002 FFF7FEFF 		bl	MX_USB_DEVICE_Init
+ 157              	.LVL4:
+ 158              	.L6:
  257:Src/main.c    **** 
- 258:Src/main.c    ****   }
- 259:Src/main.c    ****   /* USER CODE END 5 */ 
- 260:Src/main.c    **** }
- 261:Src/main.c    **** 
- 262:Src/main.c    **** /**
- 263:Src/main.c    ****   * @brief  Period elapsed callback in non blocking mode
- 264:Src/main.c    ****   * @note   This function is called  when TIM1 interrupt took place, inside
- 265:Src/main.c    ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
- 266:Src/main.c    ****   * a global variable "uwTick" used as application time base.
- 267:Src/main.c    ****   * @param  htim : TIM handle
- 268:Src/main.c    ****   * @retval None
- 269:Src/main.c    ****   */
- 270:Src/main.c    **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
- 271:Src/main.c    **** {
- 165              		.loc 1 271 0
- 166              		.cfi_startproc
- 167              		@ args = 0, pretend = 0, frame = 0
- 168              		@ frame_needed = 0, uses_anonymous_args = 0
- 169              	.LVL5:
- 170 0000 08B5     		push	{r3, lr}
- 171              	.LCFI4:
- 172              		.cfi_def_cfa_offset 8
- 173              		.cfi_offset 3, -8
- 174              		.cfi_offset 14, -4
- 272:Src/main.c    **** /* USER CODE BEGIN Callback 0 */
- 273:Src/main.c    **** 
- 274:Src/main.c    **** /* USER CODE END Callback 0 */
- 275:Src/main.c    ****   if (htim->Instance == TIM1) {
- 175              		.loc 1 275 0
- 176 0002 0268     		ldr	r2, [r0]
- 177 0004 034B     		ldr	r3, .L12
- 178 0006 9A42     		cmp	r2, r3
- 179 0008 00D0     		beq	.L11
- 180              	.LVL6:
- 181              	.L8:
- 182 000a 08BD     		pop	{r3, pc}
- 183              	.LVL7:
- 184              	.L11:
- 276:Src/main.c    ****     HAL_IncTick();
- 185              		.loc 1 276 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 9
+ 258:Src/main.c    ****   /* USER CODE BEGIN 5 */
+ 259:Src/main.c    ****   /* Infinite loop */
+ 260:Src/main.c    ****   for(;;) {
+ 261:Src/main.c    ****     //for the love of god leave the osDelay in
+ 262:Src/main.c    ****       osDelay(1);
+ 159              		.loc 1 262 0 discriminator 1
+ 160 0006 0120     		movs	r0, #1
+ 161 0008 FFF7FEFF 		bl	osDelay
+ 162              	.LVL5:
+ 163 000c FBE7     		b	.L6
+ 164              		.cfi_endproc
+ 165              	.LFE132:
+ 167              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+ 168              		.align	1
+ 169              		.global	HAL_TIM_PeriodElapsedCallback
+ 170              		.syntax unified
+ 171              		.thumb
+ 172              		.thumb_func
+ 173              		.fpu fpv4-sp-d16
+ 175              	HAL_TIM_PeriodElapsedCallback:
+ 176              	.LFB133:
+ 263:Src/main.c    **** 
+ 264:Src/main.c    ****   }
+ 265:Src/main.c    ****   /* USER CODE END 5 */ 
+ 266:Src/main.c    **** }
+ 267:Src/main.c    **** 
+ 268:Src/main.c    **** /**
+ 269:Src/main.c    ****   * @brief  Period elapsed callback in non blocking mode
+ 270:Src/main.c    ****   * @note   This function is called  when TIM1 interrupt took place, inside
+ 271:Src/main.c    ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ 272:Src/main.c    ****   * a global variable "uwTick" used as application time base.
+ 273:Src/main.c    ****   * @param  htim : TIM handle
+ 274:Src/main.c    ****   * @retval None
+ 275:Src/main.c    ****   */
+ 276:Src/main.c    **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+ 277:Src/main.c    **** {
+ 177              		.loc 1 277 0
+ 178              		.cfi_startproc
+ 179              		@ args = 0, pretend = 0, frame = 0
+ 180              		@ frame_needed = 0, uses_anonymous_args = 0
+ 181              	.LVL6:
+ 182 0000 08B5     		push	{r3, lr}
+ 183              	.LCFI4:
+ 184              		.cfi_def_cfa_offset 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 9
 
 
- 186 000c FFF7FEFF 		bl	HAL_IncTick
- 187              	.LVL8:
- 277:Src/main.c    ****   }
- 278:Src/main.c    **** /* USER CODE BEGIN Callback 1 */
+ 185              		.cfi_offset 3, -8
+ 186              		.cfi_offset 14, -4
+ 278:Src/main.c    **** /* USER CODE BEGIN Callback 0 */
  279:Src/main.c    **** 
- 280:Src/main.c    **** /* USER CODE END Callback 1 */
- 281:Src/main.c    **** }
- 188              		.loc 1 281 0
- 189 0010 FBE7     		b	.L8
- 190              	.L13:
- 191 0012 00BF     		.align	2
- 192              	.L12:
- 193 0014 00000140 		.word	1073807360
- 194              		.cfi_endproc
- 195              	.LFE133:
- 197              		.section	.text._Error_Handler,"ax",%progbits
- 198              		.align	1
- 199              		.global	_Error_Handler
- 200              		.syntax unified
- 201              		.thumb
- 202              		.thumb_func
- 203              		.fpu fpv4-sp-d16
- 205              	_Error_Handler:
- 206              	.LFB134:
- 282:Src/main.c    **** 
- 283:Src/main.c    **** /**
- 284:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
- 285:Src/main.c    ****   * @param  None
- 286:Src/main.c    ****   * @retval None
- 287:Src/main.c    ****   */
- 288:Src/main.c    **** void _Error_Handler(char * file, int line)
- 289:Src/main.c    **** {
- 207              		.loc 1 289 0
- 208              		.cfi_startproc
- 209              		@ Volatile: function does not return.
- 210              		@ args = 0, pretend = 0, frame = 0
- 211              		@ frame_needed = 0, uses_anonymous_args = 0
- 212              		@ link register save eliminated.
- 213              	.LVL9:
- 214              	.L15:
- 215 0000 FEE7     		b	.L15
- 216              		.cfi_endproc
- 217              	.LFE134:
- 219              		.section	.text.SystemClock_Config,"ax",%progbits
- 220              		.align	1
- 221              		.global	SystemClock_Config
- 222              		.syntax unified
- 223              		.thumb
- 224              		.thumb_func
- 225              		.fpu fpv4-sp-d16
- 227              	SystemClock_Config:
- 228              	.LFB130:
- 159:Src/main.c    **** 
- 229              		.loc 1 159 0
- 230              		.cfi_startproc
- 231              		@ args = 0, pretend = 0, frame = 80
- 232              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 10
+ 280:Src/main.c    **** /* USER CODE END Callback 0 */
+ 281:Src/main.c    ****   if (htim->Instance == TIM1) {
+ 187              		.loc 1 281 0
+ 188 0002 0268     		ldr	r2, [r0]
+ 189 0004 034B     		ldr	r3, .L12
+ 190 0006 9A42     		cmp	r2, r3
+ 191 0008 00D0     		beq	.L11
+ 192              	.LVL7:
+ 193              	.L8:
+ 194 000a 08BD     		pop	{r3, pc}
+ 195              	.LVL8:
+ 196              	.L11:
+ 282:Src/main.c    ****     HAL_IncTick();
+ 197              		.loc 1 282 0
+ 198 000c FFF7FEFF 		bl	HAL_IncTick
+ 199              	.LVL9:
+ 283:Src/main.c    ****   }
+ 284:Src/main.c    **** /* USER CODE BEGIN Callback 1 */
+ 285:Src/main.c    **** 
+ 286:Src/main.c    **** /* USER CODE END Callback 1 */
+ 287:Src/main.c    **** }
+ 200              		.loc 1 287 0
+ 201 0010 FBE7     		b	.L8
+ 202              	.L13:
+ 203 0012 00BF     		.align	2
+ 204              	.L12:
+ 205 0014 00000140 		.word	1073807360
+ 206              		.cfi_endproc
+ 207              	.LFE133:
+ 209              		.section	.text._Error_Handler,"ax",%progbits
+ 210              		.align	1
+ 211              		.global	_Error_Handler
+ 212              		.syntax unified
+ 213              		.thumb
+ 214              		.thumb_func
+ 215              		.fpu fpv4-sp-d16
+ 217              	_Error_Handler:
+ 218              	.LFB134:
+ 288:Src/main.c    **** 
+ 289:Src/main.c    **** /**
+ 290:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 291:Src/main.c    ****   * @param  None
+ 292:Src/main.c    ****   * @retval None
+ 293:Src/main.c    ****   */
+ 294:Src/main.c    **** void _Error_Handler(char * file, int line)
+ 295:Src/main.c    **** {
+ 219              		.loc 1 295 0
+ 220              		.cfi_startproc
+ 221              		@ Volatile: function does not return.
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              		@ link register save eliminated.
+ 225              	.LVL10:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 10
 
 
- 159:Src/main.c    **** 
- 233              		.loc 1 159 0
- 234 0000 00B5     		push	{lr}
- 235              	.LCFI5:
- 236              		.cfi_def_cfa_offset 4
- 237              		.cfi_offset 14, -4
- 238 0002 95B0     		sub	sp, sp, #84
- 239              	.LCFI6:
- 240              		.cfi_def_cfa_offset 88
- 241              	.LBB6:
- 166:Src/main.c    **** 
- 242              		.loc 1 166 0
- 243 0004 0021     		movs	r1, #0
- 244 0006 0191     		str	r1, [sp, #4]
- 245 0008 294B     		ldr	r3, .L22
- 246 000a 1A6C     		ldr	r2, [r3, #64]
- 247 000c 42F08052 		orr	r2, r2, #268435456
- 248 0010 1A64     		str	r2, [r3, #64]
- 249 0012 1B6C     		ldr	r3, [r3, #64]
- 250 0014 03F08053 		and	r3, r3, #268435456
- 251 0018 0193     		str	r3, [sp, #4]
- 252 001a 019B     		ldr	r3, [sp, #4]
- 253              	.LBE6:
- 254              	.LBB7:
- 168:Src/main.c    **** 
- 255              		.loc 1 168 0
- 256 001c 0291     		str	r1, [sp, #8]
- 257 001e 254B     		ldr	r3, .L22+4
- 258 0020 1A68     		ldr	r2, [r3]
- 259 0022 42F48042 		orr	r2, r2, #16384
- 260 0026 1A60     		str	r2, [r3]
- 261 0028 1B68     		ldr	r3, [r3]
- 262 002a 03F48043 		and	r3, r3, #16384
- 263 002e 0293     		str	r3, [sp, #8]
- 264 0030 029B     		ldr	r3, [sp, #8]
- 265              	.LBE7:
- 172:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 266              		.loc 1 172 0
- 267 0032 0123     		movs	r3, #1
- 268 0034 0893     		str	r3, [sp, #32]
- 173:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
- 269              		.loc 1 173 0
- 270 0036 4FF48033 		mov	r3, #65536
- 271 003a 0993     		str	r3, [sp, #36]
- 174:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
- 272              		.loc 1 174 0
- 273 003c 0223     		movs	r3, #2
- 274 003e 0E93     		str	r3, [sp, #56]
- 175:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 8;
- 275              		.loc 1 175 0
- 276 0040 4FF48002 		mov	r2, #4194304
- 277 0044 0F92     		str	r2, [sp, #60]
- 176:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 72;
- 278              		.loc 1 176 0
- 279 0046 0822     		movs	r2, #8
- 280 0048 1092     		str	r2, [sp, #64]
- 177:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 11
+ 226              	.L15:
+ 227 0000 FEE7     		b	.L15
+ 228              		.cfi_endproc
+ 229              	.LFE134:
+ 231              		.section	.text.SystemClock_Config,"ax",%progbits
+ 232              		.align	1
+ 233              		.global	SystemClock_Config
+ 234              		.syntax unified
+ 235              		.thumb
+ 236              		.thumb_func
+ 237              		.fpu fpv4-sp-d16
+ 239              	SystemClock_Config:
+ 240              	.LFB130:
+ 158:Src/main.c    **** 
+ 241              		.loc 1 158 0
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 80
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158:Src/main.c    **** 
+ 245              		.loc 1 158 0
+ 246 0000 00B5     		push	{lr}
+ 247              	.LCFI5:
+ 248              		.cfi_def_cfa_offset 4
+ 249              		.cfi_offset 14, -4
+ 250 0002 95B0     		sub	sp, sp, #84
+ 251              	.LCFI6:
+ 252              		.cfi_def_cfa_offset 88
+ 253              	.LBB6:
+ 165:Src/main.c    **** 
+ 254              		.loc 1 165 0
+ 255 0004 0021     		movs	r1, #0
+ 256 0006 0191     		str	r1, [sp, #4]
+ 257 0008 294B     		ldr	r3, .L22
+ 258 000a 1A6C     		ldr	r2, [r3, #64]
+ 259 000c 42F08052 		orr	r2, r2, #268435456
+ 260 0010 1A64     		str	r2, [r3, #64]
+ 261 0012 1B6C     		ldr	r3, [r3, #64]
+ 262 0014 03F08053 		and	r3, r3, #268435456
+ 263 0018 0193     		str	r3, [sp, #4]
+ 264 001a 019B     		ldr	r3, [sp, #4]
+ 265              	.LBE6:
+ 266              	.LBB7:
+ 167:Src/main.c    **** 
+ 267              		.loc 1 167 0
+ 268 001c 0291     		str	r1, [sp, #8]
+ 269 001e 254B     		ldr	r3, .L22+4
+ 270 0020 1A68     		ldr	r2, [r3]
+ 271 0022 42F48042 		orr	r2, r2, #16384
+ 272 0026 1A60     		str	r2, [r3]
+ 273 0028 1B68     		ldr	r3, [r3]
+ 274 002a 03F48043 		and	r3, r3, #16384
+ 275 002e 0293     		str	r3, [sp, #8]
+ 276 0030 029B     		ldr	r3, [sp, #8]
+ 277              	.LBE7:
+ 171:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 278              		.loc 1 171 0
+ 279 0032 0123     		movs	r3, #1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 11
 
 
- 281              		.loc 1 177 0
- 282 004a 4822     		movs	r2, #72
- 283 004c 1192     		str	r2, [sp, #68]
- 178:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 3;
- 284              		.loc 1 178 0
- 285 004e 1293     		str	r3, [sp, #72]
- 179:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 286              		.loc 1 179 0
- 287 0050 0323     		movs	r3, #3
- 288 0052 1393     		str	r3, [sp, #76]
- 180:Src/main.c    ****   {
- 289              		.loc 1 180 0
- 290 0054 08A8     		add	r0, sp, #32
- 291 0056 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 292              	.LVL10:
- 293 005a 08BB     		cbnz	r0, .L20
- 187:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 294              		.loc 1 187 0
- 295 005c 0F23     		movs	r3, #15
- 296 005e 0393     		str	r3, [sp, #12]
- 189:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 297              		.loc 1 189 0
- 298 0060 0221     		movs	r1, #2
- 299 0062 0491     		str	r1, [sp, #16]
- 190:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
- 300              		.loc 1 190 0
- 301 0064 0023     		movs	r3, #0
- 302 0066 0593     		str	r3, [sp, #20]
- 191:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 303              		.loc 1 191 0
- 304 0068 4FF48052 		mov	r2, #4096
- 305 006c 0692     		str	r2, [sp, #24]
- 192:Src/main.c    **** 
- 306              		.loc 1 192 0
- 307 006e 0793     		str	r3, [sp, #28]
- 194:Src/main.c    ****   {
- 308              		.loc 1 194 0
- 309 0070 03A8     		add	r0, sp, #12
- 310 0072 FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 311              	.LVL11:
- 312 0076 B8B9     		cbnz	r0, .L21
- 201:Src/main.c    **** 
- 313              		.loc 1 201 0
- 314 0078 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
- 315              	.LVL12:
- 316 007c 0E4B     		ldr	r3, .L22+8
- 317 007e A3FB0030 		umull	r3, r0, r3, r0
- 318 0082 8009     		lsrs	r0, r0, #6
- 319 0084 FFF7FEFF 		bl	HAL_SYSTICK_Config
- 320              	.LVL13:
- 205:Src/main.c    **** 
- 321              		.loc 1 205 0
- 322 0088 0420     		movs	r0, #4
- 323 008a FFF7FEFF 		bl	HAL_SYSTICK_CLKSourceConfig
- 324              	.LVL14:
- 208:Src/main.c    **** }
- 325              		.loc 1 208 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 12
+ 280 0034 0893     		str	r3, [sp, #32]
+ 172:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 281              		.loc 1 172 0
+ 282 0036 4FF48033 		mov	r3, #65536
+ 283 003a 0993     		str	r3, [sp, #36]
+ 173:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 284              		.loc 1 173 0
+ 285 003c 0223     		movs	r3, #2
+ 286 003e 0E93     		str	r3, [sp, #56]
+ 174:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 8;
+ 287              		.loc 1 174 0
+ 288 0040 4FF48002 		mov	r2, #4194304
+ 289 0044 0F92     		str	r2, [sp, #60]
+ 175:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 72;
+ 290              		.loc 1 175 0
+ 291 0046 0822     		movs	r2, #8
+ 292 0048 1092     		str	r2, [sp, #64]
+ 176:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 293              		.loc 1 176 0
+ 294 004a 4822     		movs	r2, #72
+ 295 004c 1192     		str	r2, [sp, #68]
+ 177:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 3;
+ 296              		.loc 1 177 0
+ 297 004e 1293     		str	r3, [sp, #72]
+ 178:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 298              		.loc 1 178 0
+ 299 0050 0323     		movs	r3, #3
+ 300 0052 1393     		str	r3, [sp, #76]
+ 179:Src/main.c    ****   {
+ 301              		.loc 1 179 0
+ 302 0054 08A8     		add	r0, sp, #32
+ 303 0056 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 304              	.LVL11:
+ 305 005a 08BB     		cbnz	r0, .L20
+ 186:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 306              		.loc 1 186 0
+ 307 005c 0F23     		movs	r3, #15
+ 308 005e 0393     		str	r3, [sp, #12]
+ 188:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 309              		.loc 1 188 0
+ 310 0060 0221     		movs	r1, #2
+ 311 0062 0491     		str	r1, [sp, #16]
+ 189:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+ 312              		.loc 1 189 0
+ 313 0064 0023     		movs	r3, #0
+ 314 0066 0593     		str	r3, [sp, #20]
+ 190:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+ 315              		.loc 1 190 0
+ 316 0068 4FF48052 		mov	r2, #4096
+ 317 006c 0692     		str	r2, [sp, #24]
+ 191:Src/main.c    **** 
+ 318              		.loc 1 191 0
+ 319 006e 0793     		str	r3, [sp, #28]
+ 193:Src/main.c    ****   {
+ 320              		.loc 1 193 0
+ 321 0070 03A8     		add	r0, sp, #12
+ 322 0072 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 12
 
 
- 326 008e 0022     		movs	r2, #0
- 327 0090 0F21     		movs	r1, #15
- 328 0092 4FF0FF30 		mov	r0, #-1
- 329 0096 FFF7FEFF 		bl	HAL_NVIC_SetPriority
- 330              	.LVL15:
- 209:Src/main.c    **** 
- 331              		.loc 1 209 0
- 332 009a 15B0     		add	sp, sp, #84
- 333              	.LCFI7:
- 334              		.cfi_remember_state
- 335              		.cfi_def_cfa_offset 4
- 336              		@ sp needed
- 337 009c 5DF804FB 		ldr	pc, [sp], #4
- 338              	.L20:
- 339              	.LCFI8:
- 340              		.cfi_restore_state
- 182:Src/main.c    ****   }
- 341              		.loc 1 182 0
- 342 00a0 B621     		movs	r1, #182
- 343 00a2 0648     		ldr	r0, .L22+12
- 344 00a4 FFF7FEFF 		bl	_Error_Handler
- 345              	.LVL16:
- 346              	.L21:
- 196:Src/main.c    ****   }
- 347              		.loc 1 196 0
- 348 00a8 C421     		movs	r1, #196
- 349 00aa 0448     		ldr	r0, .L22+12
- 350 00ac FFF7FEFF 		bl	_Error_Handler
- 351              	.LVL17:
- 352              	.L23:
- 353              		.align	2
- 354              	.L22:
- 355 00b0 00380240 		.word	1073887232
- 356 00b4 00700040 		.word	1073770496
- 357 00b8 D34D6210 		.word	274877907
- 358 00bc 00000000 		.word	.LC2
- 359              		.cfi_endproc
- 360              	.LFE130:
- 362              		.section	.text.main,"ax",%progbits
- 363              		.align	1
- 364              		.global	main
- 365              		.syntax unified
- 366              		.thumb
- 367              		.thumb_func
- 368              		.fpu fpv4-sp-d16
- 370              	main:
- 371              	.LFB129:
-  83:Src/main.c    **** 
- 372              		.loc 1 83 0
- 373              		.cfi_startproc
- 374              		@ Volatile: function does not return.
- 375              		@ args = 0, pretend = 0, frame = 24
- 376              		@ frame_needed = 0, uses_anonymous_args = 0
- 377 0000 00B5     		push	{lr}
- 378              	.LCFI9:
- 379              		.cfi_def_cfa_offset 4
- 380              		.cfi_offset 14, -4
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 13
+ 323              	.LVL12:
+ 324 0076 B8B9     		cbnz	r0, .L21
+ 200:Src/main.c    **** 
+ 325              		.loc 1 200 0
+ 326 0078 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
+ 327              	.LVL13:
+ 328 007c 0E4B     		ldr	r3, .L22+8
+ 329 007e A3FB0030 		umull	r3, r0, r3, r0
+ 330 0082 8009     		lsrs	r0, r0, #6
+ 331 0084 FFF7FEFF 		bl	HAL_SYSTICK_Config
+ 332              	.LVL14:
+ 204:Src/main.c    **** 
+ 333              		.loc 1 204 0
+ 334 0088 0420     		movs	r0, #4
+ 335 008a FFF7FEFF 		bl	HAL_SYSTICK_CLKSourceConfig
+ 336              	.LVL15:
+ 207:Src/main.c    **** }
+ 337              		.loc 1 207 0
+ 338 008e 0022     		movs	r2, #0
+ 339 0090 0F21     		movs	r1, #15
+ 340 0092 4FF0FF30 		mov	r0, #-1
+ 341 0096 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 342              	.LVL16:
+ 208:Src/main.c    **** 
+ 343              		.loc 1 208 0
+ 344 009a 15B0     		add	sp, sp, #84
+ 345              	.LCFI7:
+ 346              		.cfi_remember_state
+ 347              		.cfi_def_cfa_offset 4
+ 348              		@ sp needed
+ 349 009c 5DF804FB 		ldr	pc, [sp], #4
+ 350              	.L20:
+ 351              	.LCFI8:
+ 352              		.cfi_restore_state
+ 181:Src/main.c    ****   }
+ 353              		.loc 1 181 0
+ 354 00a0 B521     		movs	r1, #181
+ 355 00a2 0648     		ldr	r0, .L22+12
+ 356 00a4 FFF7FEFF 		bl	_Error_Handler
+ 357              	.LVL17:
+ 358              	.L21:
+ 195:Src/main.c    ****   }
+ 359              		.loc 1 195 0
+ 360 00a8 C321     		movs	r1, #195
+ 361 00aa 0448     		ldr	r0, .L22+12
+ 362 00ac FFF7FEFF 		bl	_Error_Handler
+ 363              	.LVL18:
+ 364              	.L23:
+ 365              		.align	2
+ 366              	.L22:
+ 367 00b0 00380240 		.word	1073887232
+ 368 00b4 00700040 		.word	1073770496
+ 369 00b8 D34D6210 		.word	274877907
+ 370 00bc 00000000 		.word	.LC2
+ 371              		.cfi_endproc
+ 372              	.LFE130:
+ 374              		.section	.text.main,"ax",%progbits
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 13
 
 
- 381 0002 87B0     		sub	sp, sp, #28
- 382              	.LCFI10:
- 383              		.cfi_def_cfa_offset 32
-  92:Src/main.c    **** 
- 384              		.loc 1 92 0
- 385 0004 FFF7FEFF 		bl	HAL_Init
- 386              	.LVL18:
-  99:Src/main.c    **** 
- 387              		.loc 1 99 0
- 388 0008 FFF7FEFF 		bl	SystemClock_Config
- 389              	.LVL19:
- 106:Src/main.c    **** 
- 390              		.loc 1 106 0
- 391 000c FFF7FEFF 		bl	MX_GPIO_Init
- 392              	.LVL20:
- 111:Src/main.c    ****   /* USER CODE BEGIN RTOS_MUTEX */
- 393              		.loc 1 111 0
- 394 0010 FFF7FEFF 		bl	riptideMain
- 395              	.LVL21:
- 126:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
- 396              		.loc 1 126 0
- 397 0014 01AC     		add	r4, sp, #4
- 398 0016 074D     		ldr	r5, .L27
- 399 0018 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
- 400 001a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
- 401 001c 2B68     		ldr	r3, [r5]
- 402 001e 2360     		str	r3, [r4]
- 127:Src/main.c    **** 
- 403              		.loc 1 127 0
- 404 0020 0021     		movs	r1, #0
- 405 0022 01A8     		add	r0, sp, #4
- 406 0024 FFF7FEFF 		bl	osThreadCreate
- 407              	.LVL22:
- 408 0028 034B     		ldr	r3, .L27+4
- 409 002a 1860     		str	r0, [r3]
- 139:Src/main.c    ****   
- 410              		.loc 1 139 0
- 411 002c FFF7FEFF 		bl	osKernelStart
- 412              	.LVL23:
- 413              	.L25:
- 414 0030 FEE7     		b	.L25
- 415              	.L28:
- 416 0032 00BF     		.align	2
- 417              	.L27:
- 418 0034 00000000 		.word	.LANCHOR0
- 419 0038 00000000 		.word	defaultTaskHandle
- 420              		.cfi_endproc
- 421              	.LFE129:
- 423              		.comm	defaultTaskHandle,4,4
- 424              		.section	.rodata
- 425              		.align	2
- 426              		.set	.LANCHOR0,. + 0
- 427              	.LC3:
- 428 0000 00000000 		.word	.LC0
- 429 0004 00000000 		.word	StartDefaultTask
- 430 0008 0000     		.short	0
- 431 000a 0000     		.space	2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 14
+ 375              		.align	1
+ 376              		.global	main
+ 377              		.syntax unified
+ 378              		.thumb
+ 379              		.thumb_func
+ 380              		.fpu fpv4-sp-d16
+ 382              	main:
+ 383              	.LFB129:
+  82:Src/main.c    **** 
+ 384              		.loc 1 82 0
+ 385              		.cfi_startproc
+ 386              		@ Volatile: function does not return.
+ 387              		@ args = 0, pretend = 0, frame = 24
+ 388              		@ frame_needed = 0, uses_anonymous_args = 0
+ 389 0000 00B5     		push	{lr}
+ 390              	.LCFI9:
+ 391              		.cfi_def_cfa_offset 4
+ 392              		.cfi_offset 14, -4
+ 393 0002 87B0     		sub	sp, sp, #28
+ 394              	.LCFI10:
+ 395              		.cfi_def_cfa_offset 32
+  91:Src/main.c    **** 
+ 396              		.loc 1 91 0
+ 397 0004 FFF7FEFF 		bl	HAL_Init
+ 398              	.LVL19:
+  98:Src/main.c    **** 
+ 399              		.loc 1 98 0
+ 400 0008 FFF7FEFF 		bl	SystemClock_Config
+ 401              	.LVL20:
+ 105:Src/main.c    **** 
+ 402              		.loc 1 105 0
+ 403 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 404              	.LVL21:
+ 125:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+ 405              		.loc 1 125 0
+ 406 0010 01AC     		add	r4, sp, #4
+ 407 0012 084D     		ldr	r5, .L27
+ 408 0014 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 409 0016 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 410 0018 2B68     		ldr	r3, [r5]
+ 411 001a 2360     		str	r3, [r4]
+ 126:Src/main.c    **** 
+ 412              		.loc 1 126 0
+ 413 001c 0021     		movs	r1, #0
+ 414 001e 01A8     		add	r0, sp, #4
+ 415 0020 FFF7FEFF 		bl	osThreadCreate
+ 416              	.LVL22:
+ 417 0024 044B     		ldr	r3, .L27+4
+ 418 0026 1860     		str	r0, [r3]
+ 129:Src/main.c    ****   /* USER CODE END RTOS_THREADS */
+ 419              		.loc 1 129 0
+ 420 0028 FFF7FEFF 		bl	riptideMain
+ 421              	.LVL23:
+ 138:Src/main.c    ****   
+ 422              		.loc 1 138 0
+ 423 002c FFF7FEFF 		bl	osKernelStart
+ 424              	.LVL24:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 14
 
 
- 432 000c 00000000 		.word	0
- 433 0010 80000000 		.word	128
- 434              		.section	.rodata.SystemClock_Config.str1.4,"aMS",%progbits,1
- 435              		.align	2
- 436              	.LC2:
- 437 0000 5372632F 		.ascii	"Src/main.c\000"
- 437      6D61696E 
- 437      2E6300
- 438              		.section	.rodata.str1.4,"aMS",%progbits,1
- 439              		.align	2
- 440              	.LC0:
- 441 0000 64656661 		.ascii	"defaultTask\000"
- 441      756C7454 
- 441      61736B00 
- 442              		.text
- 443              	.Letext0:
- 444              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 445              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 446              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
- 447              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
- 448              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
- 449              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 450              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 451              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 452              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
- 453              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
- 454              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
- 455              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
- 456              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
- 457              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
- 458              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
- 459              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
- 460              		.file 18 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
- 461              		.file 19 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
- 462              		.file 20 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
- 463              		.file 21 "Inc/usb_device.h"
- 464              		.file 22 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
- 465              		.file 23 "Inc/usbd_cdc_if.h"
- 466              		.file 24 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
- 467              		.file 25 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
- 468              		.file 26 "riptideSTM/inc/riptideMain.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s 			page 15
+ 425              	.L25:
+ 426 0030 FEE7     		b	.L25
+ 427              	.L28:
+ 428 0032 00BF     		.align	2
+ 429              	.L27:
+ 430 0034 00000000 		.word	.LANCHOR0
+ 431 0038 00000000 		.word	defaultTaskHandle
+ 432              		.cfi_endproc
+ 433              	.LFE129:
+ 435              		.comm	defaultTaskHandle,4,4
+ 436              		.section	.rodata
+ 437              		.align	2
+ 438              		.set	.LANCHOR0,. + 0
+ 439              	.LC3:
+ 440 0000 00000000 		.word	.LC0
+ 441 0004 00000000 		.word	StartDefaultTask
+ 442 0008 0000     		.short	0
+ 443 000a 0000     		.space	2
+ 444 000c 00000000 		.word	0
+ 445 0010 80000000 		.word	128
+ 446              		.section	.rodata.SystemClock_Config.str1.4,"aMS",%progbits,1
+ 447              		.align	2
+ 448              	.LC2:
+ 449 0000 5372632F 		.ascii	"Src/main.c\000"
+ 449      6D61696E 
+ 449      2E6300
+ 450              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 451              		.align	2
+ 452              	.LC0:
+ 453 0000 64656661 		.ascii	"defaultTask\000"
+ 453      756C7454 
+ 453      61736B00 
+ 454              		.text
+ 455              	.Letext0:
+ 456              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 457              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 458              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 459              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 460              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 461              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 462              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 463              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 464              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 465              		.file 11 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
+ 466              		.file 12 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h"
+ 467              		.file 13 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h"
+ 468              		.file 14 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ 469              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h"
+ 470              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h"
+ 471              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 472              		.file 18 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
+ 473              		.file 19 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 474              		.file 20 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 475              		.file 21 "Inc/usb_device.h"
+ 476              		.file 22 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
+ 477              		.file 23 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h"
+ 478              		.file 24 "riptideSTM/inc/riptideMain.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 15
+
+
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s 			page 16
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:18     .text.MX_GPIO_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:117    .text.MX_GPIO_Init:000000000000007c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:123    .text.StartDefaultTask:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:130    .text.StartDefaultTask:0000000000000000 StartDefaultTask
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:156    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:163    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:193    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:198    .text._Error_Handler:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:205    .text._Error_Handler:0000000000000000 _Error_Handler
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:220    .text.SystemClock_Config:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:227    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:355    .text.SystemClock_Config:00000000000000b0 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:363    .text.main:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:370    .text.main:0000000000000000 main
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:418    .text.main:0000000000000034 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:18     .text.MX_GPIO_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:24     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:129    .text.MX_GPIO_Init:0000000000000090 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:135    .text.StartDefaultTask:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:142    .text.StartDefaultTask:0000000000000000 StartDefaultTask
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:168    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:175    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:205    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:210    .text._Error_Handler:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:217    .text._Error_Handler:0000000000000000 _Error_Handler
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:232    .text.SystemClock_Config:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:239    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:367    .text.SystemClock_Config:00000000000000b0 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:375    .text.main:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:382    .text.main:0000000000000000 main
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:430    .text.main:0000000000000034 $d
                             *COM*:0000000000000004 defaultTaskHandle
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:425    .rodata:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:435    .rodata.SystemClock_Config.str1.4:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccRxe6rX.s:439    .rodata.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:437    .rodata:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:447    .rodata.SystemClock_Config.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccdHB0Eq.s:451    .rodata.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
@@ -862,6 +881,6 @@ HAL_SYSTICK_Config
 HAL_SYSTICK_CLKSourceConfig
 HAL_NVIC_SetPriority
 HAL_Init
-riptideMain
 osThreadCreate
+riptideMain
 osKernelStart

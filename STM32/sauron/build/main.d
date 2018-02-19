@@ -50,7 +50,7 @@ build/main.d: Src/main.c Inc/main.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  Inc/usb_device.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- Inc/usbd_conf.h Inc/teamThreads.h
+ Inc/usbd_conf.h riptideSTM/Inc/riptideMain.h
 
 Inc/main.h:
 
@@ -164,4 +164,4 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
 Inc/usbd_conf.h:
 
-Inc/teamThreads.h:
+riptideSTM/Inc/riptideMain.h:

@@ -14,9 +14,12 @@
 #include "riptidethreads.h"
 
 void riptideMain(){
-    //create tasks here
+    //create task handlers here
     xTaskHandle xHeartbeat;
+    xTaskHandle xSwitchMonitor;
+    //create tasks here
     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
+    xTaskCreate( vSwitchMonitor, "SwitchMonitor", configMINIMAL_STACK_SIZE, NULL, 1, &xSwitchMonitor);
     //create queues here
     //create mutexes here
     //create semaphores here

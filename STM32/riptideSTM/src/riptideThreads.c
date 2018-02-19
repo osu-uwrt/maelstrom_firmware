@@ -12,6 +12,8 @@
 #include "riptideMain.h"
 #include "riptideFunctions.h"
 #include "riptidethreads.h"
+//#include "../../Inc/main.h"
+//#include "../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
 
 void vHeartbeat(void *pvParameters ){
 
@@ -27,6 +29,18 @@ void vHeartbeat(void *pvParameters ){
 
 }
 
-void vSwitches(void *pvParameters){
-
+void vSwitchMonitor(void *pvParameters){
+    uint8_t switchMessage[14] = "$$$$nnnnnn@@@@";
+    //uint8_t switchMessage = "";
+    for(;;){
+        //You can read directly in to the the message without forcing a 1 or 0 but that returns
+        //a weird block character when switch is closed which may be hard to parse later
+        switchMessage [4] = HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin)  ? '1' : '0';
+        switchMessage [5] = HAL_GPIO_ReadPin(Switch1_GPIO_Port, Switch1_Pin)        ? '1' : '0';
+        switchMessage [6] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+        switchMessage [7] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+        switchMessage [8] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+        CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
+        vTaskDelay(900);
+    }
 }

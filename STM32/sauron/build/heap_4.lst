@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
   30:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****      *    is the industry's de facto standard.                               *
   31:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****      *                                                                       *
   32:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****      *    Help yourself get started quickly while simultaneously helping     *
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 2
 
 
   33:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c ****      *    to support the FreeRTOS project by purchasing a FreeRTOS           *
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
   87:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
   88:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE
   89:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 3
 
 
   90:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** #if( configSUPPORT_DYNAMIC_ALLOCATION == 0 )
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  144:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** static size_t xFreeBytesRemaining = 0U;
  145:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** static size_t xMinimumEverFreeBytesRemaining = 0U;
  146:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 4
 
 
  147:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** /* Gets set to the top bit of an size_t type.  When this bit in the xBlockSize
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  201:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			}
  202:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  203:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			if( ( xWantedSize > 0 ) && ( xWantedSize <= xFreeBytesRemaining ) )
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 5
 
 
  204:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 			{
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  258:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					{
  259:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 						mtCOVERAGE_TEST_MARKER();
  260:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					}
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 6
 
 
  261:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  315:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  316:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		/* This casting is to keep the compiler from issuing warnings. */
  317:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		pxLink = ( void * ) puc;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 7
 
 
  318:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  372:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** {
   27              		.loc 1 372 0
   28              		.cfi_startproc
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 8
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  396:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	at the end of the heap space. */
  397:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	uxAddress = ( ( size_t ) pucAlignedHeap ) + xTotalHeapSize;
   59              		.loc 1 397 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 9
 
 
   60 001e 1344     		add	r3, r3, r2
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  376:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
   96              		.loc 1 376 0
   97 0046 4FF47053 		mov	r3, #15360
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 10
 
 
   98 004a E4E7     		b	.L2
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  430:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  431:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	/* Do the block being inserted, and the block it is being inserted after
  432:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	make a contiguous block of memory? */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 11
 
 
  433:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 	puc = ( uint8_t * ) pxIterator;
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  173              	.L11:
  454:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		}
  455:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		else
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 12
 
 
  456:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 		{
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  203 004c F3E7     		b	.L11
  204              	.L16:
  205 004e 00BF     		.align	2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 13
 
 
  206              	.L15:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  255 001a 14F0070F 		tst	r4, #7
  256 001e 11D0     		beq	.L20
  190:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 					configASSERT( ( xWantedSize & portBYTE_ALIGNMENT_MASK ) == 0 );
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 14
 
 
  257              		.loc 1 190 0
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
   43:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****     http://www.FreeRTOS.org/support - In return for receiving this top quality
   44:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****     embedded software for free we request you assist our global community by
   45:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h ****     participating in the support forum.
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 15
 
 
   46:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  100:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 
  101:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #if( configUSE_16_BIT_TICKS == 1 )
  102:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	typedef uint16_t TickType_t;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 16
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 16
 
 
  103:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	#define portMAX_DELAY ( TickType_t ) 0xffff
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  157:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** /* Tickless idle/low power functionality. */
  158:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** #ifndef portSUPPRESS_TICKS_AND_SLEEP
  159:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime );
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 17
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 17
 
 
  160:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	#define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime ) vPortSuppressTicksAndSleep( xExpectedIdl
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  214:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** BaseType_t xReturn;
  215:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 
  216:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	/* Obtain the number of the currently executing interrupt. */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 18
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 18
 
 
  217:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h **** 	__asm volatile( "mrs %0, ipsr" : "=r"( ulCurrentInterrupt ) );
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  298              	.LVL31:
  208:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				while( ( pxBlock->xBlockSize < xWantedSize ) && ( pxBlock->pxNextFreeBlock != NULL ) )
  299              		.loc 1 208 0 is_stmt 1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 19
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 19
 
 
  300 0050 2B4B     		ldr	r3, .L37+12
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  236:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 
  344              		.loc 1 236 0
  345 0080 10F0070F 		tst	r0, #7
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 20
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 20
 
 
  346 0084 08D0     		beq	.L25
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  393 00bc 6B60     		str	r3, [r5, #4]
  265:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** 				}
  394              		.loc 1 265 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 21
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 21
 
 
  395 00be 0023     		movs	r3, #0
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  445 00f2 00BF     		.align	2
  446              	.L37:
  447 00f4 00000000 		.word	.LANCHOR2
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 22
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 22
 
 
  448 00f8 00000000 		.word	.LANCHOR5
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  499              	
  500              	@ 0 "" 2
  501              	.LVL50:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 23
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 23
 
 
  502              		.thumb
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  550              	.LVL55:
  551 0062 38BD     		pop	{r3, r4, r5, pc}
  552              	.LVL56:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 24
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 24
 
 
  553              	.L46:
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  608              		@ frame_needed = 0, uses_anonymous_args = 0
  609              		@ link register save eliminated.
  362:Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c **** /*-----------------------------------------------------------*/
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 25
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 25
 
 
  610              		.loc 1 362 0
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  670              		.set	.LANCHOR3,. + 0
  673              	xMinimumEverFreeBytesRemaining:
  674 0000 00000000 		.space	4
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 26
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 26
 
 
  675              		.section	.bss.xStart,"aw",%nobits
@@ -1509,52 +1509,52 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 1
  681      00000000 
  682              		.text
  683              	.Letext0:
- 684              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 685              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 686              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 687              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 688              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 689              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 690              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 684              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 685              		.file 4 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 686              		.file 5 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 687              		.file 6 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 688              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 689              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 690              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  691              		.file 10 "Inc/FreeRTOSConfig.h"
  692              		.file 11 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s 			page 27
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 heap_4.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:18     .text.prvHeapInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:24     .text.prvHeapInit:0000000000000000 prvHeapInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:102    .text.prvHeapInit:000000000000004c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:112    .text.prvInsertBlockIntoFreeList:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:118    .text.prvInsertBlockIntoFreeList:0000000000000000 prvInsertBlockIntoFreeList
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:207    .text.prvInsertBlockIntoFreeList:0000000000000050 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:213    .text.pvPortMalloc:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:220    .text.pvPortMalloc:0000000000000000 pvPortMalloc
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:447    .text.pvPortMalloc:00000000000000f4 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:456    .text.vPortFree:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:463    .text.vPortFree:0000000000000000 vPortFree
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:564    .text.vPortFree:0000000000000068 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:570    .text.xPortGetFreeHeapSize:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:577    .text.xPortGetFreeHeapSize:0000000000000000 xPortGetFreeHeapSize
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:591    .text.xPortGetFreeHeapSize:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:596    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:603    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 xPortGetMinimumEverFreeHeapSize
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:617    .text.xPortGetMinimumEverFreeHeapSize:0000000000000008 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:622    .text.vPortInitialiseBlocks:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:629    .text.vPortInitialiseBlocks:0000000000000000 vPortInitialiseBlocks
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:641    .bss.pxEnd:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:645    .bss.pxEnd:0000000000000000 pxEnd
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:648    .bss.ucHeap:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:652    .bss.ucHeap:0000000000000000 ucHeap
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:655    .bss.xBlockAllocatedBit:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:659    .bss.xBlockAllocatedBit:0000000000000000 xBlockAllocatedBit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:662    .bss.xFreeBytesRemaining:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:666    .bss.xFreeBytesRemaining:0000000000000000 xFreeBytesRemaining
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:669    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:673    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 xMinimumEverFreeBytesRemaining
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:676    .bss.xStart:0000000000000000 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc0bGF4f.s:680    .bss.xStart:0000000000000000 xStart
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:18     .text.prvHeapInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:24     .text.prvHeapInit:0000000000000000 prvHeapInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:102    .text.prvHeapInit:000000000000004c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:112    .text.prvInsertBlockIntoFreeList:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:118    .text.prvInsertBlockIntoFreeList:0000000000000000 prvInsertBlockIntoFreeList
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:207    .text.prvInsertBlockIntoFreeList:0000000000000050 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:213    .text.pvPortMalloc:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:220    .text.pvPortMalloc:0000000000000000 pvPortMalloc
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:447    .text.pvPortMalloc:00000000000000f4 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:456    .text.vPortFree:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:463    .text.vPortFree:0000000000000000 vPortFree
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:564    .text.vPortFree:0000000000000068 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:570    .text.xPortGetFreeHeapSize:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:577    .text.xPortGetFreeHeapSize:0000000000000000 xPortGetFreeHeapSize
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:591    .text.xPortGetFreeHeapSize:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:596    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:603    .text.xPortGetMinimumEverFreeHeapSize:0000000000000000 xPortGetMinimumEverFreeHeapSize
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:617    .text.xPortGetMinimumEverFreeHeapSize:0000000000000008 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:622    .text.vPortInitialiseBlocks:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:629    .text.vPortInitialiseBlocks:0000000000000000 vPortInitialiseBlocks
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:641    .bss.pxEnd:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:645    .bss.pxEnd:0000000000000000 pxEnd
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:648    .bss.ucHeap:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:652    .bss.ucHeap:0000000000000000 ucHeap
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:655    .bss.xBlockAllocatedBit:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:659    .bss.xBlockAllocatedBit:0000000000000000 xBlockAllocatedBit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:662    .bss.xFreeBytesRemaining:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:666    .bss.xFreeBytesRemaining:0000000000000000 xFreeBytesRemaining
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:669    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:673    .bss.xMinimumEverFreeBytesRemaining:0000000000000000 xMinimumEverFreeBytesRemaining
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:676    .bss.xStart:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccLcyspt.s:680    .bss.xStart:0000000000000000 xStart
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/augustmason/Documents/GitHub/riptide_firmware/sauron
+# Install script for directory: /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

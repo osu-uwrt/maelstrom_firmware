@@ -7,4 +7,4 @@
 
 #endif //STMCOMMS_RIPTIDETHREADS_H
 void vHeartbeat ( void *pvParameters );
-void vSwitches  ( void *pvParameters );
+void vSwitchMonitor  ( void *pvParameters );

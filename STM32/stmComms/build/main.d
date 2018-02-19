@@ -45,14 +45,7 @@ build/main.d: Src/main.c Inc/main.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  Inc/usb_device.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- Inc/usbd_conf.h Inc/usbd_cdc_if.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- riptideSTM/inc/riptideMain.h
+ Inc/usbd_conf.h riptideSTM/inc/riptideMain.h
 
 Inc/main.h:
 
@@ -155,19 +148,5 @@ Inc/usb_device.h:
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
 Inc/usbd_conf.h:
-
-Inc/usbd_cdc_if.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
 
 riptideSTM/inc/riptideMain.h:

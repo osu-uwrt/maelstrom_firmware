@@ -1,14 +1,17 @@
-build/usbd_cdc_if.d: Src/usbd_cdc_if.c Inc/main.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
- Inc/stm32f4xx_hal_conf.h Inc/main.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
- Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
+build/usbd_cdc_if.d: Src/usbd_cdc_if.c Inc/usbd_cdc_if.h \
+ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
+ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
+ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ Inc/usbd_conf.h Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h \
  Drivers/CMSIS/Include/core_cm4.h Drivers/CMSIS/Include/core_cmInstr.h \
  Drivers/CMSIS/Include/cmsis_gcc.h Drivers/CMSIS/Include/core_cmFunc.h \
  Drivers/CMSIS/Include/core_cmSimd.h \
  Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+ Inc/stm32f4xx_hal_conf.h Inc/main.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h \
@@ -26,44 +29,19 @@ build/usbd_cdc_if.d: Src/usbd_cdc_if.c Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
- Inc/FreeRTOSConfig.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- Inc/usbd_cdc_if.h \
- Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
- Inc/usbd_conf.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
- riptideSTM/inc/riptideFunctions.h
+ Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
 
-Inc/main.h:
+Inc/usbd_cdc_if.h:
 
-Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
+Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
 
-Inc/stm32f4xx_hal_conf.h:
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 
-Inc/main.h:
+Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
-Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
-
-Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
+Inc/usbd_conf.h:
 
 Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 
@@ -80,6 +58,16 @@ Drivers/CMSIS/Include/core_cmFunc.h:
 Drivers/CMSIS/Include/core_cmSimd.h:
 
 Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h:
+
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
+
+Inc/stm32f4xx_hal_conf.h:
+
+Inc/main.h:
+
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
+
+Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:
 
 Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 
@@ -115,54 +103,8 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
 
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
-
-Inc/FreeRTOSConfig.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
-
-Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
-
-Inc/usbd_cdc_if.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
-
-Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
-
-Inc/usbd_conf.h:
-
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
-
-riptideSTM/inc/riptideFunctions.h:

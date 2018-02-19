@@ -41,8 +41,6 @@ bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
     uint8_t Successmsg[] = "thrust hell yeah \r\n";
   uint8_t failmsg[] = "not good enough kid\r\n";
-    //CDC_Transmit_HS(Buf, *Len);
-    //HAL_Delay(10);
   char* thrustst = "#";
   char* thrustend = "@";
   int   thrustComp = 4;
