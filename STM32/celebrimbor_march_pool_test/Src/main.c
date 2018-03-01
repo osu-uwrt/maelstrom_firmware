@@ -568,6 +568,19 @@ void writePWM(uint16_t * values) {
 	  htim13.Instance->CCR1 = values[8];
 	  htim3.Instance->CCR3 = values[9];
 }
+
+void resetPWM() {
+	  htim2.Instance->CCR1 = 1500;
+	  htim5.Instance->CCR3 = 1500;
+	  htim5.Instance->CCR4 = 1500;
+	  htim2.Instance->CCR2 = 1500;
+	  htim2.Instance->CCR4 = 1500;
+	  htim2.Instance->CCR3 = 1500;
+	  htim3.Instance->CCR4 = 1500;
+	  htim14.Instance->CCR1 = 1500;
+	  htim13.Instance->CCR1 = 1500;
+	  htim3.Instance->CCR3 = 1500;
+}
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */

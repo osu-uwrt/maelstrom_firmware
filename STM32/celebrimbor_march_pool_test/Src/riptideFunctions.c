@@ -23,7 +23,10 @@
  *          uint32_t *Len   -the length of the message
  */
 bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t *Len ){
-    int i = 0;
+    if (*Len != 48) {
+    	return false;
+    }
+	int i = 0;
     while( i < compNumber ){
         if (Buf[i] == *start && Buf[*Len - (1+i)] == *end){
             i++;
