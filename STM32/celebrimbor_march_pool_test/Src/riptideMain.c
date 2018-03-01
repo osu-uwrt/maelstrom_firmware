@@ -17,10 +17,11 @@ void riptideMain(){
     //create task handlers here
     xTaskHandle xHeartbeat;
     xTaskHandle xSwitchMonitor;
+    xTaskHandle xKillSwitch;
     //create tasks here
     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
     xTaskCreate( vSwitchMonitor, "SwitchMonitor", configMINIMAL_STACK_SIZE, NULL, 1, &xSwitchMonitor);
-    //create queues here
+    xTaskCreate( vKillSwitchMonitor, "KillSwitch", configMINIMAL_STACK_SIZE, NULL, 1, &xKillSwitch);
     //create mutexes here
     //create semaphores here
     return;

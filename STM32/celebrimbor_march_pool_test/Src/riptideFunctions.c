@@ -23,7 +23,7 @@
  *          uint32_t *Len   -the length of the message
  */
 bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t *Len ){
-    if (*Len != 48) {
+    if (*Len != 48 || HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin) == GPIO_PIN_RESET) {
     	return false;
     }
 	int i = 0;

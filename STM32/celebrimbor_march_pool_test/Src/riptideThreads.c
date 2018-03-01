@@ -29,6 +29,17 @@ void vHeartbeat(void *pvParameters ){
 
 }
 
+void vKillSwitchMonitor(void *pvParameters) {
+	uint8_t message[] = "kill switch removed";
+	for (;;) {
+		if (HAL_GPIO_ReadPin(Switch5_GPIO_Port, Switch5_Pin) == GPIO_PIN_RESET) {
+			resetPWM();
+			CDC_Transmit_HS(message, strlen(message));
+		}
+		vTaskDelay(50);
+	}
+}
+
 void vSwitchMonitor(void *pvParameters){
     uint8_t switchMessage[14] = "$$$$nnnnnn@@@@";
     //uint8_t switchMessage = "";
