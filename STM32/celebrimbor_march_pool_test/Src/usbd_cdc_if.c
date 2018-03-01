@@ -49,6 +49,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_cdc_if.h"
 /* USER CODE BEGIN INCLUDE */
+#include "main.h"
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -271,6 +272,9 @@ static int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
   /* USER CODE BEGIN 11 */ 
   USBD_CDC_SetRxBuffer(&hUsbDeviceHS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceHS);
+  uint16_t values[10];
+  Riptide_CDC_Receive(Buf, Len, values);
+  writePWM(values);
   return (USBD_OK);
   /* USER CODE END 11 */ 
 }

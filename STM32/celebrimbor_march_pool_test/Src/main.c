@@ -53,7 +53,7 @@
 #include "usb_device.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "riptideMain.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -70,7 +70,11 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
+TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim5;
+TIM_HandleTypeDef htim13;
+TIM_HandleTypeDef htim14;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,7 +98,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+void writePWM(uint16_t * values);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -148,6 +152,16 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
+  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
+  HAL_TIM_PWM_Start(&htim13, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim14, TIM_CHANNEL_1);
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the thread(s) */
@@ -157,6 +171,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  riptideMain();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -285,7 +300,7 @@ static void MX_TIM2_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 90;
+  htim2.Init.Prescaler = 72;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 2000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -337,7 +352,7 @@ static void MX_TIM3_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 90;
+  htim3.Init.Prescaler = 72;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 2000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -379,7 +394,7 @@ static void MX_TIM5_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim5.Instance = TIM5;
-  htim5.Init.Prescaler = 90;
+  htim5.Init.Prescaler = 72;
   htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim5.Init.Period = 2000;
   htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -420,7 +435,7 @@ static void MX_TIM13_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim13.Instance = TIM13;
-  htim13.Init.Prescaler = 90;
+  htim13.Init.Prescaler = 72;
   htim13.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim13.Init.Period = 2000;
   htim13.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -454,7 +469,7 @@ static void MX_TIM14_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim14.Instance = TIM14;
-  htim14.Init.Prescaler = 90;
+  htim14.Init.Prescaler = 72;
   htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim14.Init.Period = 2000;
   htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -505,12 +520,16 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC5_LED_Pin|HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC13_Header_Pin Switch6_Pin KillSwitch_Pin MissionStart_Pin 
-                           Switch3_Pin Switch4_Pin Switch5_Pin */
-  GPIO_InitStruct.Pin = PC13_Header_Pin|Switch6_Pin|KillSwitch_Pin|MissionStart_Pin 
-                          |Switch3_Pin|Switch4_Pin|Switch5_Pin;
+  /*Configure GPIO pins : PC13_Header_Pin KillSwitch_Pin MissionStart_Pin */
+  GPIO_InitStruct.Pin = PC13_Header_Pin|KillSwitch_Pin|MissionStart_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : Switch6_Pin Switch3_Pin Switch4_Pin Switch5_Pin */
+  GPIO_InitStruct.Pin = Switch6_Pin|Switch3_Pin|Switch4_Pin|Switch5_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : HeartBeat3_Pin HeartBeat4_Pin */
@@ -536,7 +555,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void writePWM(uint16_t * values) {
+	  // I wrote this at 1 am, there is a good chance the order or something is wrong
+	  htim2.Instance->CCR1 = values[0];
+	  htim5.Instance->CCR3 = values[1];
+	  htim5.Instance->CCR4 = values[2];
+	  htim2.Instance->CCR2 = values[3];
+	  htim2.Instance->CCR4 = values[4];
+	  htim2.Instance->CCR3 = values[5];
+	  htim3.Instance->CCR4 = values[6];
+	  htim14.Instance->CCR1 = values[7];
+	  htim13.Instance->CCR1 = values[8];
+	  htim3.Instance->CCR3 = values[9];
+}
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */
@@ -546,6 +577,28 @@ void StartDefaultTask(void const * argument)
   MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 5 */
+
+//  vTaskDelay(5000);
+//  for (int i = 1500; i < 1600; i += 5) {
+//	  htim2.Instance->CCR1 = i;
+//	  htim2.Instance->CCR2 = i;
+//	  htim2.Instance->CCR3 = i;
+//	  htim2.Instance->CCR4 = i;
+//	  htim3.Instance->CCR3 = i;
+//	  htim3.Instance->CCR4 = i;
+//	  htim5.Instance->CCR3 = i;
+//	  htim5.Instance->CCR4 = i;
+//	  vTaskDelay(150);
+//  }
+//  htim2.Instance->CCR1 = 1500;
+//  htim2.Instance->CCR2 = 1500;
+//  htim2.Instance->CCR3 = 1500;
+//  htim2.Instance->CCR4 = 1500;
+//  htim3.Instance->CCR3 = 1500;
+//  htim3.Instance->CCR4 = 1500;
+//  htim5.Instance->CCR3 = 1500;
+//  htim5.Instance->CCR4 = 1500;
+
   /* Infinite loop */
   for(;;)
   {

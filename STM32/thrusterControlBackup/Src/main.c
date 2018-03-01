@@ -84,9 +84,6 @@ void StartDefaultTask(void const * argument);
                                     
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
-                                
-                                
-
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 void vI2CReader(void * pv);
@@ -164,8 +161,8 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  xTaskCreate(vI2CReader, "i2c", configMINIMAL_STACK_SIZE, NULL, 1, &i2ctask);
-  xTaskCreate(vSwitchMonitor, "switch", configMINIMAL_STACK_SIZE, NULL, 1, &switchtask);
+  //xTaskCreate(vI2CReader, "i2c", configMINIMAL_STACK_SIZE, NULL, 1, &i2ctask);
+  //xTaskCreate(vSwitchMonitor, "switch", configMINIMAL_STACK_SIZE, NULL, 1, &switchtask);
   xTaskCreate(vHeartbeat, "heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &heartbeat);
   /* USER CODE END RTOS_THREADS */
 
@@ -457,52 +454,54 @@ void CDC_Receive(uint8_t* buf, uint32_t len){
 	uint8_t end[] = "@";
 	uint8_t error[] = "malformed input string\r\n";
 
-	if (buf[0] == *start && buf[1] == *start && buf[2] == *start && buf[3] == *start && buf[len - 1] == *end && buf[len - 2] == *end && buf[len - 3] == *end && buf[len - 4] == *end)
-	{
+	if (buf[0] == *start && buf[1] == *start && buf[2] == *start && buf[3] == *start && buf[len - 1] == *end && buf[len - 2] == *end && buf[len - 3] == *end && buf[len - 4] == *end) {
 		uint8_t data[4];
 		uint16_t value;
 
 
-		if (xSemaphoreTake(killswitch, 10)) {
-			for (int i = 1; i <= 10; i++ ) {
+		if (/*xSemaphoreTake(killswitch, 10)*/1) {
+			for (int i = 1; i <= 1; i++ ) {
 				data[0] = buf[i * 4];
 				data[1] = buf[i * 4 + 1];
 				data[2] = buf[i * 4 + 2];
 				data[3] = buf[i * 4 + 3];
 				value = atoi((const char *) data);
 
-				switch(i) {
-					case 1:
-						htim2.Instance->CCR1 = value;
-						break;
-					case 2:
-						htim2.Instance->CCR3 = value;
-						break;
-					case 3:
-						htim5.Instance->CCR4 = value;
-						break;
-					case 4:
-						htim5.Instance->CCR3 = value;
-						break;
-					case 5:
-						htim2.Instance->CCR4 = value;
-						break;
-					case 6:
-						htim2.Instance->CCR3 = value;
-						break;
-					case 7:
-						htim3.Instance->CCR4 = value;
-						break;
-					case 8:
-						htim3.Instance->CCR2 = value;
-						break;
-					case 9:
-						htim3.Instance->CCR1 = value;
-						break;
-					case 10:
-						htim3.Instance->CCR3 = value;
-						break;
-				}
+				CDC_Transmit_HS(start, strlen(start));
+				htim2.Instance->CCR1 = value;
+
+//				switch(i) {
+//					case 1:
+//						htim2.Instance->CCR1 = value;
+//						break;
+//					case 2:
+//						htim2.Instance->CCR3 = value;
+//						break;
+//					case 3:
+//						htim5.Instance->CCR4 = value;
+//						break;
+//					case 4:
+//						htim5.Instance->CCR3 = value;
+//						break;
+//					case 5:
+//						htim2.Instance->CCR4 = value;
+//						break;
+//					case 6:
+//						htim2.Instance->CCR3 = value;
+//						break;
+//					case 7:
+//						htim3.Instance->CCR4 = value;
+//						break;
+//					case 8:
+//						htim3.Instance->CCR2 = value;
+//						break;
+//					case 9:
+//						htim3.Instance->CCR1 = value;
+//						break;
+//					case 10:
+//						htim3.Instance->CCR3 = value;
+//						break;
+//				}
 			}
 		}
 
