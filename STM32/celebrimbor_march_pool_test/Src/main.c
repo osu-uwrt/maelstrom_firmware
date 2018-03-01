@@ -53,47 +53,48 @@
 #include "usb_device.h"
 
 /* USER CODE BEGIN Includes */
-#include "usbd_cdc_if.h"
+
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
+I2C_HandleTypeDef hi2c3;
 
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim5;
+TIM_HandleTypeDef htim13;
+TIM_HandleTypeDef htim14;
 
 osThreadId defaultTaskHandle;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-TaskHandle_t i2ctask;
-TaskHandle_t switchtask;
-TaskHandle_t heartbeat;
-SemaphoreHandle_t killswitch;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_TIM13_Init(void);
+static void MX_TIM14_Init(void);
+static void MX_I2C3_Init(void);
+static void MX_I2C1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM5_Init(void);
-static void MX_I2C1_Init(void);
 void StartDefaultTask(void const * argument);
-                                    
+
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+                                
+                                
                                 
                                 
                                 
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-void vI2CReader(void * pv);
-uint8_t crc4(uint16_t n_prom[]);
-void calculate(uint32_t D1, uint32_t D2, uint16_t C[8], uint32_t * TEMP, uint32_t * P);
-void vHeartbeat(void * pv);
-void vSwitchMonitor(void * pv);
+
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -126,9 +127,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM2_Init();
+  MX_TIM13_Init();
+  MX_TIM14_Init();
+  MX_I2C3_Init();
+  MX_I2C1_Init();
   MX_TIM3_Init();
   MX_TIM5_Init();
-  MX_I2C1_Init();
 
   /* USER CODE BEGIN 2 */
 
@@ -140,21 +144,10 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
-  killswitch = xSemaphoreCreateBinary();
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
   /* start timers, add new ones, ... */
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
-  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_4);
   /* USER CODE END RTOS_TIMERS */
 
   /* Create the thread(s) */
@@ -164,9 +157,6 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  xTaskCreate(vI2CReader, "i2c", configMINIMAL_STACK_SIZE, NULL, 1, &i2ctask);
-  xTaskCreate(vSwitchMonitor, "switch", configMINIMAL_STACK_SIZE, NULL, 1, &switchtask);
-  xTaskCreate(vHeartbeat, "heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &heartbeat);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -267,6 +257,26 @@ static void MX_I2C1_Init(void)
 
 }
 
+/* I2C3 init function */
+static void MX_I2C3_Init(void)
+{
+
+  hi2c3.Instance = I2C3;
+  hi2c3.Init.ClockSpeed = 100000;
+  hi2c3.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c3.Init.OwnAddress1 = 0;
+  hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c3.Init.OwnAddress2 = 0;
+  hi2c3.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c3.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c3) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+}
+
 /* TIM2 init function */
 static void MX_TIM2_Init(void)
 {
@@ -347,16 +357,6 @@ static void MX_TIM3_Init(void)
   sConfigOC.Pulse = 1500;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    _Error_Handler(__FILE__, __LINE__);
-  }
-
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
-  {
-    _Error_Handler(__FILE__, __LINE__);
-  }
-
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
@@ -413,6 +413,74 @@ static void MX_TIM5_Init(void)
 
 }
 
+/* TIM13 init function */
+static void MX_TIM13_Init(void)
+{
+
+  TIM_OC_InitTypeDef sConfigOC;
+
+  htim13.Instance = TIM13;
+  htim13.Init.Prescaler = 90;
+  htim13.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim13.Init.Period = 2000;
+  htim13.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  if (HAL_TIM_Base_Init(&htim13) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  if (HAL_TIM_PWM_Init(&htim13) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 1500;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim13, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  HAL_TIM_MspPostInit(&htim13);
+
+}
+
+/* TIM14 init function */
+static void MX_TIM14_Init(void)
+{
+
+  TIM_OC_InitTypeDef sConfigOC;
+
+  htim14.Instance = TIM14;
+  htim14.Init.Prescaler = 90;
+  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim14.Init.Period = 2000;
+  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  if (HAL_TIM_PWM_Init(&htim14) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 1500;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim14, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    _Error_Handler(__FILE__, __LINE__);
+  }
+
+  HAL_TIM_MspPostInit(&htim14);
+
+}
+
 /** Configure pins as 
         * Analog 
         * Input 
@@ -432,288 +500,42 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, HeartBeat3_Pin|HeartBeat4_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : KILL_SWITCH_Pin */
-  GPIO_InitStruct.Pin = KILL_SWITCH_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC5_LED_Pin|HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PC13_Header_Pin Switch6_Pin KillSwitch_Pin MissionStart_Pin 
+                           Switch3_Pin Switch4_Pin Switch5_Pin */
+  GPIO_InitStruct.Pin = PC13_Header_Pin|Switch6_Pin|KillSwitch_Pin|MissionStart_Pin 
+                          |Switch3_Pin|Switch4_Pin|Switch5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(KILL_SWITCH_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC6 PC7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+  /*Configure GPIO pins : HeartBeat3_Pin HeartBeat4_Pin */
+  GPIO_InitStruct.Pin = HeartBeat3_Pin|HeartBeat4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PC4_LED_Pin PC5_LED_Pin HeartBeat1_Pin HeartBeat2_Pin */
+  GPIO_InitStruct.Pin = PC4_LED_Pin|PC5_LED_Pin|HeartBeat1_Pin|HeartBeat2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : PB8_Header_Pin DebugSwitch_Pin */
+  GPIO_InitStruct.Pin = PB8_Header_Pin|DebugSwitch_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
-// #### 1500 1500 1500 1500 1500 1500 1500 1500 @@@@
-
-void CDC_Receive(uint8_t* buf, uint32_t len){
-	uint8_t start[] = "#";
-	uint8_t end[] = "@";
-	uint8_t error[] = "malformed input string\r\n";
-
-	if (buf[0] == *start && buf[1] == *start && buf[2] == *start && buf[3] == *start && buf[len - 1] == *end && buf[len - 2] == *end && buf[len - 3] == *end && buf[len - 4] == *end)
-	{
-		uint8_t data[4];
-		uint16_t value;
-
-
-		if (xSemaphoreTake(killswitch, 10)) {
-			for (int i = 1; i <= 10; i++ ) {
-				data[0] = buf[i * 4];
-				data[1] = buf[i * 4 + 1];
-				data[2] = buf[i * 4 + 2];
-				data[3] = buf[i * 4 + 3];
-				value = atoi((const char *) data);
-
-				switch(i) {
-					case 1:
-						htim2.Instance->CCR1 = value;
-						break;
-					case 2:
-						htim2.Instance->CCR3 = value;
-						break;
-					case 3:
-						htim5.Instance->CCR4 = value;
-						break;
-					case 4:
-						htim5.Instance->CCR3 = value;
-						break;
-					case 5:
-						htim2.Instance->CCR4 = value;
-						break;
-					case 6:
-						htim2.Instance->CCR3 = value;
-						break;
-					case 7:
-						htim3.Instance->CCR4 = value;
-						break;
-					case 8:
-						htim3.Instance->CCR2 = value;
-						break;
-					case 9:
-						htim3.Instance->CCR1 = value;
-						break;
-					case 10:
-						htim3.Instance->CCR3 = value;
-						break;
-				}
-			}
-		}
-
-	} else {
-		CDC_Transmit_HS(error, strlen(error));
-	}
-
-}
-
-void vI2CReader(void * pv) {
-
-	// this is the reset point, in case of failure to initialize;
-	resetI2C: vTaskDelay(100);
-
-	uint16_t address_write = 0xEC;
-	uint16_t address_read = 0xED;
-	uint8_t reset = 0x1E;
-	uint8_t prom_read = 0xA0;
-	uint8_t prom_val = prom_read;
-	uint8_t read_d1 = 0x4A;
-	uint8_t read_d2 = 0x5A;
-	uint8_t read_adc = 0x00;
-
-	uint16_t calibration[8];
-	uint8_t buffer[3];
-
-	uint32_t d1;
-	uint32_t d2;
-
-	uint32_t temp;
-	uint32_t pressure;
-
-
-	HAL_I2C_Master_Transmit(&hi2c1, address_write, &reset, 1, 20);
-
-	vTaskDelay(50);
-
-	for (uint8_t i = 0; i < 7; i++) {
-
-		HAL_I2C_Master_Transmit(&hi2c1, address_write, &prom_val, 1, 20);
-		vTaskDelay(20);
-		HAL_I2C_Master_Receive(&hi2c1, address_read, buffer, 2, 20);
-		calibration[i] = (buffer[0] << 8) | buffer[1];
-
-		prom_val += 2;
-
-	}
-
-	uint8_t crcRead = calibration[0] >> 12;
-	uint8_t crcCalc = crc4(calibration);
-
-	uint8_t success[] = "initialization succeeded\r\n";
-	uint8_t failure[] = "initialization failed\r\n";
-
-	if (crcRead == crcCalc) {
-		CDC_Transmit_HS(success, strlen(success));
-	} else {
-		CDC_Transmit_HS(failure, strlen(failure));
-		goto resetI2C;
-	}
-
-
-	char values[6];
-	for(;;) {
-
-		HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14);
-
-		HAL_I2C_Master_Transmit(&hi2c1, address_write, &read_d1, 1, 20);
-		vTaskDelay(20);
-		HAL_I2C_Master_Transmit(&hi2c1, address_write, &read_adc, 1, 20);
-		vTaskDelay(20);
-
-		HAL_I2C_Master_Receive(&hi2c1, address_read, buffer, 3, 20);
-		d1 = buffer[0];
-		d1 = d1 << 8 | buffer[1];
-		d1 = d1 << 8 | buffer[2];
-
-		HAL_I2C_Master_Transmit(&hi2c1, address_write, &read_d2, 1, 30);
-		vTaskDelay(40);
-		HAL_I2C_Master_Transmit(&hi2c1, address_write, &read_adc, 1, 30);
-		vTaskDelay(40);
-
-		HAL_I2C_Master_Receive(&hi2c1, address_read, buffer, 3, 30);
-		d2 = buffer[0];
-		d2 = d2 << 8 | buffer[1];
-		d2 = d2 << 8 | buffer[2];
-
-		calculate(d1, d2, calibration, &temp, &pressure);
-
-		itoa(temp, values, 10);
-		//if (temp == 2000) goto resetI2C;
-		CDC_Transmit_HS(values, strlen(values));
-		vTaskDelay(50);
-		CDC_Transmit_HS("\r\n", strlen("\r\n"));
-		vTaskDelay(50);
-
-		itoa(pressure, values, 10);
-		//if (temp == 2000) goto resetI2C;
-		CDC_Transmit_HS(values, strlen(values));
-		vTaskDelay(50);
-		CDC_Transmit_HS("\r\n", strlen("\r\n"));
-
-		vTaskDelay(200);
-	}
-}
-
-// From the Blue Robotics data sheet, cyclic redundancy check
-uint8_t crc4(uint16_t n_prom[]) {
-	uint16_t n_rem = 0;
-
-	n_prom[0] = ((n_prom[0]) & 0x0FFF);
-	n_prom[7] = 0;
-
-	for ( uint8_t i = 0 ; i < 16; i++ ) {
-		if ( i%2 == 1 ) {
-			n_rem ^= (uint16_t)((n_prom[i>>1]) & 0x00FF);
-		} else {
-			n_rem ^= (uint16_t)(n_prom[i>>1] >> 8);
-		}
-		for ( uint8_t n_bit = 8 ; n_bit > 0 ; n_bit-- ) {
-			if ( n_rem & 0x8000 ) {
-				n_rem = (n_rem << 1) ^ 0x3000;
-			} else {
-				n_rem = (n_rem << 1);
-			}
-		}
-	}
-
-	n_rem = ((n_rem >> 12) & 0x000F);
-
-	return n_rem ^ 0x00;
-}
-
-void calculate(uint32_t D1, uint32_t D2, uint16_t C[8], uint32_t * TEMP, uint32_t * P) {
-	// Given C1-C6 and D1, D2, calculated TEMP and P
-	// Do conversion first and then second order temp compensation
-
-	int32_t dT = 0;
-	int64_t SENS = 0;
-	int64_t OFF = 0;
-	int32_t SENSi = 0;
-	int32_t OFFi = 0;
-	int32_t Ti = 0;
-	int64_t OFF2 = 0;
-	int64_t SENS2 = 0;
-
-	// Terms called
-	dT = D2 - (uint32_t) (C[5])*256l;
-	SENS = (int64_t) (C[1])*32768l+((int64_t) (C[3])*dT)/256l;
-	OFF = (int64_t) (C[2])*65536l+((int64_t) (C[4])*dT)/128l;
-	*P = (D1*SENS/(2097152l)-OFF)/(8192l);
-
-	// Temp conversion
-	*TEMP = 2000l + (int64_t) (dT)*C[6]/8388608LL;
-
-	//Second order compensation
-	if((*TEMP/100)<20){         //Low temp
-		Ti = (3*(int64_t)(dT)*(int64_t)(dT))/(8589934592LL);
-		OFFi = (3*(*TEMP-2000)*(*TEMP-2000))/2;
-		SENSi = (5*(*TEMP-2000)*(*TEMP-2000))/8;
-
-		if((*TEMP/100)<-15){    //Very low temp
-			OFFi = OFFi+7*(*TEMP+1500l)*(*TEMP+1500l);
-			SENSi = SENSi+4*(*TEMP+1500l)*(*TEMP+1500l);
-		}
-	}
-	else if((*TEMP/100)>=20){    //High temp
-		Ti = 2*(dT*dT)/(137438953472LL);
-		OFFi = (1*(*TEMP-2000)*(*TEMP-2000))/16;
-		SENSi = 0;
-	}
-
-	OFF2 = OFF-OFFi;           //Calculate pressure and temp second order
-	SENS2 = SENS-SENSi;
-
-	*TEMP = (*TEMP-Ti);
-	*P = (((D1*SENS2)/2097152l-OFF2)/8192l)/10;
-
-}
-
-void vHeartbeat(void * pv) {
-
-	for (;;) {
-		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_7);
-		vTaskDelay(750);
-	}
-}
-
-void vSwitchMonitor(void * pv) {
-
-	for (;;) {
-		if (HAL_GPIO_ReadPin(KILL_SWITCH_GPIO_Port, KILL_SWITCH_Pin) == GPIO_PIN_SET) {
-			xSemaphoreGive(killswitch);
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_RESET);
-		} else {
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
-			htim2.Instance->CCR1 = 1500;
-			htim2.Instance->CCR3 = 1500;
-			htim5.Instance->CCR4 = 1500;
-			htim5.Instance->CCR3 = 1500;
-			htim2.Instance->CCR4 = 1500;
-			htim2.Instance->CCR3 = 1500;
-			htim3.Instance->CCR4 = 1500;
-			htim3.Instance->CCR2 = 1500;
-			htim3.Instance->CCR1 = 1500;
-			htim3.Instance->CCR3 = 1500;
-		}
-
-		vTaskDelay(10);
-	}
-}
 
 /* USER CODE END 4 */
 
@@ -727,7 +549,7 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(100);
+    osDelay(1);
   }
   /* USER CODE END 5 */ 
 }

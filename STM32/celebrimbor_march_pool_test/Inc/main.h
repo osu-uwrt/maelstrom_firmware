@@ -57,8 +57,64 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define KILL_SWITCH_Pin GPIO_PIN_15
-#define KILL_SWITCH_GPIO_Port GPIOC
+#define PC13_Header_Pin GPIO_PIN_13
+#define PC13_Header_GPIO_Port GPIOC
+#define Switch6_Pin GPIO_PIN_14
+#define Switch6_GPIO_Port GPIOC
+#define KillSwitch_Pin GPIO_PIN_15
+#define KillSwitch_GPIO_Port GPIOC
+#define MissionStart_Pin GPIO_PIN_0
+#define MissionStart_GPIO_Port GPIOC
+#define Switch3_Pin GPIO_PIN_1
+#define Switch3_GPIO_Port GPIOC
+#define Switch4_Pin GPIO_PIN_2
+#define Switch4_GPIO_Port GPIOC
+#define Switch5_Pin GPIO_PIN_3
+#define Switch5_GPIO_Port GPIOC
+#define SurgeStarboardHigh_Pin GPIO_PIN_0
+#define SurgeStarboardHigh_GPIO_Port GPIOA
+#define SurgeStarboardLow_Pin GPIO_PIN_1
+#define SurgeStarboardLow_GPIO_Port GPIOA
+#define SurgePortHigh_Pin GPIO_PIN_2
+#define SurgePortHigh_GPIO_Port GPIOA
+#define SurgePortLow_Pin GPIO_PIN_3
+#define SurgePortLow_GPIO_Port GPIOA
+#define HeartBeat3_Pin GPIO_PIN_4
+#define HeartBeat3_GPIO_Port GPIOA
+#define HeartBeat4_Pin GPIO_PIN_5
+#define HeartBeat4_GPIO_Port GPIOA
+#define HeaveStarboardForward_Pin GPIO_PIN_6
+#define HeaveStarboardForward_GPIO_Port GPIOA
+#define HeaveStarboardAft_Pin GPIO_PIN_7
+#define HeaveStarboardAft_GPIO_Port GPIOA
+#define PC4_LED_Pin GPIO_PIN_4
+#define PC4_LED_GPIO_Port GPIOC
+#define PC5_LED_Pin GPIO_PIN_5
+#define PC5_LED_GPIO_Port GPIOC
+#define HeavePortForward_Pin GPIO_PIN_0
+#define HeavePortForward_GPIO_Port GPIOB
+#define HeavePortAft_Pin GPIO_PIN_1
+#define HeavePortAft_GPIO_Port GPIOB
+#define SwayAft_Pin GPIO_PIN_10
+#define SwayAft_GPIO_Port GPIOB
+#define SwayForward_Pin GPIO_PIN_11
+#define SwayForward_GPIO_Port GPIOB
+#define HeartBeat1_Pin GPIO_PIN_6
+#define HeartBeat1_GPIO_Port GPIOC
+#define HeartBeat2_Pin GPIO_PIN_7
+#define HeartBeat2_GPIO_Port GPIOC
+#define SDA_Bkpln_Pin GPIO_PIN_9
+#define SDA_Bkpln_GPIO_Port GPIOC
+#define SCL_Bkpln_Pin GPIO_PIN_8
+#define SCL_Bkpln_GPIO_Port GPIOA
+#define SCL_Depth_Pin GPIO_PIN_6
+#define SCL_Depth_GPIO_Port GPIOB
+#define SDA_Depth_Pin GPIO_PIN_7
+#define SDA_Depth_GPIO_Port GPIOB
+#define PB8_Header_Pin GPIO_PIN_8
+#define PB8_Header_GPIO_Port GPIOB
+#define DebugSwitch_Pin GPIO_PIN_9
+#define DebugSwitch_GPIO_Port GPIOB
 
 /* ########################## Assert Selection ############################## */
 /**

@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
-  * File Name          : main.hpp
-  * Description        : This file contains the common defines of the application
+  * File Name          : freertos.c
+  * Description        : Code for freertos applications
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
@@ -45,49 +45,31 @@
   *
   ******************************************************************************
   */
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __MAIN_H
-#define __MAIN_H
-  /* Includes ------------------------------------------------------------------*/
 
 /* Includes ------------------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
+#include "task.h"
+
+/* USER CODE BEGIN Includes */     
 
 /* USER CODE END Includes */
 
-/* Private define ------------------------------------------------------------*/
+/* Variables -----------------------------------------------------------------*/
 
-#define KILL_SWITCH_Pin GPIO_PIN_15
-#define KILL_SWITCH_GPIO_Port GPIOC
+/* USER CODE BEGIN Variables */
 
-/* ########################## Assert Selection ############################## */
-/**
-  * @brief Uncomment the line below to expanse the "assert_param" macro in the 
-  *        HAL drivers code
-  */
-/* #define USE_FULL_ASSERT    1U */
+/* USER CODE END Variables */
 
-/* USER CODE BEGIN Private defines */
+/* Function prototypes -------------------------------------------------------*/
 
-/* USER CODE END Private defines */
+/* USER CODE BEGIN FunctionPrototypes */
 
-#ifdef __cplusplus
- extern "C" {
-#endif
-void _Error_Handler(char *, int);
+/* USER CODE END FunctionPrototypes */
 
-#define Error_Handler() _Error_Handler(__FILE__, __LINE__)
-#ifdef __cplusplus
-}
-#endif
+/* Hook prototypes */
 
-/**
-  * @}
-  */ 
+/* USER CODE BEGIN Application */
+     
+/* USER CODE END Application */
 
-/**
-  * @}
-*/ 
-
-#endif /* __MAIN_H */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
