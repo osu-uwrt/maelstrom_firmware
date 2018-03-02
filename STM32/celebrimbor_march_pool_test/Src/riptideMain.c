@@ -13,17 +13,25 @@
 #include "riptideFunctions.h"
 #include "riptidethreads.h"
 
+xTaskHandle xHeartbeat;
+xTaskHandle xSwitchMonitor;
+xTaskHandle xKillSwitch;
+xTaskHandle xDepthSensor;
+
 void riptideMain(){
-    //create task handlers here
-    xTaskHandle xHeartbeat;
-    xTaskHandle xSwitchMonitor;
-    xTaskHandle xKillSwitch;
     //create tasks here
     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
     xTaskCreate( vSwitchMonitor, "SwitchMonitor", configMINIMAL_STACK_SIZE, NULL, 1, &xSwitchMonitor);
     xTaskCreate( vKillSwitchMonitor, "KillSwitch", configMINIMAL_STACK_SIZE, NULL, 1, &xKillSwitch);
+    xTaskCreate( vDepthSensor, "DepthSensor", configMINIMAL_STACK_SIZE, NULL, 1, &xDepthSensor);
     //create mutexes here
     //create semaphores here
     return;
+}
+
+void restartI2C() {
+	vTaskDelete(xDepthSensor);
+	vTaskDelay(50);
+	xTaskCreate( vDepthSensor, "DepthSensor", configMINIMAL_STACK_SIZE, NULL, 1, &xDepthSensor);
 }
 

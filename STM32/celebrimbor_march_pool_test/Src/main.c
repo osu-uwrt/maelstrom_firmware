@@ -99,6 +99,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 void writePWM(uint16_t * values);
+I2C_HandleTypeDef* getI2CRef();
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -580,6 +581,10 @@ void resetPWM() {
 	  htim14.Instance->CCR1 = 1500;
 	  htim13.Instance->CCR1 = 1500;
 	  htim3.Instance->CCR3 = 1500;
+}
+
+I2C_HandleTypeDef* getI2CRef() {
+	return &hi2c1;
 }
 /* USER CODE END 4 */
 

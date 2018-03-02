@@ -9,3 +9,4 @@
 void vHeartbeat (void *pvParameters );
 void vSwitchMonitor  (void *pvParameters );
 void vKillSwitchMonitor (void *pvParameters);
+void vDepthSensor (void *pvParameters);

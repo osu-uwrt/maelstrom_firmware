@@ -7,3 +7,4 @@
 
 #endif //STMCOMMS_RIPTIDEMAIN_H
 void riptideMain();
+void restartI2C();
