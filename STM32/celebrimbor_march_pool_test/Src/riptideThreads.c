@@ -18,13 +18,9 @@
 
 void vHeartbeat(void *pvParameters ){
 
-    uint8_t HiMsg[] = "heartbeat\r\n";
     /* Infinite loop */
     for(;;) {
         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
-        HAL_GPIO_TogglePin(PC4_LED_GPIO_Port, PC4_LED_Pin);
-        //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
-        //CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
         vTaskDelay(1000);
     }
 
@@ -34,6 +30,9 @@ void vKillSwitchMonitor(void *pvParameters) {
 	for (;;) {
 		if (HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin) == GPIO_PIN_RESET) {
 			resetPWM();
+			HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_RESET);
+		} else {
+			HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_SET);
 		}
 		vTaskDelay(50);
 	}
@@ -71,6 +70,8 @@ void vDepthSensor(void *pvParameters) {
 
 	uint16_t calibration[8];
 	uint8_t buffer[3];
+
+	uint8_t depthmsg[] = "%%%%99999999!99999999!99999999@@@@\r\n";
 
 	uint32_t d1;
 	uint32_t d2;
@@ -115,9 +116,11 @@ void vDepthSensor(void *pvParameters) {
 	}
 
 
-	uint8_t values[20];
+	uint8_t values[8];
+	uint8_t * ptr;
 	for(;;) {
 
+		ptr = &depthmsg[4];
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_d1, 1, 20);
 		vTaskDelay(20);
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_adc, 1, 20);
@@ -142,27 +145,20 @@ void vDepthSensor(void *pvParameters) {
 		convert(&temp, &press, &temperature, &pressure, &depth, fluidDensity);
 
 		memset(values, 0, sizeof(values));
-		gcvt(temperature, 20, values);
-		CDC_Transmit_HS(values, strlen(values));
-		vTaskDelay(5);
-		CDC_Transmit_HS("\r\n", 2);
-
-		vTaskDelay(10);
+		fToString(values, temperature);
+		memcpy(ptr, values, 8);
+		ptr += 9;
 
 		memset(values, 0, sizeof(values));
-		gcvt(pressure, 20, values);
-		CDC_Transmit_HS(values, strlen(values));
-		vTaskDelay(5);
-		CDC_Transmit_HS("\r\n", 2);
-
-		vTaskDelay(10);
+		fToString(values, pressure);
+		memcpy(ptr, values, 8);
+		ptr += 9;
 
 		memset(values, 0, sizeof(values));
-		gcvt(depth, 20, values);
-		CDC_Transmit_HS(values, strlen(values));
-		vTaskDelay(5);
-		CDC_Transmit_HS("\r\n", 2);
+		fToString(values, depth);
+		memcpy(ptr, values, 8);
 
+		CDC_Transmit_HS(depthmsg, 37);
 
 		vTaskDelay(200);
 	}

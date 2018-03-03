@@ -9,6 +9,7 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usbd_cdc_if.h"
+#include "string.h"
 
 /*
  *          Message Check
@@ -43,6 +44,7 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len, uint16_t * values){
   uint8_t Successmsg[] = "thrust hell yeah\n";
   uint8_t failmsg[] = "not good enough kid\n";
   uint8_t restart[] = "restart";
+  HAL_GPIO_TogglePin(PC5_LED_GPIO_Port, PC5_LED_Pin);
   char* thrustst = "#";
   char* thrustend = "@";
   int   thrustComp = 4;
@@ -152,4 +154,15 @@ void convert(uint32_t * temp, uint32_t * press, float * temperature, float * pre
 	*temperature = *temp / 100.0;
 	*pressure = *press * 1.0;
 	*depth = ((100.0 * *pressure) - 101300)/(fluidDensity * 9.80665);
+}
+
+void fToString(uint8_t * dest, float toConvert) {
+	uint8_t decimals[7];
+	itoa(toConvert, dest, 10);
+	strcat(dest, ".");
+	int trunked = (int) toConvert;
+	uint16_t i = (toConvert - trunked) * 100000;
+	itoa(i, decimals, 10);
+	strcat(dest, decimals);
+	dest[7] = 0;
 }

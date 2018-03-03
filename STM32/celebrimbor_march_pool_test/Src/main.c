@@ -301,9 +301,9 @@ static void MX_TIM2_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 72;
+  htim2.Init.Prescaler = 71;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 2000;
+  htim2.Init.Period = 4000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
@@ -353,9 +353,9 @@ static void MX_TIM3_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 72;
+  htim3.Init.Prescaler = 71;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 2000;
+  htim3.Init.Period = 4000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
   {
@@ -395,9 +395,9 @@ static void MX_TIM5_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim5.Instance = TIM5;
-  htim5.Init.Prescaler = 72;
+  htim5.Init.Prescaler = 71;
   htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim5.Init.Period = 2000;
+  htim5.Init.Period = 4000;
   htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim5) != HAL_OK)
   {
@@ -436,9 +436,9 @@ static void MX_TIM13_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim13.Instance = TIM13;
-  htim13.Init.Prescaler = 72;
+  htim13.Init.Prescaler = 71;
   htim13.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim13.Init.Period = 2000;
+  htim13.Init.Period = 4000;
   htim13.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_Base_Init(&htim13) != HAL_OK)
   {
@@ -470,9 +470,9 @@ static void MX_TIM14_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim14.Instance = TIM14;
-  htim14.Init.Prescaler = 72;
+  htim14.Init.Prescaler = 71;
   htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim14.Init.Period = 2000;
+  htim14.Init.Period = 4000;
   htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
   {
@@ -521,14 +521,16 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC5_LED_Pin|HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC13_Header_Pin KillSwitch_Pin MissionStart_Pin */
-  GPIO_InitStruct.Pin = PC13_Header_Pin|KillSwitch_Pin|MissionStart_Pin;
+  /*Configure GPIO pins : PC13_Header_Pin MissionStart_Pin */
+  GPIO_InitStruct.Pin = PC13_Header_Pin|MissionStart_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Switch6_Pin Switch3_Pin Switch4_Pin Switch5_Pin */
-  GPIO_InitStruct.Pin = Switch6_Pin|Switch3_Pin|Switch4_Pin|Switch5_Pin;
+  /*Configure GPIO pins : Switch6_Pin KillSwitch_Pin Switch3_Pin Switch4_Pin 
+                           Switch5_Pin */
+  GPIO_InitStruct.Pin = Switch6_Pin|KillSwitch_Pin|Switch3_Pin|Switch4_Pin 
+                          |Switch5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
