@@ -91,14 +91,9 @@ void StartDefaultTask(void const * argument);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
-                                
-                                
-                                
-                                
-
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-void writePWM(uint16_t * values);
+
 I2C_HandleTypeDef* getI2CRef();
 /* USER CODE END PFP */
 
@@ -301,9 +296,9 @@ static void MX_TIM2_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 71;
+  htim2.Init.Prescaler = 72;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 4000;
+  htim2.Init.Period = 2000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
@@ -353,9 +348,9 @@ static void MX_TIM3_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 71;
+  htim3.Init.Prescaler = 72;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 4000;
+  htim3.Init.Period = 2000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
   {
@@ -395,9 +390,9 @@ static void MX_TIM5_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim5.Instance = TIM5;
-  htim5.Init.Prescaler = 71;
+  htim5.Init.Prescaler = 72;
   htim5.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim5.Init.Period = 4000;
+  htim5.Init.Period = 2000;
   htim5.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_PWM_Init(&htim5) != HAL_OK)
   {
@@ -436,9 +431,9 @@ static void MX_TIM13_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim13.Instance = TIM13;
-  htim13.Init.Prescaler = 71;
+  htim13.Init.Prescaler = 72;
   htim13.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim13.Init.Period = 4000;
+  htim13.Init.Period = 2000;
   htim13.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_Base_Init(&htim13) != HAL_OK)
   {
@@ -470,9 +465,9 @@ static void MX_TIM14_Init(void)
   TIM_OC_InitTypeDef sConfigOC;
 
   htim14.Instance = TIM14;
-  htim14.Init.Prescaler = 71;
+  htim14.Init.Prescaler = 72;
   htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim14.Init.Period = 4000;
+  htim14.Init.Period = 2000;
   htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
   {
@@ -561,11 +556,11 @@ static void MX_GPIO_Init(void)
 void writePWM(uint16_t * values) {
 	  // I wrote this at 1 am, there is a good chance the order or something is wrong
 	  htim2.Instance->CCR1 = values[0];
-	  htim5.Instance->CCR3 = values[1];
+	  htim2.Instance->CCR3 = values[1];
 	  htim5.Instance->CCR4 = values[2];
 	  htim2.Instance->CCR2 = values[3];
 	  htim2.Instance->CCR4 = values[4];
-	  htim2.Instance->CCR3 = values[5];
+	  htim5.Instance->CCR3 = values[5];
 	  htim3.Instance->CCR4 = values[6];
 	  htim14.Instance->CCR1 = values[7];
 	  htim13.Instance->CCR1 = values[8];
@@ -595,6 +590,8 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
+
+  resetPWM();
 
   /* USER CODE BEGIN 5 */
 

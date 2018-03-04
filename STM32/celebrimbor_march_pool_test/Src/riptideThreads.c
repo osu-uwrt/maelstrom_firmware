@@ -39,7 +39,7 @@ void vKillSwitchMonitor(void *pvParameters) {
 }
 
 void vSwitchMonitor(void *pvParameters){
-    uint8_t switchMessage[14] = "$$$$nnnnnn@@@@\r\n";
+    uint8_t switchMessage[] = "$$$$nnnnnn@@@@\r\n";
     //uint8_t switchMessage = "";
     for(;;){
         //You can read directly in to the the message without forcing a 1 or 0 but that returns
@@ -50,7 +50,7 @@ void vSwitchMonitor(void *pvParameters){
         switchMessage [7] = HAL_GPIO_ReadPin(Switch4_GPIO_Port, Switch4_Pin)            ? '1' : '0';
         switchMessage [8] = HAL_GPIO_ReadPin(Switch5_GPIO_Port, Switch5_Pin)            ? '1' : '0';
         switchMessage [9] = HAL_GPIO_ReadPin(Switch6_GPIO_Port, Switch6_Pin)            ? '1' : '0';
-        CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
+        CDC_Transmit_HS(switchMessage, strlen(switchMessage));
         vTaskDelay(900);
     }
 }
@@ -143,6 +143,11 @@ void vDepthSensor(void *pvParameters) {
 
 		calculate(d1, d2, calibration, &temp, &press);
 		convert(&temp, &press, &temperature, &pressure, &depth, fluidDensity);
+
+//		if (temp == 2000) {
+//			vTaskDelay(1500);
+//			goto resetI2C;
+//		}
 
 		memset(values, 0, sizeof(values));
 		fToString(values, temperature);

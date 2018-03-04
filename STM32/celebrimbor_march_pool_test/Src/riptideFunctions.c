@@ -57,6 +57,7 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len, uint16_t * values){
   }
 
   if (!thrustsuccess){
+	resetPWM();
     CDC_Transmit_HS(failmsg, sizeof(failmsg));
     *values = NULL;
   }
