@@ -44,3 +44,10 @@ void vSwitchMonitor(void *pvParameters){
         vTaskDelay(900);
     }
 }
+
+void vRobotMover(void *pvParameters){
+    //might need to setup que here
+    for (;;){
+        //write to registers of all the thrusters
+    }
+}
