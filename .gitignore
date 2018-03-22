@@ -10,10 +10,4 @@
 # IDE generated files #
 #######################
 .idea
-cmake-build-debug/
-CMakeLists.txt
 
-#######################
-# STM Generated Stuff #
-#######################
-build/
