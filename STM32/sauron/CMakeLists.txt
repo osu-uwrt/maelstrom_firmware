@@ -542,7 +542,6 @@ set(SOURCE_FILES
         Inc/nodes.h
         Inc/stm32f4xx_hal_conf.h
         Inc/stm32f4xx_it.h
-        Inc/teamThreads.h
         Inc/usb_device.h
         Inc/usbd_cdc_if.h
         Inc/usbd_conf.h
@@ -590,19 +589,21 @@ set(SOURCE_FILES
         Middlewares/Third_Party/FreeRTOS/Source/queue.c
         Middlewares/Third_Party/FreeRTOS/Source/tasks.c
         Middlewares/Third_Party/FreeRTOS/Source/timers.c
+        riptideSTM/inc/riptideFunctions.h
+        riptideSTM/inc/riptideMain.h
+        riptideSTM/inc/riptideThreads.h
+        riptideSTM/src/riptideFunctions.c
+        riptideSTM/src/riptideMain.c
+        riptideSTM/src/riptideThreads.c
         Src/freertos.c
         Src/main.c
         Src/stm32f4xx_hal_msp.c
         Src/stm32f4xx_hal_timebase_TIM.c
         Src/stm32f4xx_it.c
         Src/system_stm32f4xx.c
-        Src/teamThreads.c
         Src/usb_device.c
         Src/usbd_cdc_if.c
         Src/usbd_conf.c
-        Src/usbd_desc.c
-        Makefile)
-
-include_directories(.)
+        Src/usbd_desc.c)
 
 add_executable(sauron ${SOURCE_FILES})

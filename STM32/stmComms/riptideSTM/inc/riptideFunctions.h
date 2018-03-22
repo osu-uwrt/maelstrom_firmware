@@ -8,3 +8,5 @@
 #endif //STMCOMMS_RIPTIDEFUNCTIONS_H
 #include <stdbool.h>
 bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t *Len );
+
+int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len );

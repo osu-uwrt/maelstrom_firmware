@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
   29:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** #include "usbd_core.h"
   30:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
   31:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /** @addtogroup STM32_USBD_DEVICE_LIBRARY
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 2
 
 
   32:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** * @{
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
   86:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** */ 
   87:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
   88:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 3
 
 
   89:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** * @brief  USBD_Init
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
   55 0018 1846     		mov	r0, r3
  115:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   }
  116:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 4
 
 
  117:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   /* Set Device initial State */
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
   94              		@ frame_needed = 0, uses_anonymous_args = 0
   95              	.LVL6:
   96 0000 10B5     		push	{r4, lr}
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 5
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 5
 
 
   97              	.LCFI2:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  152:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   *         Link class driver to Device Core.
  153:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pDevice : Device Handle
  154:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pclass: Class handle
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 6
 
 
  155:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @retval USBD Status
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  177:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   *         Start the USB Device Core.
  178:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @param  pdev: Device Handle
  179:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   * @retval USBD Status
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 7
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 7
 
 
  180:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   */
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  207              		.cfi_offset 14, -4
  208 0002 0446     		mov	r4, r0
  198:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   /* Free Class Resources */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 8
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 8
 
 
  199:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   pdev->pClass->DeInit(pdev, pdev->dev_config);  
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  248              		.section	.text.USBD_SetClassConfig,"ax",%progbits
  249              		.align	1
  250              		.global	USBD_SetClassConfig
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 9
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 9
 
 
  251              		.syntax unified
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  235:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     {
  236:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       ret = USBD_OK;
  287              		.loc 1 236 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 10
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 10
 
 
  288 0016 0020     		movs	r0, #0
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  327              		.align	1
  328              		.global	USBD_LL_SetupStage
  329              		.syntax unified
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 11
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 11
 
 
  330              		.thumb
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  368 002c 10D0     		beq	.L31
  272:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   {
  273:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   case USB_REQ_RECIPIENT_DEVICE:   
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 12
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 12
 
 
  274:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****     USBD_StdDevReq (pdev, &pdev->request);
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  401              		.loc 1 283 0
  402 0058 F3E7     		b	.L32
  403              		.cfi_endproc
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 13
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 13
 
 
  404              	.LFE132:
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  441 001a 0BD8     		bhi	.L41
  310:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****       {
  311:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         pep->rem_length -=  pep->maxpacket;
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 14
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 14
 
 
  312:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****        
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  478              	.LVL48:
  479 004c EEE7     		b	.L39
  480              	.LVL49:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 15
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 15
 
 
  481              	.L36:
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  341:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** * @retval status
  342:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** */
  343:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** USBD_StatusTypeDef USBD_LL_DataInStage(USBD_HandleTypeDef *pdev ,uint8_t epnum, uint8_t *pdata)
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 16
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 16
 
 
  344:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** {
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  375:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           pdev->ep0_data_len = 0;
  376:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****           
  377:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         /* Prepare endpoint for premature end of transfer */
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 17
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 17
 
 
  378:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****         USBD_LL_PrepareReceive (pdev,
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  369:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****            (pep->total_length >= pep->maxpacket) &&
  565              		.loc 1 369 0 is_stmt 0 discriminator 1
  566 0032 8A42     		cmp	r2, r1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 18
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 18
 
 
  567 0034 03D8     		bhi	.L48
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  611 0070 0022     		movs	r2, #0
  612 0072 1146     		mov	r1, r2
  613 0074 FFF7FEFF 		bl	USBD_CtlContinueSendData
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 19
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 19
 
 
  614              	.LVL69:
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  661              		.section	.text.USBD_LL_Reset,"ax",%progbits
  662              		.align	1
  663              		.global	USBD_LL_Reset
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 20
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 20
 
 
  664              		.syntax unified
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  699              	.LVL80:
  427:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****               0x80,
  428:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****               USBD_EP_TYPE_CTRL,
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 21
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 21
 
 
  429:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****               USB_MAX_EP0_SIZE);
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  732              		.loc 1 452 0
  733              		.cfi_startproc
  734              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 22
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 22
 
 
  735              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  774              	.LFE137:
  776              		.section	.text.USBD_LL_Resume,"ax",%progbits
  777              		.align	1
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 23
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 23
 
 
  778              		.global	USBD_LL_Resume
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  812              		.loc 1 492 0
  813              		.cfi_startproc
  814              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 24
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 24
 
 
  815              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  507:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** * @retval status
  508:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** */
  509:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** USBD_StatusTypeDef USBD_LL_IsoINIncomplete(USBD_HandleTypeDef  *pdev, uint8_t epnum)
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 25
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 25
 
 
  510:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** {
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  899              	USBD_LL_DevConnected:
  900              	.LFB142:
  524:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 26
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 26
 
 
  525:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c **** /**
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  936 0004 80F8FC21 		strb	r2, [r0, #508]
  546:Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c ****   pdev->pClass->DeInit(pdev, pdev->dev_config);  
  937              		.loc 1 546 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 27
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 27
 
 
  938 0008 D0F81422 		ldr	r2, [r0, #532]
@@ -1576,64 +1576,64 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 1
  947              	.LFE143:
  949              		.text
  950              	.Letext0:
- 951              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 952              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 953              		.file 4 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 954              		.file 5 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 955              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 956              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 957              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 951              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 952              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 953              		.file 4 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 954              		.file 5 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 955              		.file 6 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 956              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 957              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
  958              		.file 9 "Drivers/CMSIS/Include/core_cm4.h"
  959              		.file 10 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
  960              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
  961              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
  962              		.file 13 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h"
  963              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 28
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 28
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usbd_core.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:18     .text.USBD_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:25     .text.USBD_Init:0000000000000000 USBD_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:82     .text.USBD_DeInit:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:89     .text.USBD_DeInit:0000000000000000 USBD_DeInit
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:126    .text.USBD_RegisterClass:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:133    .text.USBD_RegisterClass:0000000000000000 USBD_RegisterClass
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:160    .text.USBD_Start:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:167    .text.USBD_Start:0000000000000000 USBD_Start
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:189    .text.USBD_Stop:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:196    .text.USBD_Stop:0000000000000000 USBD_Stop
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:226    .text.USBD_RunTestMode:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:233    .text.USBD_RunTestMode:0000000000000000 USBD_RunTestMode
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:249    .text.USBD_SetClassConfig:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:256    .text.USBD_SetClassConfig:0000000000000000 USBD_SetClassConfig
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:296    .text.USBD_ClrClassConfig:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:303    .text.USBD_ClrClassConfig:0000000000000000 USBD_ClrClassConfig
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:327    .text.USBD_LL_SetupStage:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:334    .text.USBD_LL_SetupStage:0000000000000000 USBD_LL_SetupStage
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:407    .text.USBD_LL_DataOutStage:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:414    .text.USBD_LL_DataOutStage:0000000000000000 USBD_LL_DataOutStage
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:510    .text.USBD_LL_DataInStage:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:517    .text.USBD_LL_DataInStage:0000000000000000 USBD_LL_DataInStage
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:662    .text.USBD_LL_Reset:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:669    .text.USBD_LL_Reset:0000000000000000 USBD_LL_Reset
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:723    .text.USBD_LL_SetSpeed:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:730    .text.USBD_LL_SetSpeed:0000000000000000 USBD_LL_SetSpeed
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:748    .text.USBD_LL_Suspend:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:755    .text.USBD_LL_Suspend:0000000000000000 USBD_LL_Suspend
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:777    .text.USBD_LL_Resume:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:784    .text.USBD_LL_Resume:0000000000000000 USBD_LL_Resume
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:803    .text.USBD_LL_SOF:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:810    .text.USBD_LL_SOF:0000000000000000 USBD_LL_SOF
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:846    .text.USBD_LL_IsoINIncomplete:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:853    .text.USBD_LL_IsoINIncomplete:0000000000000000 USBD_LL_IsoINIncomplete
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:869    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:876    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 USBD_LL_IsoOUTIncomplete
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:892    .text.USBD_LL_DevConnected:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:899    .text.USBD_LL_DevConnected:0000000000000000 USBD_LL_DevConnected
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:915    .text.USBD_LL_DevDisconnected:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s:922    .text.USBD_LL_DevDisconnected:0000000000000000 USBD_LL_DevDisconnected
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:18     .text.USBD_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:25     .text.USBD_Init:0000000000000000 USBD_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:82     .text.USBD_DeInit:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:89     .text.USBD_DeInit:0000000000000000 USBD_DeInit
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:126    .text.USBD_RegisterClass:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:133    .text.USBD_RegisterClass:0000000000000000 USBD_RegisterClass
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:160    .text.USBD_Start:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:167    .text.USBD_Start:0000000000000000 USBD_Start
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:189    .text.USBD_Stop:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:196    .text.USBD_Stop:0000000000000000 USBD_Stop
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:226    .text.USBD_RunTestMode:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:233    .text.USBD_RunTestMode:0000000000000000 USBD_RunTestMode
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:249    .text.USBD_SetClassConfig:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:256    .text.USBD_SetClassConfig:0000000000000000 USBD_SetClassConfig
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:296    .text.USBD_ClrClassConfig:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:303    .text.USBD_ClrClassConfig:0000000000000000 USBD_ClrClassConfig
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:327    .text.USBD_LL_SetupStage:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:334    .text.USBD_LL_SetupStage:0000000000000000 USBD_LL_SetupStage
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:407    .text.USBD_LL_DataOutStage:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:414    .text.USBD_LL_DataOutStage:0000000000000000 USBD_LL_DataOutStage
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:510    .text.USBD_LL_DataInStage:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:517    .text.USBD_LL_DataInStage:0000000000000000 USBD_LL_DataInStage
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:662    .text.USBD_LL_Reset:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:669    .text.USBD_LL_Reset:0000000000000000 USBD_LL_Reset
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:723    .text.USBD_LL_SetSpeed:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:730    .text.USBD_LL_SetSpeed:0000000000000000 USBD_LL_SetSpeed
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:748    .text.USBD_LL_Suspend:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:755    .text.USBD_LL_Suspend:0000000000000000 USBD_LL_Suspend
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:777    .text.USBD_LL_Resume:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:784    .text.USBD_LL_Resume:0000000000000000 USBD_LL_Resume
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:803    .text.USBD_LL_SOF:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:810    .text.USBD_LL_SOF:0000000000000000 USBD_LL_SOF
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:846    .text.USBD_LL_IsoINIncomplete:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:853    .text.USBD_LL_IsoINIncomplete:0000000000000000 USBD_LL_IsoINIncomplete
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:869    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:876    .text.USBD_LL_IsoOUTIncomplete:0000000000000000 USBD_LL_IsoOUTIncomplete
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:892    .text.USBD_LL_DevConnected:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:899    .text.USBD_LL_DevConnected:0000000000000000 USBD_LL_DevConnected
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:915    .text.USBD_LL_DevDisconnected:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s:922    .text.USBD_LL_DevDisconnected:0000000000000000 USBD_LL_DevDisconnected
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
@@ -1649,7 +1649,7 @@ USBD_StdEPReq
 USBD_CtlSendStatus
 USBD_CtlContinueRx
 USBD_CtlReceiveStatus
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccKlobUy.s 			page 29
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccMDYV26.s 			page 29
 
 
 USBD_CtlContinueSendData

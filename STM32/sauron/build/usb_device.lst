@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 1
   29:Src/usb_device.c ****   *    microprocessor devices manufactured by or for STMicroelectronics.
   30:Src/usb_device.c ****   * 5. Redistribution and use of this software other than as permitted under 
   31:Src/usb_device.c ****   *    this license is void and will automatically terminate your rights under 
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s 			page 2
 
 
   32:Src/usb_device.c ****   *    this license. 
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 1
   46 0010 2046     		mov	r0, r4
   47 0012 FFF7FEFF 		bl	USBD_RegisterClass
   48              	.LVL1:
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 3
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s 			page 3
 
 
   68:Src/usb_device.c **** 
@@ -147,29 +147,29 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 1
   69              		.comm	hUsbDeviceHS,548,4
   70              		.text
   71              	.Letext0:
-  72              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  73              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  72              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  73              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
   74              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
   75              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-  76              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  77              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  78              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  79              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  80              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+  76              		.file 6 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  77              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  78              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  79              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+  80              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
   81              		.file 11 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
   82              		.file 12 "Inc/usb_device.h"
   83              		.file 13 "Inc/usbd_desc.h"
   84              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
   85              		.file 15 "Inc/usbd_cdc_if.h"
   86              		.file 16 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s 			page 4
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 usb_device.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s:18     .text.MX_USB_DEVICE_Init:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s:25     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc1h1a4K.s:62     .text.MX_USB_DEVICE_Init:0000000000000028 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s:18     .text.MX_USB_DEVICE_Init:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s:25     .text.MX_USB_DEVICE_Init:0000000000000000 MX_USB_DEVICE_Init
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckYPBvc.s:62     .text.MX_USB_DEVICE_Init:0000000000000028 $d
                             *COM*:0000000000000224 hUsbDeviceHS
                      .debug_frame:0000000000000010 $d
 

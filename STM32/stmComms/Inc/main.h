@@ -56,6 +56,16 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define KillSwitch_Pin GPIO_PIN_15
+#define KillSwitch_GPIO_Port GPIOC
+#define Switch1_Pin GPIO_PIN_0
+#define Switch1_GPIO_Port GPIOC
+#define Switch2_Pin GPIO_PIN_1
+#define Switch2_GPIO_Port GPIOC
+#define Switch3_Pin GPIO_PIN_2
+#define Switch3_GPIO_Port GPIOC
+#define Switch4_Pin GPIO_PIN_3
+#define Switch4_GPIO_Port GPIOC
 #define HeartBeat1_Pin GPIO_PIN_6
 #define HeartBeat1_GPIO_Port GPIOC
 #define HeartBeat2_Pin GPIO_PIN_7

@@ -50,7 +50,6 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
-#include "usbd_cdc_if.h"
 
 /* USER CODE BEGIN Includes */
 #include "riptideMain.h"
@@ -108,7 +107,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-    riptideMain();
+
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -127,7 +126,7 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-    //riptideMain();
+    riptideMain();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -221,13 +220,21 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : KillSwitch_Pin Switch1_Pin Switch2_Pin Switch3_Pin 
+                           Switch4_Pin */
+  GPIO_InitStruct.Pin = KillSwitch_Pin|Switch1_Pin|Switch2_Pin|Switch3_Pin 
+                          |Switch4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : HeartBeat1_Pin HeartBeat2_Pin */
   GPIO_InitStruct.Pin = HeartBeat1_Pin|HeartBeat2_Pin;
@@ -247,7 +254,6 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
-
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */

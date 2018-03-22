@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -25,7 +25,7 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 1
   22              		.thumb_func
   23              		.fpu fpv4-sp-d16
   25              	MessageCheck:
-  26              	.LFB0:
+  26              	.LFB129:
   27              		.file 1 "riptideSTM/src/riptideFunctions.c"
    1:riptideSTM/src/riptideFunctions.c **** //
    2:riptideSTM/src/riptideFunctions.c **** // Created by August R. Mason on 2/11/18.
@@ -34,53 +34,58 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 1
    5:riptideSTM/src/riptideFunctions.c **** #include <stdbool.h> //used for the MessageCheck function
    6:riptideSTM/src/riptideFunctions.c **** #include <stdint.h>
    7:riptideSTM/src/riptideFunctions.c **** #include "riptideFunctions.h"
-   8:riptideSTM/src/riptideFunctions.c **** /*
-   9:riptideSTM/src/riptideFunctions.c ****  *          Message Check
-  10:riptideSTM/src/riptideFunctions.c ****  *  This function is meant to streamline the messages sent from riptide to the STM32. Primary use c
-  11:riptideSTM/src/riptideFunctions.c ****  *  is for working in the CDC_Recieve function to check which message that gets recieved and set a 
-  12:riptideSTM/src/riptideFunctions.c ****  *  determine which message was sent
-  13:riptideSTM/src/riptideFunctions.c ****  *  Intakes:
-  14:riptideSTM/src/riptideFunctions.c ****  *          char* start     -the characters that start the message
-  15:riptideSTM/src/riptideFunctions.c ****  *          char* end       -the characters that are the last
-  16:riptideSTM/src/riptideFunctions.c ****  *          int compNumber  -the number of characters that start and end the message
-  17:riptideSTM/src/riptideFunctions.c ****  *          uint8_t* Buf    -the message sent
-  18:riptideSTM/src/riptideFunctions.c ****  *          uint32_t *Len   -the length of the message
-  19:riptideSTM/src/riptideFunctions.c ****  */
-  20:riptideSTM/src/riptideFunctions.c **** bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t *Len ){
-  28              		.loc 1 20 0
+   8:riptideSTM/src/riptideFunctions.c **** 
+   9:riptideSTM/src/riptideFunctions.c **** #include "stm32f4xx_hal.h"
+  10:riptideSTM/src/riptideFunctions.c **** #include "cmsis_os.h"
+  11:riptideSTM/src/riptideFunctions.c **** #include "usbd_cdc_if.h"
+  12:riptideSTM/src/riptideFunctions.c **** 
+  13:riptideSTM/src/riptideFunctions.c **** /*
+  14:riptideSTM/src/riptideFunctions.c ****  *          Message Check
+  15:riptideSTM/src/riptideFunctions.c ****  *  This function is meant to streamline the messages sent from riptide to the STM32. Primary use c
+  16:riptideSTM/src/riptideFunctions.c ****  *  is for working in the CDC_Recieve function to check which message that gets recieved and set a 
+  17:riptideSTM/src/riptideFunctions.c ****  *  determine which message was sent
+  18:riptideSTM/src/riptideFunctions.c ****  *  Intakes:
+  19:riptideSTM/src/riptideFunctions.c ****  *          char* start     -the characters that start the message
+  20:riptideSTM/src/riptideFunctions.c ****  *          char* end       -the characters that are the last
+  21:riptideSTM/src/riptideFunctions.c ****  *          int compNumber  -the number of characters that start and end the message
+  22:riptideSTM/src/riptideFunctions.c ****  *          uint8_t* Buf    -the message sent
+  23:riptideSTM/src/riptideFunctions.c ****  *          uint32_t *Len   -the length of the message
+  24:riptideSTM/src/riptideFunctions.c ****  */
+  25:riptideSTM/src/riptideFunctions.c **** bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t *Len ){
+  28              		.loc 1 25 0
   29              		.cfi_startproc
   30              		@ args = 4, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
   33              	.LVL0:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 2
+
+
   34 0000 F0B4     		push	{r4, r5, r6, r7}
   35              	.LCFI0:
   36              		.cfi_def_cfa_offset 16
   37              		.cfi_offset 4, -16
   38              		.cfi_offset 5, -12
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 2
-
-
   39              		.cfi_offset 6, -8
   40              		.cfi_offset 7, -4
   41 0002 049F     		ldr	r7, [sp, #16]
   42              	.LVL1:
-  21:riptideSTM/src/riptideFunctions.c ****     int i = 0;
-  43              		.loc 1 21 0
+  26:riptideSTM/src/riptideFunctions.c ****     int i = 0;
+  43              		.loc 1 26 0
   44 0004 0025     		movs	r5, #0
   45              	.LVL2:
   46              	.L2:
-  22:riptideSTM/src/riptideFunctions.c ****     while( i < compNumber ){
-  47              		.loc 1 22 0
+  27:riptideSTM/src/riptideFunctions.c ****     while( i < compNumber ){
+  47              		.loc 1 27 0
   48 0006 9542     		cmp	r5, r2
   49 0008 0CDA     		bge	.L8
-  23:riptideSTM/src/riptideFunctions.c ****         if (Buf[i] == *start && Buf[*Len - (1+i)] == *end){
-  50              		.loc 1 23 0
+  28:riptideSTM/src/riptideFunctions.c ****         if (Buf[i] == *start && Buf[*Len - (1+i)] == *end){
+  50              		.loc 1 28 0
   51 000a 5E5D     		ldrb	r6, [r3, r5]	@ zero_extendqisi2
   52 000c 0478     		ldrb	r4, [r0]	@ zero_extendqisi2
   53 000e A642     		cmp	r6, r4
   54 0010 0BD1     		bne	.L5
-  55              		.loc 1 23 0 is_stmt 0 discriminator 1
+  55              		.loc 1 28 0 is_stmt 0 discriminator 1
   56 0012 3C68     		ldr	r4, [r7]
   57 0014 641B     		subs	r4, r4, r5
   58 0016 013C     		subs	r4, r4, #1
@@ -88,45 +93,45 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 1
   60 001a 0C78     		ldrb	r4, [r1]	@ zero_extendqisi2
   61 001c A642     		cmp	r6, r4
   62 001e 06D1     		bne	.L6
-  24:riptideSTM/src/riptideFunctions.c **** 
-  25:riptideSTM/src/riptideFunctions.c ****             i++;
-  63              		.loc 1 25 0 is_stmt 1
+  29:riptideSTM/src/riptideFunctions.c **** 
+  30:riptideSTM/src/riptideFunctions.c ****             i++;
+  63              		.loc 1 30 0 is_stmt 1
   64 0020 0135     		adds	r5, r5, #1
   65              	.LVL3:
   66 0022 F0E7     		b	.L2
   67              	.L8:
-  26:riptideSTM/src/riptideFunctions.c ****         }
-  27:riptideSTM/src/riptideFunctions.c ****         else {
-  28:riptideSTM/src/riptideFunctions.c ****             return false;
-  29:riptideSTM/src/riptideFunctions.c ****         }
-  30:riptideSTM/src/riptideFunctions.c ****     }
-  31:riptideSTM/src/riptideFunctions.c ****     return true;
-  68              		.loc 1 31 0
+  31:riptideSTM/src/riptideFunctions.c ****         }
+  32:riptideSTM/src/riptideFunctions.c ****         else {
+  33:riptideSTM/src/riptideFunctions.c ****             return false;
+  34:riptideSTM/src/riptideFunctions.c ****         }
+  35:riptideSTM/src/riptideFunctions.c ****     }
+  36:riptideSTM/src/riptideFunctions.c ****     return true;
+  68              		.loc 1 36 0
   69 0024 0120     		movs	r0, #1
   70              	.LVL4:
   71              	.L3:
-  32:riptideSTM/src/riptideFunctions.c **** 
-  33:riptideSTM/src/riptideFunctions.c **** }
-  72              		.loc 1 33 0
+  37:riptideSTM/src/riptideFunctions.c **** 
+  38:riptideSTM/src/riptideFunctions.c **** }
+  72              		.loc 1 38 0
   73 0026 F0BC     		pop	{r4, r5, r6, r7}
   74              	.LCFI1:
   75              		.cfi_remember_state
   76              		.cfi_restore 7
   77              		.cfi_restore 6
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 3
+
+
   78              		.cfi_restore 5
   79              		.cfi_restore 4
   80              		.cfi_def_cfa_offset 0
   81              	.LVL5:
   82 0028 7047     		bx	lr
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 3
-
-
   83              	.LVL6:
   84              	.L5:
   85              	.LCFI2:
   86              		.cfi_restore_state
-  28:riptideSTM/src/riptideFunctions.c ****         }
-  87              		.loc 1 28 0
+  33:riptideSTM/src/riptideFunctions.c ****         }
+  87              		.loc 1 33 0
   88 002a 0020     		movs	r0, #0
   89              	.LVL7:
   90 002c FBE7     		b	.L3
@@ -136,18 +141,188 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 1
   94              	.LVL9:
   95 0030 F9E7     		b	.L3
   96              		.cfi_endproc
-  97              	.LFE0:
-  99              		.text
- 100              	.Letext0:
- 101              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
- 102              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s 			page 4
+  97              	.LFE129:
+  99              		.section	.text.Riptide_CDC_Receive,"ax",%progbits
+ 100              		.align	1
+ 101              		.global	Riptide_CDC_Receive
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.fpu fpv4-sp-d16
+ 107              	Riptide_CDC_Receive:
+ 108              	.LFB130:
+  39:riptideSTM/src/riptideFunctions.c **** 
+  40:riptideSTM/src/riptideFunctions.c **** 
+  41:riptideSTM/src/riptideFunctions.c **** int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
+ 109              		.loc 1 41 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 48
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              	.LVL10:
+ 114 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 115              	.LCFI3:
+ 116              		.cfi_def_cfa_offset 20
+ 117              		.cfi_offset 4, -20
+ 118              		.cfi_offset 5, -16
+ 119              		.cfi_offset 6, -12
+ 120              		.cfi_offset 7, -8
+ 121              		.cfi_offset 14, -4
+ 122 0002 8FB0     		sub	sp, sp, #60
+ 123              	.LCFI4:
+ 124              		.cfi_def_cfa_offset 80
+ 125 0004 0646     		mov	r6, r0
+ 126 0006 0F46     		mov	r7, r1
+  42:riptideSTM/src/riptideFunctions.c ****     uint8_t Successmsg[] = "thrust hell yeah \r\n";
+ 127              		.loc 1 42 0
+ 128 0008 09AC     		add	r4, sp, #36
+ 129 000a 144D     		ldr	r5, .L15
+ 130 000c 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 131              	.LVL11:
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 4
+
+
+ 132 000e 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 133 0010 2B68     		ldr	r3, [r5]
+ 134 0012 2360     		str	r3, [r4]
+  43:riptideSTM/src/riptideFunctions.c ****   uint8_t failmsg[] = "not good enough kid\r\n";
+ 135              		.loc 1 43 0
+ 136 0014 03AC     		add	r4, sp, #12
+ 137 0016 124D     		ldr	r5, .L15+4
+ 138 0018 0FCD     		ldmia	r5!, {r0, r1, r2, r3}
+ 139 001a 0FC4     		stmia	r4!, {r0, r1, r2, r3}
+ 140 001c 95E80300 		ldm	r5, {r0, r1}
+ 141 0020 44F8040B 		str	r0, [r4], #4
+ 142 0024 2180     		strh	r1, [r4]	@ movhi
+ 143              	.LVL12:
+  44:riptideSTM/src/riptideFunctions.c ****   char* thrustst = "#";
+  45:riptideSTM/src/riptideFunctions.c ****   char* thrustend = "@";
+  46:riptideSTM/src/riptideFunctions.c ****   int   thrustComp = 4;
+  47:riptideSTM/src/riptideFunctions.c ****   bool thrustsuccess = false;
+  48:riptideSTM/src/riptideFunctions.c ****   thrustsuccess = MessageCheck(thrustst, thrustend, thrustComp, Buf, Len);
+ 144              		.loc 1 48 0
+ 145 0026 0097     		str	r7, [sp]
+ 146 0028 3346     		mov	r3, r6
+ 147 002a 0422     		movs	r2, #4
+ 148 002c 0D49     		ldr	r1, .L15+8
+ 149 002e 0E48     		ldr	r0, .L15+12
+ 150 0030 FFF7FEFF 		bl	MessageCheck
+ 151              	.LVL13:
+  49:riptideSTM/src/riptideFunctions.c ****   if (thrustsuccess){
+ 152              		.loc 1 49 0
+ 153 0034 0446     		mov	r4, r0
+ 154 0036 18B9     		cbnz	r0, .L13
+ 155              	.LVL14:
+ 156              	.L10:
+  50:riptideSTM/src/riptideFunctions.c ****     HAL_GPIO_TogglePin(HeartBeat2_GPIO_Port, HeartBeat2_Pin);
+  51:riptideSTM/src/riptideFunctions.c ****     CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
+  52:riptideSTM/src/riptideFunctions.c ****   }
+  53:riptideSTM/src/riptideFunctions.c ****   if (!thrustsuccess){
+ 157              		.loc 1 53 0
+ 158 0038 5CB1     		cbz	r4, .L14
+ 159              	.L11:
+  54:riptideSTM/src/riptideFunctions.c ****     CDC_Transmit_HS(failmsg, sizeof(failmsg));
+  55:riptideSTM/src/riptideFunctions.c ****   }
+  56:riptideSTM/src/riptideFunctions.c ****     return (USBD_OK);
+  57:riptideSTM/src/riptideFunctions.c **** }...
+ 160              		.loc 1 57 0
+ 161 003a 0020     		movs	r0, #0
+ 162 003c 0FB0     		add	sp, sp, #60
+ 163              	.LCFI5:
+ 164              		.cfi_remember_state
+ 165              		.cfi_def_cfa_offset 20
+ 166              		@ sp needed
+ 167 003e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 168              	.LVL15:
+ 169              	.L13:
+ 170              	.LCFI6:
+ 171              		.cfi_restore_state
+  50:riptideSTM/src/riptideFunctions.c ****     HAL_GPIO_TogglePin(HeartBeat2_GPIO_Port, HeartBeat2_Pin);
+ 172              		.loc 1 50 0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 5
+
+
+ 173 0040 8021     		movs	r1, #128
+ 174 0042 0A48     		ldr	r0, .L15+16
+ 175              	.LVL16:
+ 176 0044 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 177              	.LVL17:
+  51:riptideSTM/src/riptideFunctions.c ****     CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
+ 178              		.loc 1 51 0
+ 179 0048 1421     		movs	r1, #20
+ 180 004a 09A8     		add	r0, sp, #36
+ 181 004c FFF7FEFF 		bl	CDC_Transmit_HS
+ 182              	.LVL18:
+ 183 0050 F2E7     		b	.L10
+ 184              	.L14:
+  54:riptideSTM/src/riptideFunctions.c ****     CDC_Transmit_HS(failmsg, sizeof(failmsg));
+ 185              		.loc 1 54 0
+ 186 0052 1621     		movs	r1, #22
+ 187 0054 03A8     		add	r0, sp, #12
+ 188 0056 FFF7FEFF 		bl	CDC_Transmit_HS
+ 189              	.LVL19:
+ 190 005a EEE7     		b	.L11
+ 191              	.L16:
+ 192              		.align	2
+ 193              	.L15:
+ 194 005c 08000000 		.word	.LC0
+ 195 0060 1C000000 		.word	.LC1
+ 196 0064 00000000 		.word	.LC2
+ 197 0068 04000000 		.word	.LC3
+ 198 006c 00080240 		.word	1073874944
+ 199              		.cfi_endproc
+ 200              	.LFE130:
+ 202              		.section	.rodata.Riptide_CDC_Receive.str1.4,"aMS",%progbits,1
+ 203              		.align	2
+ 204              	.LC2:
+ 205 0000 4000     		.ascii	"@\000"
+ 206 0002 0000     		.space	2
+ 207              	.LC3:
+ 208 0004 2300     		.ascii	"#\000"
+ 209 0006 0000     		.space	2
+ 210              	.LC0:
+ 211 0008 74687275 		.ascii	"thrust hell yeah \015\012\000"
+ 211      73742068 
+ 211      656C6C20 
+ 211      79656168 
+ 211      200D0A00 
+ 212              	.LC1:
+ 213 001c 6E6F7420 		.ascii	"not good enough kid\015\012\000"
+ 213      676F6F64 
+ 213      20656E6F 
+ 213      75676820 
+ 213      6B69640D 
+ 214              		.text
+ 215              	.Letext0:
+ 216              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 217              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 218              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 219              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 220              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 6
+
+
+ 221              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 222              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 223              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 224              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 225              		.file 11 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 226              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 227              		.file 13 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 228              		.file 14 "Inc/usbd_cdc_if.h"
+ 229              		.file 15 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 riptideFunctions.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s:18     .text.MessageCheck:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cckou4WT.s:25     .text.MessageCheck:0000000000000000 MessageCheck
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:18     .text.MessageCheck:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:25     .text.MessageCheck:0000000000000000 MessageCheck
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:100    .text.Riptide_CDC_Receive:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:107    .text.Riptide_CDC_Receive:0000000000000000 Riptide_CDC_Receive
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:194    .text.Riptide_CDC_Receive:000000000000005c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccqkQWTM.s:203    .rodata.Riptide_CDC_Receive.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
-NO UNDEFINED SYMBOLS
+UNDEFINED SYMBOLS
+HAL_GPIO_TogglePin
+CDC_Transmit_HS

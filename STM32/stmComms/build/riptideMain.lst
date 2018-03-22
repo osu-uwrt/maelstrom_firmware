@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -45,83 +45,129 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 1
   16:riptideSTM/src/riptideMain.c **** void riptideMain(){
   28              		.loc 1 16 0
   29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 8
+  30              		@ args = 0, pretend = 0, frame = 16
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32 0000 00B5     		push	{lr}
+  32 0000 10B5     		push	{r4, lr}
   33              	.LCFI0:
-  34              		.cfi_def_cfa_offset 4
-  35              		.cfi_offset 14, -4
-  36 0002 85B0     		sub	sp, sp, #20
-  37              	.LCFI1:
-  38              		.cfi_def_cfa_offset 24
-  17:riptideSTM/src/riptideMain.c ****     //create tasks here
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  37 0002 86B0     		sub	sp, sp, #24
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 32
+  17:riptideSTM/src/riptideMain.c ****     //create task handlers here
   18:riptideSTM/src/riptideMain.c ****     xTaskHandle xHeartbeat;
-  19:riptideSTM/src/riptideMain.c ****     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
-  39              		.loc 1 19 0
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 2
+  19:riptideSTM/src/riptideMain.c ****     xTaskHandle xSwitchMonitor;
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s 			page 2
 
 
-  40 0004 03AB     		add	r3, sp, #12
-  41 0006 0193     		str	r3, [sp, #4]
-  42 0008 0123     		movs	r3, #1
-  43 000a 0093     		str	r3, [sp]
-  44 000c 0023     		movs	r3, #0
-  45 000e 8022     		movs	r2, #128
-  46 0010 0349     		ldr	r1, .L3
-  47 0012 0448     		ldr	r0, .L3+4
-  48 0014 FFF7FEFF 		bl	xTaskCreate
-  49              	.LVL0:
-  20:riptideSTM/src/riptideMain.c ****     //create queues here
-  21:riptideSTM/src/riptideMain.c ****     //create mutexes here
-  22:riptideSTM/src/riptideMain.c ****     //create semaphores here
-  23:riptideSTM/src/riptideMain.c ****     return;
-  24:riptideSTM/src/riptideMain.c **** }...
-  50              		.loc 1 24 0
-  51 0018 05B0     		add	sp, sp, #20
-  52              	.LCFI2:
-  53              		.cfi_def_cfa_offset 4
-  54              		@ sp needed
-  55 001a 5DF804FB 		ldr	pc, [sp], #4
-  56              	.L4:
-  57 001e 00BF     		.align	2
-  58              	.L3:
-  59 0020 00000000 		.word	.LC0
-  60 0024 00000000 		.word	vHeartbeat
-  61              		.cfi_endproc
-  62              	.LFE129:
-  64              		.section	.rodata.riptideMain.str1.4,"aMS",%progbits,1
-  65              		.align	2
-  66              	.LC0:
-  67 0000 48656172 		.ascii	"Heartbeat\000"
-  67      74626561 
-  67      7400
-  68              		.text
-  69              	.Letext0:
-  70              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  71              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  72              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
-  73              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-  74              		.file 6 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  75              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  76              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  77              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  78              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-  79              		.file 11 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
-  80              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
-  81              		.file 13 "Inc/usb_device.h"
-  82              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
-  83              		.file 15 "Inc/usbd_cdc_if.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s 			page 3
+  20:riptideSTM/src/riptideMain.c ****     xTaskHandle xRobotMover;
+  21:riptideSTM/src/riptideMain.c ****     //create tasks here
+  22:riptideSTM/src/riptideMain.c ****     xTaskCreate( vHeartbeat, "Heartbeat", configMINIMAL_STACK_SIZE, NULL, 1, &xHeartbeat);
+  40              		.loc 1 22 0
+  41 0004 05AB     		add	r3, sp, #20
+  42 0006 0193     		str	r3, [sp, #4]
+  43 0008 0124     		movs	r4, #1
+  44 000a 0094     		str	r4, [sp]
+  45 000c 0023     		movs	r3, #0
+  46 000e 8022     		movs	r2, #128
+  47 0010 0B49     		ldr	r1, .L3
+  48 0012 0C48     		ldr	r0, .L3+4
+  49 0014 FFF7FEFF 		bl	xTaskCreate
+  50              	.LVL0:
+  23:riptideSTM/src/riptideMain.c ****     xTaskCreate( vSwitchMonitor, "SwitchMonitor", configMINIMAL_STACK_SIZE, NULL, 1, &xSwitchMonito
+  51              		.loc 1 23 0
+  52 0018 04AB     		add	r3, sp, #16
+  53 001a 0193     		str	r3, [sp, #4]
+  54 001c 0094     		str	r4, [sp]
+  55 001e 0023     		movs	r3, #0
+  56 0020 8022     		movs	r2, #128
+  57 0022 0949     		ldr	r1, .L3+8
+  58 0024 0948     		ldr	r0, .L3+12
+  59 0026 FFF7FEFF 		bl	xTaskCreate
+  60              	.LVL1:
+  24:riptideSTM/src/riptideMain.c ****     xTaskCreate( vRobotMover, "RobotMover", configMINIMAL_STACK_SIZE, NULL, 1, &xRobotMover);
+  61              		.loc 1 24 0
+  62 002a 03AB     		add	r3, sp, #12
+  63 002c 0193     		str	r3, [sp, #4]
+  64 002e 0094     		str	r4, [sp]
+  65 0030 0023     		movs	r3, #0
+  66 0032 8022     		movs	r2, #128
+  67 0034 0649     		ldr	r1, .L3+16
+  68 0036 0748     		ldr	r0, .L3+20
+  69 0038 FFF7FEFF 		bl	xTaskCreate
+  70              	.LVL2:
+  25:riptideSTM/src/riptideMain.c ****     //create queues here
+  26:riptideSTM/src/riptideMain.c ****     //create mutexes here
+  27:riptideSTM/src/riptideMain.c ****     //create semaphores here
+  28:riptideSTM/src/riptideMain.c ****     return;
+  29:riptideSTM/src/riptideMain.c **** }...
+  71              		.loc 1 29 0
+  72 003c 06B0     		add	sp, sp, #24
+  73              	.LCFI2:
+  74              		.cfi_def_cfa_offset 8
+  75              		@ sp needed
+  76 003e 10BD     		pop	{r4, pc}
+  77              	.L4:
+  78              		.align	2
+  79              	.L3:
+  80 0040 00000000 		.word	.LC0
+  81 0044 00000000 		.word	vHeartbeat
+  82 0048 0C000000 		.word	.LC1
+  83 004c 00000000 		.word	vSwitchMonitor
+  84 0050 1C000000 		.word	.LC2
+  85 0054 00000000 		.word	vRobotMover
+  86              		.cfi_endproc
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s 			page 3
+
+
+  87              	.LFE129:
+  89              		.section	.rodata.riptideMain.str1.4,"aMS",%progbits,1
+  90              		.align	2
+  91              	.LC0:
+  92 0000 48656172 		.ascii	"Heartbeat\000"
+  92      74626561 
+  92      7400
+  93 000a 0000     		.space	2
+  94              	.LC1:
+  95 000c 53776974 		.ascii	"SwitchMonitor\000"
+  95      63684D6F 
+  95      6E69746F 
+  95      7200
+  96 001a 0000     		.space	2
+  97              	.LC2:
+  98 001c 526F626F 		.ascii	"RobotMover\000"
+  98      744D6F76 
+  98      657200
+  99              		.text
+ 100              	.Letext0:
+ 101              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 102              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 103              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 104              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 105              		.file 6 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 106              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 107              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 108              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 109              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 110              		.file 11 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 111              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 112              		.file 13 "Inc/usb_device.h"
+ 113              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 114              		.file 15 "Inc/usbd_cdc_if.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 riptideMain.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:18     .text.riptideMain:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:25     .text.riptideMain:0000000000000000 riptideMain
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:59     .text.riptideMain:0000000000000020 $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccCI0mwv.s:65     .rodata.riptideMain.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s:18     .text.riptideMain:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s:25     .text.riptideMain:0000000000000000 riptideMain
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s:80     .text.riptideMain:0000000000000040 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccp76yzP.s:90     .rodata.riptideMain.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 xTaskCreate
 vHeartbeat
+vSwitchMonitor
+vRobotMover

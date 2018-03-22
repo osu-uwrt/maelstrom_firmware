@@ -47,12 +47,7 @@
 */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "stm32f4xx_hal.h"
-#include "cmsis_os.h"
 #include "usbd_cdc_if.h"
-#include <stdbool.h>
-#include "riptideFunctions.h"
 /* USER CODE BEGIN INCLUDE */
 /* USER CODE END INCLUDE */
 
@@ -276,7 +271,8 @@ static int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
   /* USER CODE BEGIN 11 */ 
   USBD_CDC_SetRxBuffer(&hUsbDeviceHS, &Buf[0]);
   USBD_CDC_ReceivePacket(&hUsbDeviceHS);
-  uint8_t Successmsg[] = "thrust hell yeah \r\n";
+  Riptide_CDC_Receive(Buf, Len);
+  /*uint8_t Successmsg[] = "thrust hell yeah \r\n";
   uint8_t failmsg[] = "not good enough kid\r\n";
 
   char* thrustst = "#";
@@ -290,7 +286,7 @@ static int8_t CDC_Receive_HS (uint8_t* Buf, uint32_t *Len)
   }
   if (!thrustsuccess){
     CDC_Transmit_HS(failmsg, sizeof(failmsg));
-  }
+  }*/
   return (USBD_OK);
   /* USER CODE END 11 */ 
 }

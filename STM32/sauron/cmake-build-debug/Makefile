@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/augustmason/Documents/GitHub/riptide_firmware/sauron
+CMAKE_SOURCE_DIR = /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles /Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron/cmake-build-debug/CMakeFiles /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/augustmason/Documents/GitHub/riptide_firmware/sauron/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/augustmason/Documents/gitHub/riptide_firmware/STM32/sauron/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -11301,33 +11301,6 @@ Src/system_stm32f4xx.c.s:
 	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/Src/system_stm32f4xx.c.s
 .PHONY : Src/system_stm32f4xx.c.s
 
-Src/teamThreads.o: Src/teamThreads.c.o
-
-.PHONY : Src/teamThreads.o
-
-# target to build an object file
-Src/teamThreads.c.o:
-	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/Src/teamThreads.c.o
-.PHONY : Src/teamThreads.c.o
-
-Src/teamThreads.i: Src/teamThreads.c.i
-
-.PHONY : Src/teamThreads.i
-
-# target to preprocess a source file
-Src/teamThreads.c.i:
-	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/Src/teamThreads.c.i
-.PHONY : Src/teamThreads.c.i
-
-Src/teamThreads.s: Src/teamThreads.c.s
-
-.PHONY : Src/teamThreads.s
-
-# target to generate assembly for a file
-Src/teamThreads.c.s:
-	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/Src/teamThreads.c.s
-.PHONY : Src/teamThreads.c.s
-
 Src/usb_device.o: Src/usb_device.c.o
 
 .PHONY : Src/usb_device.o
@@ -11435,6 +11408,87 @@ Src/usbd_desc.s: Src/usbd_desc.c.s
 Src/usbd_desc.c.s:
 	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/Src/usbd_desc.c.s
 .PHONY : Src/usbd_desc.c.s
+
+riptideSTM/src/riptideFunctions.o: riptideSTM/src/riptideFunctions.c.o
+
+.PHONY : riptideSTM/src/riptideFunctions.o
+
+# target to build an object file
+riptideSTM/src/riptideFunctions.c.o:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideFunctions.c.o
+.PHONY : riptideSTM/src/riptideFunctions.c.o
+
+riptideSTM/src/riptideFunctions.i: riptideSTM/src/riptideFunctions.c.i
+
+.PHONY : riptideSTM/src/riptideFunctions.i
+
+# target to preprocess a source file
+riptideSTM/src/riptideFunctions.c.i:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideFunctions.c.i
+.PHONY : riptideSTM/src/riptideFunctions.c.i
+
+riptideSTM/src/riptideFunctions.s: riptideSTM/src/riptideFunctions.c.s
+
+.PHONY : riptideSTM/src/riptideFunctions.s
+
+# target to generate assembly for a file
+riptideSTM/src/riptideFunctions.c.s:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideFunctions.c.s
+.PHONY : riptideSTM/src/riptideFunctions.c.s
+
+riptideSTM/src/riptideMain.o: riptideSTM/src/riptideMain.c.o
+
+.PHONY : riptideSTM/src/riptideMain.o
+
+# target to build an object file
+riptideSTM/src/riptideMain.c.o:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideMain.c.o
+.PHONY : riptideSTM/src/riptideMain.c.o
+
+riptideSTM/src/riptideMain.i: riptideSTM/src/riptideMain.c.i
+
+.PHONY : riptideSTM/src/riptideMain.i
+
+# target to preprocess a source file
+riptideSTM/src/riptideMain.c.i:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideMain.c.i
+.PHONY : riptideSTM/src/riptideMain.c.i
+
+riptideSTM/src/riptideMain.s: riptideSTM/src/riptideMain.c.s
+
+.PHONY : riptideSTM/src/riptideMain.s
+
+# target to generate assembly for a file
+riptideSTM/src/riptideMain.c.s:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideMain.c.s
+.PHONY : riptideSTM/src/riptideMain.c.s
+
+riptideSTM/src/riptideThreads.o: riptideSTM/src/riptideThreads.c.o
+
+.PHONY : riptideSTM/src/riptideThreads.o
+
+# target to build an object file
+riptideSTM/src/riptideThreads.c.o:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideThreads.c.o
+.PHONY : riptideSTM/src/riptideThreads.c.o
+
+riptideSTM/src/riptideThreads.i: riptideSTM/src/riptideThreads.c.i
+
+.PHONY : riptideSTM/src/riptideThreads.i
+
+# target to preprocess a source file
+riptideSTM/src/riptideThreads.c.i:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideThreads.c.i
+.PHONY : riptideSTM/src/riptideThreads.c.i
+
+riptideSTM/src/riptideThreads.s: riptideSTM/src/riptideThreads.c.s
+
+.PHONY : riptideSTM/src/riptideThreads.s
+
+# target to generate assembly for a file
+riptideSTM/src/riptideThreads.c.s:
+	$(MAKE) -f CMakeFiles/sauron.dir/build.make CMakeFiles/sauron.dir/riptideSTM/src/riptideThreads.c.s
+.PHONY : riptideSTM/src/riptideThreads.c.s
 
 # Help Target
 help:
@@ -12687,9 +12741,6 @@ help:
 	@echo "... Src/system_stm32f4xx.o"
 	@echo "... Src/system_stm32f4xx.i"
 	@echo "... Src/system_stm32f4xx.s"
-	@echo "... Src/teamThreads.o"
-	@echo "... Src/teamThreads.i"
-	@echo "... Src/teamThreads.s"
 	@echo "... Src/usb_device.o"
 	@echo "... Src/usb_device.i"
 	@echo "... Src/usb_device.s"
@@ -12702,6 +12753,15 @@ help:
 	@echo "... Src/usbd_desc.o"
 	@echo "... Src/usbd_desc.i"
 	@echo "... Src/usbd_desc.s"
+	@echo "... riptideSTM/src/riptideFunctions.o"
+	@echo "... riptideSTM/src/riptideFunctions.i"
+	@echo "... riptideSTM/src/riptideFunctions.s"
+	@echo "... riptideSTM/src/riptideMain.o"
+	@echo "... riptideSTM/src/riptideMain.i"
+	@echo "... riptideSTM/src/riptideMain.s"
+	@echo "... riptideSTM/src/riptideThreads.o"
+	@echo "... riptideSTM/src/riptideThreads.i"
+	@echo "... riptideSTM/src/riptideThreads.s"
 .PHONY : help
 
 

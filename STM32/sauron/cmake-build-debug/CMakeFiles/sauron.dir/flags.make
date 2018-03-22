@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/augustmason/Documents/GitHub/riptide_firmware/sauron/. 
+C_INCLUDES = 
 

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -41,9 +41,11 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   12:riptideSTM/src/riptideThreads.c **** #include "riptideMain.h"
   13:riptideSTM/src/riptideThreads.c **** #include "riptideFunctions.h"
   14:riptideSTM/src/riptideThreads.c **** #include "riptidethreads.h"
-  15:riptideSTM/src/riptideThreads.c **** 
-  16:riptideSTM/src/riptideThreads.c **** void vHeartbeat(void *pvParameters ){
-  28              		.loc 1 16 0
+  15:riptideSTM/src/riptideThreads.c **** //#include "../../Inc/main.h"
+  16:riptideSTM/src/riptideThreads.c **** //#include "../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+  17:riptideSTM/src/riptideThreads.c **** 
+  18:riptideSTM/src/riptideThreads.c **** void vHeartbeat(void *pvParameters ){
+  28              		.loc 1 18 0
   29              		.cfi_startproc
   30              		@ Volatile: function does not return.
   31              		@ args = 0, pretend = 0, frame = 16
@@ -56,36 +58,35 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   38 0002 85B0     		sub	sp, sp, #20
   39              	.LCFI1:
   40              		.cfi_def_cfa_offset 24
-  17:riptideSTM/src/riptideThreads.c **** 
-  18:riptideSTM/src/riptideThreads.c ****     uint8_t HiMsg[] = "heartbeat\r\n";
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 2
 
 
-  41              		.loc 1 18 0
+  19:riptideSTM/src/riptideThreads.c **** 
+  20:riptideSTM/src/riptideThreads.c ****     uint8_t HiMsg[] = "heartbeat\r\n";
+  41              		.loc 1 20 0
   42 0004 094B     		ldr	r3, .L4
   43 0006 93E80700 		ldm	r3, {r0, r1, r2}
   44              	.LVL1:
   45 000a 04AB     		add	r3, sp, #16
   46 000c 03E90700 		stmdb	r3, {r0, r1, r2}
   47              	.L2:
-  19:riptideSTM/src/riptideThreads.c **** 
-  20:riptideSTM/src/riptideThreads.c ****     /* Infinite loop */
-  21:riptideSTM/src/riptideThreads.c ****     for(;;) {
-  22:riptideSTM/src/riptideThreads.c ****         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
-  48              		.loc 1 22 0 discriminator 1
+  21:riptideSTM/src/riptideThreads.c ****     /* Infinite loop */
+  22:riptideSTM/src/riptideThreads.c ****     for(;;) {
+  23:riptideSTM/src/riptideThreads.c ****         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
+  48              		.loc 1 23 0 discriminator 1
   49 0010 4021     		movs	r1, #64
   50 0012 0748     		ldr	r0, .L4+4
   51 0014 FFF7FEFF 		bl	HAL_GPIO_TogglePin
   52              	.LVL2:
-  23:riptideSTM/src/riptideThreads.c ****         //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
-  24:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
-  53              		.loc 1 24 0 discriminator 1
+  24:riptideSTM/src/riptideThreads.c ****         //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
+  25:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
+  53              		.loc 1 25 0 discriminator 1
   54 0018 0C21     		movs	r1, #12
   55 001a 01A8     		add	r0, sp, #4
   56 001c FFF7FEFF 		bl	CDC_Transmit_HS
   57              	.LVL3:
-  25:riptideSTM/src/riptideThreads.c ****         vTaskDelay(1000);
-  58              		.loc 1 25 0 discriminator 1
+  26:riptideSTM/src/riptideThreads.c ****         vTaskDelay(1000);
+  58              		.loc 1 26 0 discriminator 1
   59 0020 4FF47A70 		mov	r0, #1000
   60 0024 FFF7FEFF 		bl	vTaskDelay
   61              	.LVL4:
@@ -97,45 +98,250 @@ ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 1
   67 0030 00080240 		.word	1073874944
   68              		.cfi_endproc
   69              	.LFE129:
-  71              		.section	.rodata.vHeartbeat.str1.4,"aMS",%progbits,1
-  72              		.align	2
-  73              	.LC0:
-  74 0000 68656172 		.ascii	"heartbeat\015\012\000"
-  74      74626561 
-  74      740D0A00 
-  75              		.text
-  76              	.Letext0:
-  77              		.file 2 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  78              		.file 3 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  79              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
-  80              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
-  81              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
-  82              		.file 7 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  83              		.file 8 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  84              		.file 9 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
-  85              		.file 10 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
-  86              		.file 11 "/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
-  87              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
-  88              		.file 13 "Inc/usb_device.h"
-  89              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 3
+  71              		.section	.text.vSwitchMonitor,"ax",%progbits
+  72              		.align	1
+  73              		.global	vSwitchMonitor
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu fpv4-sp-d16
+  79              	vSwitchMonitor:
+  80              	.LFB130:
+  27:riptideSTM/src/riptideThreads.c **** 
+  28:riptideSTM/src/riptideThreads.c ****     }
+  29:riptideSTM/src/riptideThreads.c **** 
+  30:riptideSTM/src/riptideThreads.c **** }
+  31:riptideSTM/src/riptideThreads.c **** 
+  32:riptideSTM/src/riptideThreads.c **** void vSwitchMonitor(void *pvParameters){
+  81              		.loc 1 32 0
+  82              		.cfi_startproc
+  83              		@ Volatile: function does not return.
+  84              		@ args = 0, pretend = 0, frame = 16
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 3
 
 
-  90              		.file 15 "Inc/usbd_cdc_if.h"
-  91              		.file 16 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
-  92              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s 			page 4
+  86              	.LVL5:
+  87 0000 00B5     		push	{lr}
+  88              	.LCFI2:
+  89              		.cfi_def_cfa_offset 4
+  90              		.cfi_offset 14, -4
+  91 0002 85B0     		sub	sp, sp, #20
+  92              	.LCFI3:
+  93              		.cfi_def_cfa_offset 24
+  33:riptideSTM/src/riptideThreads.c ****     uint8_t switchMessage[14] = "$$$$nnnnnn@@@@";
+  94              		.loc 1 33 0
+  95 0004 224B     		ldr	r3, .L19
+  96 0006 6C46     		mov	r4, sp
+  97 0008 0FCB     		ldm	r3, {r0, r1, r2, r3}
+  98              	.LVL6:
+  99 000a 07C4     		stmia	r4!, {r0, r1, r2}
+ 100 000c 2380     		strh	r3, [r4]	@ movhi
+ 101 000e 12E0     		b	.L12
+ 102              	.L13:
+  34:riptideSTM/src/riptideThreads.c ****     //uint8_t switchMessage = "";
+  35:riptideSTM/src/riptideThreads.c ****     for(;;){
+  36:riptideSTM/src/riptideThreads.c ****         //You can read directly in to the the message without forcing a 1 or 0 but that returns
+  37:riptideSTM/src/riptideThreads.c ****         //a weird block character when switch is closed which may be hard to parse later
+  38:riptideSTM/src/riptideThreads.c ****         switchMessage [4] = HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin)  ? '1' : '0';
+ 103              		.loc 1 38 0
+ 104 0010 3023     		movs	r3, #48
+ 105 0012 18E0     		b	.L7
+ 106              	.L14:
+  39:riptideSTM/src/riptideThreads.c ****         switchMessage [5] = HAL_GPIO_ReadPin(Switch1_GPIO_Port, Switch1_Pin)        ? '1' : '0';
+ 107              		.loc 1 39 0
+ 108 0014 3023     		movs	r3, #48
+ 109 0016 1FE0     		b	.L8
+ 110              	.L15:
+  40:riptideSTM/src/riptideThreads.c ****         switchMessage [6] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 111              		.loc 1 40 0
+ 112 0018 3023     		movs	r3, #48
+ 113 001a 26E0     		b	.L9
+ 114              	.L16:
+  41:riptideSTM/src/riptideThreads.c ****         switchMessage [7] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 115              		.loc 1 41 0
+ 116 001c 3023     		movs	r3, #48
+ 117 001e 2DE0     		b	.L10
+ 118              	.L17:
+  42:riptideSTM/src/riptideThreads.c ****         switchMessage [8] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 119              		.loc 1 42 0
+ 120 0020 3023     		movs	r3, #48
+ 121              	.L11:
+ 122              		.loc 1 42 0 is_stmt 0 discriminator 4
+ 123 0022 8DF80830 		strb	r3, [sp, #8]
+  43:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
+ 124              		.loc 1 43 0 is_stmt 1 discriminator 4
+ 125 0026 0E21     		movs	r1, #14
+ 126 0028 6846     		mov	r0, sp
+ 127 002a FFF7FEFF 		bl	CDC_Transmit_HS
+ 128              	.LVL7:
+  44:riptideSTM/src/riptideThreads.c ****         vTaskDelay(900);
+ 129              		.loc 1 44 0 discriminator 4
+ 130 002e 4FF46170 		mov	r0, #900
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 4
+
+
+ 131 0032 FFF7FEFF 		bl	vTaskDelay
+ 132              	.LVL8:
+ 133              	.L12:
+  38:riptideSTM/src/riptideThreads.c ****         switchMessage [5] = HAL_GPIO_ReadPin(Switch1_GPIO_Port, Switch1_Pin)        ? '1' : '0';
+ 134              		.loc 1 38 0
+ 135 0036 4FF40041 		mov	r1, #32768
+ 136 003a 1648     		ldr	r0, .L19+4
+ 137 003c FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 138              	.LVL9:
+ 139 0040 0028     		cmp	r0, #0
+ 140 0042 E5D0     		beq	.L13
+ 141 0044 3123     		movs	r3, #49
+ 142              	.L7:
+  38:riptideSTM/src/riptideThreads.c ****         switchMessage [5] = HAL_GPIO_ReadPin(Switch1_GPIO_Port, Switch1_Pin)        ? '1' : '0';
+ 143              		.loc 1 38 0 is_stmt 0 discriminator 4
+ 144 0046 8DF80430 		strb	r3, [sp, #4]
+  39:riptideSTM/src/riptideThreads.c ****         switchMessage [6] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 145              		.loc 1 39 0 is_stmt 1 discriminator 4
+ 146 004a 0121     		movs	r1, #1
+ 147 004c 1148     		ldr	r0, .L19+4
+ 148 004e FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 149              	.LVL10:
+ 150 0052 0028     		cmp	r0, #0
+ 151 0054 DED0     		beq	.L14
+  39:riptideSTM/src/riptideThreads.c ****         switchMessage [6] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 152              		.loc 1 39 0 is_stmt 0
+ 153 0056 3123     		movs	r3, #49
+ 154              	.L8:
+  39:riptideSTM/src/riptideThreads.c ****         switchMessage [6] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 155              		.loc 1 39 0 discriminator 4
+ 156 0058 8DF80530 		strb	r3, [sp, #5]
+  40:riptideSTM/src/riptideThreads.c ****         switchMessage [7] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 157              		.loc 1 40 0 is_stmt 1 discriminator 4
+ 158 005c 0221     		movs	r1, #2
+ 159 005e 0D48     		ldr	r0, .L19+4
+ 160 0060 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 161              	.LVL11:
+ 162 0064 0028     		cmp	r0, #0
+ 163 0066 D7D0     		beq	.L15
+  40:riptideSTM/src/riptideThreads.c ****         switchMessage [7] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 164              		.loc 1 40 0 is_stmt 0
+ 165 0068 3123     		movs	r3, #49
+ 166              	.L9:
+  40:riptideSTM/src/riptideThreads.c ****         switchMessage [7] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 167              		.loc 1 40 0 discriminator 4
+ 168 006a 8DF80630 		strb	r3, [sp, #6]
+  41:riptideSTM/src/riptideThreads.c ****         switchMessage [8] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 169              		.loc 1 41 0 is_stmt 1 discriminator 4
+ 170 006e 0221     		movs	r1, #2
+ 171 0070 0848     		ldr	r0, .L19+4
+ 172 0072 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 173              	.LVL12:
+ 174 0076 0028     		cmp	r0, #0
+ 175 0078 D0D0     		beq	.L16
+  41:riptideSTM/src/riptideThreads.c ****         switchMessage [8] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 176              		.loc 1 41 0 is_stmt 0
+ 177 007a 3123     		movs	r3, #49
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 5
+
+
+ 178              	.L10:
+  41:riptideSTM/src/riptideThreads.c ****         switchMessage [8] = HAL_GPIO_ReadPin(Switch2_GPIO_Port, Switch2_Pin)        ? '1' : '0';
+ 179              		.loc 1 41 0 discriminator 4
+ 180 007c 8DF80730 		strb	r3, [sp, #7]
+  42:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
+ 181              		.loc 1 42 0 is_stmt 1 discriminator 4
+ 182 0080 0221     		movs	r1, #2
+ 183 0082 0448     		ldr	r0, .L19+4
+ 184 0084 FFF7FEFF 		bl	HAL_GPIO_ReadPin
+ 185              	.LVL13:
+ 186 0088 0028     		cmp	r0, #0
+ 187 008a C9D0     		beq	.L17
+  42:riptideSTM/src/riptideThreads.c ****         CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
+ 188              		.loc 1 42 0 is_stmt 0
+ 189 008c 3123     		movs	r3, #49
+ 190 008e C8E7     		b	.L11
+ 191              	.L20:
+ 192              		.align	2
+ 193              	.L19:
+ 194 0090 00000000 		.word	.LANCHOR0
+ 195 0094 00080240 		.word	1073874944
+ 196              		.cfi_endproc
+ 197              	.LFE130:
+ 199              		.section	.text.vRobotMover,"ax",%progbits
+ 200              		.align	1
+ 201              		.global	vRobotMover
+ 202              		.syntax unified
+ 203              		.thumb
+ 204              		.thumb_func
+ 205              		.fpu fpv4-sp-d16
+ 207              	vRobotMover:
+ 208              	.LFB131:
+  45:riptideSTM/src/riptideThreads.c ****     }
+  46:riptideSTM/src/riptideThreads.c **** }
+  47:riptideSTM/src/riptideThreads.c **** 
+  48:riptideSTM/src/riptideThreads.c **** void vRobotMover(void *pvParameters){
+ 209              		.loc 1 48 0 is_stmt 1
+ 210              		.cfi_startproc
+ 211              		@ Volatile: function does not return.
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215              	.LVL14:
+ 216              	.L22:
+ 217 0000 FEE7     		b	.L22
+ 218              		.cfi_endproc
+ 219              	.LFE131:
+ 221              		.section	.rodata
+ 222              		.align	2
+ 223              		.set	.LANCHOR0,. + 0
+ 224              	.LC1:
+ 225 0000 24242424 		.ascii	"$$$$nnnnnn@@@@\000"
+ 225      6E6E6E6E 
+ 225      6E6E4040 
+ 225      404000
+ 226              		.section	.rodata.vHeartbeat.str1.4,"aMS",%progbits,1
+ 227              		.align	2
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 6
+
+
+ 228              	.LC0:
+ 229 0000 68656172 		.ascii	"heartbeat\015\012\000"
+ 229      74626561 
+ 229      740D0A00 
+ 230              		.text
+ 231              	.Letext0:
+ 232              		.file 2 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 233              		.file 3 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 234              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 235              		.file 5 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h"
+ 236              		.file 6 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h"
+ 237              		.file 7 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 238              		.file 8 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 239              		.file 9 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-up
+ 240              		.file 10 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 241              		.file 11 "/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/gcc-arm-none-eabi-6-2017-q2-u
+ 242              		.file 12 "Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h"
+ 243              		.file 13 "Inc/usb_device.h"
+ 244              		.file 14 "Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h"
+ 245              		.file 15 "Inc/usbd_cdc_if.h"
+ 246              		.file 16 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 247              		.file 17 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h"
+ARM GAS  /var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 riptideThreads.c
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:18     .text.vHeartbeat:0000000000000000 $t
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:66     .text.vHeartbeat:000000000000002c $d
-/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//ccyI6CuX.s:72     .rodata.vHeartbeat.str1.4:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:18     .text.vHeartbeat:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:25     .text.vHeartbeat:0000000000000000 vHeartbeat
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:66     .text.vHeartbeat:000000000000002c $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:72     .text.vSwitchMonitor:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:79     .text.vSwitchMonitor:0000000000000000 vSwitchMonitor
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:194    .text.vSwitchMonitor:0000000000000090 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:200    .text.vRobotMover:0000000000000000 $t
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:207    .text.vRobotMover:0000000000000000 vRobotMover
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:222    .rodata:0000000000000000 $d
+/var/folders/7p/1_dhylqx7nl5s8914_0f_4w00000gn/T//cc44lQJ0.s:227    .rodata.vHeartbeat.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_TogglePin
 CDC_Transmit_HS
 vTaskDelay
+HAL_GPIO_ReadPin

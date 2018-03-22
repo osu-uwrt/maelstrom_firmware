@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/stmComms/Inc
+HeaderPath=/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/stmComms/Inc
 HeaderFiles=FreeRTOSConfig.h;stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;
-SourcePath=/Users/augustmason/Documents/GitHub/riptide_firmware/STM32/stmComms/Src
+SourcePath=/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/stmComms/Src
 SourceFiles=FreeRTOSConfig.h;stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;freertos.c;stm32f4xx_it.c;stm32f4xx_hal_msp.c;stm32f4xx_hal_timebase_TIM.c;main.c;usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;usb_device.c;usbd_conf.c;usbd_desc.c;usbd_cdc_if.c;
 
 [PreviousLibFiles]
