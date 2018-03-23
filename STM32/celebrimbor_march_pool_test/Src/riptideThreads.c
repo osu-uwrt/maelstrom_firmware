@@ -18,9 +18,13 @@
 
 void vHeartbeat(void *pvParameters ){
 
+    uint8_t HiMsg[] = "heartbeat\r\n";
     /* Infinite loop */
     for(;;) {
         HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
+        HAL_GPIO_TogglePin(PC4_LED_GPIO_Port, PC4_LED_Pin);
+        //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
+        //CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
         vTaskDelay(1000);
     }
 
@@ -30,16 +34,13 @@ void vKillSwitchMonitor(void *pvParameters) {
 	for (;;) {
 		if (HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin) == GPIO_PIN_RESET) {
 			resetPWM();
-			HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_RESET);
-		} else {
-			HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_SET);
 		}
 		vTaskDelay(50);
 	}
 }
 
 void vSwitchMonitor(void *pvParameters){
-    uint8_t switchMessage[] = "$$$$nnnnnn@@@@\r\n";
+    uint8_t switchMessage[14] = "$$$$nnnnnn@@@@\r\n";
     //uint8_t switchMessage = "";
     for(;;){
         //You can read directly in to the the message without forcing a 1 or 0 but that returns
@@ -50,7 +51,7 @@ void vSwitchMonitor(void *pvParameters){
         switchMessage [7] = HAL_GPIO_ReadPin(Switch4_GPIO_Port, Switch4_Pin)            ? '1' : '0';
         switchMessage [8] = HAL_GPIO_ReadPin(Switch5_GPIO_Port, Switch5_Pin)            ? '1' : '0';
         switchMessage [9] = HAL_GPIO_ReadPin(Switch6_GPIO_Port, Switch6_Pin)            ? '1' : '0';
-        CDC_Transmit_HS(switchMessage, strlen(switchMessage));
+        CDC_Transmit_HS(switchMessage, sizeof(switchMessage));
         vTaskDelay(900);
     }
 }
@@ -70,8 +71,6 @@ void vDepthSensor(void *pvParameters) {
 
 	uint16_t calibration[8];
 	uint8_t buffer[3];
-
-	uint8_t depthmsg[] = "%%%%99999999!99999999!99999999@@@@\r\n";
 
 	uint32_t d1;
 	uint32_t d2;
@@ -116,11 +115,9 @@ void vDepthSensor(void *pvParameters) {
 	}
 
 
-	uint8_t values[8];
-	uint8_t * ptr;
+	uint8_t values[20];
 	for(;;) {
 
-		ptr = &depthmsg[4];
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_d1, 1, 20);
 		vTaskDelay(20);
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_adc, 1, 20);
@@ -144,26 +141,28 @@ void vDepthSensor(void *pvParameters) {
 		calculate(d1, d2, calibration, &temp, &press);
 		convert(&temp, &press, &temperature, &pressure, &depth, fluidDensity);
 
-//		if (temp == 2000) {
-//			vTaskDelay(1500);
-//			goto resetI2C;
-//		}
+		memset(values, 0, sizeof(values));
+		gcvt(temperature, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
+
+		vTaskDelay(10);
 
 		memset(values, 0, sizeof(values));
-		fToString(values, temperature);
-		memcpy(ptr, values, 8);
-		ptr += 9;
+		gcvt(pressure, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
+
+		vTaskDelay(10);
 
 		memset(values, 0, sizeof(values));
-		fToString(values, pressure);
-		memcpy(ptr, values, 8);
-		ptr += 9;
+		gcvt(depth, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
 
-		memset(values, 0, sizeof(values));
-		fToString(values, depth);
-		memcpy(ptr, values, 8);
-
-		CDC_Transmit_HS(depthmsg, 37);
 
 		vTaskDelay(200);
 	}
