@@ -77,8 +77,6 @@ void vDepthSensor(void *pvParameters) {
 	uint16_t calibration[8];
 	uint8_t buffer[3];
 
-	uint8_t depthmsg[] = "%%%%99999999!99999999!99999999@@@@\r\n";
-
 	uint32_t d1;
 	uint32_t d2;
 
@@ -88,6 +86,7 @@ void vDepthSensor(void *pvParameters) {
 	float pressure;
 	float temperature;
 	float depth;
+	float altitude;
 	uint16_t fluidDensity = 1029;
 
 	I2C_HandleTypeDef *i2c = getI2CRef();
@@ -121,11 +120,9 @@ void vDepthSensor(void *pvParameters) {
 	}
 
 
-	uint8_t values[8];
-	uint8_t * ptr;
+	uint8_t values[20];
 	for(;;) {
 
-		ptr = &depthmsg[4];
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_d1, 1, 20);
 		vTaskDelay(20);
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_adc, 1, 20);
@@ -149,26 +146,28 @@ void vDepthSensor(void *pvParameters) {
 		calculate(d1, d2, calibration, &temp, &press);
 		convert(&temp, &press, &temperature, &pressure, &depth, fluidDensity);
 
-//		if (temp == 2000) {
-//			vTaskDelay(1500);
-//			goto resetI2C;
-//		}
+		memset(values, 0, sizeof(values));
+		gcvt(temperature, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
 
-		memset(values, 0, sizeof(values) * 8);
-		fToString(values, temperature);
-		memcpy(ptr, values, 8);
-		ptr += 9;
+		vTaskDelay(10);
 
-		memset(values, 0, sizeof(values) * 8);
-		fToString(values, pressure);
-		memcpy(ptr, values, 8);
-		ptr += 9;
+		memset(values, 0, sizeof(values));
+		gcvt(pressure, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
 
-		memset(values, 0, sizeof(values) * 8);
-		fToString(values, depth);
-		memcpy(ptr, values, 8);
+		vTaskDelay(10);
 
-		CDC_Transmit_HS(depthmsg, 37);
+		memset(values, 0, sizeof(values));
+		gcvt(depth, 20, values);
+		CDC_Transmit_HS(values, strlen(values));
+		vTaskDelay(5);
+		CDC_Transmit_HS("\r\n", 2);
+
 
 		vTaskDelay(200);
 	}

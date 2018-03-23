@@ -27,7 +27,5 @@ void riptideMain(){
     //create queues here
     //create mutexes here
     //create semaphores here
-
-    HAL_Delay(8000);
     return;
 }
