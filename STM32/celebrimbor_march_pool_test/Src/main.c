@@ -91,14 +91,9 @@ void StartDefaultTask(void const * argument);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
-                                
-                                
-                                
-                                
-
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-void writePWM(uint16_t * values);
+
 I2C_HandleTypeDef* getI2CRef();
 /* USER CODE END PFP */
 
@@ -521,14 +516,16 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC5_LED_Pin|HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC13_Header_Pin KillSwitch_Pin MissionStart_Pin */
-  GPIO_InitStruct.Pin = PC13_Header_Pin|KillSwitch_Pin|MissionStart_Pin;
+  /*Configure GPIO pins : PC13_Header_Pin MissionStart_Pin */
+  GPIO_InitStruct.Pin = PC13_Header_Pin|MissionStart_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : Switch6_Pin Switch3_Pin Switch4_Pin Switch5_Pin */
-  GPIO_InitStruct.Pin = Switch6_Pin|Switch3_Pin|Switch4_Pin|Switch5_Pin;
+  /*Configure GPIO pins : Switch6_Pin KillSwitch_Pin Switch3_Pin Switch4_Pin 
+                           Switch5_Pin */
+  GPIO_InitStruct.Pin = Switch6_Pin|KillSwitch_Pin|Switch3_Pin|Switch4_Pin 
+                          |Switch5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
@@ -559,11 +556,11 @@ static void MX_GPIO_Init(void)
 void writePWM(uint16_t * values) {
 	  // I wrote this at 1 am, there is a good chance the order or something is wrong
 	  htim2.Instance->CCR1 = values[0];
-	  htim5.Instance->CCR3 = values[1];
+	  htim2.Instance->CCR3 = values[1];
 	  htim5.Instance->CCR4 = values[2];
 	  htim2.Instance->CCR2 = values[3];
 	  htim2.Instance->CCR4 = values[4];
-	  htim2.Instance->CCR3 = values[5];
+	  htim5.Instance->CCR3 = values[5];
 	  htim3.Instance->CCR4 = values[6];
 	  htim14.Instance->CCR1 = values[7];
 	  htim13.Instance->CCR1 = values[8];
@@ -593,6 +590,8 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
+
+  resetPWM();
 
   /* USER CODE BEGIN 5 */
 
