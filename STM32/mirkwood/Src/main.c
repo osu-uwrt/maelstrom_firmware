@@ -1,3 +1,4 @@
+
 /**
   ******************************************************************************
   * @file           : main.c
@@ -5,41 +6,41 @@
   ******************************************************************************
   * This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether
+  * USER CODE END. Other portions of this file, whether 
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * Copyright (c) 2018 STMicroelectronics International N.V.
+  * Copyright (c) 2018 STMicroelectronics International N.V. 
   * All rights reserved.
   *
-  * Redistribution and use in source and binary forms, with or without
+  * Redistribution and use in source and binary forms, with or without 
   * modification, are permitted, provided that the following conditions are met:
   *
-  * 1. Redistribution of source code must retain the above copyright notice,
+  * 1. Redistribution of source code must retain the above copyright notice, 
   *    this list of conditions and the following disclaimer.
   * 2. Redistributions in binary form must reproduce the above copyright notice,
   *    this list of conditions and the following disclaimer in the documentation
   *    and/or other materials provided with the distribution.
-  * 3. Neither the name of STMicroelectronics nor the names of other
-  *    contributors to this software may be used to endorse or promote products
+  * 3. Neither the name of STMicroelectronics nor the names of other 
+  *    contributors to this software may be used to endorse or promote products 
   *    derived from this software without specific written permission.
-  * 4. This software, including modifications and/or derivative works of this
+  * 4. This software, including modifications and/or derivative works of this 
   *    software, must execute solely and exclusively on microcontroller or
   *    microprocessor devices manufactured by or for STMicroelectronics.
-  * 5. Redistribution and use of this software other than as permitted under
-  *    this license is void and will automatically terminate your rights under
-  *    this license.
+  * 5. Redistribution and use of this software other than as permitted under 
+  *    this license is void and will automatically terminate your rights under 
+  *    this license. 
   *
-  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS"
-  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT
-  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS" 
+  * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT 
+  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
-  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT
+  * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT 
   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
-  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+  * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+  * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
@@ -85,11 +86,11 @@ static void MX_TIM5_Init(void);
 void StartDefaultTask(void const * argument);
 
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
-
-
-
-
+                                
+                                
+                                
+                                
+                                
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -173,11 +174,11 @@ int main(void)
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
-
+ 
 
   /* Start scheduler */
   osKernelStart();
-
+  
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
@@ -203,13 +204,13 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct;
   RCC_ClkInitTypeDef RCC_ClkInitStruct;
 
-    /**Configure the main internal regulator output voltage
+    /**Configure the main internal regulator output voltage 
     */
   __HAL_RCC_PWR_CLK_ENABLE();
 
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
@@ -224,7 +225,7 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Initializes the CPU, AHB and APB busses clocks
+    /**Initializes the CPU, AHB and APB busses clocks 
     */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
@@ -238,11 +239,11 @@ void SystemClock_Config(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
-    /**Configure the Systick interrupt time
+    /**Configure the Systick interrupt time 
     */
   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
 
-    /**Configure the Systick
+    /**Configure the Systick 
     */
   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 
@@ -315,7 +316,7 @@ static void MX_TIM2_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 1500;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
@@ -323,6 +324,7 @@ static void MX_TIM2_Init(void)
     _Error_Handler(__FILE__, __LINE__);
   }
 
+  sConfigOC.Pulse = 1500;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
@@ -484,9 +486,9 @@ static void MX_TIM14_Init(void)
 
 }
 
-/** Configure pins as
-        * Analog
-        * Input
+/** Configure pins as 
+        * Analog 
+        * Input 
         * Output
         * EVENT_OUT
         * EXTI
@@ -503,14 +505,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, HeartBeat3_Pin|HeartBeat4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_PA4_Pin|LED_PA5_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC4_LEDC5_Pin|HeartBeat1_Pin|HeartBeat2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC4_LEDC5_Pin|LED_PC6_Pin|LED_PC7_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC13_Header_Pin Switch6_Pin KillSwitch_Pin Switch3_Pin
+  /*Configure GPIO pins : PC13_Header_Pin Switch6_Pin KillSwitch_Pin Switch3_Pin 
                            Switch4_Pin Switch5_Pin */
-  GPIO_InitStruct.Pin = PC13_Header_Pin|Switch6_Pin|KillSwitch_Pin|Switch3_Pin
+  GPIO_InitStruct.Pin = PC13_Header_Pin|Switch6_Pin|KillSwitch_Pin|Switch3_Pin 
                           |Switch4_Pin|Switch5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -522,15 +524,15 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(MissionStart_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : HeartBeat3_Pin HeartBeat4_Pin */
-  GPIO_InitStruct.Pin = HeartBeat3_Pin|HeartBeat4_Pin;
+  /*Configure GPIO pins : LED_PA4_Pin LED_PA5_Pin */
+  GPIO_InitStruct.Pin = LED_PA4_Pin|LED_PA5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC4_LED_Pin PC4_LEDC5_Pin HeartBeat1_Pin HeartBeat2_Pin */
-  GPIO_InitStruct.Pin = PC4_LED_Pin|PC4_LEDC5_Pin|HeartBeat1_Pin|HeartBeat2_Pin;
+  /*Configure GPIO pins : PC4_LED_Pin PC4_LEDC5_Pin LED_PC6_Pin LED_PC7_Pin */
+  GPIO_InitStruct.Pin = PC4_LED_Pin|PC4_LEDC5_Pin|LED_PC6_Pin|LED_PC7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -547,21 +549,18 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void writePWM(uint16_t * values) {
 	  // I wrote this at 1 am, there is a good chance the order or something is wrong
-	  //htim2.Instance->CCR1 = values[0];
-	  //htim5.Instance->CCR3 = values[1];
-	  htim5.Instance->CCR4 = values[0];
-	  htim2.Instance->CCR2 = values[1];
-	  htim2.Instance->CCR4 = values[2];
-	  htim2.Instance->CCR3 = values[3];
-	  htim3.Instance->CCR4 = values[4];
-	  htim14.Instance->CCR1 = values[5];
-	  htim13.Instance->CCR1 = values[6];
-	  htim3.Instance->CCR3 = values[7];
+	  // spare is TIM2 Channel 3 (on pin 16), need to add in cube mx if we want to add
+	  htim5.Instance->CCR4 = values[0];		// spl
+	  htim2.Instance->CCR2 = values[1];		// ssl
+	  htim2.Instance->CCR4 = values[2];		// swf
+	  htim2.Instance->CCR3 = values[3];		// swa
+	  htim3.Instance->CCR4 = values[4];		// hpa
+	  htim14.Instance->CCR1 = values[5];	// hsa
+	  htim13.Instance->CCR1 = values[6];	// hsf
+	  htim3.Instance->CCR3 = values[7];		// hpf
 }
 
 void resetPWM() {
-	  //htim2.Instance->CCR1 = 1500;
-	  //htim5.Instance->CCR3 = 1500;
 	  htim5.Instance->CCR4 = 1500;
 	  htim2.Instance->CCR2 = 1500;
 	  htim2.Instance->CCR4 = 1500;
@@ -582,15 +581,14 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
-  resetPWM();
-  HAL_Delay(8000);
+
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END 5 */
+  /* USER CODE END 5 */ 
 }
 
 /**
@@ -639,7 +637,7 @@ void _Error_Handler(char *file, int line)
   * @retval None
   */
 void assert_failed(uint8_t* file, uint32_t line)
-{
+{ 
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
