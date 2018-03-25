@@ -39,7 +39,7 @@ bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t 
 
 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
-    uint8_t Successmsg[] = "thrust hell yeah \r\n";
+  uint8_t Successmsg[] = "thrust hell yeah \r\n";
   uint8_t failmsg[] = "not good enough kid\r\n";
   char* thrustst = "#";
   char* thrustend = "@";
@@ -48,14 +48,13 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
   uint16_t values[8];
   thrustsuccess = MessageCheck(thrustst, thrustend, thrustComp, Buf, Len);
   if (thrustsuccess){
-    HAL_GPIO_TogglePin(HeartBeat2_GPIO_Port, HeartBeat2_Pin);
-    CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
+    HAL_GPIO_TogglePin(LED_PC7_GPIO_Port, LED_PC7_Pin);
+    //CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
     parse(Buf, values);
     writePWM(values);
-
   }
   if (!thrustsuccess){
-    CDC_Transmit_HS(failmsg, sizeof(failmsg));
+    //CDC_Transmit_HS(failmsg, sizeof(failmsg));
   }
     return (USBD_OK);
 }
@@ -149,4 +148,15 @@ void convert(uint32_t * temp, uint32_t * press, float * temperature, float * pre
 	*temperature = *temp / 100.0;
 	*pressure = *press * 1.0;
 	*depth = ((100.0 * *pressure) - 101300)/(fluidDensity * 9.80665);
+}
+
+void fToString(uint8_t * dest, float toConvert) {
+	uint8_t decimals[7];
+	itoa(toConvert, dest, 10);
+	strcat(dest, ".");
+	int trunked = (int) toConvert;
+	uint16_t i = (toConvert - trunked) * 100000;
+	itoa(i, decimals, 10);
+	strcat(dest, decimals);
+	dest[7] = 0;
 }

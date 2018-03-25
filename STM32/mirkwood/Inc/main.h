@@ -77,10 +77,10 @@
 #define LED_PA4_GPIO_Port GPIOA
 #define LED_PA5_Pin GPIO_PIN_5
 #define LED_PA5_GPIO_Port GPIOA
-#define PC4_LED_Pin GPIO_PIN_4
-#define PC4_LED_GPIO_Port GPIOC
-#define PC4_LEDC5_Pin GPIO_PIN_5
-#define PC4_LEDC5_GPIO_Port GPIOC
+#define LED_PC4_Pin GPIO_PIN_4
+#define LED_PC4_GPIO_Port GPIOC
+#define LED_PC5_Pin GPIO_PIN_5
+#define LED_PC5_GPIO_Port GPIOC
 #define SwAft_Pin GPIO_PIN_10
 #define SwAft_GPIO_Port GPIOB
 #define SwFwd_Pin GPIO_PIN_11

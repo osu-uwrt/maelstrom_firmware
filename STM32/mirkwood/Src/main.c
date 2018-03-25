@@ -70,7 +70,7 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-void writePWM(uint16_t * values);
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,7 +94,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+I2C_HandleTypeDef* getDepthI2CRef();
+I2C_HandleTypeDef* getBackplaneI2CRef();
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -508,21 +509,21 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, LED_PA4_Pin|LED_PA5_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, PC4_LED_Pin|PC4_LEDC5_Pin|LED_PC6_Pin|LED_PC7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LED_PC4_Pin|LED_PC5_Pin|LED_PC6_Pin|LED_PC7_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PC13_Header_Pin Switch6_Pin KillSwitch_Pin Switch3_Pin 
-                           Switch4_Pin Switch5_Pin */
-  GPIO_InitStruct.Pin = PC13_Header_Pin|Switch6_Pin|KillSwitch_Pin|Switch3_Pin 
-                          |Switch4_Pin|Switch5_Pin;
+  /*Configure GPIO pin : PC13_Header_Pin */
+  GPIO_InitStruct.Pin = PC13_Header_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_Init(PC13_Header_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : MissionStart_Pin */
-  GPIO_InitStruct.Pin = MissionStart_Pin;
+  /*Configure GPIO pins : Switch6_Pin KillSwitch_Pin MissionStart_Pin Switch3_Pin 
+                           Switch4_Pin Switch5_Pin */
+  GPIO_InitStruct.Pin = Switch6_Pin|KillSwitch_Pin|MissionStart_Pin|Switch3_Pin 
+                          |Switch4_Pin|Switch5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(MissionStart_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_PA4_Pin LED_PA5_Pin */
   GPIO_InitStruct.Pin = LED_PA4_Pin|LED_PA5_Pin;
@@ -531,8 +532,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PC4_LED_Pin PC4_LEDC5_Pin LED_PC6_Pin LED_PC7_Pin */
-  GPIO_InitStruct.Pin = PC4_LED_Pin|PC4_LEDC5_Pin|LED_PC6_Pin|LED_PC7_Pin;
+  /*Configure GPIO pins : LED_PC4_Pin LED_PC5_Pin LED_PC6_Pin LED_PC7_Pin */
+  GPIO_InitStruct.Pin = LED_PC4_Pin|LED_PC5_Pin|LED_PC6_Pin|LED_PC7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -571,8 +572,12 @@ void resetPWM() {
 	  htim3.Instance->CCR3 = 1500;
 }
 
-I2C_HandleTypeDef* getI2CRef() {
+I2C_HandleTypeDef* getDepthI2CRef() {
 	return &hi2c1;
+}
+
+I2C_HandleTypeDef* getBackplaneI2CRef() {
+	return &hi2c3;
 }
 /* USER CODE END 4 */
 

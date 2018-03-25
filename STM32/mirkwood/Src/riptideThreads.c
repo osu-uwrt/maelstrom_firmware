@@ -21,19 +21,16 @@ void vHeartbeat(void *pvParameters ){
     uint8_t HiMsg[] = "heartbeat\r\n";
     /* Infinite loop */
     for(;;) {
-        HAL_GPIO_TogglePin(HeartBeat1_GPIO_Port, HeartBeat1_Pin);
-        HAL_GPIO_TogglePin(PC4_LED_GPIO_Port, PC4_LED_Pin);
+        HAL_GPIO_TogglePin(LED_PC6_GPIO_Port, LED_PC6_Pin);
         //to note here, we do not nead the sizeof(msg)/sizeof(uint8_t)
-        CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
+        //CDC_Transmit_HS(HiMsg, sizeof(HiMsg));
         vTaskDelay(1000);
-
     }
 
 }
 
 void vSwitchMonitor(void *pvParameters){
-    uint8_t switchMessage[14] = "$$$$nnnnnn@@@@";
-    //uint8_t switchMessage = "";
+    uint8_t switchMessage[] = "$$$$nnnnnn@@@@\r\n";
     for(;;){
         //You can read directly in to the the message without forcing a 1 or 0 but that returns
         //a weird block character when switch is closed which may be hard to parse later
@@ -52,13 +49,70 @@ void vKillSwitch ( void *pvParameters ){
   //variables ?
   for(;;){
     if( HAL_GPIO_ReadPin(KillSwitch_GPIO_Port,KillSwitch_Pin) == GPIO_PIN_RESET){
-      resetPWM();
-      HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_RESET);
-		} else {
-			HAL_GPIO_WritePin(PC4_LED_GPIO_Port, PC4_LED_Pin, GPIO_PIN_SET);
+        resetPWM();
+        HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_RESET);
+	} else {
+		HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_SET);
     }
     vTaskDelay(100);
   }
+}
+
+void vBackplaneI2C(void *pvParameters) {
+	vTaskDelay(100);
+
+	uint16_t address = 0x1D;
+	I2C_HandleTypeDef *i2c = getBackplaneI2CRef();
+	uint16_t write_data[] = {0, 0};
+
+	write_data[0] = 0x0b;
+	write_data[1] = 0x01;
+	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // choose external vref and mode 0 from advanced config register
+	vTaskDelay(20);
+
+	write_data[0] = 0x03;
+	write_data[1] = 0xff;
+	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // disable interrupts
+	vTaskDelay(20);
+
+	write_data[0] = 0x00;
+	write_data[1] = 0x01;
+	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // start
+	vTaskDelay(100);
+
+
+	uint16_t stbd_voltage_addr = 0x22;
+	uint16_t port_voltage_addr = 0x24;
+	uint16_t temperature_addr = 0x27;
+	uint16_t starboard_voltage = 0;
+	uint16_t port_voltage = 0;
+	uint16_t temperature = 0;
+	uint8_t output[] = {0, 0};
+
+	for (;;) {
+		// read starboard voltage
+		HAL_I2C_Master_Transmit(i2c, address, stbd_voltage_addr, 1, 20);
+		vTaskDelay(5);
+		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
+		starboard_voltage = output[0]<<8 + output[1];
+		vTaskDelay(10);
+
+		HAL_I2C_Master_Transmit(i2c, address, port_voltage_addr, 1, 20);
+		vTaskDelay(5);
+		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
+		port_voltage = output[0]<<8 + output[1];
+		vTaskDelay(10);
+
+		HAL_I2C_Master_Transmit(i2c, address, temperature_addr, 1, 20);
+		vTaskDelay(5);
+		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
+		temperature = output[0]<<8 + output[1];
+
+		vTaskDelay(2000);
+	}
+
+
+
 }
 
 void vDepthSensor(void *pvParameters) {
@@ -90,7 +144,7 @@ void vDepthSensor(void *pvParameters) {
 	float depth;
 	uint16_t fluidDensity = 1029;
 
-	I2C_HandleTypeDef *i2c = getI2CRef();
+	I2C_HandleTypeDef *i2c = getDepthI2CRef();
 
 	HAL_I2C_Master_Transmit(i2c, address_write, &reset, 1, 20);
 
@@ -112,6 +166,7 @@ void vDepthSensor(void *pvParameters) {
 
 	uint8_t success[] = "initialization succeeded\r\n";
 	uint8_t failure[] = "initialization failed\r\n";
+	uint8_t resetMsg[] = "reset I2C, values out of range\r\n";
 
 	if (crcRead == crcCalc) {
 		CDC_Transmit_HS(success, strlen(success));
@@ -149,22 +204,23 @@ void vDepthSensor(void *pvParameters) {
 		calculate(d1, d2, calibration, &temp, &press);
 		convert(&temp, &press, &temperature, &pressure, &depth, fluidDensity);
 
-//		if (temp == 2000) {
+//		if (temperature >= 100 || pressure >= 10000) {
+//			CDC_Transmit_HS(resetMsg, strlen(reset));
 //			vTaskDelay(1500);
 //			goto resetI2C;
 //		}
 
-		memset(values, 0, sizeof(values) * 8);
+		memset(values, 0, sizeof(uint8_t) * 8);
 		fToString(values, temperature);
 		memcpy(ptr, values, 8);
 		ptr += 9;
 
-		memset(values, 0, sizeof(values) * 8);
+		memset(values, 0, sizeof(uint8_t) * 8);
 		fToString(values, pressure);
 		memcpy(ptr, values, 8);
 		ptr += 9;
 
-		memset(values, 0, sizeof(values) * 8);
+		memset(values, 0, sizeof(uint8_t) * 8);
 		fToString(values, depth);
 		memcpy(ptr, values, 8);
 
