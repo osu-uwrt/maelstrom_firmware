@@ -582,9 +582,8 @@ void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
-  laksdhfoaisdhfpa
-  resetPWM();
-  HAL_Delay(8000);
+
+  
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)

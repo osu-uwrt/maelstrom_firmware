@@ -51,7 +51,6 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
     HAL_GPIO_TogglePin(HeartBeat2_GPIO_Port, HeartBeat2_Pin);
     CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
     parse(Buf, values);
-    if 
     writePWM(values);
 
   }

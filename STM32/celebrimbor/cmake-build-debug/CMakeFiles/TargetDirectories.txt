@@ -1,0 +1,3 @@
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/celebrimbor/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/celebrimbor/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/augustmason/Documents/gitHub/riptide_firmware/STM32/celebrimbor/cmake-build-debug/CMakeFiles/celebrimbor.dir
