@@ -1,0 +1,6 @@
+riptideFunctions.c:25:6:MessageCheck	20	static
+riptideFunctions.c:63:6:parse	24	static
+riptideFunctions.c:41:8:Riptide_CDC_Receive	96	static
+riptideFunctions.c:75:9:crc4	0	static
+riptideFunctions.c:101:6:calculate	48	static
+riptideFunctions.c:148:6:convert	16	static

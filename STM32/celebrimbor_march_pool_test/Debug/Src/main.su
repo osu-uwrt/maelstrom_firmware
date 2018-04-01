@@ -1,0 +1,8 @@
+main.c:592:6:StartDefaultTask	8	static
+main.c:203:6:SystemClock_Config	104	static
+main.c:109:5:main	64	static
+main.c:559:6:writePWM	20	static
+main.c:573:6:resetPWM	8	static
+main.c:586:20:getI2CRef	0	static
+main.c:636:6:HAL_TIM_PeriodElapsedCallback	0	static
+main.c:654:6:_Error_Handler	0	static

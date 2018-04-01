@@ -1,0 +1,5 @@
+usbd_cdc_if.c:174:15:CDC_DeInit_HS	0	static
+usbd_cdc_if.c:189:15:CDC_Control_HS	0	static
+usbd_cdc_if.c:270:15:CDC_Receive_HS	40	static
+usbd_cdc_if.c:158:15:CDC_Init_HS	8	static
+usbd_cdc_if.c:296:9:CDC_Transmit_HS	8	static

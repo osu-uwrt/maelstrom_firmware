@@ -1,0 +1,4 @@
+riptideThreads.c:19:6:vHeartbeat	24	static
+riptideThreads.c:34:6:vSwitchMonitor	24	static
+riptideThreads.c:51:6:vKillSwitch	8	static
+riptideThreads.c:64:6:vDepthSensor	160	static
