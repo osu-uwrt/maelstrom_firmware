@@ -178,9 +178,9 @@ typedef struct
   __IO uint32_t              PreviousState;  /*!< I2C communication Previous state and mode
                                                   context for internal usage               */
                                              
-  DMA_HandleTypeDef          *hdmatx;        /*!< I2C Tx DMA handle parameters             */
+  DMA_HandleTypeDef           *hdmatx;        /*!< I2C Tx DMA handle parameters             */
                                              
-  DMA_HandleTypeDef          *hdmarx;        /*!< I2C Rx DMA handle parameters             */
+  DMA_HandleTypeDef           *hdmarx;        /*!< I2C Rx DMA handle parameters             */
                                              
   HAL_LockTypeDef            Lock;           /*!< I2C locking object                       */
                                              

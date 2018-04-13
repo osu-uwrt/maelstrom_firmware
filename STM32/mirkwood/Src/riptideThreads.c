@@ -46,13 +46,30 @@ void vSwitchMonitor(void *pvParameters){
 }
 
 void vKillSwitch ( void *pvParameters ){
-  //variables ?
+  uint8_t state = -1;
   for(;;){
     if( HAL_GPIO_ReadPin(KillSwitch_GPIO_Port,KillSwitch_Pin) == GPIO_PIN_RESET){
         resetPWM();
         HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_RESET);
+        state = 0;
 	} else {
 		HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_SET);
+//		if (state == 0) {
+//		    HAL_GPIO_WritePin(LED_PC6_GPIO_Port, LED_PC6_Pin, GPIO_PIN_SET);
+//		    HAL_GPIO_WritePin(LED_PC7_GPIO_Port, LED_PC7_Pin, GPIO_PIN_SET);
+//		    HAL_GPIO_WritePin(LED_PA5_GPIO_Port, LED_PA5_Pin, GPIO_PIN_SET);
+//		    HAL_GPIO_WritePin(LED_PC5_GPIO_Port, LED_PC5_Pin, GPIO_PIN_SET);
+//		    HAL_GPIO_WritePin(LED_PC4_GPIO_Port, LED_PC4_Pin, GPIO_PIN_SET);
+//
+//		    HAL_Delay(8000);
+//
+//		    HAL_GPIO_WritePin(LED_PC6_GPIO_Port, LED_PC6_Pin, GPIO_PIN_RESET);
+//		    HAL_GPIO_WritePin(LED_PC7_GPIO_Port, LED_PC7_Pin, GPIO_PIN_RESET);
+//		    HAL_GPIO_WritePin(LED_PA5_GPIO_Port, LED_PA5_Pin, GPIO_PIN_RESET);
+//		    HAL_GPIO_WritePin(LED_PC5_GPIO_Port, LED_PC5_Pin, GPIO_PIN_RESET);
+//		    HAL_GPIO_WritePin(LED_PC4_GPIO_Port, LED_PC4_Pin, GPIO_PIN_RESET);
+//		}
+		state = 1;
     }
     vTaskDelay(100);
   }
@@ -61,57 +78,93 @@ void vKillSwitch ( void *pvParameters ){
 void vBackplaneI2C(void *pvParameters) {
 	vTaskDelay(100);
 
+	uint8_t led_addr = 0x60;
+	uint8_t led_test = 0x07;
+	uint8_t dec_mode = 0x01;
+	uint8_t led_intensity = 0x02;
+	uint8_t scan_limit = 0x03;
+	uint8_t reg_config = 0x04;
+	uint8_t digit_type = 0x0C;
+
+
 	uint16_t address = 0x1D;
 	I2C_HandleTypeDef *i2c = getBackplaneI2CRef();
 	uint16_t write_data[] = {0, 0};
 
-	write_data[0] = 0x0b;
-	write_data[1] = 0x01;
-	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // choose external vref and mode 0 from advanced config register
-	vTaskDelay(20);
+	/************* LEDS Board ******************/
 
-	write_data[0] = 0x03;
-	write_data[1] = 0xff;
-	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // disable interrupts
-	vTaskDelay(20);
+	uint8_t led_data[] = {dec_mode, 0xFF};
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send decode mode (standard)
+	led_data[0] = led_intensity;
+	led_data[1] = 0x00;
+	vTaskDelay(10);
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
+	led_data[0] = scan_limit;
+	led_data[1] = 0x05;
+	vTaskDelay(10);
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set the scan limit (not sure why 5 though)?
+	led_data[0] = reg_config;
+	led_data[1] = 0x01;
+	vTaskDelay(10);
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set the control register
+	led_data[0] = digit_type;
+	led_data[1] = 0x00;
+	vTaskDelay(10);
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set as a 7 segment display
+	led_data[0] = led_test;
+	led_data[1] = 0x01;
+	vTaskDelay(10);
+	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // for testing only
+	vTaskDelay(10);
 
-	write_data[0] = 0x00;
-	write_data[1] = 0x01;
-	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // start
-	vTaskDelay(100);
+	/*************** Status Board *************/
 
-
-	uint16_t stbd_voltage_addr = 0x22;
-	uint16_t port_voltage_addr = 0x24;
-	uint16_t temperature_addr = 0x27;
-	uint16_t starboard_voltage = 0;
-	uint16_t port_voltage = 0;
-	uint16_t temperature = 0;
-	uint8_t output[] = {0, 0};
+//	write_data[0] = 0x0b;
+//	write_data[1] = 0x01;
+//	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // choose external vref and mode 0 from advanced config register
+//	vTaskDelay(20);
+//
+//	write_data[0] = 0x03;
+//	write_data[1] = 0xff;
+//	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // disable interrupts
+//	vTaskDelay(20);
+//
+//	write_data[0] = 0x00;
+//	write_data[1] = 0x01;
+//	HAL_I2C_Master_Transmit(i2c, address, write_data, 2, 20); // start
+//	vTaskDelay(100);
+//
+//
+//	uint16_t stbd_voltage_addr = 0x22;
+//	uint16_t port_voltage_addr = 0x24;
+//	uint16_t temperature_addr = 0x27;
+//	uint16_t starboard_voltage = 0;
+//	uint16_t port_voltage = 0;
+//	uint16_t temperature = 0;
+//	uint8_t output[] = {0, 0};
+//
+//	for (;;) {
+//		// read starboard voltage
+//		HAL_I2C_Master_Transmit(i2c, address, &stbd_voltage_addr, 1, 10);
+//		HAL_I2C_Master_Receive(i2c, address, output, 2, 10);
+//		starboard_voltage = (output[0]<<8) + output[1];
+//
+//		HAL_I2C_Master_Transmit(i2c, address, &port_voltage_addr, 1, 10);
+//		HAL_I2C_Master_Receive(i2c, address, output, 2, 10);
+//		port_voltage = (output[0]<<8) + output[1];
+//
+//		HAL_I2C_Master_Transmit(i2c, address, &temperature_addr, 1, 10);
+//		HAL_I2C_Master_Receive(i2c, address, output, 2, 10);
+//		temperature = (output[0]<<8) + output[1];
+//		vTaskDelay(2000);
+//	}
 
 	for (;;) {
-		// read starboard voltage
-		HAL_I2C_Master_Transmit(i2c, address, stbd_voltage_addr, 1, 20);
-		vTaskDelay(5);
-		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
-		starboard_voltage = output[0]<<8 + output[1];
-		vTaskDelay(10);
-
-		HAL_I2C_Master_Transmit(i2c, address, port_voltage_addr, 1, 20);
-		vTaskDelay(5);
-		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
-		port_voltage = output[0]<<8 + output[1];
-		vTaskDelay(10);
-
-		HAL_I2C_Master_Transmit(i2c, address, temperature_addr, 1, 20);
-		vTaskDelay(5);
-		HAL_I2C_Master_Receive(i2c, address, output, 2, 20);
-		temperature = output[0]<<8 + output[1];
-
-		vTaskDelay(2000);
+		led_data[0] = led_test;
+		led_data[1] = 0x01;
+		vTaskDelay(100);
+		HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // for testing only
 	}
-
-
 
 }
 
@@ -211,21 +264,21 @@ void vDepthSensor(void *pvParameters) {
 //		}
 
 		memset(values, 0, sizeof(uint8_t) * 8);
-		fToString(values, temperature);
+		fToString2(temperature, values);
 		memcpy(ptr, values, 8);
 		ptr += 9;
 
 		memset(values, 0, sizeof(uint8_t) * 8);
-		fToString(values, pressure);
+		fToString2(pressure, values);
 		memcpy(ptr, values, 8);
 		ptr += 9;
 
 		memset(values, 0, sizeof(uint8_t) * 8);
-		fToString(values, depth);
+		fToString2(depth, values);
 		memcpy(ptr, values, 8);
 
 		CDC_Transmit_HS(depthmsg, 37);
 
-		vTaskDelay(200);
+		vTaskDelay(50);
 	}
 }

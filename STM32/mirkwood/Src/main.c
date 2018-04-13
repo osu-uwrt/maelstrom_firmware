@@ -47,10 +47,10 @@
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
+#include "main.h"
 
 /* USER CODE BEGIN Includes */
 #include "riptideMain.h"
