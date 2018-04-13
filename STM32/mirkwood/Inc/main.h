@@ -55,6 +55,7 @@
 
 /* USER CODE BEGIN Includes */
 #include <stdint.h>
+//#include "stm32f4xx_hal_i2c.h"
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
@@ -112,6 +113,7 @@
 /* USER CODE BEGIN Private defines */
 void writePWM(uint16_t * values);
 void resetPWM();
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

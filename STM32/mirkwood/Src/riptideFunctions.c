@@ -9,6 +9,7 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usbd_cdc_if.h"
+#include <math.h>
 
 /*
  *          Message Check
@@ -39,7 +40,7 @@ bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t 
 
 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
-  uint8_t Successmsg[] = "thrust hell yeah \r\n";
+  uint8_t successmsg[] = "thrust hell yeah \r\n";
   uint8_t failmsg[] = "not good enough kid\r\n";
   char* thrustst = "#";
   char* thrustend = "@";
@@ -49,13 +50,13 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
   thrustsuccess = MessageCheck(thrustst, thrustend, thrustComp, Buf, Len);
   if (thrustsuccess){
     HAL_GPIO_TogglePin(LED_PC7_GPIO_Port, LED_PC7_Pin);
-    //CDC_Transmit_HS(Successmsg, sizeof(Successmsg));
+    //CDC_Transmit_HS(Successmsg, sizeof(successmsg));
     parse(Buf, values);
     writePWM(values);
   }
-  if (!thrustsuccess){
-    //CDC_Transmit_HS(failmsg, sizeof(failmsg));
-  }
+//  if (!thrustsuccess){
+//    //CDC_Transmit_HS(failmsg, sizeof(failmsg));
+//  }
     return (USBD_OK);
 }
 
@@ -147,7 +148,7 @@ void calculate(uint32_t D1, uint32_t D2, uint16_t C[8], uint32_t * TEMP, uint32_
 void convert(uint32_t * temp, uint32_t * press, float * temperature, float * pressure, float * depth, uint16_t fluidDensity) {
 	*temperature = *temp / 100.0;
 	*pressure = *press * 1.0;
-	*depth = ((100.0 * *pressure) - 101300)/(fluidDensity * 9.80665);
+	*depth = ((100.0 * *pressure) - 101300.0)/(fluidDensity * 9.80665);
 }
 
 void fToString(uint8_t * dest, float toConvert) {
@@ -159,4 +160,63 @@ void fToString(uint8_t * dest, float toConvert) {
 	itoa(i, decimals, 10);
 	strcat(dest, decimals);
 	dest[7] = 0;
+}
+
+// Converts a floating point number to string.
+void fToString2(float n, uint8_t *res) {
+    // Extract integer part
+    int ipart = (int)n;
+
+    // Extract floating part
+    float fpart = n - (float)ipart;
+
+    if (fpart < 0) {
+    	res[0] = '-';
+    	res++;
+    	ipart *= -1;
+    	fpart *= -1;
+    }
+
+    // convert integer part to string
+    int i = intToStr(ipart, res, 0);
+
+	res[i] = '.';  // add dot
+
+	// Get the value of fraction part upto given no.
+	// of points after dot. The third parameter is needed
+	// to handle cases like 233.007
+	fpart = fpart * pow(10, (8 - i));
+
+	intToStr((int) fpart, res + i + 1, 8 - i);
+}
+
+int intToStr(int x, uint8_t str[], int d)
+{
+	int i = 0;
+	while (x)
+	{
+		str[i++] = (x%10) + '0';
+		x = x/10;
+	}
+
+	// If number of digits required is more, then
+	// add 0s at the beginning
+	while (i < d)
+		str[i++] = '0';
+
+	revStr(str, i);
+	str[i] = '\0';
+	return i;
+}
+
+void revStr(char *str, int len)
+{
+	int i=0, j=len-1, temp;
+	while (i<j)
+	{
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		i++; j--;
+	}
 }
