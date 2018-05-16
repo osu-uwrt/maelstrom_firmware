@@ -51,9 +51,10 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usb_device.h"
+#include "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "riptideMain.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -94,7 +95,8 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
+I2C_HandleTypeDef* getDepthI2CRef();
+I2C_HandleTypeDef* getBackplaneI2CRef();
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -159,7 +161,8 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
+  //riptideMain();
+
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -539,7 +542,37 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void writePWM(uint16_t * values) {
+    // I wrote this at 1 am, there is a good chance the order or something is wrong
+    // spare is TIM2 Channel 3 (on pin 16), need to add in cube mx if we want to add
+    htim5.Instance->CCR4 = values[0];		// spl
+    htim2.Instance->CCR2 = values[1];		// ssl
+    htim2.Instance->CCR4 = values[2];		// swf
+    htim2.Instance->CCR3 = values[3];		// swa
+    htim3.Instance->CCR4 = values[4];		// hpa
+    htim14.Instance->CCR1 = values[5];	    // hsa
+    htim13.Instance->CCR1 = values[6];	    // hsf
+    htim3.Instance->CCR3 = values[7];		// hpf
+}
 
+void resetPWM() {
+    htim5.Instance->CCR4 = 1500;
+    htim2.Instance->CCR2 = 1500;
+    htim2.Instance->CCR4 = 1500;
+    htim2.Instance->CCR3 = 1500;
+    htim3.Instance->CCR4 = 1500;
+    htim14.Instance->CCR1 = 1500;
+    htim13.Instance->CCR1 = 1500;
+    htim3.Instance->CCR3 = 1500;
+}
+
+I2C_HandleTypeDef* getDepthI2CRef() {
+    return &hi2c1;
+}
+
+I2C_HandleTypeDef* getBackplaneI2CRef() {
+    return &hi2c3;
+}
 /* USER CODE END 4 */
 
 /* StartDefaultTask function */

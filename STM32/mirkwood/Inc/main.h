@@ -54,7 +54,9 @@
 /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-
+#include <stdint.h>
+void writePWM(uint16_t * values);
+void resetPWM();
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/

@@ -47,7 +47,8 @@ Drivers/STM32F4xx_HAL_Driver \
 Application/User/Src/freertos.c \
 Middlewares/FreeRTOS \
 Application/User/Src/usbd_cdc_if.c \
-Application/User/Src/stm32f4xx_hal_timebase_TIM.c
+Application/User/Src/stm32f4xx_hal_timebase_TIM.c \
+riptideSTM/src
 
 # firmware library path
 PERIFLIB_PATH = 
@@ -101,7 +102,10 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
-Src/freertos.c  
+Src/freertos.c \
+riptideSTM/src/riptideMain.c \
+riptideSTM/src/riptideFunctions.c \
+riptideSTM/src/riptideThreads.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -167,7 +171,8 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
 -IMiddlewares/Third_Party/FreeRTOS/Source/include \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-IriptideSTM/inc
 
 
 # compile gcc flags
