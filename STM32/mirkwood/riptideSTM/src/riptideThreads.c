@@ -1,4 +1,3 @@
-
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
@@ -10,12 +9,11 @@
 #include "riptideMain.h"
 #include "riptideFunctions.h"
 #include "riptidethreads.h"
+#include "riptideAddress.h"
 
 
 void vHeartbeat(void *pvParameters ){
 
-    uint8_t HiMsg[] = "heartbeat\r\n";
-    /* Infinite loop */
     for(;;) {
         HAL_GPIO_TogglePin(LED_PC6_GPIO_Port, LED_PC6_Pin);
         vTaskDelay(1000);
@@ -28,6 +26,7 @@ void vSwitchMonitor(void *pvParameters){
     for(;;){
         //You can read directly in to the the message without forcing a 1 or 0 but that returns
         //a weird block character when switch is closed which may be hard to parse later
+        //TODO: Rename the switches
         switchMessage [4] = HAL_GPIO_ReadPin(KillSwitch_GPIO_Port, KillSwitch_Pin)      ? '1' : '0';
         switchMessage [5] = HAL_GPIO_ReadPin(MissionStart_GPIO_Port, MissionStart_Pin)  ? '1' : '0';
         switchMessage [6] = HAL_GPIO_ReadPin(Switch3_GPIO_Port, Switch3_Pin)            ? '1' : '0';
@@ -40,15 +39,15 @@ void vSwitchMonitor(void *pvParameters){
 }
 
 void vKillSwitch ( void *pvParameters ){
-  uint8_t state = -1;
+
   for(;;){
     if( HAL_GPIO_ReadPin(KillSwitch_GPIO_Port,KillSwitch_Pin) == GPIO_PIN_RESET){
         resetPWM();
         HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_RESET);
-        state = 0;
+
 	} else {
 		HAL_GPIO_WritePin(LED_PA4_GPIO_Port, LED_PA4_Pin, GPIO_PIN_SET);
-		state = 1;
+
     }
     vTaskDelay(100);
   }
@@ -57,22 +56,6 @@ void vKillSwitch ( void *pvParameters ){
 void vBackplaneI2C(void *pvParameters) {
 	vTaskDelay(1500); //need this to offset scheduler, just in case
 
-	uint8_t led_addr = 0xC0;
-	uint8_t led_test = 0x07;
-	uint8_t dec_mode = 0x01;
-	uint8_t led_intensity = 0x02;
-	uint8_t scan_limit = 0x03;
-	uint8_t reg_config = 0x04;
-	uint8_t digit_type = 0x0C;
-
-	uint8_t red_intensity = 0x10;
-	uint8_t red_intensity_a = 0x14;
-	uint8_t green_intensity = 0x11;
-	uint8_t green_intensity_a = 0x15;
-	uint8_t yellow_intensity = 0x12;
-	uint8_t	yellow_intensity_a = 0x16;
-
-
 	uint16_t write_address = 0x3C;
 	uint16_t read_address = 0x3D;
 	I2C_HandleTypeDef *i2c = getBackplaneI2CRef();
@@ -80,51 +63,51 @@ void vBackplaneI2C(void *pvParameters) {
 
 	/************* Status Board Setup ******************/
 
-	uint8_t led_data[] = {dec_mode, 0xFF};
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send decode mode (standard)
+	uint8_t led_data[] = {SB_DEC_MODE, 0xFF};
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send decode mode (standard)
 
-	led_data[0] = red_intensity;
+	led_data[0] = SB_REDINTENSE;
 	led_data[1] = 0x0;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
-	led_data[0] = red_intensity_a;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
+	led_data[0] = SB_REDINTENSE_A;
 	led_data[1] = 0x0;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
-	led_data[0] = green_intensity;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
+	led_data[0] = SB_GREENINTENSE;
 	led_data[1] = 0x11;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
-	led_data[0] = green_intensity_a;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
+	led_data[0] = SB_GREENINTENSE_A;
 	led_data[1] = 0x11;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
-	led_data[0] = yellow_intensity;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
+	led_data[0] = SB_YELLOWINTENSE;
 	led_data[1] = 0x22;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
-	led_data[0] = yellow_intensity_a;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
+	led_data[0] = SB_YELLOWINTENSE_A;
 	led_data[1] = 0x22;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // send LED intensity
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 
-	led_data[0] = scan_limit;
+	led_data[0] = SB_SCAN_LIMIT;
 	led_data[1] = 0x05;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set the scan limit (not sure why 5 though)?
-	led_data[0] = reg_config;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set the scan limit (not sure why 5 though)?
+	led_data[0] = SB_REG_CONFIG;
 	led_data[1] = 0x41;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set the control register, set the global led intensity mode off
-	led_data[0] = digit_type;
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set the control register, set the global led intensity mode off
+	led_data[0] = SB_DIGIT_TYPE;
 	led_data[1] = 0x00;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // set as a 7 segment display
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set as a 7 segment display
 
-	led_data[0] = led_test;
+	led_data[0] = SB_LED_Test;
 	led_data[1] = 0x00;
 	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, led_addr, led_data, 2, 20); // for testing only
+	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // for testing only
 	vTaskDelay(10);
 
 	/*************** BB setup *************/
