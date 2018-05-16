@@ -195,8 +195,8 @@ void vDepthSensor(void *pvParameters) {
 	uint8_t reset = 0x1E;
 	uint8_t prom_read = 0xA0;
 	uint8_t prom_val = prom_read;
-	uint8_t read_d1 = 0x4A;
-	uint8_t read_d2 = 0x5A;
+	uint8_t read_d1 = 0x4A; //OSR 8192
+	uint8_t read_d2 = 0x5A; //OSR 8192
 	uint8_t read_adc = 0x00;
 
 	uint16_t calibration[8];

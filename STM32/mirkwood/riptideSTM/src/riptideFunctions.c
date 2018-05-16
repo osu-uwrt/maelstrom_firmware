@@ -50,14 +50,11 @@ int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
   uint16_t values[8];
   thrustsuccess = MessageCheck(thrustst, thrustend, thrustComp, Buf, Len);
   if (thrustsuccess){
-    HAL_GPIO_TogglePin(LED_PC7_GPIO_Port, LED_PC7_Pin);
-    //CDC_Transmit_HS(Successmsg, sizeof(successmsg));
+    //limit this ISR to just write to registers
     parse(Buf, values);
     writePWM(values);
   }
-//  if (!thrustsuccess){
-//    //CDC_Transmit_HS(failmsg, sizeof(failmsg));
-//  }
+
     return (USBD_OK);
 }
 
