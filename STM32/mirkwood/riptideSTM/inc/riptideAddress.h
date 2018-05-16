@@ -4,6 +4,10 @@
 #define BB_W_ADDR           0x3C
 #define BB_R_ADDR           0x3D
 
+#define BB_STBDV_ADDR       0x22
+#define BB_PORTV_ADDR       0x24
+#define BB_TEMP_ADDR        0x27
+
 //####################################################### Status #######################################################
 #define SB_ADDR             0xC0
 #define SB_LED_Test         0x07
