@@ -230,17 +230,17 @@ void printToDisplay(float value, uint8_t which) {
 	uint8_t data[2];
 
 	data[0] = which;
-	data[1] = (int) value/100;
+	data[1] = (int) value/10; //used to divide by 100
 	HAL_I2C_Master_Transmit(i2c, led_addr, data, 2, 20);
 	vTaskDelay(10);
 
 	data[0] = which + 8;
-	data[1] = ((int) value/10) % 10;
+	data[1] = ((int) value) % 10 | 0x80; //used to divide by 10
 	HAL_I2C_Master_Transmit(i2c, led_addr, data, 2, 20);
 	vTaskDelay(10);
 
 	data[0] = which + 1;
-	data[1] = ((int) value) % 10 | 0x80;
+	data[1] = ((int) value) % 10;
 	HAL_I2C_Master_Transmit(i2c, led_addr, data, 2, 20);
 	vTaskDelay(10);
 
@@ -250,11 +250,19 @@ void printToDisplay(float value, uint8_t which) {
 	vTaskDelay(10);
 }
 
-double runAverage(double val, double newVal){
-	val -= val/10; //delete the last value
-	val += newVal/10; //add the next one
+float runAverage(float val, float newVal){
+	val -= val/10.0; //delete the last value
+	val += newVal/10.0; //add the next one
 
 	return val;
 }
+//TODO: Make temp dependent
+float calcSTBDV(uint16_t raw){
+  float val = 0.0;
+  val = (-0.0085 * (float)raw ) + 39.046;
+  if (val <= 10.0){
+    val = 0.0;
+  }
+  return val;
 
-
+}

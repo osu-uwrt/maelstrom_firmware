@@ -10,6 +10,8 @@ void fToString2(float n, uint8_t *res);
 int intToStr(int x, uint8_t str[], int d);
 void revStr(char *str, int len);
 void printToDisplay(float value, uint8_t which);
-double runAverage(double val, double newVal);
+float runAverage(float val, float newVal);
+
+float calcSTBDV(uint16_t raw);
 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len );
