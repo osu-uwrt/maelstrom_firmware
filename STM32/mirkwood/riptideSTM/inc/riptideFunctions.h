@@ -13,5 +13,6 @@ void printToDisplay(float value, uint8_t which);
 float runAverage(float val, float newVal);
 
 float calcSTBDV(uint16_t raw);
+float calcPORTV(uint16_t raw);
 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len );

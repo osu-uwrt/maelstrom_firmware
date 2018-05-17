@@ -41,15 +41,15 @@ bool MessageCheck(char* start, char* end, int compNumber,uint8_t* Buf, uint32_t 
 
 
 int8_t Riptide_CDC_Receive(uint8_t* Buf, uint32_t *Len ){
-  uint8_t successmsg[] = "thrust hell yeah \r\n";
-  uint8_t failmsg[] = "not good enough kid\r\n";
+
   char* thrustst = "#";
   char* thrustend = "@";
   int   thrustComp = 4;
   bool thrustsuccess = false;
   uint16_t values[8];
   thrustsuccess = MessageCheck(thrustst, thrustend, thrustComp, Buf, Len);
-  if (thrustsuccess){
+  //the length of the thruster message will be 40 so hard check that
+  if (thrustsuccess && *Len == 40){
     //limit this ISR to just write to registers
     parse(Buf, values);
     writePWM(values);
@@ -259,10 +259,18 @@ float runAverage(float val, float newVal){
 //TODO: Make temp dependent
 float calcSTBDV(uint16_t raw){
   float val = 0.0;
-  val = (-0.0085 * (float)raw ) + 39.046;
+  val = (-0.0085 * raw ) + 39.046;
   if (val <= 10.0){
     val = 0.0;
   }
   return val;
+}
 
+float calcPORTV(uint16_t raw){
+  float val = 0.0;
+  val = (-0.0069 * raw ) + 33.842; //nice
+  if (val <= 10.0){
+    val = 0.0;
+  }
+  return val;
 }

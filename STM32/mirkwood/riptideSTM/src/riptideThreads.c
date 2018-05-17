@@ -143,7 +143,7 @@ void vBackplaneI2C(void *pvParameters) {
 		vTaskDelay(20);
 		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
 		vTaskDelay(20);
-		starboard_voltage = (output[0]<<8) + output[1];
+		starboard_voltage = (((output[0]<<8) + output[1]) >> 4);
     stbdV = calcSTBDV(starboard_voltage);
     printToDisplay(stbdV, 0x62);
 
@@ -153,6 +153,8 @@ void vBackplaneI2C(void *pvParameters) {
 		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
 		vTaskDelay(20);
 		port_voltage = (output[0]<<8) + output[1];
+    portV = calcPORTV(port_voltage);
+    printToDisplay(portV, 0x60);
 
 		// read temperature
 		HAL_I2C_Define_Transmit(i2c, write_address, BB_TEMP_ADDR, 1, 10);
@@ -179,8 +181,12 @@ void vDepthSensor(void *pvParameters) {
 	uint8_t reset = 0x1E;
 	uint8_t prom_read = 0xA0;
 	uint8_t prom_val = prom_read;
-	uint8_t read_d1 = 0x4A; //OSR 8192
-	uint8_t read_d2 = 0x5A; //OSR 8192
+  /*this read_d1 and read_d2 set the OSR of ADC, this sets the max wait time between
+    reading off the ADC at 10ms.  This sample rate results in about a 7.5cm possible
+    error in the sensor which is safe for what we are doing.
+  */
+	uint8_t read_d1 = 0x48; //OSR 8192 = 0x4A
+	uint8_t read_d2 = 0x58; //OSR 8192 = 0x5A
 	uint8_t read_adc = 0x00;
 
 	uint16_t calibration[8];
@@ -237,9 +243,9 @@ void vDepthSensor(void *pvParameters) {
 
 		ptr = &depthmsg[4];
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_d1, 1, 20);
-		vTaskDelay(20);
+		vTaskDelay(10); //delay set by the OSR of the sensor
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_adc, 1, 20);
-		vTaskDelay(20);
+		vTaskDelay(10);
 
 		HAL_I2C_Master_Receive(i2c, address_read, buffer, 3, 20);
 		d1 = buffer[0];
@@ -247,9 +253,9 @@ void vDepthSensor(void *pvParameters) {
 		d1 = d1 << 8 | buffer[2];
 
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_d2, 1, 30);
-		vTaskDelay(20);
+		vTaskDelay(10);
 		HAL_I2C_Master_Transmit(i2c, address_write, &read_adc, 1, 30);
-		vTaskDelay(20);
+		vTaskDelay(10);
 
 		HAL_I2C_Master_Receive(i2c, address_read, buffer, 3, 30);
 		d2 = buffer[0];
