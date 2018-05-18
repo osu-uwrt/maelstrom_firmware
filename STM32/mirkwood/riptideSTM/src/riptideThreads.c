@@ -71,23 +71,23 @@ void vBackplaneI2C(void *pvParameters) {
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 	led_data[0] = SB_REDINTENSE_A;
-	led_data[1] = 0x0;
+	led_data[1] = 0x11;
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 	led_data[0] = SB_GREENINTENSE;
-	led_data[1] = 0x11;
+	led_data[1] = 0xAA;
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 	led_data[0] = SB_GREENINTENSE_A;
-	led_data[1] = 0x11;
+	led_data[1] = 0xAA;
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 	led_data[0] = SB_YELLOWINTENSE;
-	led_data[1] = 0x22;
+	led_data[1] = 0xCC;
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 	led_data[0] = SB_YELLOWINTENSE_A;
-	led_data[1] = 0x22;
+	led_data[1] = 0xCC;
 	vTaskDelay(10);
 	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
 
@@ -131,8 +131,12 @@ void vBackplaneI2C(void *pvParameters) {
 
 	uint16_t starboard_voltage = 0;
   float stbdV = 0.0;
+  uint16_t starboard_current = 0;
+  float stbdI = 0.0;
 	uint16_t port_voltage = 0;
   float portV = 0.0;
+  uint16_t port_current = 0;
+  float portI = 0.0;
 	int16_t temperature = 0;
 	float temp = 0.0;
 	uint8_t output[2] = {0, 0};
@@ -145,16 +149,14 @@ void vBackplaneI2C(void *pvParameters) {
 		vTaskDelay(20);
 		starboard_voltage = (((output[0]<<8) + output[1]) >> 4);
     stbdV = calcSTBDV(starboard_voltage);
-    printToDisplay(stbdV, 0x62);
 
 		// read port voltage
 		HAL_I2C_Define_Transmit(i2c, write_address, BB_PORTV_ADDR, 1, 10);
 		vTaskDelay(20);
 		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
 		vTaskDelay(20);
-		port_voltage = (output[0]<<8) + output[1];
+		port_voltage = (((output[0]<<8) + output[1]) >> 4);
     portV = calcPORTV(port_voltage);
-    printToDisplay(portV, 0x60);
 
 		// read temperature
 		HAL_I2C_Define_Transmit(i2c, write_address, BB_TEMP_ADDR, 1, 10);
@@ -162,8 +164,26 @@ void vBackplaneI2C(void *pvParameters) {
 		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
 		vTaskDelay(20);
 		temperature = ((output[0] << 8) + output[1]);
-
 		temp = runAverage(temp, temperature / 256.0 );
+
+    //read starboard current
+    HAL_I2C_Define_Transmit(i2c, write_address, BB_STBDI_ADDR, 1, 10);
+    vTaskDelay(20);
+    HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+    vTaskDelay(20);
+    starboard_current = (((output[0]<<8)+output[1]) >> 4);
+    stbdI = calcCurrent(starboard_current);
+
+    //read starboard current
+    HAL_I2C_Define_Transmit(i2c, write_address, BB_PORTI_ADDR, 1, 10);
+    vTaskDelay(20);
+    HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+    vTaskDelay(20);
+    port_current = (((output[0]<<8)+output[1]) >> 4);
+    portI = calcCurrent(port_current);
+
+    printToDisplay(stbdV, 0x62);
+    printToDisplay(portV, 0x60);
 		printToDisplay(temp, 0x64);
 
 

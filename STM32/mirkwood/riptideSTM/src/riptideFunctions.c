@@ -274,3 +274,12 @@ float calcPORTV(uint16_t raw){
   }
   return val;
 }
+
+float calcCurrent(uint16_t raw){
+  float val = 0.0;
+  val = (raw - 2035) * 0.0244;
+  if (val <= 0.05){
+    val = 0.0;
+  }
+  return val;
+}
