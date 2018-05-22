@@ -7,7 +7,7 @@
 
 #include "riptideMain.h"
 #include "riptideFunctions.h"
-#include "riptidethreads.h"
+#include "riptideThreads.h"
 
 void riptideMain(){
     //create task handlers here
