@@ -10,4 +10,5 @@
 # IDE generated files #
 #######################
 .idea
-Makefile
+STM32/mirkwood/Makefile
+STM32/mirkwood/build/*
