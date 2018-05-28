@@ -9,7 +9,9 @@
 #	2017-02-10 - Several enhancements + project update mode
 #   2015-07-22 - first version
 # ------------------------------------------------
-
+#  For flashing you need to type the following command:
+#   ./st-flash --format ihex write ~/osu-uwrt/riptide_firmware/STM32/mirkwood/build/mirkwood.hex 
+#
 ######################################
 # target
 ######################################
@@ -121,7 +123,7 @@ PERIFLIB_SOURCES =
 #######################################
 # binaries
 #######################################
-BINPATH = /Users/augustmason/Documents/toolpackages/gcc-arm-none-eabi-7-2017-q4-major/bin
+BINPATH = /home/august/tools/gcc-arm-none-eabi-7-2017-q4-major/bin
 PREFIX = arm-none-eabi-
 CC = $(BINPATH)/$(PREFIX)gcc
 AS = $(BINPATH)/$(PREFIX)gcc -x assembler-with-cpp

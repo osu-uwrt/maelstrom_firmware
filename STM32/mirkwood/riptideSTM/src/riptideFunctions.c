@@ -5,7 +5,7 @@
 #include <stdbool.h> //used for the MessageCheck function
 #include <stdint.h> //for the crc4 message
 #include "riptideFunctions.h"
-
+#include "riptideAddress.h"
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "usbd_cdc_if.h"
@@ -222,6 +222,66 @@ void revStr(char *str, int len) {
 }
 
 //##################################### i2c Bkpln Functions ############################################################
+
+/*
+                    Status board setup
+  Riptide Specific.You need to include riptideAddress.h anad verify you are
+  working on the right i2c bus.  You cannot pass and an I2C type def as easily as
+  you should be able to.
+  Inputs:
+          uint8_t setup[8]              -this is the data that you write to various registers
+          uint8_t setup[8]: decode mode, Red intensity, green intensity, yellow intensity,
+                            scan limit, registry config, digit type, led test
+  Returns: void
+*/
+void riptideSBsetup(uint8_t setup[8]){
+  //get the i2c device you are using cause the type def is dumb
+  I2C_HandleTypeDef * i2c_bp = getBackplaneI2CRef();
+
+  uint8_t led_data[] = {SB_DEC_MODE, setup[0]}; //data array to be passed through
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send decode mode (standard)
+  led_data[0] = SB_REDINTENSE;
+  led_data[1] = setup[1];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_REDINTENSE_A;
+  led_data[1] = setup[1];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_GREENINTENSE;
+  led_data[1] = setup[2];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_GREENINTENSE_A;
+  led_data[1] = setup[2];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_YELLOWINTENSE;
+  led_data[1] = setup[3];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_YELLOWINTENSE_A;
+  led_data[1] = setup[3];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // send LED intensity
+  led_data[0] = SB_SCAN_LIMIT;
+  led_data[1] = setup[4];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // set the scan limit (not sure why 5 though)?
+  led_data[0] = SB_REG_CONFIG;
+  led_data[1] = setup[5];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // set the control register, set the global led intensity mode off
+  led_data[0] = SB_DIGIT_TYPE;
+  led_data[1] = setup[6];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // set as a 7 segment display
+  led_data[0] = SB_LED_Test;
+  led_data[1] = setup[7];
+  vTaskDelay(10);
+  HAL_I2C_Master_Transmit(i2c_bp, SB_ADDR, led_data, 2, 20); // for testing only
+  vTaskDelay(10);
+}
 // this function assumes the length is 4
 void printToDisplay(float value, uint8_t which) {
 	I2C_HandleTypeDef * i2c = getBackplaneI2CRef();
@@ -278,8 +338,8 @@ float calcPORTV(uint16_t raw){
 float calcCurrent(uint16_t raw){
   float val = 0.0;
   val = (raw - 2035) * 0.0244;
-  if (val <= 0.05){
-    val = 0.0;
+  if (val <= 0.06){
+    val = 00.00;
   }
   return val;
 }

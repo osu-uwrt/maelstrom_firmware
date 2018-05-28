@@ -62,53 +62,11 @@ void vBackplaneI2C(void *pvParameters) {
 	uint8_t write_data[2];
 
 	/************* Status Board Setup ******************/
-
-	uint8_t led_data[] = {SB_DEC_MODE, 0xFF};
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send decode mode (standard)
-
-	led_data[0] = SB_REDINTENSE;
-	led_data[1] = 0x0;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-	led_data[0] = SB_REDINTENSE_A;
-	led_data[1] = 0x11;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-	led_data[0] = SB_GREENINTENSE;
-	led_data[1] = 0xAA;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-	led_data[0] = SB_GREENINTENSE_A;
-	led_data[1] = 0xAA;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-	led_data[0] = SB_YELLOWINTENSE;
-	led_data[1] = 0xCC;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-	led_data[0] = SB_YELLOWINTENSE_A;
-	led_data[1] = 0xCC;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // send LED intensity
-
-	led_data[0] = SB_SCAN_LIMIT;
-	led_data[1] = 0x05;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set the scan limit (not sure why 5 though)?
-	led_data[0] = SB_REG_CONFIG;
-	led_data[1] = 0x41;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set the control register, set the global led intensity mode off
-	led_data[0] = SB_DIGIT_TYPE;
-	led_data[1] = 0x00;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // set as a 7 segment display
-
-	led_data[0] = SB_LED_Test;
-	led_data[1] = 0x00;
-	vTaskDelay(10);
-	HAL_I2C_Master_Transmit(i2c, SB_ADDR, led_data, 2, 20); // for testing only
-	vTaskDelay(10);
+  //setup array for the status board, in order we are setting:
+  //  uint8_t setup[8]: decode mode, Red intensity, green intensity, yellow intensity,
+  //                    scan limit, registry config, digit type, led test
+  uint8_t setup[] = {0xFF, 0x11, 0xAA, 0xCC, 0x05, 0x41, 0x00, 0x00};
+	riptideSBsetup(setup);
 
 	/*************** BB setup *************/
 
@@ -182,12 +140,12 @@ void vBackplaneI2C(void *pvParameters) {
     port_current = (((output[0]<<8)+output[1]) >> 4);
     portI = calcCurrent(port_current);
 
-    printToDisplay(stbdV, 0x62);
-    printToDisplay(portV, 0x60);
+    printToDisplay(stbdI, 0x62);
+    printToDisplay(portI, 0x60);
 		printToDisplay(temp, 0x64);
-
-
 		vTaskDelay(500);
+    //package values and send to computer
+
 	}
 
 }

@@ -11,7 +11,7 @@ int intToStr(int x, uint8_t str[], int d);
 void revStr(char *str, int len);
 void printToDisplay(float value, uint8_t which);
 float runAverage(float val, float newVal);
-
+void riptideSBsetup(uint8_t setup[8]);
 float calcSTBDV(uint16_t raw);
 float calcPORTV(uint16_t raw);
 float calcCurrent(uint16_t raw);
