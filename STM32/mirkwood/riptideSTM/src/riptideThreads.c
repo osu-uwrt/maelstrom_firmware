@@ -55,9 +55,6 @@ void vKillSwitch ( void *pvParameters ){
 
 void vBackplaneI2C(void *pvParameters) {
 	vTaskDelay(1500); //need this to offset scheduler, just in case
-
-	uint16_t write_address = 0x3C;
-	uint16_t read_address = 0x3D;
 	I2C_HandleTypeDef *i2c = getBackplaneI2CRef();
 	uint8_t write_data[2];
 
@@ -72,17 +69,17 @@ void vBackplaneI2C(void *pvParameters) {
 
 	write_data[0] = 0x0b;
 	write_data[1] = 0x01;
-	HAL_I2C_Master_Transmit(i2c, write_address, write_data, 2, 20); // choose external vref and mode 0 from advanced config register
+	HAL_I2C_Master_Transmit(i2c, BB_W_ADDR, write_data, 2, 20); // choose external vref and mode 0 from advanced config register
 	vTaskDelay(20);
 
 	write_data[0] = 0x03;
 	write_data[1] = 0xff;
-	HAL_I2C_Master_Transmit(i2c, write_address, write_data, 2, 20); // disable interrupts
+	HAL_I2C_Master_Transmit(i2c, BB_W_ADDR, write_data, 2, 20); // disable interrupts
 	vTaskDelay(20);
 
 	write_data[0] = 0x00;
 	write_data[1] = 0x01;
-	HAL_I2C_Master_Transmit(i2c, write_address, write_data, 2, 20); // start
+	HAL_I2C_Master_Transmit(i2c, BB_W_ADDR, write_data, 2, 20); // start
 	vTaskDelay(100);
 
 
@@ -101,41 +98,41 @@ void vBackplaneI2C(void *pvParameters) {
 
 	for (;;) {
 		// read starboard voltage
-		HAL_I2C_Define_Transmit(i2c, write_address, BB_STBDV_ADDR, 1, 10);
+		HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_STBDV_ADDR, 1, 10);
 		vTaskDelay(20);
-		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+		HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
 		vTaskDelay(20);
 		starboard_voltage = (((output[0]<<8) + output[1]) >> 4);
     stbdV = calcSTBDV(starboard_voltage);
 
 		// read port voltage
-		HAL_I2C_Define_Transmit(i2c, write_address, BB_PORTV_ADDR, 1, 10);
+		HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_PORTV_ADDR, 1, 10);
 		vTaskDelay(20);
-		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+		HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
 		vTaskDelay(20);
 		port_voltage = (((output[0]<<8) + output[1]) >> 4);
     portV = calcPORTV(port_voltage);
 
 		// read temperature
-		HAL_I2C_Define_Transmit(i2c, write_address, BB_TEMP_ADDR, 1, 10);
+		HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_TEMP_ADDR, 1, 10);
 		vTaskDelay(20);
-		HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+		HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
 		vTaskDelay(20);
 		temperature = ((output[0] << 8) + output[1]);
 		temp = runAverage(temp, temperature / 256.0 );
 
     //read starboard current
-    HAL_I2C_Define_Transmit(i2c, write_address, BB_STBDI_ADDR, 1, 10);
+    HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_STBDI_ADDR, 1, 10);
     vTaskDelay(20);
-    HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+    HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
     vTaskDelay(20);
     starboard_current = (((output[0]<<8)+output[1]) >> 4);
     stbdI = calcCurrent(starboard_current);
 
     //read starboard current
-    HAL_I2C_Define_Transmit(i2c, write_address, BB_PORTI_ADDR, 1, 10);
+    HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_PORTI_ADDR, 1, 10);
     vTaskDelay(20);
-    HAL_I2C_Master_Receive(i2c, read_address, output, 2, 10);
+    HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
     vTaskDelay(20);
     port_current = (((output[0]<<8)+output[1]) >> 4);
     portI = calcCurrent(port_current);
