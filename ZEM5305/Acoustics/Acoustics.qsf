@@ -1,0 +1,217 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 21:18:37  April 20, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ADC_Test_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CEFA2U19C8
+set_global_assignment -name TOP_LEVEL_ENTITY Acoustics
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:18:36  APRIL 20, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_DESIGN_ENTRY_SYNTHESIS_TOOL "<None>"
+set_global_assignment -name EDA_INPUT_DATA_FORMAT EDIF -section_id eda_design_synthesis
+
+
+set_location_assignment PIN_P9 -to okUH[0]
+set_location_assignment PIN_M10 -to okUH[1]
+set_location_assignment PIN_L9 -to okUH[2]
+set_location_assignment PIN_Y11 -to okUH[3]
+set_location_assignment PIN_W11 -to okUH[4]
+
+set_location_assignment PIN_P12 -to okHU[0]
+set_location_assignment PIN_R11 -to okHU[1]
+set_location_assignment PIN_AB11 -to okHU[2]
+
+set_location_assignment PIN_AA7 -to okUHU[0]
+set_location_assignment PIN_W7 -to okUHU[1]
+set_location_assignment PIN_T7 -to okUHU[2]
+set_location_assignment PIN_Y7 -to okUHU[3]
+set_location_assignment PIN_AB7 -to okUHU[4]
+set_location_assignment PIN_U7 -to okUHU[5]
+set_location_assignment PIN_P6 -to okUHU[6]
+set_location_assignment PIN_U6 -to okUHU[7]
+set_location_assignment PIN_N6 -to okUHU[8]
+set_location_assignment PIN_R5 -to okUHU[9]
+set_location_assignment PIN_M6 -to okUHU[10]
+set_location_assignment PIN_R6 -to okUHU[11]
+set_location_assignment PIN_M7 -to okUHU[12]
+set_location_assignment PIN_L7 -to okUHU[13]
+set_location_assignment PIN_R7 -to okUHU[14]
+set_location_assignment PIN_L8 -to okUHU[15]
+set_location_assignment PIN_W8 -to okUHU[16]
+set_location_assignment PIN_V8 -to okUHU[17]
+set_location_assignment PIN_M8 -to okUHU[18]
+set_location_assignment PIN_N8 -to okUHU[19]
+set_location_assignment PIN_N10 -to okUHU[20]
+set_location_assignment PIN_N9 -to okUHU[21]
+set_location_assignment PIN_R10 -to okUHU[22]
+set_location_assignment PIN_AA10 -to okUHU[23]
+set_location_assignment PIN_Y9 -to okUHU[24]
+set_location_assignment PIN_R9 -to okUHU[25]
+set_location_assignment PIN_V9 -to okUHU[26]
+set_location_assignment PIN_U8 -to okUHU[27]
+set_location_assignment PIN_AA8 -to okUHU[28]
+set_location_assignment PIN_AB8 -to okUHU[29]
+set_location_assignment PIN_T9 -to okUHU[30]
+set_location_assignment PIN_T8 -to okUHU[31]
+
+set_location_assignment PIN_T10 -to okAA
+
+
+
+
+
+
+
+
+
+# LEDs ################################################################
+set_location_assignment PIN_A20 -to led[0]
+set_location_assignment PIN_A22 -to led[1]
+set_location_assignment PIN_B20 -to led[2]
+set_location_assignment PIN_C20 -to led[3]
+
+set_location_assignment PIN_G11 -to sys_clk_n
+set_location_assignment PIN_H10 -to sys_clk_p
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_G17 -to drdy_in
+set_location_assignment PIN_W2 -to sclk_out
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name IOBANK_VCCIO 1.8V -section_id 4A
+set_location_assignment PIN_L2 -to test_out
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
+set_location_assignment PIN_AA2 -to miso_pa_in
+set_location_assignment PIN_U21 -to miso_pf_in
+set_location_assignment PIN_J19 -to miso_sa_in
+set_location_assignment PIN_AA1 -to miso_sf_in
+set_location_assignment PIN_G2 -to clk_out
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUH[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUH[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUH[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUH[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUH[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okHU[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okHU[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okHU[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[8]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[9]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[10]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[11]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[12]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[13]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[14]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[15]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[16]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[17]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[18]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[20]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[21]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[22]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[23]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[24]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[25]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[26]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[27]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[28]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[29]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[30]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okUHU[31]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to okUH[1]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to okUH[2]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to okUH[3]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to okUH[4]
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to okUHU[*]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to okUHU[*]
+set_instance_assignment -name MATCH_PLL_COMPENSATION_CLOCK ON -to "okHost:okHI|ok_altera_pll:ok_altera_pll0|altera_pll:altera_pll_i|outclk_wire"
+set_instance_assignment -name PLL_COMPENSATION_MODE "SOURCE SYNCHRONOUS" -to "*ok_altera_pll*|altera_pll:altera_pll_i*|*"
+set_instance_assignment -name PLL_AUTO_RESET ON -to "*ok_altera_pll*|altera_pll:altera_pll_i*|*"
+set_instance_assignment -name PLL_BANDWIDTH_PRESET AUTO -to "*ok_altera_pll*|altera_pll:altera_pll_i*|*"
+set_instance_assignment -name D1_DELAY 5 -to okUHU[14]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[6]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[10]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[27]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[25]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[31]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[21]
+set_instance_assignment -name D1_DELAY 5 -to okUHU[19]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to okAA
+set_instance_assignment -name IO_STANDARD "1.5 V" -to led[3]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to led[2]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to led[1]
+set_instance_assignment -name IO_STANDARD "1.5 V" -to led[0]
+set_instance_assignment -name IO_STANDARD LVDS -to sys_clk_n
+set_instance_assignment -name IO_STANDARD LVDS -to sys_clk_p
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to drdy_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sclk_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to test_out
+set_instance_assignment -name SLEW_RATE 1 -to sclk_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_pa_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_pf_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_sa_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_sf_in
+set_global_assignment -name VHDL_FILE Acoustics.vhd
+set_global_assignment -name VHDL_FILE okLibrary.vhd
+set_global_assignment -name VERILOG_FILE okHost.v
+set_global_assignment -name SYSTEMVERILOG_FILE okHost.sv
+set_global_assignment -name VERILOG_FILE okEndpoints.v
+set_global_assignment -name QIP_FILE fifo.qip
+set_global_assignment -name QIP_FILE master_pll.qip
+set_global_assignment -name SIP_FILE master_pll.sip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
