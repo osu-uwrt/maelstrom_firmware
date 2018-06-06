@@ -3,7 +3,7 @@
 This holds two main things for right now, all of the firmware running on the Arduinos in *Riptide* and all of the firmware running on the main co-processing board on *Riptid3*. The co-processing board is an STM32F4 based MCU that was custom made to work with the 2018 Robosub vehicle.   
 
 ## STM32 Spinup
-All STM projects are built initially with STM32CubeMX software.
+All STM projects are built initially with STM32CubeMX software.  The master branch has the *Riptide* specific code sitting outside of its project.  To view the entire project and code running on the robot, switch branches.
 ### Makefile spinup:
 
 In the STM32CubeMX software, in project settings, set the IDE to **Makefile**. These projects are geared towards using MacOS or a specific flavor of Linux, Ubuntu 16.04 in our case. To compile you need to edit the Makefile and change the bin path in line 127 to point to wherever:
