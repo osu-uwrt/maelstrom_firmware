@@ -4,7 +4,7 @@
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 #include "stdio.h"
-
+#include <string.h>
 
 #include "riptideMain.h"
 #include "riptideFunctions.h"
@@ -83,7 +83,6 @@ void vBackplaneI2C(void *pvParameters) {
 	vTaskDelay(100);
 
 
-
 	uint16_t starboard_voltage = 0;
   float stbdV = 0.0;
   uint16_t starboard_current = 0;
@@ -94,9 +93,25 @@ void vBackplaneI2C(void *pvParameters) {
   float portI = 0.0;
 	int16_t temperature = 0;
 	float temp = 0.0;
+  int16_t offset_16t = 0;
+  float offset = 0.0;
 	uint8_t output[2] = {0, 0};
 
-	for (;;) {
+  float converterTemp= 0.0;
+  //Variables for the satatus transfer message
+  uint8_t statmsg[] = "&&&&nnnnnnnnnn@@@@@\r\n";
+  uint8_t * ptr;
+  int i = 0;
+
+  for (;;) {
+    // read offset values
+		HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_EMPTY_ADDR, 1, 10);
+		vTaskDelay(20);
+		HAL_I2C_Master_Receive(i2c, BB_R_ADDR, output, 2, 10);
+		vTaskDelay(20);
+		offset_16t = (((output[0]<<8) + output[1]) >> 4);
+    offset = calcCurrent(offset_16t);
+
 		// read starboard voltage
 		HAL_I2C_Define_Transmit(i2c, BB_W_ADDR, BB_STBDV_ADDR, 1, 10);
 		vTaskDelay(20);
@@ -138,10 +153,16 @@ void vBackplaneI2C(void *pvParameters) {
     portI = calcCurrent(port_current);
 
     printToDisplay(stbdI, 0x62);
-    printToDisplay(portI, 0x60);
+    printToDisplay(portI, 0x60); //usually port
 		printToDisplay(temp, 0x64);
+
+    ptr = &(statmsg[4]);
+
+    fToString2(temp, ptr);
+
+    CDC_Transmit_HS(statmsg, sizeof(statmsg));
+
 		vTaskDelay(500);
-    //package values and send to computer
 
 	}
 
@@ -261,6 +282,6 @@ void vDepthSensor(void *pvParameters) {
 
 		CDC_Transmit_HS(depthmsg, 37);
 
-		//vTaskDelay(50); //fuck it, there is enough delay in the I2C reads
+
 	}
 }

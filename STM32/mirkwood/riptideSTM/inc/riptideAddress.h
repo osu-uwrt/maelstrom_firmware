@@ -9,6 +9,7 @@
 #define BB_STBDV_ADDR       0x22
 #define BB_PORTI_ADDR       0x23
 #define BB_PORTV_ADDR       0x24
+#define BB_EMPTY_ADDR       0x25
 #define BB_TEMP_ADDR        0x27
 
 //####################################################### Status #######################################################

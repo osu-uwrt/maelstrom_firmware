@@ -300,12 +300,12 @@ void printToDisplay(float value, uint8_t which) {
 	vTaskDelay(10);
 
 	data[0] = which + 1;
-	data[1] = ((int) value) % 10;
+	data[1] = (int) (value * 10) % 10;
 	HAL_I2C_Master_Transmit(i2c, led_addr, data, 2, 20);
 	vTaskDelay(10);
 
 	data[0] = which + 9;
-	data[1] = (int) (value * 10) % 10;
+	data[1] = (int) (value * 100) % 10;
 	HAL_I2C_Master_Transmit(i2c, led_addr, data, 2, 20);
 	vTaskDelay(10);
 }
