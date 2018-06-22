@@ -22,8 +22,9 @@ entity Acoustics is
 		miso_pa_in	: in		 STD_LOGIC; --BP6
 		miso_sf_in	: in		 STD_LOGIC; --BN6
 		miso_sa_in	: in		 STD_LOGIC; --BP8
-		test_out	 	: out	 	 STD_LOGIC; --BP1
+		start		 	: out	 	 STD_LOGIC; --BP1
 		clk_out	 	: out 	 STD_LOGIC;	--BP0
+		test_out		: out 	 STD_LOGIC;	--BN2
 		
 		
 		led       : out    STD_LOGIC_VECTOR(3 downto 0)
@@ -209,7 +210,7 @@ begin
 					data_sa <= STD_LOGIC_VECTOR(UNSIGNED(data_sa) sll 1);
 					data_pf(0) <= miso_pf_in;						
 					data_pa(0) <= miso_pa_in;						
-					data_sf(0) <= miso_pf_in;						-- Shift data ad insert new bit
+					data_sf(0) <= miso_sf_in;						-- Shift data ad insert new bit
 					data_sa(0) <= miso_sa_in;						
 				else
 					data_pf <= x"000001";						-- If not sending, reset flags and load our 1 into data
@@ -254,9 +255,12 @@ begin
 		sclk_out <= master_clk when sending_sclk = '1' else '0';
 		
 		clk_out <= master_clk;
+		start <= not pipe_out_ready;
+		test_out <= not pipe_out_ready;
 		
 		led_state(0) <= '1';
 		led_state(1) <= not pipe_out_ready;
+		led_state(3) <= drdy_in;
 		
 		
 				

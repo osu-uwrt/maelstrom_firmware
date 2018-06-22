@@ -16,7 +16,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "test_out",
+					"strict" : false
+				},
+				{
 					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
 					"strict" : false
 				},
 				{
@@ -177,6 +189,10 @@
 				},
 				{
 					"name" : "miso_sa_in",
+					"strict" : false
+				},
+				{
+					"name" : "miso_sf_in",
 					"strict" : false
 				},
 				{
