@@ -1,0 +1,205 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "okHU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "okHU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sclk_out",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "test_out",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[3]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[0]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[1]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[2]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[3]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[4]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[5]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[6]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[7]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[8]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[9]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[10]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[11]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[12]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[13]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[14]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[15]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[16]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[17]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[18]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[19]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[20]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[21]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[22]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[23]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[24]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[25]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[26]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[27]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[28]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[29]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[30]",
+					"strict" : false
+				},
+				{
+					"name" : "okUHU[31]",
+					"strict" : false
+				},
+				{
+					"name" : "okAA",
+					"strict" : false
+				},
+				{
+					"name" : "drdy_in",
+					"strict" : false
+				},
+				{
+					"name" : "okUH[2]",
+					"strict" : false
+				},
+				{
+					"name" : "okUH[3]",
+					"strict" : false
+				},
+				{
+					"name" : "okUH[1]",
+					"strict" : false
+				},
+				{
+					"name" : "miso_pf_in",
+					"strict" : false
+				},
+				{
+					"name" : "miso_pa_in",
+					"strict" : false
+				},
+				{
+					"name" : "miso_sa_in",
+					"strict" : false
+				},
+				{
+					"name" : "miso_sf_in",
+					"strict" : false
+				},
+				{
+					"name" : "okUH[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

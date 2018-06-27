@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Jun 21 00:43:06 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Acoustics
+Top-level Entity Name : Acoustics
+Family : Cyclone V
+Device : 5CEFA2U19C8
+Timing Models : Final
+Logic utilization (in ALMs) : 1,132 / 9,430 ( 12 % )
+Total registers : 2093
+Total pins : 56 / 224 ( 25 % )
+Total virtual pins : 0
+Total block memory bits : 887,296 / 1,802,240 ( 49 % )
+Total RAM Blocks : 117 / 176 ( 66 % )
+Total DSP Blocks : 0 / 25 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 4 ( 50 % )
+Total DLLs : 0 / 4 ( 0 % )
