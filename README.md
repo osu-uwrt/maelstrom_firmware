@@ -1,6 +1,6 @@
 # riptide_firmware
 
-This holds two main things for right now, all of the firmware running on the Arduinos in *Riptide* and all of the firmware running on the main co-processing board on *Riptid3*. The co-processing board is an STM32F4 based MCU that was custom made to work with the 2018 Robosub vehicle.   
+This holds two main things for right now, all of the firmware running on the Arduinos in *Maelstrom* and all of the firmware running on the main co-processing board on *Maelstrom*. The co-processing board is an STM32F4 based MCU that was custom made to work with the 2018 Robosub vehicle.   
 
 ## STM32 Spinup
 All STM projects are built initially with STM32CubeMX software.  The master branch has the *Riptide* specific code sitting outside of its project.  To view the entire project and code running on the robot, switch branches.
