@@ -12,6 +12,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "led[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led[2]",
+					"strict" : false
+				},
+				{
 					"name" : "sclk_out",
 					"strict" : false
 				},
@@ -20,15 +32,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "test_out",
+					"name" : "test_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "led[1]",
+					"name" : "test_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "led[3]",
+					"name" : "test_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[3]",
 					"strict" : false
 				},
 				{
@@ -96,70 +112,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "okUHU[16]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[17]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[18]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[19]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[20]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[21]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[22]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[23]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[24]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[25]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[26]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[27]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[28]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[29]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[30]",
-					"strict" : false
-				},
-				{
-					"name" : "okUHU[31]",
-					"strict" : false
-				},
-				{
 					"name" : "okAA",
 					"strict" : false
 				},
@@ -180,7 +132,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "miso_pf_in",
+					"name" : "miso_sa_in",
+					"strict" : false
+				},
+				{
+					"name" : "miso_sf_in",
 					"strict" : false
 				},
 				{
@@ -188,11 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "miso_sa_in",
-					"strict" : false
-				},
-				{
-					"name" : "miso_sf_in",
+					"name" : "miso_pf_in",
 					"strict" : false
 				},
 				{

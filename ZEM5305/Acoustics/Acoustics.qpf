@@ -18,14 +18,14 @@
 #
 # Quartus Prime
 # Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-# Date created = 20:56:27  May 30, 2018
+# Date created = 01:39:02  September 21, 2018
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "17.1"
-DATE = "20:56:27  May 30, 2018"
+DATE = "01:39:02  September 21, 2018"
 
 # Revisions
 
 PROJECT_REVISION = "Acoustics"
-PROJECT_REVISION = "ADC_Test"
+PROJECT_REVISION = "Verilog"
