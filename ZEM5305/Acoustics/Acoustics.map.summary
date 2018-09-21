@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Sep 21 01:43:51 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Acoustics
+Top-level Entity Name : Acoustics
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 3254
+Total pins : 109
+Total virtual pins : 0
+Total block memory bits : 357,376
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 4
+Total DLLs : 1

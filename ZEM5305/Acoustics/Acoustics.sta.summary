@@ -1,0 +1,488 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -3.876
+TNS   : -1222.408
+
+Type  : Slow 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 1.538
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'sys_clk_p'
+Slack : 1.703
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 1.929
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 3.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 6.044
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 10.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'sys_clk_p'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : 0.491
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.537
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.612
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 1.398
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 6.988
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 9.739
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 19.412
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 29.304
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.055
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 1.126
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 1.342
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 1.397
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -1.166
+TNS   : -447.620
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.632
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_dq_write_clk'
+Slack : 0.686
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'sys_clk_p'
+Slack : 3.347
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 5.907
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 7.474
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.580
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 21.401
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -3.689
+TNS   : -1168.623
+
+Type  : Slow 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 1.633
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'sys_clk_p'
+Slack : 1.726
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 1.929
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 3.486
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 6.112
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 10.366
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'sys_clk_p'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.556
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 1.308
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 7.341
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 10.002
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 19.512
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 29.499
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 1.053
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 1.069
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 1.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 1.268
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -1.166
+TNS   : -467.806
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_dq_write_clk'
+Slack : 0.702
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'sys_clk_p'
+Slack : 3.292
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 5.839
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 7.471
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.599
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 21.382
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -0.500
+TNS   : -17.463
+
+Type  : Fast 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 2.566
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'sys_clk_p'
+Slack : 3.575
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 4.498
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 9.615
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 10.686
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 13.910
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'sys_clk_p'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.156
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 10.245
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 12.512
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 21.116
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 31.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.567
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -0.174
+TNS   : -60.552
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 1.122
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_dq_write_clk'
+Slack : 1.139
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'sys_clk_p'
+Slack : 3.900
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 6.384
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 7.488
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.685
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 22.026
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -0.162
+TNS   : -1.959
+
+Type  : Fast 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 2.584
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'sys_clk_p'
+Slack : 3.709
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 4.724
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 10.094
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 11.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.233
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'sys_clk_p'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 10.839
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 12.628
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 21.251
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 31.446
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_afi_clk'
+Slack : -0.174
+TNS   : -60.552
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_write_clk'
+Slack : 1.121
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_dq_write_clk'
+Slack : 1.137
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'sys_clk_p'
+Slack : 3.896
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_clk'
+Slack : 6.385
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_avl_phy_clk'
+Slack : 7.487
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.729
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ddr3_interface_inst|ddr3_interface_inst|pll0|pll_config_clk'
+Slack : 22.030
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------
