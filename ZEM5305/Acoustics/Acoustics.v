@@ -1,38 +1,38 @@
 //------------------------------------------------------------------------
-// ramtest.v
+// Acoustics.v
 //
-// This sample uses the hard Altera DDR3 controller with UniPHY and HDL
-// to move data from the PC to the DDR3 and vice-versa.
+// This file reads data and stores it in ram, then offloads to computer
 //
 // Host Interface registers:
-// WireIn 0x00
-//     0 - DDR3 read enable (0=disabled, 1=enabled)
-//     1 - DDR3 write enable (0=disabled, 1=enabled)
+// WireIn 0x00 bits
+//     0 - Enable reading data off device (0=disabled, 1=enabled)
+//     1 - Collect and save ADC data (0=disabled, 1=enabled)
 //     2 - Reset
 //
-// PipeIn 0x80 - DDR3 write port (U11, DDR3)
-// PipeOut 0xA0 - DDR3 read port (U11, DDR3)
+// PipeOut 0xA0 - Read port (U11, DDR3)
 //
-// This sample is included for reference only.  No guarantees, either
-// expressed or implied, are to be drawn.
 //------------------------------------------------------------------------
-// tabstop 3
-// Copyright (c) 2005-2016 Opal Kelly Incorporated
-// $Rev$ $Date$
-//------------------------------------------------------------------------
+// 1. Computer sends signal to clear memory (Bit 2)
+// 2. Computer enables reading (Bit 1)
+// 3. Collect data and store it in storage FIFO
+// 4. Data is pulled out of storage FIFO and put in DDR3
+// 5. Computer stops collections and starts reading (Bit 0)
+// 6. DDR3 dumps data into recall FIFO
+// 7. PC pulls data out of recall FIFO through pipe out
+// 8. Repeat...
+// -----------------------------------------------------------------------
+
 `timescale 1ns/1ps
 
+// Input and output pins on actual FPGA
 module Acoustics (
+	// USB Interface
 	input  wire [  4: 0]       okUH,
 	output wire [  2: 0]       okHU,
 	inout  wire [ 31: 0]       okUHU,
 	inout  wire                okAA,
-
-	input  wire                sys_clk_p,
-	input  wire                sys_clk_n,
-
-	output wire [  3: 0]       led,
-
+	
+	// DDR3 Interface
 	output wire [ 14: 0]       mem_addr,
 	output wire [  2: 0]       mem_ba,
 	output wire                mem_cas_n,
@@ -49,60 +49,65 @@ module Acoustics (
 	output wire                mem_we_n,
 	input  wire [  0: 0]       mem_rzqin,
 	output wire                mem_reset_n,
-			
-	input  wire      				drdy_in, 	//A3
-	output wire						sclk_out, 	//A1
-	input  wire						miso_pf_in, //A2
-	input  wire						miso_pa_in, //BP6
-	input  wire						miso_sf_in, //BN6
-	input  wire						miso_sa_in, //BP8
-	output wire						start, 		//BP1
-	output wire						clk_out,		//BP0
-	output wire	[  3: 0]			test_out 	//Mc1BP0,BN0.BP2,BN2
-	);
+	
+	// System clock
+	input  wire                sys_clk_p,
+	input  wire                sys_clk_n,
 
-localparam BLOCK_SIZE      = 128;   // 512 bytes / 4 byte per word;
+	// ADC pins
+	input  wire      				drdy_in, 	// Goes low when ADC has a data point
+	output wire						sclk_out, 	// Used to request a bit. On rising edge, data will be placed on miso
+	input  wire						miso_pf_in, // Data from PF ADC
+	input  wire						miso_pa_in, // Data from PA ADC
+	input  wire						miso_sf_in, // Data from SF ADC
+	input  wire						miso_sa_in, // Data from SA ADC
+	output wire						start, 		// ADC only collects when high
+	output wire						clk_out,		// Master clock for ADC
+	
+	// Test
+	output wire [  3: 0]       led			// Device leds
+);
+
+localparam BLOCK_SIZE      = 128;   // How many words the computer reads at a time. 512 bytes / 4 byte per word;
 localparam FIFO_SIZE       = 1024;  // Number of 32-bit words stored in input/output FIFOs
 
-// Target interface bus:
+// USB signals
 wire           okClk;
 wire [112:0]   okHE;
 wire [64:0]    okEH;
 
-//Wires
+// Wire from computer (computer controls the state of each bit at any point in time)
+// 	Bit 0 - Enable reading data off device (0=disabled, 1=enabled)
+//    Bit 1 - Collect and save ADC data (0=disabled, 1=enabled)
+//		Bit 2 - Reset
 wire [31:0]  ep00wire;
 
-// Pipes
-wire         pipe_in_start;
-wire         pipe_in_done;
-wire         pipe_in_read;
-wire [127:0] pipe_in_data;
-wire [8:0]   pipe_in_rd_count;
-wire [10:0]  pipe_in_wr_count;
-wire         pipe_in_full;
-wire         pipe_in_empty;
+// Pipe
+reg          pipe_out_ready;  		// Can computer read now?
 
-wire         pipe_out_start;
-wire         pipe_out_done;
-wire         pipe_out_write;
-wire [127:0] pipe_out_data;
-wire [10:0]  pipe_out_rd_count;
-wire [8:0]   pipe_out_wr_count;
-wire         pipe_out_full;
-wire         pipe_out_empty;
-reg          pipe_out_ready;
+// Fifo controls
+wire			 store_fifo_write;		// Should storage fifo input data?
+wire         store_fifo_read;			// Should storage fifo output data?
+wire [127:0] store_fifo_data;			// Storage fifo output to DDR3
+wire [7:0]   store_fifo_rd_count;	// How many items are available to read
+wire [7:0]   store_fifo_wr_count;	// How many items have been written and still remain
+wire         store_fifo_full;			// Is storage fifo full?
+wire         store_fifo_empty;		// Is storage fifo empty?
 
-// Pipe Fifos
-wire        po0_ep_read;
-wire [31:0] pi0_ep_dataout, po0_ep_datain;
+wire         recall_fifo_write;		// Should storage fifo input data?
+wire [127:0] recall_fifo_datain;		// Data from DDR3 to store
+wire [10:0]  recall_fifo_rd_count;	// How many items are available to read
+wire [8:0]   recall_fifo_wr_count;	// How many items have been written and still remain
+wire         recall_fifo_full;		// Is storage fifo full?
+wire         recall_fifo_empty;		// Is storage fifo empty?
+wire 			 recall_fifo_read;		// Should storage fifo output data?
+wire 			 recall_fifo_dataout;	// Data out to PC
 
-//DDR3 Interface
-wire        phy_clk;              // 333MHz Memory PHY Clk
-reg         global_reset_n;
-wire        sys_clk;
 
-wire        afi_reset_n;
-
+// DDR3 signals
+wire        	phy_clk;              // 333MHz Memory PHY Clk
+reg         	global_reset_n;
+wire        	afi_reset_n;
 wire           mem_avl_ready;
 wire           mem_avl_burstbegin;
 wire [24:0]    mem_avl_addr;
@@ -113,37 +118,26 @@ wire [15:0]    mem_avl_be;
 wire           mem_avl_read_req;
 wire           mem_avl_write_req;
 wire [7:0]     mem_avl_size;
-
 wire           mem_avl_clk;
 wire           mem_init_done;
 wire           mem_cal_success;
 wire           mem_cal_fail;
-
 wire           mem_pll_locked;
 
+
+// Clocks
+wire        	sys_clk;
 wire 				master_clk;
 
 reg [127:0]		adc_data;  			// Data buffer
 reg 				sending_sclk;
 reg 				start_sclk;
 reg 				reset_sclk;
-	
-// FIFO
-reg 				write_request;
 
-function [3:0] zem5305_led;
-input [3:0] a;
-integer i;
-begin
-	for(i=0; i<4; i=i+1) begin: u
-		zem5305_led[i] = (a[i]==1'b1) ? (1'b0) : (1'bz);
-	end
-end
-endfunction
 
-assign led = zem5305_led({1'b1,ep00wire[2],start,ep00wire[0]});
 
-//Memory Interface Reset
+
+// Weird code to ensure DDR3 initilizes
 reg [3:0] rst_cnt;
 initial rst_cnt = 4'b0;
 always @(posedge okClk) begin
@@ -157,7 +151,8 @@ always @(posedge okClk) begin
 end
 
 
-//Block Throttle
+// Allow computer to read if we have enough data in memory.
+// Computer reads one block at a time. If we have a block of data...
 always @(posedge okClk) begin
 	if(pipe_out_rd_count >= BLOCK_SIZE) begin
 		pipe_out_ready <= 1'b1;
@@ -168,27 +163,28 @@ end
 
 
 always @(negedge master_clk) begin
-	if (start_sclk) begin
-		sending_sclk <= 1'b1;
-		reset_sclk <= 1'b1;
-		adc_data <= 128'h000001000000000000000000;
-	end else if (sending_sclk) begin		// On falling edge, if transfer is going...
-		if (adc_data[95]) begin					// If our original 1 has been shifted to the 23rd position, this is our last pulse
-			write_request <= 1'b1;
-			sending_sclk <= 1'b0;						// Stop clock and load data into fifo
+	if (start_sclk) begin 								// When time to start requesting bits...
+		sending_sclk <= 1'b1;								// Start requesting bits
+		reset_sclk <= 1'b1;									// Tell other process to reset start_sclk
+		adc_data <= 128'h000001000000000000000000;	// Initialize data with one bit set
+	end else if (sending_sclk) begin					// If mid transfer...
+		if (adc_data[95]) begin								// If our original 1 has been shifted to the 23rd position, this is our bit
+			store_fifo_write <= 1'b1;							// Tell Fifo to store this data on next clock
+			sending_sclk <= 1'b0;								// Stop requesting bits
 		end
-		adc_data <= adc_data << 1;
+		adc_data <= adc_data << 1;							
 		adc_data[72] <= miso_pf_in;						
 		adc_data[48] <= miso_pa_in;						
-		adc_data[24] <= miso_sf_in;					// Shift data ad insert new bit
+		adc_data[24] <= miso_sf_in;						// Shift data ad insert new bit
 		adc_data[0] <= miso_sa_in;	
-	end else begin
-		write_request <= 1'b0; 
-		reset_sclk <= 1'b0;
+	end else begin											// If we are not transfering data
+		store_fifo_write <= 1'b0; 							// Ensure fifo is not trying to save data
+		reset_sclk <= 1'b0;									// Ensure start_sclk is allowed to be asserted
 	end
 end
 
-
+// When drdy falls, set start_sclk to tell other process to stop reading.
+// reset_sclk will be set by that process when it aknowledged the start flag
 always @(negedge drdy_in, posedge reset_sclk) begin
 	if (reset_sclk) begin
 		start_sclk <= 1'b0;
@@ -198,35 +194,53 @@ always @(negedge drdy_in, posedge reset_sclk) begin
 end
 
 
-assign sclk_out = (sending_sclk) ? master_clk : 1'b0;
-assign clk_out = master_clk;
-assign start = ep00wire[1];
+assign sclk_out = (sending_sclk) ? master_clk : 1'b0; // Request bits when sending_sclk (asserted when drdy falls)
+assign clk_out = master_clk;									// clk_out always has clock on it
+assign start = ep00wire[1];									// Tell ADC to collect data when collect bit is set from PC
 
-assign test_out[0] = start;
-assign test_out[1] = drdy_in;
-assign test_out[2] = sclk_out;
-assign test_out[3] = sending_sclk;
+assign led[0] = 1'b1;											// Led 0 always on
+assign led[1] = (ep00wire[2] == 1'b1) ? 1'b0 : 1'bz;	// Led 1 on when "reset" bit is high from pc
+assign led[2] = (start == 1'b1) ? 1'b0 : 1'bz;			// Led 2 on when collecting data from ADC
+assign led[3] = (ep00wire[0] == 1'b1) ? 1'b0 : 1'bz;	// Led 3 on when "read" bit is high from pc
 
 
-//------------------------------------------------------------------------
-// Instantiate the okHost and connect endpoints.
-//------------------------------------------------------------------------
-wire [65*1-1:0]  okEHx;
+// Usb Stuff
+// -------------------------------------------------------------------
+	wire [65*1-1:0]  okEHx;
 
-okHost okHI(
-	.okUH(okUH),
-	.okHU(okHU),
-	.okUHU(okUHU),
-	.okAA(okAA),
-	.okClk(okClk),
-	.okHE(okHE),
-	.okEH(okEH)
+	okHost okHI(
+		.okUH(okUH),
+		.okHU(okHU),
+		.okUHU(okUHU),
+		.okAA(okAA),
+		.okClk(okClk),
+		.okHE(okHE),
+		.okEH(okEH)
+		);
+
+	okWireOR # (.N(1)) wireOR (okEH, okEHx);
+
+	// Connect ep00wire to computer
+	okWireIn wi00 (
+		.okHE(okHE),
+		.ep_addr(8'h00), 
+		.ep_dataout(ep00wire)
 	);
 
-okWireOR # (.N(1)) wireOR (okEH, okEHx);
-okWireIn       wi00 (.okHE(okHE),                             .ep_addr(8'h00), .ep_dataout(ep00wire));
-okBTPipeOut    po0  (.okHE(okHE), .okEH(okEHx[ 0*65 +: 65 ]), .ep_addr(8'ha0), .ep_read(po0_ep_read),   .ep_blockstrobe(), .ep_datain(po0_ep_datain),   .ep_ready(pipe_out_ready));
+	// https://docs.opalkelly.com/display/FPSDK/FrontPanel+HDL+-+USB+2.0#FrontPanelHDL-USB2.0-okBTPipeOut
+	// Connects a pipe out. This connects directly to DDR3 output fifo.
+	okBTPipeOut po0 (
+		.okHE(okHE), 
+		.okEH(okEHx[ 0*65 +: 65 ]), 
+		.ep_addr(8'ha0), 
+		.ep_read(recall_fifo_read),   
+		.ep_blockstrobe(), 
+		.ep_datain(recall_fifo_dataout),   
+		.ep_ready(pipe_out_ready)
+	);
+// --------------------------------------------------------------------
 
+// Generates clock frequency for DDR3
 mem_pll mem_pll_inst (
 	.refclk   (phy_clk),         //  refclk.clk
 	.rst      (~global_reset_n), //   reset.reset
@@ -234,14 +248,16 @@ mem_pll mem_pll_inst (
 	.locked   (mem_pll_locked)   //  locked.export
 	);
 
+// Generates clock frequency for ADC
 master_pll master_pll_inst (
 	.refclk	 (sys_clk),
 	.outclk_0 (master_clk)
 	);
 	
-	
+// Convert differential clock input to simple clock
 alt_inbuf_diff sys_clk_io(.i(sys_clk_p), .ibar(sys_clk_n), .o(sys_clk));
 
+// Define DDR3 module (IDK how this works)
 ddr3_interface ddr3_interface_inst (
 	.pll_ref_clk                (sys_clk),             //        pll_ref_clk.clk
 	.global_reset_n             (global_reset_n),      //       global_reset.reset_n
@@ -307,21 +323,23 @@ ddr3_interface ddr3_interface_inst (
 	.pll_avl_phy_clk            ()                     //                   .pll_avl_phy_clk
 	);
 
+	
+// Create DDR3 Interface
 ddr3_test ddr3_tb (
 	.clk             (mem_avl_clk),
-	.reset           (ep00wire[2]),
+	.reset           (ep00wire[2]),  			// Pass in signals from computer to enable writes and reads
 	.writes_en       (ep00wire[1]),
 	.reads_en        (ep00wire[0]),
 	.calib_done      (mem_init_done),
 
-	.ib_re           (pipe_in_read),
-	.ib_data         (pipe_in_data),
-	.ib_count        (pipe_in_rd_count),
-	.ib_empty        (pipe_in_empty),
+	.ib_re           (store_fifo_read),			// Request to read data from storage fifo
+	.ib_data         (store_fifo_data),			// Data from storage fifo
+	.ib_count        (store_fifo_rd_count),	// Available words to read from storage fifo
+	.ib_empty        (store_fifo_empty),		// Is storage fifo empty?
 
-	.ob_we           (pipe_out_write),
-	.ob_data         (pipe_out_data),
-	.ob_count        (pipe_out_wr_count),
+	.ob_we           (recall_fifo_write),		// Request to write to recall fifo
+	.ob_data         (recall_fifo_datain),		// Data to request fifo
+	.ob_count        (recall_fifo_wr_count),	// How much data is available for PC to read
 
 	.avl_ready       (mem_avl_ready),
 	.avl_burstbegin  (mem_avl_burstbegin),
@@ -335,34 +353,38 @@ ddr3_test ddr3_tb (
 	.avl_write_req   (mem_avl_write_req),
 	.avl_wdata       (mem_avl_wdata),
 	.avl_be          (mem_avl_be)
-	);
+);
 
+// Storage fifo
 fifo_w128_256 okPipeIn_fifo (
-	.aclr      (ep00wire[2]),
-	.wrclk     (master_clk),
-	.rdclk     (mem_avl_clk),
-	.data      (adc_data),     // Bus [31 : 0]
-	.wrreq     (write_request),
-	.rdreq     (pipe_in_read),
-	.q         (pipe_in_data),       // Bus [127 : 0]
-	.wrfull    (pipe_in_full),
-	.rdempty   (pipe_in_empty),
-	.rdusedw   (pipe_in_rd_count),   // Bus [7 : 0]
-	.wrusedw   (pipe_in_wr_count)    // Bus [9 : 0]
-	);
+	.aclr      (ep00wire[2]),				// Clear fifo
+	.wrclk     (master_clk),				// Clock to synchronize writes to
+	.rdclk     (mem_avl_clk),				// Clock to synchronize reads to
+	.data      (adc_data),     			// Store adc_data into fifo
+	.wrreq     (store_fifo_write),		// When done collecting from ADC, request to store in fifo
+	.rdreq     (store_fifo_read),			// DDR3 interface asking for data to save
+	.q         (store_fifo_data),       // Output to DDR3 interface
+	.wrfull    (store_fifo_full),			// Am I full?
+	.rdempty   (store_fifo_empty),		// Am I empty?
+	.rdusedw   (store_fifo_rd_count),   // How many readings can you take from me?
+	.wrusedw   (store_fifo_wr_count)    // How many data points have been written and remain?
+);
 
+
+// Recall fifo. Note: takes 128 bit words from DDR3 but 
+// outputs 32 bit words for pipe to pc
 fifo_w128_256_r32_1024 okPipeOut_fifo (
-	.aclr      (ep00wire[2]),
-	.wrclk     (mem_avl_clk),
-	.rdclk     (okClk),
-	.data      (pipe_out_data),      // Bus [127 : 0]
-	.wrreq     (pipe_out_write),
-	.rdreq     (po0_ep_read),
-	.q         (po0_ep_datain),      // Bus [31 : 0]
-	.wrfull    (pipe_out_full),
-	.rdempty   (pipe_out_empty),
-	.rdusedw   (pipe_out_rd_count),  // Bus [10 : 0]
-	.wrusedw   (pipe_out_wr_count)   // Bus [8 : 0]
-	);
+	.aclr      (ep00wire[2]),				// Clear fifo
+	.wrclk     (mem_avl_clk),				// Clock to synchronize writes to
+	.rdclk     (okClk),						// Clock to synchronize reads to
+	.data      (recall_fifo_datain),    // Data to store from DDR3
+	.wrreq     (recall_fifo_write),		// Should I save on this clock cycle?
+	.rdreq     (recall_fifo_read),		// Is PC asking for data?
+	.q         (recall_fifo_dataout),   // Output to PC
+	.wrfull    (recall_fifo_full),		// Am I Full?
+	.rdempty   (recall_fifo_empty),		// Am I empty?
+	.rdusedw   (recall_fifo_rd_count),  // How many readings can you take from me?
+	.wrusedw   (recall_fifo_wr_count)   // How many data points have been written and remain?
+);
 
 endmodule
