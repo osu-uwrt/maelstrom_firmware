@@ -40,12 +40,6 @@ okUHU[29] <> okHost:okHI.okUHU
 okUHU[30] <> okHost:okHI.okUHU
 okUHU[31] <> okHost:okHI.okUHU
 okAA <> okHost:okHI.okAA
-sys_clk_p => sys_clk_io.DATA
-sys_clk_n => sys_clk_io.NDATA
-led[0] <= led[0].DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= led[1].DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= led[2].DB_MAX_OUTPUT_PORT_TYPE
-led[3] <= <GND>
 mem_addr[0] <= ddr3_interface:ddr3_interface_inst.mem_a
 mem_addr[1] <= ddr3_interface:ddr3_interface_inst.mem_a
 mem_addr[2] <= ddr3_interface:ddr3_interface_inst.mem_a
@@ -96,19 +90,20 @@ mem_ras_n <= ddr3_interface:ddr3_interface_inst.mem_ras_n
 mem_we_n <= ddr3_interface:ddr3_interface_inst.mem_we_n
 mem_rzqin[0] => mem_rzqin[0].IN1
 mem_reset_n <= ddr3_interface:ddr3_interface_inst.mem_reset_n
-drdy_in => test_out[1].DATAIN
+sys_clk_p => sys_clk_io.DATA
+sys_clk_n => sys_clk_io.NDATA
 drdy_in => start_sclk.CLK
 sclk_out <= sclk_out.DB_MAX_OUTPUT_PORT_TYPE
 miso_pf_in => adc_data.DATAB
 miso_pa_in => adc_data.DATAB
 miso_sf_in => adc_data.DATAB
 miso_sa_in => adc_data.DATAB
-start <= test_out[0].DB_MAX_OUTPUT_PORT_TYPE
+start <= ep00wire[1].DB_MAX_OUTPUT_PORT_TYPE
 clk_out <= master_clk.DB_MAX_OUTPUT_PORT_TYPE
-test_out[0] <= test_out[0].DB_MAX_OUTPUT_PORT_TYPE
-test_out[1] <= drdy_in.DB_MAX_OUTPUT_PORT_TYPE
-test_out[2] <= sclk_out.DB_MAX_OUTPUT_PORT_TYPE
-test_out[3] <= sending_sclk.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= <VCC>
+led[1] <= led[1].DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= led[2].DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= led[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Acoustics|okHost:okHI

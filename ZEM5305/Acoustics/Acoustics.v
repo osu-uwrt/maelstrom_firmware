@@ -86,7 +86,7 @@ wire [31:0]  ep00wire;
 reg          pipe_out_ready;  		// Can computer read now?
 
 // Fifo controls
-wire			 store_fifo_write;		// Should storage fifo input data?
+reg 			 store_fifo_write;		// Should storage fifo input data?
 wire         store_fifo_read;			// Should storage fifo output data?
 wire [127:0] store_fifo_data;			// Storage fifo output to DDR3
 wire [7:0]   store_fifo_rd_count;	// How many items are available to read
@@ -94,7 +94,7 @@ wire [7:0]   store_fifo_wr_count;	// How many items have been written and still 
 wire         store_fifo_full;			// Is storage fifo full?
 wire         store_fifo_empty;		// Is storage fifo empty?
 
-wire         recall_fifo_write;		// Should storage fifo input data?
+wire			 recall_fifo_write;		// Should storage fifo input data?
 wire [127:0] recall_fifo_datain;		// Data from DDR3 to store
 wire [10:0]  recall_fifo_rd_count;	// How many items are available to read
 wire [8:0]   recall_fifo_wr_count;	// How many items have been written and still remain
@@ -154,7 +154,7 @@ end
 // Allow computer to read if we have enough data in memory.
 // Computer reads one block at a time. If we have a block of data...
 always @(posedge okClk) begin
-	if(pipe_out_rd_count >= BLOCK_SIZE) begin
+	if(recall_fifo_rd_count >= BLOCK_SIZE) begin
 		pipe_out_ready <= 1'b1;
 	end else begin
 		pipe_out_ready <= 1'b0;
