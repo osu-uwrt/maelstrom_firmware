@@ -32,6 +32,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "test_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "test_out[1]",
+					"strict" : false
+				},
+				{
 					"name" : "okUHU[0]",
 					"strict" : false
 				},

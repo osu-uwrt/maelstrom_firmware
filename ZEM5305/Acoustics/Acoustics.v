@@ -65,7 +65,8 @@ module Acoustics (
 	output wire						clk_out,		// Master clock for ADC
 	
 	// Test
-	output wire [  3: 0]       led			// Device leds
+	output wire [  3: 0]       led,			// Device leds
+	output wire [  3: 0]       test_out    // Test outputs
 );
 
 localparam BLOCK_SIZE      = 128;   // How many words the computer reads at a time. 512 bytes / 4 byte per word;
@@ -202,6 +203,8 @@ assign led[0] = 1'b1;											// Led 0 always on
 assign led[1] = (ep00wire[2] == 1'b1) ? 1'b0 : 1'bz;	// Led 1 on when "reset" bit is high from pc
 assign led[2] = (start == 1'b1) ? 1'b0 : 1'bz;			// Led 2 on when collecting data from ADC
 assign led[3] = (ep00wire[0] == 1'b1) ? 1'b0 : 1'bz;	// Led 3 on when "read" bit is high from pc
+assign test_out[0] = recall_fifo_read;
+assign test_out[1] = recall_fifo_empty;
 
 
 // Usb Stuff
@@ -356,7 +359,7 @@ ddr3_test ddr3_tb (
 );
 
 // Storage fifo
-fifo_w128_256 okPipeIn_fifo (
+fifo_w128_256 storage_fifo (
 	.aclr      (ep00wire[2]),				// Clear fifo
 	.wrclk     (master_clk),				// Clock to synchronize writes to
 	.rdclk     (mem_avl_clk),				// Clock to synchronize reads to
@@ -373,12 +376,12 @@ fifo_w128_256 okPipeIn_fifo (
 
 // Recall fifo. Note: takes 128 bit words from DDR3 but 
 // outputs 32 bit words for pipe to pc
-fifo_w128_256_r32_1024 okPipeOut_fifo (
+fifo_w128_256_r32_1024 recall_fifo (
 	.aclr      (ep00wire[2]),				// Clear fifo
 	.wrclk     (mem_avl_clk),				// Clock to synchronize writes to
-	.rdclk     (okClk),						// Clock to synchronize reads to
-	.data      (recall_fifo_datain),    // Data to store from DDR3
-	.wrreq     (recall_fifo_write),		// Should I save on this clock cycle?
+	.rdclk     (okClk),						// Clock to synchronize reads tom
+	.data      (128'hABABABABABABABABABABABABABABABAB),    // Data to store from DDR3
+	.wrreq     (1'b1),		// Should I save on this clock cycle?
 	.rdreq     (recall_fifo_read),		// Is PC asking for data?
 	.q         (recall_fifo_dataout),   // Output to PC
 	.wrfull    (recall_fifo_full),		// Am I Full?

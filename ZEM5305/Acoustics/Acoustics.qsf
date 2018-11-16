@@ -173,34 +173,18 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
-set_location_assignment PIN_G17 -to drdy_in
-set_location_assignment PIN_G2 -to clk_out
-set_location_assignment PIN_U21 -to miso_pf_in
-set_location_assignment PIN_AA2 -to miso_pa_in
-set_location_assignment PIN_J19 -to miso_sa_in
-set_location_assignment PIN_AA1 -to miso_sf_in
-set_location_assignment PIN_W2 -to sclk_out
-set_location_assignment PIN_L2 -to start
+set_location_assignment PIN_W2 -to drdy_in
+set_location_assignment PIN_E2 -to clk_out
+set_location_assignment PIN_Y3 -to miso_pf_in
+set_location_assignment PIN_G2 -to miso_pa_in
+set_location_assignment PIN_D3 -to miso_sa_in
+set_location_assignment PIN_G1 -to miso_sf_in
+set_location_assignment PIN_N1 -to sclk_out
+set_location_assignment PIN_C2 -to start
 set_location_assignment PIN_T13 -to test_out[0]
 set_location_assignment PIN_R12 -to test_out[1]
 set_location_assignment PIN_AB16 -to test_out[2]
 set_location_assignment PIN_AB15 -to test_out[3]
-set_global_assignment -name VERILOG_FILE Acoustics.v
-set_global_assignment -name VERILOG_FILE Megafunctions/master_pll/master_pll_0002.v
-set_global_assignment -name QIP_FILE Megafunctions/master_pll/master_pll_0002.qip
-set_global_assignment -name VHDL_FILE Megafunctions/master_pll.vhd
-set_global_assignment -name QIP_FILE Megafunctions/ddr3_interface.qip
-set_global_assignment -name HEX_FILE Megafunctions/okHostMicrocode.hex
-set_global_assignment -name VHDL_FILE Megafunctions/okLibrary.vhd
-set_global_assignment -name VERILOG_FILE Megafunctions/okHost.v
-set_global_assignment -name SYSTEMVERILOG_FILE Megafunctions/okHost.sv
-set_global_assignment -name VERILOG_FILE Megafunctions/okEndpoints.v
-set_global_assignment -name VERILOG_FILE Megafunctions/mem_pll_0002.v
-set_global_assignment -name VERILOG_FILE Megafunctions/mem_pll.v
-set_global_assignment -name VERILOG_FILE Megafunctions/fifo_w128_256_r32_1024.v
-set_global_assignment -name VERILOG_FILE ddr3_test.v
-set_global_assignment -name QIP_FILE fifo_w128_156.qip
-set_global_assignment -name QIP_FILE Megafunctions/fifo_w128_256.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -478,4 +462,19 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_pa_in
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_pf_in
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_sf_in
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to miso_sa_in
+set_global_assignment -name QIP_FILE Megafunctions/fifo_w128_256_r32_1024.qip
+set_global_assignment -name VERILOG_FILE Acoustics.v
+set_global_assignment -name VERILOG_FILE Megafunctions/master_pll/master_pll_0002.v
+set_global_assignment -name QIP_FILE Megafunctions/master_pll/master_pll_0002.qip
+set_global_assignment -name VHDL_FILE Megafunctions/master_pll.vhd
+set_global_assignment -name QIP_FILE Megafunctions/ddr3_interface.qip
+set_global_assignment -name HEX_FILE Megafunctions/okHostMicrocode.hex
+set_global_assignment -name VHDL_FILE Megafunctions/okLibrary.vhd
+set_global_assignment -name VERILOG_FILE Megafunctions/okHost.v
+set_global_assignment -name SYSTEMVERILOG_FILE Megafunctions/okHost.sv
+set_global_assignment -name VERILOG_FILE Megafunctions/okEndpoints.v
+set_global_assignment -name VERILOG_FILE Megafunctions/mem_pll_0002.v
+set_global_assignment -name VERILOG_FILE Megafunctions/mem_pll.v
+set_global_assignment -name VERILOG_FILE ddr3_test.v
+set_global_assignment -name QIP_FILE Megafunctions/fifo_w128_256.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
