@@ -1,0 +1,12 @@
+<nb-card size="xsmall">
+  <nb-card-header>
+    Depth
+  </nb-card-header>
+  <nb-card-body>
+    <div class="chart-info">
+      <div class="value">{{ earningLiveUpdateCardData.dailyIncome | ngxNumberWithCommas }} m</div>
+    </div>
+    <ngx-depth-live-update-chart [liveUpdateChartData]="liveUpdateChartData">
+    </ngx-depth-live-update-chart>
+  </nb-card-body>
+</nb-card>

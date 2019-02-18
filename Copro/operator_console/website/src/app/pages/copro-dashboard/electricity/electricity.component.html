@@ -1,0 +1,51 @@
+<nb-card size="medium">
+  <div class="consumption-table">
+    <div class="table-header">
+      <div>Power draw</div>
+    </div>
+
+        <div class="stats-month" *ngFor="let component of listData.components">
+          <div>
+            <span class="month">{{ component.name }}</span>
+          </div>
+          <div class="results">
+            <b>{{ component.amps }}</b> A / <b>{{ component.wattHr }}</b> Wh
+          </div>
+        </div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-header">
+      <div class="header-stats">
+        <div class="stats-block">
+          <div class="subtitle">Drawing</div>
+          <div>
+            <span class="value">20</span>
+            <span class="unit">A</span>
+          </div>
+        </div>
+
+        <div class="stats-block currency">
+          <div class="subtitle">Spent</div>
+          <div>
+            <span class="value">291</span>
+            <span class="unit">Wh</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown"
+           [ngClass]="{ 'ghost-dropdown': currentTheme === 'corporate' }"
+           ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn"
+                [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'btn-primary': currentTheme != 'default'}">
+          {{ type }}
+        </button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li class="dropdown-item" *ngFor="let t of types" (click)="type = t">{{ t }}</li>
+        </ul>
+      </div>
+    </div>
+    <ngx-electricity-chart [data]="chartData" [newData]="newData"></ngx-electricity-chart>
+  </div>
+</nb-card>
