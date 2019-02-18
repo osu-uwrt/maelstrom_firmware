@@ -19,3 +19,4 @@ ZEM5305/Acoustics/incremental_db/
 
 node_modules/
 *.pyc
+._*
