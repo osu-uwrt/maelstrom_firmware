@@ -6,7 +6,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Command } from 'selenium-webdriver';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
-const COPRO_URL = "http://localhost:8080"
+const COPRO_URL = "http://localhost:80"
 
 @Injectable()
 export class CoproService {

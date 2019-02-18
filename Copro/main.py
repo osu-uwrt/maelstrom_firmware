@@ -5,7 +5,7 @@ from time import sleep
 
 print('Setting up socket...')
 incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-incomingConnection.bind(('0.0.0.0', 50005))
+incomingConnection.bind(('127.0.0.1', 50005))
 incomingConnection.listen(1)
 conections = [incomingConnection]
 print('Listening for connections...')
