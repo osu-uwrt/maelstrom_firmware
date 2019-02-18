@@ -14,5 +14,8 @@
 #######################
 # Quartus build files #
 #######################
-ZEM5305/Acoustics/db/*
-ZEM5305/Acoustics/incremental_db/*
+ZEM5305/Acoustics/db/
+ZEM5305/Acoustics/incremental_db/
+
+node_modules/
+*.pyc

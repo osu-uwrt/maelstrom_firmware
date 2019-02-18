@@ -173,14 +173,14 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
-set_location_assignment PIN_G17 -to drdy_in
-set_location_assignment PIN_G2 -to clk_out
-set_location_assignment PIN_U21 -to miso_pf_in
-set_location_assignment PIN_AA2 -to miso_pa_in
-set_location_assignment PIN_J19 -to miso_sa_in
-set_location_assignment PIN_AA1 -to miso_sf_in
-set_location_assignment PIN_W2 -to sclk_out
-set_location_assignment PIN_L2 -to start
+set_location_assignment PIN_W2 -to drdy_in
+set_location_assignment PIN_E2 -to clk_out
+set_location_assignment PIN_Y3 -to miso_pf_in
+set_location_assignment PIN_G2 -to miso_pa_in
+set_location_assignment PIN_D3 -to miso_sa_in
+set_location_assignment PIN_G1 -to miso_sf_in
+set_location_assignment PIN_N1 -to sclk_out
+set_location_assignment PIN_C2 -to start
 set_location_assignment PIN_T13 -to test_out[0]
 set_location_assignment PIN_R12 -to test_out[1]
 set_location_assignment PIN_AB16 -to test_out[2]
