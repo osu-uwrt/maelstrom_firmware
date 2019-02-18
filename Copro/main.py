@@ -32,6 +32,7 @@ while 1:
 				continue
 			
 			s.sendall(commands.runCommand(data))
+	sleep(0.01)
 
 
 	
