@@ -1,8 +1,11 @@
-from http.server import BaseHTTPRequestHandler,HTTPServer
+try:
+	from http.server import BaseHTTPRequestHandler,HTTPServer
+except:
+	from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 import json
 import socket
 
-PORT_NUMBER = 80
+PORT_NUMBER = 2000
 coproConection = None
 
 #This class will handles any incoming request from
