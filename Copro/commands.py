@@ -41,7 +41,10 @@ class KillSwitchSensor(Sensor):
 depth = DepthSensor()
 
 def runCommand(data):
-	data = list(map(ord,data))
+	try:
+		data = data.encode()
+	except:
+		pass
 	commandNum = data[0]
 	return bytearray(commandList[commandNum](data[1:]))
 
