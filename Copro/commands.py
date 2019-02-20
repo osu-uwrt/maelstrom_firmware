@@ -42,7 +42,7 @@ depth = DepthSensor()
 
 def runCommand(data):
 	try:
-		data = data.encode()
+		data = list(map(ord,data))
 	except:
 		pass
 	commandNum = data[0]
