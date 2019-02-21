@@ -45,13 +45,12 @@ stbdBatVoltage = StbdBatVoltage()
 portBatVoltage = PortBatVoltage()
 
 def runCommand(data):
-	try:
-		data = list(map(ord,data))
-	except:
-		pass
 	commandNum = data.pop(0)
 	response = commandList[commandNum](data)
-	return bytearray([len(response)+1]+response)
+	return response
+
+
+
 
 def setMobo(state):
 	if state[0]:

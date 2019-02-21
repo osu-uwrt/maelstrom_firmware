@@ -7,6 +7,7 @@ import socket
 import threading
 import time
 import select
+import sys
 
 PORT_NUMBER = 2000
 coproConection = None
@@ -16,16 +17,6 @@ class commandWaiter:
         self.command = command
         self.event = threading.Event()
         self.response = None
-
-    def setResponse(self, response):
-        self.response = response
-        self.event.set()
-
-    def getEvent(self):
-        return self.event
-
-    def getResponse(self):
-        return self.response
     
 
 
@@ -69,8 +60,8 @@ def processCommand(byteArray):
 
     waiter = commandWaiter(byteArray)
     toBeSentQueue += [waiter]   # Enqueue data to be sent later
-    waiter.getEvent().wait()    # Wait for a response
-    return waiter.getResponse()
+    waiter.event.wait()    # Wait for a response
+    return waiter.response
 
 
 def background():
@@ -78,7 +69,7 @@ def background():
     global toBeReceivedQueue
     global toBeSentQueue
 
-    inputBuffer = ""
+    inputBuffer = []
 
     while True:
         if coproConection != None:                  # If we are connected
@@ -86,30 +77,36 @@ def background():
                 readable, writable, exceptional = select.select([coproConection], [coproConection], [coproConection], 0)
                 if len(writable) > 0:                       # If we can send data...
                     if len(toBeSentQueue) > 0:              # And we have data to send...
-                        toBeSent = toBeSentQueue.pop(0)     # Send command with length prefix
-                        coproConection.sendall(bytearray([len(toBeSent.command)+1]+toBeSent.command))
+                        toBeSent = toBeSentQueue.pop(0)    
+                        command = toBeSent.command          # Send command with length prefix
+                        command = [len(command) + 1] + command
+                        coproConection.sendall(bytearray(command))
                         toBeReceivedQueue += [toBeSent]     # Wait for response
                 
                 if len(readable) > 0:
                     data = coproConection.recv(1024)        # Get data
                     if data == None or len(data) == 0:      
                         raise TypeError
+                    if sys.version_info < (3, 0):
+                        data = list(map(ord, data))
                     inputBuffer += data                     # While we have a complete command in the buffer
-                    while len(inputBuffer) > 0 and ord(inputBuffer[0]) <= len(inputBuffer):
+                    while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
                         w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
-                        response = inputBuffer[1 : ord(inputBuffer[0])]
-                        w.setResponse(list(bytearray(response)))    # Send a response to the http protocol
-                        inputBuffer = inputBuffer[ord(inputBuffer[0]):]
+                        response = inputBuffer[1 : inputBuffer[0]]
+                        w.response = response      # Send a response to the http protocol
+                        w.event.set()
+                        inputBuffer = inputBuffer[inputBuffer[0]:]
                 
                 if len(exceptional) > 0:
                     raise TypeError
             except Exception as exc:
                 print("Lost copro connection")
-                inputBuffer = ""
+                print(exc)
+                inputBuffer = []
                 coproConection.close()
                 coproConection = None
         else:
-            inputBuffer = ""                        # If we are not connected, clear all buffers and queues
+            inputBuffer = []                        # If we are not connected, clear all buffers and queues
             while len(toBeReceivedQueue) != 0:
                 toBeReceivedQueue.pop().event.set()
 

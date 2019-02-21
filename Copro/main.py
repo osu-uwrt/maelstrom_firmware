@@ -2,9 +2,9 @@ import socket
 import select
 import commands
 import traceback
+import sys
 from time import sleep
 
-inputBuffer = ""
 print('Setting up socket...')
 incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 incomingConnection.bind(('127.0.0.1', 50005))
@@ -12,6 +12,8 @@ incomingConnection.listen(1)
 connections = [incomingConnection]
 print('Listening for connections...')
 
+
+inputBuffer = []
 try:
 	while 1:
 		readable, writable, exceptional = select.select(connections, [], connections, 0)
@@ -35,14 +37,26 @@ try:
 
 				# Command structure: Length, Command, Args...
 				# Response structure: Length, values
+				# Below code allows for multiple or partial commands to be received
+				if sys.version_info < (3, 0):
+					data = list(map(ord, data))
 				inputBuffer += data
-				while len(inputBuffer) > 0 and ord(inputBuffer[0]) <= len(inputBuffer):
-					command = inputBuffer[1 : ord(inputBuffer[0])]
-					s.sendall(commands.runCommand(command))
-					inputBuffer = inputBuffer[ord(inputBuffer[0]):]
+
+				# While there is a whole command in the buffer
+				while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
+					command = inputBuffer[1 : inputBuffer[0]]
+
+					# Act on the command
+					response = commands.runCommand(command)
+					response = [len(response) + 1] + response
+					s.sendall(bytearray(response))
+
+					# Remove the command from the buffer
+					inputBuffer = inputBuffer[inputBuffer[0]:]
 				
 		sleep(0.01)
 except Exception as exc:
+	traceback.print_exc()
 	print(exc)
 	for s in connections:
 		s.close()
