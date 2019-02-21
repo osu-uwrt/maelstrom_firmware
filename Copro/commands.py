@@ -1,6 +1,8 @@
 import time as time #computer
 #import time as time #micro
 
+from random import randint
+
 def getTime():
     return int(time.time()*1000) #computer
     #return time.ticks_ms()       #micro
@@ -9,7 +11,7 @@ class Sensor:
     def __init__(self):
         self.data = 0
         self.lastCollectionTime = 0
-        self.cacheDuration = 10
+        self.cacheDuration = 100
 
     def value(self):
         if getTime() - self.lastCollectionTime > self.cacheDuration:
@@ -26,27 +28,30 @@ class DepthSensor(Sensor):
         # Do something to read sensor
         self.data = 10
 
-class BBTempSensor(Sensor):
+class StbdBatVoltage(Sensor):
     def collect(self):
         Sensor.collect(self)
         # Do something to read sensor
-        self.data = 44
+        self.data = 20.5 + randint(0, 9) / 100.0
 
-class KillSwitchSensor(Sensor):
+class PortBatVoltage(Sensor):
     def collect(self):
         Sensor.collect(self)
         # Do something to read sensor
-        self.data = 12
+        self.data = 20 + randint(0, 9) / 100.0
 
-depth = DepthSensor()
+
+stbdBatVoltage = StbdBatVoltage()
+portBatVoltage = PortBatVoltage()
 
 def runCommand(data):
 	try:
 		data = list(map(ord,data))
 	except:
 		pass
-	commandNum = data[0]
-	return bytearray(commandList[commandNum](data[1:]))
+	commandNum = data.pop(0)
+	response = commandList[commandNum](data)
+	return bytearray([len(response)+1]+response)
 
 def setMobo(state):
 	if state[0]:
@@ -69,12 +74,18 @@ def setThrusters(state):
 		print("Thrusters off")
 	return [1]
 
-def getDepthData(data):
-	return [depth.value()]
+def getPortVoltage(data):
+	voltage = int(portBatVoltage.value() * 100)
+	return [voltage / 256, voltage % 256]
+
+def getStbdVoltage(data):
+	voltage = int(stbdBatVoltage.value() * 100)
+	return [voltage / 256, voltage % 256]
 
 commandList = [
 	setMobo, 
 	setJetson,
 	setThrusters,
-	getDepthData
+	getPortVoltage,
+	getStbdVoltage
 ]
