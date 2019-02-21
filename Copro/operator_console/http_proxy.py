@@ -7,6 +7,7 @@ import socket
 import threading
 import time
 import select
+import sys
 
 PORT_NUMBER = 2000
 coproConection = None
@@ -68,7 +69,7 @@ def background():
     global toBeReceivedQueue
     global toBeSentQueue
 
-    inputBuffer = ""
+    inputBuffer = []
 
     while True:
         if coproConection != None:                  # If we are connected
@@ -86,23 +87,26 @@ def background():
                     data = coproConection.recv(1024)        # Get data
                     if data == None or len(data) == 0:      
                         raise TypeError
+                    if sys.version_info < (3, 0):
+                        data = list(map(ord, data))
                     inputBuffer += data                     # While we have a complete command in the buffer
-                    while len(inputBuffer) > 0 and ord(inputBuffer[0]) <= len(inputBuffer):
+                    while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
                         w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
-                        response = inputBuffer[1 : ord(inputBuffer[0])]
-                        w.response = list(bytearray(response))      # Send a response to the http protocol
+                        response = inputBuffer[1 : inputBuffer[0]]
+                        w.response = response      # Send a response to the http protocol
                         w.event.set()
-                        inputBuffer = inputBuffer[ord(inputBuffer[0]):]
+                        inputBuffer = inputBuffer[inputBuffer[0]:]
                 
                 if len(exceptional) > 0:
                     raise TypeError
             except Exception as exc:
                 print("Lost copro connection")
-                inputBuffer = ""
+                print(exc)
+                inputBuffer = []
                 coproConection.close()
                 coproConection = None
         else:
-            inputBuffer = ""                        # If we are not connected, clear all buffers and queues
+            inputBuffer = []                        # If we are not connected, clear all buffers and queues
             while len(toBeReceivedQueue) != 0:
                 toBeReceivedQueue.pop().event.set()
 

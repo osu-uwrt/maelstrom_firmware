@@ -45,10 +45,6 @@ stbdBatVoltage = StbdBatVoltage()
 portBatVoltage = PortBatVoltage()
 
 def runCommand(data):
-	try:
-		data = list(map(ord,data))
-	except:
-		pass
 	commandNum = data.pop(0)
 	response = commandList[commandNum](data)
 	return response
