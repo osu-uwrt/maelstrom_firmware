@@ -4,7 +4,7 @@ import { NbThemeService } from '@nebular/theme';
 
 declare const echarts: any;
 
-@Component({ 
+@Component({
   selector: 'ngx-battery',
   styleUrls: ['./battery.component.scss'],
   template: `
@@ -30,13 +30,12 @@ export class BatteryComponent implements AfterViewInit, OnDestroy {
   @Input('voltage')
   set chartValue(voltage: number) {
     this.voltage = voltage;
-    const value = ((voltage/5) - 3.686)/0.00514;
+    const value = ((voltage / 5) - 3.686) / 0.00514;
     this.value = value;
 
     if (this.option.series) {
       this.option.series[0].data[0].value = value;
-      //this.option.series[0].data[1].value = 100 - value;
-      //this.option.series[1].data[0].value = value;
+      this.ngAfterViewInit();
     }
   }
 
@@ -130,7 +129,6 @@ export class BatteryComponent implements AfterViewInit, OnDestroy {
             center: ['45%', '50%'],
             radius: solarTheme.radius,
             data: [
-              
               {
                 value: 28,
                 name: ' ',

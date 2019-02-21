@@ -1,6 +1,6 @@
-import {Component, OnDestroy} from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { takeWhile } from 'rxjs/operators' ;
+import { takeWhile } from 'rxjs/operators';
 import { SolarData } from '../../@core/data/solar';
 import { CoproService } from '../../service/copro-service';
 
@@ -20,24 +20,26 @@ export class DashboardComponent implements OnDestroy {
 
   private alive = true;
 
-  solarValue: number;
+  stbdVoltage = 21;
+  portVoltage = 21;
+
   moboCard: CardSettings = {
     title: 'Motherboard',
     iconClass: 'nb-power',
     type: 'success',
-    onChange: (state) => {this.coproService.setMoboPower(state).subscribe(() => {})}
+    onChange: (state) => { this.coproService.setMoboPower(state).subscribe(() => { }); },
   };
   killCard: CardSettings = {
     title: 'Thrusters',
     iconClass: 'nb-close',
     type: 'danger',
-    onChange: (state) => {this.coproService.setThrusterPower(state).subscribe(() => {})}
+    onChange: (state) => { this.coproService.setThrusterPower(state).subscribe(() => { }); },
   };
   jetsonCard: CardSettings = {
     title: 'Jetson',
     iconClass: 'nb-power',
     type: 'info',
-    onChange: (state) => {this.coproService.setJetsonPower(state).subscribe(() => {})}
+    onChange: (state) => { this.coproService.setJetsonPower(state).subscribe(() => { }); },
   };
 
   statusCards: string;
@@ -45,7 +47,7 @@ export class DashboardComponent implements OnDestroy {
   commonStatusCardsSet: CardSettings[] = [
     this.moboCard,
     this.killCard,
-    this.jetsonCard
+    this.jetsonCard,
   ];
 
   statusCardsByThemes: {
@@ -53,25 +55,28 @@ export class DashboardComponent implements OnDestroy {
     cosmic: CardSettings[];
     corporate: CardSettings[];
   } = {
-    default: this.commonStatusCardsSet,
-    cosmic: this.commonStatusCardsSet,
-    corporate: this.commonStatusCardsSet
-  };
+      default: this.commonStatusCardsSet,
+      cosmic: this.commonStatusCardsSet,
+      corporate: this.commonStatusCardsSet,
+    };
 
   constructor(private themeService: NbThemeService,
-              private solarService: SolarData,
-              private coproService: CoproService) {
+    private solarService: SolarData,
+    private coproService: CoproService) {
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
         this.statusCards = this.statusCardsByThemes[theme.name];
-    });
-
-    this.solarService.getSolarData()
-      .pipe(takeWhile(() => this.alive))
-      .subscribe((data) => {
-        this.solarValue = data;
       });
+
+    this.getBattery();
+    this.coproService.coproDisconnected.subscribe(() => alert('Copro disconnected'));
+  }
+
+  getBattery() {
+    this.coproService.getStbdBat().subscribe(v => this.stbdVoltage = v, () => {});
+    this.coproService.getPortBat().subscribe(v => this.portVoltage = v, () => {});
+    setTimeout(() => this.getBattery(), 1000);
   }
 
   ngOnDestroy() {
