@@ -16,16 +16,6 @@ class commandWaiter:
         self.command = command
         self.event = threading.Event()
         self.response = None
-
-    def setResponse(self, response):
-        self.response = response
-        self.event.set()
-
-    def getEvent(self):
-        return self.event
-
-    def getResponse(self):
-        return self.response
     
 
 
@@ -69,8 +59,8 @@ def processCommand(byteArray):
 
     waiter = commandWaiter(byteArray)
     toBeSentQueue += [waiter]   # Enqueue data to be sent later
-    waiter.getEvent().wait()    # Wait for a response
-    return waiter.getResponse()
+    waiter.event.wait()    # Wait for a response
+    return waiter.response
 
 
 def background():
@@ -86,8 +76,10 @@ def background():
                 readable, writable, exceptional = select.select([coproConection], [coproConection], [coproConection], 0)
                 if len(writable) > 0:                       # If we can send data...
                     if len(toBeSentQueue) > 0:              # And we have data to send...
-                        toBeSent = toBeSentQueue.pop(0)     # Send command with length prefix
-                        coproConection.sendall(bytearray([len(toBeSent.command)+1]+toBeSent.command))
+                        toBeSent = toBeSentQueue.pop(0)    
+                        command = toBeSent.command          # Send command with length prefix
+                        command = [len(command) + 1] + command
+                        coproConection.sendall(bytearray(command))
                         toBeReceivedQueue += [toBeSent]     # Wait for response
                 
                 if len(readable) > 0:
@@ -98,7 +90,8 @@ def background():
                     while len(inputBuffer) > 0 and ord(inputBuffer[0]) <= len(inputBuffer):
                         w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
                         response = inputBuffer[1 : ord(inputBuffer[0])]
-                        w.setResponse(list(bytearray(response)))    # Send a response to the http protocol
+                        w.response = list(bytearray(response))      # Send a response to the http protocol
+                        w.event.set()
                         inputBuffer = inputBuffer[ord(inputBuffer[0]):]
                 
                 if len(exceptional) > 0:
