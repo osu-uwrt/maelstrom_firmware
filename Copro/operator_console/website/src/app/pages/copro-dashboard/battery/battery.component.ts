@@ -15,7 +15,7 @@ declare const echarts: any;
         </div>
         <div class="info">
           <div class="value">{{voltage}} V</div>
-          <div class="details">20 A <span>draw</span> 8.421 Wh <span>total</span></div>
+          <div class="details">{{amps}} A</div>
         </div>
       </nb-card-body>
     </nb-card>
@@ -27,6 +27,7 @@ export class BatteryComponent implements AfterViewInit, OnDestroy {
   voltage: number;
 
   @Input() title: string;
+  @Input() amps: number;
   @Input('voltage')
   set chartValue(voltage: number) {
     this.voltage = voltage;
