@@ -40,7 +40,19 @@ export class CoproService {
         return this.command(4).pipe(
             map(x => (x[0] * 256 + x[1]) / 100.0),
         );
-    }
+	}
+	
+	getPortCurrent(): Observable<number> {
+		return this.command(5).pipe(
+			map(x => (x[0] * 256 + x[1]) / 100.0)
+		)
+	}
+
+	getStbdCurrent(): Observable<number> {
+		return this.command(6).pipe(
+			map(x => (x[0] * 256 + x[1]) / 100.0)
+		)
+	}
 
     private command(...args: number[]): Observable<number[]> {
         return this.http.post<number[]>(COPRO_URL, [...args]).pipe(

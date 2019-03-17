@@ -30,10 +30,20 @@ def getStbdVoltage(data):
 	voltage = int(hal.BatteryBalancer.stbdVoltage.value() * 100)
 	return [voltage // 256, voltage % 256]
 
+def getPortCurrent(data):
+	current = int(hal.BatteryBalancer.portCurrent.value() * 100)
+	return [current // 256, current % 256]
+
+def getStbdCurrent(data):
+	current = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
+	return [current // 256, current % 256]
+
 commandList = [
-	setMobo, 
-	setJetson,
-	setThrusters,
-	getPortVoltage,
-	getStbdVoltage
+	setMobo,			#0
+	setJetson,			#1
+	setThrusters,		#2
+	getPortVoltage,		#3
+	getStbdVoltage,		#4
+	getPortCurrent,		#5
+	getStbdCurrent		#6
 ]

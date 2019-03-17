@@ -13,55 +13,55 @@ PORT_NUMBER = 2000
 coproConection = None
 
 class commandWaiter:
-    def __init__(self, command):
-        self.command = command
-        self.event = threading.Event()
-        self.response = None
-    
+	def __init__(self, command):
+		self.command = command
+		self.event = threading.Event()
+		self.response = None
+
 
 
 #This class will handles any incoming request from
 #the browser 
 class myHandler(BaseHTTPRequestHandler):
-	
-    #Handler for the POST requests
-    def do_POST(self):
-        requestData = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
-        result = processCommand(requestData)
 
-        resultStr = ""
-        if result == None:
-            self.send_response(503)
-        else:
-            self.send_response(200)
-            resultStr = json.dumps(result)
-        self.send_header('Content-type','text/html')
-        self.send_header('Access-Control-Allow-Origin','*')
-        self.send_header('Access-Control-Allow-Headers', '*')
-        self.end_headers()
-        self.wfile.write(resultStr.encode())
-        return
+	#Handler for the POST requests
+	def do_POST(self):
+		requestData = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+		result = processCommand(requestData)
 
-    #Handler for the GET requests
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header('Content-type','text/html')
-        self.send_header('Access-Control-Allow-Origin','*')
-        self.send_header('Access-Control-Allow-Headers', '*')
-        self.end_headers()
-        return
+		resultStr = ""
+		if result == None:
+			self.send_response(503)
+		else:
+			self.send_response(200)
+			resultStr = json.dumps(result)
+		self.send_header('Content-type','text/html')
+		self.send_header('Access-Control-Allow-Origin','*')
+		self.send_header('Access-Control-Allow-Headers', 'content-type')
+		self.end_headers()
+		self.wfile.write(resultStr.encode())
+		return
+
+	#Handler for the GET requests
+	def do_OPTIONS(self):
+		self.send_response(200)
+		self.send_header('Access-Control-Allow-Headers', 'content-type')
+		self.send_header('Content-type','text/html')
+		self.send_header('Access-Control-Allow-Origin','*')
+		self.end_headers()
+		return
 
 toBeSentQueue = []
 toBeReceivedQueue = []
 
 def processCommand(byteArray):
-    global coproConection
-    global toBeSentQueue
+	global coproConection
+	global toBeSentQueue
 
-    waiter = commandWaiter(byteArray)
-    toBeSentQueue += [waiter]   # Enqueue data to be sent later
-    waiter.event.wait()    # Wait for a response
-    return waiter.response
+	waiter = commandWaiter(byteArray)
+	toBeSentQueue += [waiter]   # Enqueue data to be sent later
+	waiter.event.wait()    # Wait for a response
+	return waiter.response
 
 
 def background():
@@ -125,18 +125,18 @@ def background():
                 
 
 try:
-    #Create a web server and define the handler to manage the
-    #incoming request
-    server = HTTPServer(('', PORT_NUMBER), myHandler)
-    print ('Started httpserver on port ' , PORT_NUMBER)
+	#Create a web server and define the handler to manage the
+	#incoming request
+	server = HTTPServer(('', PORT_NUMBER), myHandler)
+	print ('Started httpserver on port ' , PORT_NUMBER)
 
-    b = threading.Thread(name='background', target=background)
-    b.daemon = True
-    b.start()
+	b = threading.Thread(name='background', target=background)
+	b.daemon = True
+	b.start()
 
-    #Wait forever for incoming htto requests
-    server.serve_forever()
+	#Wait forever for incoming htto requests
+	server.serve_forever()
 
 except KeyboardInterrupt:
-    print ('^C received, shutting down the web server')
-    server.socket.close()
+	print ('^C received, shutting down the web server')
+	server.socket.close()
