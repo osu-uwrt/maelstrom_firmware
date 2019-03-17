@@ -1,62 +1,7 @@
-import time as time #computer
-#import time as time #micro
-
-from random import randint
-
-def getTime():
-    return int(time.time()*1000) #computer
-    #return time.ticks_ms()       #micro
-
-class Sensor:
-    def __init__(self):
-        self.data = 0
-        self.lastCollectionTime = 0
-        self.cacheDuration = 100
-
-    def value(self):
-        if getTime() - self.lastCollectionTime > self.cacheDuration:
-            self.collect()
-        return self.data
-
-    def collect(self):
-        self.lastCollectionTime = getTime()
-
-
-class DepthSensor(Sensor):
-    def collect(self):
-        Sensor.collect(self)
-        # Do something to read sensor
-        self.data = 10
-
-class StbdBatVoltage(Sensor):
-    def collect(self):
-        Sensor.collect(self)
-        # Do something to read sensor
-        self.data = 20.5 + randint(0, 9) / 100.0
-
-class PortBatVoltage(Sensor):
-    def collect(self):
-        Sensor.collect(self)
-        # Do something to read sensor
-        self.data = 20 + randint(0, 9) / 100.0
-
-class PortBatCurrent(Sensor):
-	def collect(self):
-		Sensor.collect(self)
-		# Do something to read sensor
-		self.data = 20 + randint(0, 9) / 100.0
-
-class StbdBatCurrent(Sensor):
-	def collect(self):
-		Sensor.collect(self)
-		# Do something to read sensor
-		self.data = 20 + randint(0, 9) / 100.0
-
-
-stbdBatVoltage = StbdBatVoltage()
-portBatVoltage = PortBatVoltage()
-stbdBatCurrent = StbdBatCurrent()
-portBatCurrent = PortBatCurrent()
+try:
+	import hal 
+except:
+	import halSimulated as hal
 
 def runCommand(data):
 	commandNum = data.pop(0)
@@ -65,43 +10,37 @@ def runCommand(data):
 
 
 
-
 def setMobo(state):
-	if state[0]:
-		print("Mobo on")
-	else:
-		print("Mobo off")
+	hal.Converter.setMoboPower(state[0])
 	return [1]
 
 def setJetson(state):
-	if state[0]:
-		print("Jetson on")
-	else:
-		print("Jetson off")
+	hal.Converter.setJetsonPower(state[0])
 	return [1]
 
 def setThrusters(state):
-	if state[0]:
-		print("Thrusters on")
-	else:
-		print("Thrusters off")
+	hal.ESC.setThrusterEnable(state[0])
 	return [1]
 
 def getPortVoltage(data):
-	voltage = int(portBatVoltage.value() * 100)
-	return [int(voltage / 256), voltage % 256]
+	voltage = int(hal.BatteryBalancer.portVoltage.value() * 100)
+	return [voltage // 256, voltage % 256]
 
 def getStbdVoltage(data):
-	voltage = int(stbdBatVoltage.value() * 100)
-	return [int(voltage / 256), voltage % 256]
+	voltage = int(hal.BatteryBalancer.stbdVoltage.value() * 100)
+	return [voltage // 256, voltage % 256]
 
 def getPortCurrent(data):
-	current = int (portBatCurrent.value() * 100)
-	return [int(current / 256), current % 256]
+	current = int(hal.BatteryBalancer.portCurrent.value() * 100)
+	return [current // 256, current % 256]
 
 def getStbdCurrent(data):
-	current = int (stbdBatCurrent.value() * 100)
-	return [int(current / 256), current % 256]
+	current = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
+	return [current // 256, current % 256]
+
+def getTemperature(data):
+	temp = int(hal.Converter.temp.value() * 10)
+	return [temp // 256, temp % 256]
 
 commandList = [
 	setMobo,			#0
@@ -110,5 +49,6 @@ commandList = [
 	getPortVoltage,		#3
 	getStbdVoltage,		#4
 	getPortCurrent,		#5
-	getStbdCurrent		#6
+	getStbdCurrent,		#6
+	getTemperature		#7
 ]

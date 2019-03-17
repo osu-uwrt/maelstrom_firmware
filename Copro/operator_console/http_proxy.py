@@ -65,64 +65,64 @@ def processCommand(byteArray):
 
 
 def background():
-	global coproConection
-	global toBeReceivedQueue
-	global toBeSentQueue
+    global coproConection
+    global toBeReceivedQueue
+    global toBeSentQueue
 
-	inputBuffer = []
+    inputBuffer = []
 
-	while True:
-		if coproConection != None:                  # If we are connected
-			try:
-				readable, writable, exceptional = select.select([coproConection], [coproConection], [coproConection], 0)
-				if len(writable) > 0:                       # If we can send data...
-					if len(toBeSentQueue) > 0:              # And we have data to send...
-						toBeSent = toBeSentQueue.pop(0)    
-						command = toBeSent.command          # Send command with length prefix
-						command = [len(command) + 1] + command
-						coproConection.sendall(bytearray(command))
-						toBeReceivedQueue += [toBeSent]     # Wait for response
-				
-				if len(readable) > 0:
-					data = coproConection.recv(1024)        # Get data
-					if data == None or len(data) == 0:      
-						raise TypeError
-					if sys.version_info < (3, 0):
-						data = list(map(ord, data))
-					inputBuffer += data                     # While we have a complete command in the buffer
-					while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
-						w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
-						response = inputBuffer[1 : inputBuffer[0]]
-						w.response = response      # Send a response to the http protocol
-						w.event.set()
-						inputBuffer = inputBuffer[inputBuffer[0]:]
-				
-				if len(exceptional) > 0:
-					raise TypeError
-			except Exception as exc:
-				print("Lost copro connection")
-				print(exc)
-				inputBuffer = []
-				coproConection.close()
-				coproConection = None
-		else:
-			inputBuffer = []                        # If we are not connected, clear all buffers and queues
-			while len(toBeReceivedQueue) != 0:
-				toBeReceivedQueue.pop().event.set()
+    while True:
+        if coproConection != None:                  # If we are connected
+            try:
+                readable, writable, exceptional = select.select([coproConection], [coproConection], [coproConection], 0)
+                if len(writable) > 0:                       # If we can send data...
+                    if len(toBeSentQueue) > 0:              # And we have data to send...
+                        toBeSent = toBeSentQueue.pop(0)    
+                        command = toBeSent.command          # Send command with length prefix
+                        command = [len(command) + 1] + command
+                        coproConection.sendall(bytearray(command))
+                        toBeReceivedQueue += [toBeSent]     # Wait for response
+                
+                if len(readable) > 0:
+                    data = coproConection.recv(1024)        # Get data
+                    if data == None or len(data) == 0:      
+                        raise TypeError
+                    if sys.version_info < (3, 0):
+                        data = list(map(ord, data))
+                    inputBuffer += data                     # While we have a complete command in the buffer
+                    while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
+                        w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
+                        response = inputBuffer[1 : inputBuffer[0]]
+                        w.response = response      # Send a response to the http protocol
+                        w.event.set()
+                        inputBuffer = inputBuffer[inputBuffer[0]:]
+                
+                if len(exceptional) > 0:
+                    raise TypeError
+            except Exception as exc:
+                print("Lost copro connection")
+                print(exc)
+                inputBuffer = []
+                coproConection.close()
+                coproConection = None
+        else:
+            inputBuffer = []                        # If we are not connected, clear all buffers and queues
+            while len(toBeReceivedQueue) != 0:
+                toBeReceivedQueue.pop().event.set()
 
-			if len(toBeSentQueue) > 0:              # If we want to send something, try to connect
-				try:
-					coproConection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-					coproConection.settimeout(1)
-					coproConection.connect(('localhost', 50005))
-				except:
-					coproConection = None           # If it failed, clear queue
-					while len(toBeSentQueue) != 0:  
-						toBeSentQueue.pop().event.set()
-		time.sleep(0.01)
-			
+            if len(toBeSentQueue) > 0:              # If we want to send something, try to connect
+                try:
+                    coproConection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    coproConection.settimeout(1)
+                    coproConection.connect(('localhost', 50000))
+                except:
+                    coproConection = None           # If it failed, clear queue
+                    while len(toBeSentQueue) != 0:  
+                        toBeSentQueue.pop().event.set()
+        time.sleep(0.01)
+                
 
-			
+                
 
 try:
 	#Create a web server and define the handler to manage the

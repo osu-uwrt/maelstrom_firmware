@@ -1,13 +1,22 @@
-import socket
-import select
+onCopro = False
+try:
+	import socket
+	from time import sleep
+	import halSimulated
+	import sys
+	import traceback
+except:
+	onCopro = True
+	import hal
+	import usocket as socket
+	
+
 import commands
-import traceback
-import sys
-from time import sleep
+import select
 
 print('Setting up socket...')
 incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-incomingConnection.bind(('127.0.0.1', 50005))
+incomingConnection.bind(('0.0.0.0', 50000))
 incomingConnection.listen(1)
 connections = [incomingConnection]
 print('Listening for connections...')
@@ -38,7 +47,7 @@ try:
 				# Command structure: Length, Command, Args...
 				# Response structure: Length, values
 				# Below code allows for multiple or partial commands to be received
-				if sys.version_info < (3, 0):
+				if not onCopro and sys.version_info < (3, 0):
 					data = list(map(ord, data))
 				inputBuffer += data
 
@@ -53,10 +62,12 @@ try:
 
 					# Remove the command from the buffer
 					inputBuffer = inputBuffer[inputBuffer[0]:]
-				
-		sleep(0.01)
+		
+		if not onCopro:
+			sleep(0.01)
 except Exception as exc:
-	traceback.print_exc()
+	if not onCopro:
+		traceback.print_exc()
 	print(exc)
 	for s in connections:
 		s.close()
