@@ -49,17 +49,17 @@ class BatteryBalancer:
 class Converter:
 	deviceAddress = 0x37
 
-	def setMoboPower(power):
+	def setMoboPower(self, power):
 		pass
-	def setJetsonPower(power):
+	def setJetsonPower(self, power):
 		pass
-	def setPeltierPower(power):
+	def setPeltierPower(self, power):
 		pass
-	def setThreePower(power):
+	def setThreePower(self, power):
 		pass
-	def setFivePower(power):
+	def setFivePower(self, power):
 		pass
-	def setTwelvePower(power):
+	def setTwelvePower(self, power):
 		pass
 	def collectFiveCurrent():
 		return random.uniform(0,10)
