@@ -114,7 +114,7 @@ def background():
                 try:
                     coproConection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     coproConection.settimeout(1)
-                    coproConection.connect(('localhost', 50005))
+                    coproConection.connect(('192.168.1.42', 50000))
                 except:
                     coproConection = None           # If it failed, clear queue
                     while len(toBeSentQueue) != 0:  
