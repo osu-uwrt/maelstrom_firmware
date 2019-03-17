@@ -19,7 +19,7 @@ def setJetson(state):
 	return [1]
 
 def setThrusters(state):
-	hal.Converter.setTwelvePower(state[0])
+	hal.ESC.setThrusterEnable(state[0])
 	return [1]
 
 def getPortVoltage(data):
@@ -38,6 +38,10 @@ def getStbdCurrent(data):
 	current = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
 	return [current // 256, current % 256]
 
+def getTemperature(data):
+	temp = int(hal.Converter.temp.value() * 10)
+	return [temp // 256, temp % 256]
+
 commandList = [
 	setMobo,			#0
 	setJetson,			#1
@@ -45,5 +49,6 @@ commandList = [
 	getPortVoltage,		#3
 	getStbdVoltage,		#4
 	getPortCurrent,		#5
-	getStbdCurrent		#6
+	getStbdCurrent,		#6
+	getTemperature		#7
 ]

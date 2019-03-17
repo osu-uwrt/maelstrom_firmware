@@ -41,7 +41,7 @@ export class CoproService {
             map(x => (x[0] * 256 + x[1]) / 100.0),
         );
 	}
-	
+
 	getPortCurrent(): Observable<number> {
 		return this.command(5).pipe(
 			map(x => (x[0] * 256 + x[1]) / 100.0)
@@ -51,6 +51,12 @@ export class CoproService {
 	getStbdCurrent(): Observable<number> {
 		return this.command(6).pipe(
 			map(x => (x[0] * 256 + x[1]) / 100.0)
+		)
+  }
+
+  getTemperature(): Observable<number> {
+		return this.command(7).pipe(
+			map(x => (x[0] * 256 + x[1]) / 10.0)
 		)
 	}
 

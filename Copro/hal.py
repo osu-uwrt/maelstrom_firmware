@@ -3,7 +3,7 @@ import utime as time
 import network
 import pyb
 
-nic = network.WIZNET5K(machine.SPI(1), machine.Pin('PD14', machine.Pin.OUT), machine.Pin('PD12', machine.Pin.OUT))
+nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machine.Pin('C5', machine.Pin.OUT))
 nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8')) 
 
 backplaneI2C = pyb.I2C(1, pyb.I2C.MASTER)
@@ -72,6 +72,8 @@ class BatteryBalancerBoard:
 	stbdVoltage = Sensor(collectStbdVoltage)
 	portVoltage = Sensor(collectPortVoltage)
 	temp = Sensor(collectTemp)
+
+BatteryBalancer = BatteryBalancerBoard()
 
 
 class ConverterBoard:
@@ -146,9 +148,12 @@ class ConverterBoard:
 	twelveCurrent = Sensor(collectTwelveCurrent)
 	temp = Sensor(collectTemp)
 
+Converter = ConverterBoard()
+
 
 class ESCBoard():
 	deviceAddress = 0x2F
+	thrustersEnabled = 0
 
 	def __init__(self):
 		while backplaneI2C.mem_read(1, ESCBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
@@ -158,7 +163,7 @@ class ESCBoard():
 		# Set continuous conversion
 		backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x07)
 		# Disable unused channels
-		backplaneI2C.mem_write(chr(0b00000000), ESCBoard.deviceAddress, 0x08)
+		backplaneI2C.mem_write(chr(0b00000000), ESCBoard.deviceAddress, 0x08)	
 		# Mask all interrupts
 		backplaneI2C.mem_write(chr(0xFF), ESCBoard.deviceAddress, 0x03)
 		# Start ADC and disable interrupts
@@ -170,9 +175,23 @@ class ESCBoard():
 			data = backplaneI2C.mem_read(2, ESCBoard.deviceAddress, 0x20 + i)
 			currents[i] = (((data[0] << 8) + data[1]) >> 4) * 10 / 4096
 
+	def setThrusterEnable(enable):
+		thrustersEnabled = enable
+
 	currents = Sensor(collectCurrents)
 
-
-BatteryBalancer = BatteryBalancerBoard()
-Converter = ConverterBoard()
 ESC = ESCBoard()
+
+killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
+switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)
+switch2 = machine.Pin('C6', machine.Pin.IN, machine.Pin.PULL_UP)
+switch3 = machine.Pin('C7', machine.Pin.IN, machine.Pin.PULL_UP)
+switch4 = machine.Pin('C4', machine.Pin.IN, machine.Pin.PULL_UP)
+switch5 = machine.Pin('B1', machine.Pin.IN, machine.Pin.PULL_UP)
+
+def killSwitchChanged(pin):
+	ESC.setThrusterEnable(not pin.value())
+
+killSwitch.irq(trigger=machine.Pin.IRQ_RISING | machine.Pin.IRQ_FALLING, handler=killSwitchChanged)
+
+
