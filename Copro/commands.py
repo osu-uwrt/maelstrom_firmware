@@ -40,9 +40,23 @@ class PortBatVoltage(Sensor):
         # Do something to read sensor
         self.data = 20 + randint(0, 9) / 100.0
 
+class PortBatCurrent(Sensor):
+	def collect(self):
+		Sensor.collect(self)
+		# Do something to read sensor
+		self.data = 20 + randint(0, 9) / 100.0
+
+class StbdBatCurrent(Sensor):
+	def collect(self):
+		Sensor.collect(self)
+		# Do something to read sensor
+		self.data = 20 + randint(0, 9) / 100.0
+
 
 stbdBatVoltage = StbdBatVoltage()
 portBatVoltage = PortBatVoltage()
+stbdBatCurrent = StbdBatCurrent()
+portBatCurrent = PortBatCurrent()
 
 def runCommand(data):
 	commandNum = data.pop(0)
@@ -75,16 +89,26 @@ def setThrusters(state):
 
 def getPortVoltage(data):
 	voltage = int(portBatVoltage.value() * 100)
-	return [voltage / 256, voltage % 256]
+	return [int(voltage / 256), voltage % 256]
 
 def getStbdVoltage(data):
 	voltage = int(stbdBatVoltage.value() * 100)
-	return [voltage / 256, voltage % 256]
+	return [int(voltage / 256), voltage % 256]
+
+def getPortCurrent(data):
+	current = int (portBatCurrent.value() * 100)
+	return [int(current / 256), current % 256]
+
+def getStbdCurrent(data):
+	current = int (stbdBatCurrent.value() * 100)
+	return [int(current / 256), current % 256]
 
 commandList = [
-	setMobo, 
-	setJetson,
-	setThrusters,
-	getPortVoltage,
-	getStbdVoltage
+	setMobo,			#0
+	setJetson,			#1
+	setThrusters,		#2
+	getPortVoltage,		#3
+	getStbdVoltage,		#4
+	getPortCurrent,		#5
+	getStbdCurrent		#6
 ]

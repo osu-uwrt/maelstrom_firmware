@@ -64,7 +64,8 @@ export class DepthCardComponent {
         switchMap(() => this.earningService.getEarningLiveUpdateCardData(currency)),
       )
       .subscribe((liveUpdateChartData: any[]) => {
-        this.liveUpdateChartData = [...liveUpdateChartData];
+		  console.log([...this.liveUpdateChartData]);
+        this.liveUpdateChartData.push({value: ["string", 12]});
       });
   }
 
