@@ -16,7 +16,7 @@ import select
 
 print('Setting up socket...')
 incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-incomingConnection.bind(('127.0.0.1', 50005))
+incomingConnection.bind(('0.0.0.0', 50000))
 incomingConnection.listen(1)
 connections = [incomingConnection]
 print('Listening for connections...')
