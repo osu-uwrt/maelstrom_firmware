@@ -13,9 +13,12 @@ declare const echarts: any;
       <nb-card-body>
         <div echarts [options]="option" class="echart">
         </div>
-        <div class="info">
+        <div class="info" *ngIf="voltage >= 12">
           <div class="value">{{voltage}} V</div>
           <div class="details">{{amps}} A</div>
+        </div>
+        <div class="info" *ngIf="voltage < 12">
+          <div class="value">Disconnected</div>
         </div>
       </nb-card-body>
     </nb-card>
@@ -31,7 +34,10 @@ export class BatteryComponent implements AfterViewInit, OnDestroy {
   @Input('voltage')
   set chartValue(voltage: number) {
     this.voltage = voltage;
-    const value = ((voltage / 5) - 3.686) / 0.00514;
+    let value = ((voltage / 5) - 3.686) / 0.00514;
+    if (value < 0) {
+      value = 0;
+    }
     this.value = value;
 
     if (this.option.series) {

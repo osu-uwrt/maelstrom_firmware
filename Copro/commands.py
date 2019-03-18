@@ -39,8 +39,12 @@ def getStbdCurrent(data):
 	return [current // 256, current % 256]
 
 def getTemperature(data):
-	temp = int(hal.Converter.temp.value() * 10)
+	temp = int(hal.BatteryBalancer.temp.value() * 10)
 	return [temp // 256, temp % 256]
+
+def setPeltier(data):
+	hal.Converter.petierControl.value(data[0])
+	return [1]
 
 commandList = [
 	setMobo,			#0
@@ -50,5 +54,6 @@ commandList = [
 	getStbdVoltage,		#4
 	getPortCurrent,		#5
 	getStbdCurrent,		#6
-	getTemperature		#7
+	getTemperature,		#7
+	setPeltier			#8
 ]

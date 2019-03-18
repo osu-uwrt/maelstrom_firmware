@@ -4,8 +4,8 @@
     <nb-tab tabTitle="Temperature">
 
       <div class="slider-container">
-        <ngx-temperature-dragger [(value)]="temperature" (power)="temperatureOff = !$event"
-                                 [min]="30" [max]="60" [disableArcColor]="colors.layoutBg"
+        <ngx-temperature-dragger [(value)]="temperature" (power)="togglePower()"
+                                 [min]="80" [max]="140" [disableArcColor]="colors.layoutBg"
                                  [fillColors]="colors.temperature">
 
           <div class="slider-value-container"  [ngClass]="{ 'off': temperatureOff }">
