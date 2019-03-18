@@ -3,6 +3,7 @@ import { NbThemeService } from '@nebular/theme';
 import { Temperature, TemperatureHumidityData } from '../../../@core/data/temperature-humidity';
 import { takeWhile } from 'rxjs/operators';
 import { forkJoin } from 'rxjs';
+import { CoproService } from '../../../service/copro-service';
 
 @Component({
   selector: 'ngx-temperature',
@@ -23,7 +24,8 @@ export class TemperatureComponent implements OnDestroy {
   themeSubscription: any;
 
   constructor(private theme: NbThemeService,
-              private temperatureHumidityService: TemperatureHumidityData) {
+              private temperatureHumidityService: TemperatureHumidityData,
+              private coproService: CoproService) {
     this.theme.getJsTheme()
       .pipe(takeWhile(() => this.alive))
       .subscribe(config => {
@@ -38,6 +40,11 @@ export class TemperatureComponent implements OnDestroy {
         this.temperatureData = temperatureData;
         this.temperature = this.temperatureData.value;
       });
+  }
+
+  togglePower() {
+    this.temperatureOff = !this.temperatureOff;
+    this.coproService.setPeltierPower(this.temperatureOff);
   }
 
   ngOnDestroy() {

@@ -20,11 +20,11 @@ export class DashboardComponent implements OnDestroy {
 
 	private alive = true;
 
-	stbdVoltage = 21;
-	portVoltage = 21;
-	stbdCurrent = 23;
-  portCurrent = 24;
-  temp = 27;
+	stbdVoltage = 10;
+	portVoltage = 19.45;
+	stbdCurrent = 0;
+  portCurrent = 0.45;
+  temp = 82;
 
 	moboCard: CardSettings = {
 		title: 'Motherboard',
@@ -82,12 +82,12 @@ export class DashboardComponent implements OnDestroy {
 		this.coproService.getStbdCurrent().subscribe(i => this.stbdCurrent = i);
 		this.coproService.getPortBat().subscribe(v => this.portVoltage = v);
 		this.coproService.getPortCurrent().subscribe(i => this.portCurrent = i);
-		setTimeout(() => this.getBattery(), 1000);
+		setTimeout(() => this.getBattery(), 100);
   }
 
   getTemperature() {
-    this.coproService.getTemperature().subscribe(t => this.temp = t);
-    setTimeout(() => this.getTemperature(), 1000);
+    this.coproService.getTemperature().subscribe(t => this.temp = (t * 9 / 5) + 32);
+    setTimeout(() => this.getTemperature(), 100);
   }
 
 	ngOnDestroy() {

@@ -49,19 +49,21 @@ class BatteryBalancerBoard:
 
 	def collectStbdCurrent():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x20)
-		return (((data[0] << 8) + data[1]) >> 4) * 40 / 4096
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
+		return max((voltage - .33) / .066, 0)
 	def collectPortCurrent():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x21)
-		return (((data[0] << 8) + data[1]) >> 4) * 40 / 4096
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
+		return max((voltage - .33) / .066, 0)
 	def collectBalancedVoltage():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x22)
 		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
 	def collectStbdVoltage():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x23)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .988
 	def collectPortVoltage():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x24)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .986
 	def collectTemp():
 		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
@@ -81,17 +83,17 @@ class ConverterBoard:
 	moboControl = machine.Pin('C2', machine.Pin.OUT)
 	jetsonControl = machine.Pin('C3', machine.Pin.OUT)
 	petierControl = machine.Pin('C1', machine.Pin.OUT)
-	threeControl = machine.Pin('C0', machine.Pin.OUT)
+	#threeControl = machine.Pin('C0', machine.Pin.OUT)
 	fiveControl = machine.Pin('C13', machine.Pin.OUT)
 	twelveControl = machine.Pin('B0', machine.Pin.OUT)
 
 	def __init__(self):
-		moboControl.On()
-		jetsonControl.On()
-		petierControl.On()
-		threeControl.On()
-		fiveControl.On()
-		twelveControl.On()
+		self.moboControl.on()
+		self.jetsonControl.on()
+		self.petierControl.on()
+		#self.threeControl.on()
+		self.fiveControl.on()
+		self.twelveControl.on()
 		while backplaneI2C.mem_read(1, ConverterBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 			pass
 		# Operational mode 0 (includes temperature) and external vref
@@ -120,13 +122,16 @@ class ConverterBoard:
 
 	def collectFiveCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x20)
-		return (((data[0] << 8) + data[1]) >> 4) * 10 / 4096 * 2.56 / 3.3
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.54 / 4096
+		return max((voltage - .33) / .264, 0)
 	def collectThreeCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x21)
-		return (((data[0] << 8) + data[1]) >> 4) * 10 / 4096 * 2.56 / 3.3
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.54 / 4096
+		return max((voltage - .33) / .264, 0)
 	def collectTwelveCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x22)
-		return (((data[0] << 8) + data[1]) >> 4) * 10 / 4096 * 2.56 / 3.3
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
+		return max((voltage - .33) / .264, 0)
 	def collectTwelveVoltage():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x23)
 		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (12.4 / 2.4)
@@ -173,14 +178,33 @@ class ESCBoard():
 		currents = []
 		for i in range(7):
 			data = backplaneI2C.mem_read(2, ESCBoard.deviceAddress, 0x20 + i)
-			currents[i] = (((data[0] << 8) + data[1]) >> 4) * 10 / 4096
+			voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
+			currents[i] = max((voltage - .33) / .066, 0)
 
-	def setThrusterEnable(enable):
-		thrustersEnabled = enable
+	def setThrusterEnable(self, enable):
+		self.thrustersEnabled = enable
 
 	currents = Sensor(collectCurrents)
 
 ESC = ESCBoard()
+
+class StatusBoard():
+	screenAddress = 0x78
+
+	def __init__(self):
+		data = ''.join(map(chr, [0, 0x38]))
+		robotI2C.send(data , self.screenAddress)
+		time.sleep_ms(10)
+		data = ''.join(map(chr, [0, 0x39]))
+		robotI2C.send(data , self.screenAddress)
+		time.sleep_ms(10)
+		data = ''.join(map(chr, [0, 0x14, 0x78, 0x5E, 0x6D, 0x0C, 0x01, 0x06]))
+		robotI2C.send(data , self.screenAddress)
+		time.sleep_ms(10)
+
+	def write(self, text):
+		robotI2C.send(chr(0x40)+text, self.screenAddress)
+
 
 killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
 switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)

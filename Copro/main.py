@@ -58,7 +58,7 @@ try:
 					# Act on the command
 					response = commands.runCommand(command)
 					response = [len(response) + 1] + response
-					s.sendall(bytearray(response))
+					s.send(bytearray(response))
 
 					# Remove the command from the buffer
 					inputBuffer = inputBuffer[inputBuffer[0]:]

@@ -62,7 +62,7 @@ export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
         backgroundColor: this.eTheme.tooltipBg,
         borderColor: this.eTheme.tooltipBorderColor,
         borderWidth: 3,
-        formatter: '{c0} kWh',
+        formatter: '{c0} A',
         extraCssText: this.eTheme.tooltipExtraCss,
       },
       xAxis: {
@@ -102,6 +102,8 @@ export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
             width: '1',
           },
         },
+        min: 0,
+        max: 70,
       },
       series: [
         {
