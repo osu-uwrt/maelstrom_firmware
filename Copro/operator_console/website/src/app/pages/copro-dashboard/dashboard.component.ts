@@ -82,12 +82,12 @@ export class DashboardComponent implements OnDestroy {
 		this.coproService.getStbdCurrent().subscribe(i => this.stbdCurrent = i);
 		this.coproService.getPortBat().subscribe(v => this.portVoltage = v);
 		this.coproService.getPortCurrent().subscribe(i => this.portCurrent = i);
-		setTimeout(() => this.getBattery(), 100);
+		setTimeout(() => this.getBattery(), 1000);
   }
 
   getTemperature() {
     this.coproService.getTemperature().subscribe(t => this.temp = (t * 9 / 5) + 32);
-    setTimeout(() => this.getTemperature(), 100);
+    setTimeout(() => this.getTemperature(), 1000);
   }
 
 	ngOnDestroy() {
