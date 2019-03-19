@@ -64,7 +64,7 @@ def processCommand(byteArray):
 
 	waiter = commandWaiter(byteArray)
 	toBeSentQueue += [waiter]   # Enqueue data to be sent later
-	waiter.event.wait()    # Wait for a response
+	waiter.event.wait(10)    # Wait for a response
 	return waiter.response
 
 

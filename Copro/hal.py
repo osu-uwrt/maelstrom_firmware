@@ -241,6 +241,120 @@ class StatusBoard():
 
 Status = StatusBoard()
 
+class DepthSensor():
+	deviceAddress = 0x76
+	_fluidDensity = 997
+
+	def __init__(self):
+		try:
+			robotI2C.send(chr(0x1E), self.deviceAddress)
+			time.sleep(0.01)
+			self._C = []
+
+			# Read calibration and crc
+			for i in range(7):
+				c = robotI2C.mem_read(2, self.deviceAddress, 0xA0 + 2*i)
+				c =  ((c & 0xFF) << 8) | (c >> 8) # SMBus is little-endian for word transfers, we need to swap MSB and LSB
+				self._C.append(c)
+							
+			assert (self._C[0] & 0xF000) >> 12 == self.crc4(self._C), "PROM read error, CRC failed!"
+		except Exception as e: print("Error on Depth init: " + str(e))
+
+	# Cribbed from datasheet
+	def crc4(self, n_prom):
+		n_rem = 0
+
+		n_prom[0] = ((n_prom[0]) & 0x0FFF)
+		n_prom.append(0)
+
+		for i in range(16):
+			if i%2 == 1:
+				n_rem ^= ((n_prom[i>>1]) & 0x00FF)
+			else:
+				n_rem ^= (n_prom[i>>1] >> 8)
+				
+			for n_bit in range(8,0,-1):
+				if n_rem & 0x8000:
+					n_rem = (n_rem << 1) ^ 0x3000
+				else:
+					n_rem = (n_rem << 1)
+
+		n_rem = ((n_rem >> 12) & 0x000F)
+
+		self.n_prom = n_prom
+		self.n_rem = n_rem
+
+		return n_rem ^ 0x00
+
+	# Cribbed from datasheet
+	def calculate(self):
+		OFFi = 0
+		SENSi = 0
+		Ti = 0
+
+		dT = self._D2-self._C[5]*256
+		SENS = self._C[1]*32768+(self._C[3]*dT)/256
+		OFF = self._C[2]*65536+(self._C[4]*dT)/128
+		self._pressure = (self._D1*SENS/(2097152)-OFF)/(8192)
+
+		self._temperature = 2000+dT*self._C[6]/8388608
+
+		# Second order compensation
+
+		if (self._temperature/100) < 20: # Low temp
+			Ti = (3*dT*dT)/(8589934592)
+			OFFi = (3*(self._temperature-2000)*(self._temperature-2000))/2
+			SENSi = (5*(self._temperature-2000)*(self._temperature-2000))/8
+			if (self._temperature/100) < -15: # Very low temp
+				OFFi = OFFi+7*(self._temperature+1500)*(self._temperature+1500)
+				SENSi = SENSi+4*(self._temperature+1500)*(self._temperature+1500)
+		elif (self._temperature/100) >= 20: # High temp
+			Ti = 2*(dT*dT)/(137438953472)
+			OFFi = (1*(self._temperature-2000)*(self._temperature-2000))/16
+			SENSi = 0
+
+		OFF2 = OFF-OFFi
+		SENS2 = SENS-SENSi
+
+		self._temperature = (self._temperature-Ti)
+		self._pressure = (((self._D1*SENS2)/2097152-OFF2)/8192)/10.0   
+
+	def read(self):
+		oversampling = 0
+
+		# Request D1 conversion (temperature)
+		self.robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
+
+		# Maximum conversion time increases linearly with oversampling
+		# max time (seconds) ~= 2.2e-6(x) where x = OSR = (2^8, 2^9, ..., 2^13)
+		# We use 2.5e-6 for some overhead
+		time.sleep(2.5e-6 * 2**(8+oversampling))
+
+		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		self._D1 = d[0] << 16 | d[1] << 8 | d[2]
+
+		# Request D2 conversion (pressure)
+		self.robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
+
+		# As above
+		time.sleep(2.5e-6 * 2**(8+oversampling))
+
+		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		self._D2 = d[0] << 16 | d[1] << 8 | d[2]
+
+		self.calculate()
+
+	def pressure(self):
+		return self._pressure
+		
+	def temperature(self):
+		degC = self._temperature / 100.0
+		return degC
+		
+	# Depth relative to MSL pressure in given fluid density
+	def depth(self):
+		return (self.pressure()*100-101300)/(self._fluidDensity*9.80665)
+
 
 killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
 switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)
