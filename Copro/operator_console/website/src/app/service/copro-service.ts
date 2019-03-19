@@ -27,32 +27,28 @@ export class CoproService {
     return this.command(2, state ? 1 : 0);
   }
 
-  getPortBat(): Observable<number> {
-    return this.command(3).pipe(
+  setPeltierPower(state: boolean): Observable<any> {
+    return this.command(3, state ? 1 : 0);
+  }
+
+  getBatVoltages(): Observable<number[]> {
+    return this.command(4).pipe(
       map(x => {
-        return (x[0] * 256 + x[1]) / 100.0;
+        return [(x[0] * 256 + x[1]) / 100.0, (x[2] * 256 + x[3]) / 100.0];
       })
     );
   }
 
-  getStbdBat(): Observable<number> {
-    return this.command(4).pipe(map(x => (x[0] * 256 + x[1]) / 100.0));
-  }
-
-  getPortCurrent(): Observable<number> {
-    return this.command(5).pipe(map(x => (x[0] * 256 + x[1]) / 100.0));
-  }
-
-  getStbdCurrent(): Observable<number> {
-    return this.command(6).pipe(map(x => (x[0] * 256 + x[1]) / 100.0));
+  getBatCurrents(): Observable<number[]> {
+    return this.command(5).pipe(
+      map(x => {
+        return [(x[0] * 256 + x[1]) / 100.0, (x[2] * 256 + x[3]) / 100.0];
+      })
+    );
   }
 
   getTemperature(): Observable<number> {
-    return this.command(7).pipe(map(x => (x[0] * 256 + x[1]) / 10.0));
-  }
-
-  setPeltierPower(state: boolean): Observable<any> {
-    return this.command(8, state ? 1 : 0);
+    return this.command(6).pipe(map(x => (x[0] * 256 + x[1]) / 10.0));
   }
 
   private command(...args: number[]): Observable<number[]> {

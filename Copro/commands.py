@@ -28,29 +28,23 @@ def setThrusterPower(state):
 	hal.ESC.setThrusterEnable(state[0])
 	return [1]
 
-def getPortVoltage(data):
-	voltage = int(hal.BatteryBalancer.portVoltage.value() * 100)
-	return [voltage // 256, voltage % 256]
+def setPeltier(data):
+	hal.Converter.petierControl.value(data[0])
+	return [1]
 
-def getStbdVoltage(data):
-	voltage = int(hal.BatteryBalancer.stbdVoltage.value() * 100)
-	return [voltage // 256, voltage % 256]
+def getBatVoltages(data):
+	portVoltage = int(hal.BatteryBalancer.portVoltage.value() * 100)
+	stbdVoltage = int(hal.BatteryBalancer.stbdVoltage.value() * 100)
+	return [portVoltage // 256, portVoltage % 256, stbdVoltage // 256, stbdVoltage % 256]
 
-def getPortCurrent(data):
-	current = int(hal.BatteryBalancer.portCurrent.value() * 100)
-	return [current // 256, current % 256]
-
-def getStbdCurrent(data):
-	current = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
-	return [current // 256, current % 256]
+def getBatCurrents(data):
+	portCurrent = int(hal.BatteryBalancer.portCurrent.value() * 100)
+	stbdCurrent = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
+	return [portCurrent // 256, portCurrent % 256, stbdCurrent // 256, stbdCurrent % 256]
 
 def getTemperature(data):
 	temp = int(hal.BatteryBalancer.temp.value() * 10)
 	return [temp // 256, temp % 256]
-
-def setPeltier(data):
-	hal.Converter.petierControl.value(data[0])
-	return [1]
 
 def setThrusterForce(data):
 	values = []
@@ -63,11 +57,9 @@ commandList = [
 	setMobo,			#0
 	setJetson,			#1
 	setThrusterPower,	#2
-	getPortVoltage,		#3
-	getStbdVoltage,		#4
-	getPortCurrent,		#5
-	getStbdCurrent,		#6
-	getTemperature,		#7
-	setPeltier,			#8
-	setThrusterForce	#9
+	setPeltier,			#3
+	getBatVoltages,		#4
+	getBatCurrents,		#5
+	getTemperature,		#6
+	setThrusterForce	#7
 ]
