@@ -20,15 +20,26 @@ class Sensor:
 		self.data = self.collectFunction()
 		self.lastCollectionTime = getTime()
 
+class Pin:
+	def on(self):
+		pass
+	def off(self):
+		pass
+	def value(self):
+		return 1
 
+
+
+blueLed = Pin()
+greenLed = Pin()
 
 class BatteryBalancer:
 	deviceAddress = 0x1F
 
 	def collectStbdCurrent():
-		return random.uniform(0,40)
+		return random.uniform(0,35)
 	def collectPortCurrent():
-		return random.uniform(0,40)
+		return random.uniform(0,35)
 	def collectBalancedVoltage():
 		return random.uniform(19,21)
 	def collectStbdVoltage():
@@ -36,7 +47,7 @@ class BatteryBalancer:
 	def collectPortVoltage():
 		return random.uniform(19,21)
 	def collectTemp():
-		return random.uniform(0,110)
+		return random.uniform(0,70)
 
 	stbdCurrent = Sensor(collectStbdCurrent)
 	portCurrent = Sensor(collectPortCurrent)
@@ -45,6 +56,7 @@ class BatteryBalancer:
 	portVoltage = Sensor(collectPortVoltage)
 	temp = Sensor(collectTemp)
 
+BatteryBalancer = BatteryBalancer()
 
 class Converter:
 	deviceAddress = 0x37
@@ -74,7 +86,7 @@ class Converter:
 	def collectThreeVoltage():
 		return random.uniform(0,21)
 	def collectTemp():
-		return random.uniform(0,110)
+		return random.uniform(0,70)
 
 	fiveVoltage = Sensor(collectFiveVoltage)
 	threeVoltage = Sensor(collectThreeVoltage)
@@ -84,6 +96,7 @@ class Converter:
 	twelveCurrent = Sensor(collectTwelveCurrent)
 	temp = Sensor(collectTemp)
 
+Converter = Converter()
 
 class ESC():
 	deviceAddress = 0x2F
@@ -95,7 +108,20 @@ class ESC():
 
 	currents = Sensor(collectCurrents)
 
-
-BatteryBalancer = BatteryBalancer()
-Converter = Converter()
 ESC = ESC()
+
+class StatusBoard():
+	screenAddress = 0x78
+
+	def write(self, text):
+		print(text)
+
+Status = StatusBoard()
+
+
+killSwitch = Pin()
+switch1 = Pin()
+switch2 = Pin()
+switch3 = Pin()
+switch4 = Pin()
+switch5 = Pin()

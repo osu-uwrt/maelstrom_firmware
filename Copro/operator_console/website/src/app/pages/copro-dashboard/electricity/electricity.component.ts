@@ -18,7 +18,13 @@ export class ElectricityComponent implements OnDestroy {
 
   listData: Electricity;
   chartData: ElectricityChart[] = [];
-  @Input() amperage: number;
+  amperage: number;
+  @Input('amperage')
+  set chartValue(amperage: number) {
+    this.amperage = amperage;
+    this.chartData.push({ label: '', value: this.amperage });
+    this.newData.emit();
+  }
 
   newData = new EventEmitter<any>();
 
@@ -27,6 +33,8 @@ export class ElectricityComponent implements OnDestroy {
 
   currentTheme: string;
   themeSubscription: any;
+
+
 
   constructor(private electricityService: ElectricityData,
     private themeService: NbThemeService) {
@@ -45,16 +53,8 @@ export class ElectricityComponent implements OnDestroy {
         this.listData = listData;
         //this.chartData = chartData;
       });
-      this.addData();
   }
 
-  addData() {
-    setTimeout(() => {
-      this.chartData.push({ label: '', value: this.amperage });
-      this.newData.emit();
-      this.addData();
-    }, 1000);
-  }
 
   ngOnDestroy() {
     this.alive = false;
