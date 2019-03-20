@@ -89,12 +89,12 @@ class ConverterBoard:
 
 	def __init__(self):
 		try:
-			self.moboControl = machine.Pin('C2', machine.Pin.OUT, value=1)
-			self.jetsonControl = machine.Pin('C3', machine.Pin.OUT, value=1)
-			self.peltierControl = machine.Pin('C1', machine.Pin.OUT, value=1)
-			self.threeControl = machine.Pin('C0', machine.Pin.OUT, value=1)
-			self.fiveControl = machine.Pin('C13', machine.Pin.OUT, value=1)
-			self.twelveControl = machine.Pin('B0', machine.Pin.OUT, value=1)
+			self.moboPower = machine.Pin('C2', machine.Pin.OPEN_DRAIN, value=1)
+			self.jetsonPower = machine.Pin('C3', machine.Pin.OPEN_DRAIN, value=1)
+			self.peltierPower = machine.Pin('C1', machine.Pin.OPEN_DRAIN, value=1)
+			self.threePower = machine.Pin('C0', machine.Pin.OPEN_DRAIN, value=1)
+			self.fivePower = machine.Pin('C13', machine.Pin.OPEN_DRAIN, value=1)
+			self.fivePower = machine.Pin('B0', machine.Pin.OPEN_DRAIN, value=1)
 
 			while backplaneI2C.mem_read(1, ConverterBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
@@ -109,19 +109,6 @@ class ConverterBoard:
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ConverterBoard.deviceAddress, 0x00)
 		except Exception as e: print("Error on Conv init: " + str(e))
-
-	def setMoboPower(self, power):
-		self.moboControl.value(power)
-	def setJetsonPower(self, power): 
-		self.jetsonControl.value(power)
-	def setPeltierPower(self, power):
-		self.peltierControl.value(power)
-	def setThreePower(self, power):
-		self.threeControl.value(power)
-	def setFivePower(self, power):
-		self.fiveControl.value(power)
-	def setTwelvePower(self, power):
-		self.twelveControl.value(power)
 
 	def collectFiveCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x20)
@@ -162,6 +149,7 @@ Converter = ConverterBoard()
 class ESCBoard():
 	deviceAddress = 0x2F
 	thrustersEnabled = 0
+	thrusts = []
 
 	def __init__(self):
 		try:
@@ -203,17 +191,21 @@ class ESCBoard():
 			currents[i] = max((voltage - .33) / .066, 0)
 
 	def stopThrusters(self):
+		self.thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 		for t in self.thrusters:
-				t.pulse_width_percent(60)
+				t.pulse_width_percent(60)		
 
 	def setThrusters(self, thrusts):
 		if self.thrustersEnabled:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
+			self.thrusts = thrusts
 
 	def setThrusterEnable(self, enable):
-		self.thrustersEnabled = enable
+		self.thrustersEnabled = 0
+		if killSwitch.value() == 0:
+			self.thrustersEnabled = enable
 		self.stopThrusters()
 
 	currents = Sensor(collectCurrents)
@@ -323,23 +315,23 @@ class DepthSensor():
 		oversampling = 0
 
 		# Request D1 conversion (temperature)
-		self.robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
+		robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
 
 		# Maximum conversion time increases linearly with oversampling
 		# max time (seconds) ~= 2.2e-6(x) where x = OSR = (2^8, 2^9, ..., 2^13)
 		# We use 2.5e-6 for some overhead
 		time.sleep(2.5e-6 * 2**(8+oversampling))
 
-		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D1 = d[0] << 16 | d[1] << 8 | d[2]
 
 		# Request D2 conversion (pressure)
-		self.robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
+		robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
 
 		# As above
 		time.sleep(2.5e-6 * 2**(8+oversampling))
 
-		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D2 = d[0] << 16 | d[1] << 8 | d[2]
 
 		self.calculate()
