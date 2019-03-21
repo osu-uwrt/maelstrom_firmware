@@ -37,15 +37,15 @@ class BatteryBalancer:
 	deviceAddress = 0x1F
 
 	def collectStbdCurrent():
-		return random.uniform(0,35)
+		return random.uniform(30,35)
 	def collectPortCurrent():
-		return random.uniform(0,35)
+		return random.uniform(30,35)
 	def collectBalancedVoltage():
-		return random.uniform(19,21)
+		return random.uniform(19,20)
 	def collectStbdVoltage():
-		return random.uniform(19,21)
+		return random.uniform(19,20)
 	def collectPortVoltage():
-		return random.uniform(19,21)
+		return random.uniform(19,20)
 	def collectTemp():
 		return random.uniform(0,70)
 
@@ -100,6 +100,7 @@ Converter = Converter()
 
 class ESC():
 	deviceAddress = 0x2F
+	thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 
 	def collectCurrents():
 		currents = []

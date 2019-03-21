@@ -89,16 +89,16 @@ class ConverterBoard:
 
 	def __init__(self):
 		try:
-			self.moboControl = machine.Pin('C2', machine.Pin.OUT, value=1)
-			self.jetsonControl = machine.Pin('C3', machine.Pin.OUT, value=1)
-			self.peltierControl = machine.Pin('C1', machine.Pin.OUT, value=1)
-			self.threeControl = machine.Pin('C0', machine.Pin.OUT, value=1)
-			self.fiveControl = machine.Pin('C13', machine.Pin.OUT, value=1)
-			self.twelveControl = machine.Pin('B0', machine.Pin.OUT, value=1)
+			self.moboPower = machine.Pin('C2', machine.Pin.OUT, value=1)
+			self.jetsonPower = machine.Pin('C3', machine.Pin.OUT, value=1)
+			self.peltierPower = machine.Pin('C1', machine.Pin.OUT, value=1)
+			self.threePower = machine.Pin('C0', machine.Pin.OUT, value=1)
+			self.fivePower = machine.Pin('C13', machine.Pin.OUT, value=1)
+			self.twelvePower = machine.Pin('B0', machine.Pin.OUT, value=1)
 
 			while backplaneI2C.mem_read(1, ConverterBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
-			# Operational mode 0 (includes temperature) and external vref
+			# Operational mode 0 (includes temperature) and internal vref
 			backplaneI2C.mem_write(chr(0b000), ConverterBoard.deviceAddress, 0x0B)
 			# Set continuous conversion
 			backplaneI2C.mem_write(chr(1), ConverterBoard.deviceAddress, 0x07)
@@ -110,30 +110,17 @@ class ConverterBoard:
 			backplaneI2C.mem_write(chr(1), ConverterBoard.deviceAddress, 0x00)
 		except Exception as e: print("Error on Conv init: " + str(e))
 
-	def setMoboPower(self, power):
-		self.moboControl.value(power)
-	def setJetsonPower(self, power): 
-		self.jetsonControl.value(power)
-	def setPeltierPower(self, power):
-		self.peltierControl.value(power)
-	def setThreePower(self, power):
-		self.threeControl.value(power)
-	def setFivePower(self, power):
-		self.fiveControl.value(power)
-	def setTwelvePower(self, power):
-		self.twelveControl.value(power)
-
 	def collectFiveCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x20)
-		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.54 / 4096
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
 	def collectThreeCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x21)
-		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.54 / 4096
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
 	def collectTwelveCurrent():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x22)
-		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
+		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
 	def collectTwelveVoltage():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x23)
@@ -143,7 +130,7 @@ class ConverterBoard:
 		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (18 / 8)
 	def collectThreeVoltage():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x25)
-		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (18 / 8)
+		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (30 / 20)
 	def collectTemp():
 		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
@@ -162,6 +149,7 @@ Converter = ConverterBoard()
 class ESCBoard():
 	deviceAddress = 0x2F
 	thrustersEnabled = 0
+	thrusts = []
 
 	def __init__(self):
 		try:
@@ -183,7 +171,7 @@ class ESCBoard():
 
 			while backplaneI2C.mem_read(1, ESCBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
-			# Operational mode 0 (includes temperature) and external vref
+			# Operational mode 1 (excludes temperature) and external vref
 			backplaneI2C.mem_write(chr(0b011), ESCBoard.deviceAddress, 0x0B)
 			# Set continuous conversion
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x07)
@@ -203,17 +191,21 @@ class ESCBoard():
 			currents[i] = max((voltage - .33) / .066, 0)
 
 	def stopThrusters(self):
+		self.thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 		for t in self.thrusters:
-				t.pulse_width_percent(60)
+				t.pulse_width_percent(60)		
 
 	def setThrusters(self, thrusts):
 		if self.thrustersEnabled:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
+			self.thrusts = thrusts
 
 	def setThrusterEnable(self, enable):
-		self.thrustersEnabled = enable
+		self.thrustersEnabled = 0
+		if killSwitch.value() == 0:
+			self.thrustersEnabled = enable
 		self.stopThrusters()
 
 	currents = Sensor(collectCurrents)
@@ -222,19 +214,68 @@ ESC = ESCBoard()
 
 class StatusBoard():
 	screenAddress = 0x78
+	lightAddress = 0x20
+	green = 0
+	blue = 0
+	red = 0
+	blink = 0
 
 	def __init__(self):
 		try:
-			data = ''.join(map(chr, [0, 0x38]))
-			robotI2C.send(data , self.screenAddress)
-			time.sleep_ms(10)
-			data = ''.join(map(chr, [0, 0x39]))
-			robotI2C.send(data , self.screenAddress)
-			time.sleep_ms(10)
-			data = ''.join(map(chr, [0, 0x14, 0x78, 0x5E, 0x6D, 0x0C, 0x01, 0x06]))
-			robotI2C.send(data , self.screenAddress)
-			time.sleep_ms(10)
+			# Global intensity, no blink or interrupt
+			robotI2C.mem_write(chr(0b00000100), self.lightAddress, 0x0F)
+			# All outputs
+			robotI2C.mem_write(chr(0), self.lightAddress, 0x03)
+			# Always on / full intensity
+			robotI2C.mem_write(chr(0xFF), self.lightAddress, 0x0E)
+
+			#data = ''.join(map(chr, [0, 0x38]))
+			#robotI2C.send(data , self.screenAddress)
+			#time.sleep_ms(10)
+			#data = ''.join(map(chr, [0, 0x39]))
+			#robotI2C.send(data , self.screenAddress)
+			#time.sleep_ms(10)
+			#data = ''.join(map(chr, [0, 0x14, 0x78, 0x5E, 0x6D, 0x0C, 0x01, 0x06]))
+			#robotI2C.send(data , self.screenAddress)
+			#time.sleep_ms(10)
+
+			self.red = 1
+			self.updateLights()
+			time.sleep(.33)
+			self.red = 0
+			self.green = 1
+			self.updateLights()
+			time.sleep(.33)
+			self.green = 0 
+			self.blue = 1
+			self.updateLights()
+			time.sleep(.33)
+			self.blue = 0
+			self.updateLights()
 		except Exception as e: print("Error on Status init: " + str(e))
+
+	def setRed(self, state):
+		self.red = state
+		self.updateLights()
+
+	def setGreen(self, state):
+		self.green = state
+		self.updateLights()
+
+	def setBlue(self, state):
+		self.blue = state
+		self.updateLights()
+
+	def setBlink(self, state):	
+		self.blink = state
+		self.updateLights()
+
+
+
+	def updateLights(self):
+		# blink, red, blue, green
+		code = 8 * self.blink + 4 * self.red + 2 * self.blue + self.green
+		robotI2C.mem_write(chr(0xF - code), self.lightAddress, 0x01)
 
 	def write(self, text):
 		robotI2C.send(chr(0x40)+text, self.screenAddress)
@@ -323,23 +364,23 @@ class DepthSensor():
 		oversampling = 0
 
 		# Request D1 conversion (temperature)
-		self.robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
+		robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
 
 		# Maximum conversion time increases linearly with oversampling
 		# max time (seconds) ~= 2.2e-6(x) where x = OSR = (2^8, 2^9, ..., 2^13)
 		# We use 2.5e-6 for some overhead
 		time.sleep(2.5e-6 * 2**(8+oversampling))
 
-		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D1 = d[0] << 16 | d[1] << 8 | d[2]
 
 		# Request D2 conversion (pressure)
-		self.robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
+		robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
 
 		# As above
 		time.sleep(2.5e-6 * 2**(8+oversampling))
 
-		d = self.robotI2C.mem_read(3, self.deviceAddress, 0x00)
+		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D2 = d[0] << 16 | d[1] << 8 | d[2]
 
 		self.calculate()
@@ -354,6 +395,7 @@ class DepthSensor():
 	# Depth relative to MSL pressure in given fluid density
 	def depth(self):
 		return (self.pressure()*100-101300)/(self._fluidDensity*9.80665)
+
 
 
 killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
