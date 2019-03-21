@@ -43,8 +43,8 @@ export class TemperatureComponent implements OnDestroy {
   }
 
   togglePower() {
+    this.coproService.setPeltierPower(this.temperatureOff).subscribe(() => {});
     this.temperatureOff = !this.temperatureOff;
-    this.coproService.setPeltierPower(this.temperatureOff);
   }
 
   ngOnDestroy() {

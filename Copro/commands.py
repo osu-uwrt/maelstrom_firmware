@@ -68,6 +68,18 @@ def thrusterForce(args):
 		values.append(thrusts[i] % 256)
 	return values
 
+def logicCurrents(args):
+	threeCurrent = int(hal.Converter.threeCurrent.value() * 1000)
+	fiveCurrent = int(hal.Converter.fiveCurrent.value() * 1000)
+	twelveCurrent = int(hal.Converter.twelveCurrent.value() * 1000)
+	return [threeCurrent // 256, threeCurrent % 256, fiveCurrent // 256, fiveCurrent % 256, twelveCurrent // 256, twelveCurrent % 256, ]
+
+def logicVoltages(args):
+	threeVoltage = int(hal.Converter.threeVoltage.value() * 1000)
+	fiveVoltage = int(hal.Converter.fiveVoltage.value() * 1000)
+	twelveVoltage = int(hal.Converter.twelveVoltage.value() * 500)
+	return [threeVoltage // 256, threeVoltage % 256, fiveVoltage // 256, fiveVoltage % 256, twelveVoltage // 256, twelveVoltage % 256, ]
+
 commandList = [
 	moboPower,			#0
 	jetsonPower,		#1
@@ -76,5 +88,7 @@ commandList = [
 	getBatVoltages,		#4
 	getBatCurrents,		#5
 	getTemperature,		#6
-	thrusterForce		#7
+	thrusterForce,		#7
+	logicCurrents,		#8
+	logicVoltages		#9
 ]
