@@ -1,5 +1,5 @@
 import { Temperature } from './../../../@core/data/temperature-humidity';
-import { Component, OnDestroy, EventEmitter, Input } from '@angular/core';
+import { Component, OnDestroy, EventEmitter, Input, OnInit } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 import { Electricity, ElectricityChart, ElectricityData } from '../../../@core/data/electricity';
@@ -12,19 +12,14 @@ import { ElectricityChartComponent } from './electricity-chart/electricity-chart
   styleUrls: ['./electricity.component.scss'],
   templateUrl: './electricity.component.html',
 })
-export class ElectricityComponent implements OnDestroy {
+export class ElectricityComponent implements OnDestroy, OnInit {
 
   private alive = true;
 
   listData: Electricity;
   chartData: ElectricityChart[] = [];
   amperage: number;
-  @Input('amperage')
-  set chartValue(amperage: number) {
-    this.amperage = amperage;
-    this.chartData.push({ label: '', value: this.amperage });
-    this.newData.emit();
-  }
+  @Input() amperageEmitter: EventEmitter<number>;
 
   newData = new EventEmitter<any>();
 
@@ -55,6 +50,13 @@ export class ElectricityComponent implements OnDestroy {
       });
   }
 
+  ngOnInit() {
+    this.amperageEmitter.subscribe(a => {
+      this.amperage = a;
+      this.chartData.push({ label: '', value: this.amperage });
+      this.newData.emit();
+    });
+  }
 
   ngOnDestroy() {
     this.alive = false;

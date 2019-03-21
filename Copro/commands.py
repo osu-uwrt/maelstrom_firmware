@@ -80,6 +80,15 @@ def logicVoltages(args):
 	twelveVoltage = int(hal.Converter.twelveVoltage.value() * 500)
 	return [threeVoltage // 256, threeVoltage % 256, fiveVoltage // 256, fiveVoltage % 256, twelveVoltage // 256, twelveVoltage % 256, ]
 
+def switches(args):
+	data = hal.killSwitch.value()
+	data = (data << 1) + hal.switch1.value()
+	data = (data << 1) + hal.switch2.value()
+	data = (data << 1) + hal.switch3.value()
+	data = (data << 1) + hal.switch4.value()
+	data = (data << 1) + hal.switch5.value()
+	return [data]
+
 commandList = [
 	moboPower,			#0
 	jetsonPower,		#1
@@ -90,5 +99,6 @@ commandList = [
 	getTemperature,		#6
 	thrusterForce,		#7
 	logicCurrents,		#8
-	logicVoltages		#9
+	logicVoltages,		#9
+	switches			#10
 ]

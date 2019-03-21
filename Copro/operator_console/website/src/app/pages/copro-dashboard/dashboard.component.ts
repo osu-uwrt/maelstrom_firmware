@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from "@angular/core";
+import { Component, OnDestroy, EventEmitter } from "@angular/core";
 import { NbThemeService } from "@nebular/theme";
 import { takeWhile } from "rxjs/operators";
 import { SolarData } from "../../@core/data/solar";
@@ -23,7 +23,7 @@ export class DashboardComponent implements OnDestroy {
   portVoltage = 19.45;
   stbdCurrent = 0;
   portCurrent = 0.45;
-  totalCurrent = 0.45;
+  totalCurrentEmitter = new EventEmitter<number>();
   temp = 82;
 
   moboCard: CardSettings = {
@@ -96,7 +96,7 @@ export class DashboardComponent implements OnDestroy {
     this.coproService.getBatCurrents().subscribe(i => {
       this.portCurrent = i[0];
       this.stbdCurrent = i[1];
-      this.totalCurrent = this.stbdCurrent + this.portCurrent;
+      this.totalCurrentEmitter.emit(i[0] + i[1]);
     });
     setTimeout(() => this.getBattery(), 1000);
   }

@@ -37,15 +37,15 @@ class BatteryBalancer:
 	deviceAddress = 0x1F
 
 	def collectStbdCurrent():
-		return random.uniform(30,35)
+		return random.uniform(0,35)
 	def collectPortCurrent():
-		return random.uniform(30,35)
+		return random.uniform(0,35)
 	def collectBalancedVoltage():
-		return random.uniform(19,20)
+		return random.uniform(19,21)
 	def collectStbdVoltage():
-		return random.uniform(19,20)
+		return random.uniform(19,21)
 	def collectPortVoltage():
-		return random.uniform(19,20)
+		return random.uniform(19,21)
 	def collectTemp():
 		return random.uniform(0,70)
 
