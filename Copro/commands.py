@@ -89,6 +89,10 @@ def switches(args):
 	data = (data << 1) + hal.switch5.value()
 	return [data]
 
+def depth(args):
+	data = int(hal.Depth.depth()*100000)
+	return [(data >> 16), (data >> 8) & 0xFF, data & 0xFF]
+
 commandList = [
 	moboPower,			#0
 	jetsonPower,		#1
@@ -100,5 +104,6 @@ commandList = [
 	thrusterForce,		#7
 	logicCurrents,		#8
 	logicVoltages,		#9
-	switches			#10
+	switches,			#10
+	depth				#11
 ]
