@@ -3,6 +3,7 @@ import utime as time
 import network
 import pyb
 from pyb import Timer, Pin, I2C
+import uasyncio as asyncio
 
 nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machine.Pin('C5', machine.Pin.OUT))
 nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8')) 
@@ -295,7 +296,8 @@ class DepthSensor():
 			# Read calibration and crc
 			for i in range(7):
 				c = robotI2C.mem_read(2, self.deviceAddress, 0xA0 + 2*i)
-				c =  ((c & 0xFF) << 8) | (c >> 8) # SMBus is little-endian for word transfers, we need to swap MSB and LSB
+				c = (c[0] << 8) + c[1]
+				#c =  ((c & 0xFF) << 8) | (c >> 8) # SMBus is little-endian for word transfers, we need to swap MSB and LSB
 				self._C.append(c)
 							
 			assert (self._C[0] & 0xF000) >> 12 == self.crc4(self._C), "PROM read error, CRC failed!"
@@ -360,8 +362,8 @@ class DepthSensor():
 		self._temperature = (self._temperature-Ti)
 		self._pressure = (((self._D1*SENS2)/2097152-OFF2)/8192)/10.0   
 
-	def read(self):
-		oversampling = 0
+	async def read(self):
+		oversampling = 5
 
 		# Request D1 conversion (temperature)
 		robotI2C.send(chr(0x40 + 2*oversampling), self.deviceAddress)
@@ -369,7 +371,7 @@ class DepthSensor():
 		# Maximum conversion time increases linearly with oversampling
 		# max time (seconds) ~= 2.2e-6(x) where x = OSR = (2^8, 2^9, ..., 2^13)
 		# We use 2.5e-6 for some overhead
-		time.sleep(2.5e-6 * 2**(8+oversampling))
+		await asyncio.sleep_ms(int(2.5e-3 * 2**(8+oversampling)) + 2)
 
 		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D1 = d[0] << 16 | d[1] << 8 | d[2]
@@ -378,7 +380,7 @@ class DepthSensor():
 		robotI2C.send(chr(0x50 + 2*oversampling), self.deviceAddress)
 
 		# As above
-		time.sleep(2.5e-6 * 2**(8+oversampling))
+		await asyncio.sleep_ms(int(2.5e-3 * 2**(8+oversampling)) + 2)
 
 		d = robotI2C.mem_read(3, self.deviceAddress, 0x00)
 		self._D2 = d[0] << 16 | d[1] << 8 | d[2]
@@ -396,7 +398,7 @@ class DepthSensor():
 	def depth(self):
 		return (self.pressure()*100-101300)/(self._fluidDensity*9.80665)
 
-
+Depth = DepthSensor()
 
 killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
 switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)
