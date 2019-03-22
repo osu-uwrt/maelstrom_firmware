@@ -84,6 +84,7 @@ async def depthLoop():
 			await hal.Depth.read()
 		except Exception as e:
 			print("Depth error: " + str(e))
+			await asyncio.sleep_ms(50)
 
 if onCopro:
 	loop = asyncio.get_event_loop()
