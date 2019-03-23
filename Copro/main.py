@@ -5,6 +5,7 @@ try:
 	import halSimulated
 	import sys
 	import traceback
+	import asyncio
 except:
 	onCopro = True
 	import hal
@@ -93,7 +94,7 @@ if onCopro:
 	loop.run_forever()
 	loop.close()
 else:
-	mainLoop()
+	asyncio.run(mainLoop())
 
 
 	
