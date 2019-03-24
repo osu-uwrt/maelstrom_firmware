@@ -21,12 +21,7 @@ With the project compiled and built, go to the directory where the **STLink Util
 
 And you should now have a programmed STM32 chip. The **st-flash** can take many formats so you need to specify `--formate ihex` and the `write` command writes the actual hexfile to the chip.
 
-## Arduino Spinup
-
--You need to get the ros libs (messages) from team Github
-
--You need to get the sensor libs from Blue Robotics Docs
-## ZEM5305
+## Acoustics
 To compile, open in quartus, compile, and make .rbf programming file.
 
-This configuration interacts with the ADCs on the acoustics board, loads in .5 ms of data from each hydrophone, and sends to computer.
+This configuration interacts with the ADCs on the acoustics board and will record and report data at request from a PC.
