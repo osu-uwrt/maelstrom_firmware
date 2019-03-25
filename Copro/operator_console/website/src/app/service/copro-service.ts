@@ -47,6 +47,14 @@ export class CoproService {
     );
   }
 
+  getLogicCurrents(): Observable<number[]> {
+	  return this.command(8).pipe(
+		  map(x => {
+			  return [(x[0] * 256 + x[1]) / 1000.0, (x[2] * 256 + x[3]) / 1000.0, (x[4] * 256 + x[5]) / 1000.0];
+		  })
+	  )
+  }
+
   getTemperature(): Observable<number> {
     return this.command(6).pipe(map(x => (x[0] * 256 + x[1]) / 10.0));
   }

@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 export interface Components {
   name: string;
   amps: string;
-  wattHr: string;
 }
 
 export interface Electricity {

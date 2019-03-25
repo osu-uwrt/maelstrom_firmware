@@ -8,17 +8,9 @@ export class ElectricityService extends ElectricityData {
   private listData: Electricity = 
     {
       components: [
-        { name: '12v', amps: '816', wattHr: '97' },
-        { name: '5v', amps: '806', wattHr: '95' },
-        { name: '3.3v', amps: '803', wattHr: '94' },
-        { name: 'HPF', amps: '818', wattHr: '98' },
-        { name: 'HSF', amps: '809', wattHr: '96' },
-        { name: 'HPA', amps: '808', wattHr: '96' },
-        { name: 'HSA', amps: '815', wattHr: '97' },
-        { name: 'SRP', amps: '807', wattHr: '95' },
-        { name: 'SRS', amps: '792', wattHr: '92' },
-        { name: 'SWF', amps: '791', wattHr: '92' },
-        { name: 'SWA', amps: '786', wattHr: '89' }
+		{ name: '3.3v', amps: '803'},
+		{ name: '5v', amps: '806'},
+        { name: '12v', amps: '816'}
       ],
     };
 

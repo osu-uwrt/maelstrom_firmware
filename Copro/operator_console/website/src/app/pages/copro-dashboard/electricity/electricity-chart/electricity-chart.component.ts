@@ -82,7 +82,9 @@ export class ElectricityChartComponent implements AfterViewInit, OnDestroy {
             color: this.eTheme.axisLineColor,
             width: '2',
           },
-        },
+		},
+		min: this.data.length > 30 ? this.data.length - 30 : 0,
+		max: this.data.length - 1,
       },
       yAxis: {
         boundaryGap: [0, '5%'],
