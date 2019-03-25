@@ -16,15 +16,24 @@ export class ElectricityComponent implements OnDestroy, OnInit {
 
   private alive = true;
 
-  listData: Electricity;
+  listData: Electricity = {
+	components: [
+		{ name: '3.3v', amps: '0'},
+		{ name: '5v', amps: '0'},
+        { name: '12v', amps: '0'}
+      ],
+  };
   chartData: ElectricityChart[] = [];
   amperage: number;
   @Input() amperageEmitter: EventEmitter<number>;
+  @Input('logicCurrents')
+  set logicCurrents(currents: number[]) {
+	  this.listData.components[0].amps = ''+currents[0];
+	  this.listData.components[1].amps = ''+currents[1];
+	  this.listData.components[2].amps = ''+currents[2];
+  }
 
   newData = new EventEmitter<any>();
-
-  type = 'week';
-  types = ['week', 'month', 'year'];
 
   currentTheme: string;
   themeSubscription: any;
@@ -39,20 +48,20 @@ export class ElectricityComponent implements OnDestroy, OnInit {
         this.currentTheme = theme.name;
       });
 
-    forkJoin(
-      this.electricityService.getListData(),
-      this.electricityService.getChartData(),
-    )
-      .pipe(takeWhile(() => this.alive))
-      .subscribe(([listData, chartData]: [Electricity, ElectricityChart[]]) => {
-        this.listData = listData;
-        //this.chartData = chartData;
-      });
+    // forkJoin(
+    //   this.electricityService.getListData(),
+    //   this.electricityService.getChartData(),
+    // )
+    //   .pipe(takeWhile(() => this.alive))
+    //   .subscribe(([listData, chartData]: [Electricity, ElectricityChart[]]) => {
+    //     this.listData = listData;
+    //     //this.chartData = chartData;
+	//   });
   }
 
   ngOnInit() {
     this.amperageEmitter.subscribe(a => {
-      this.amperage = a;
+      this.amperage = a.toFixed(2);
       this.chartData.push({ label: '', value: this.amperage });
       this.newData.emit();
     });
