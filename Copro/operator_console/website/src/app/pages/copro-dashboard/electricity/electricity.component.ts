@@ -16,21 +16,19 @@ export class ElectricityComponent implements OnDestroy, OnInit {
 
   private alive = true;
 
-  listData: Electricity = {
-	components: [
-		{ name: '3.3v', amps: '0'},
-		{ name: '5v', amps: '0'},
-        { name: '12v', amps: '0'}
-      ],
-  };
+  listData = [
+    { name: '3.3v', amps: 0 },
+    { name: '5v', amps: 0 },
+    { name: '12v', amps: 0 }
+  ];
   chartData: ElectricityChart[] = [];
   amperage: number;
   @Input() amperageEmitter: EventEmitter<number>;
   @Input('logicCurrents')
   set logicCurrents(currents: number[]) {
-	  this.listData.components[0].amps = ''+currents[0];
-	  this.listData.components[1].amps = ''+currents[1];
-	  this.listData.components[2].amps = ''+currents[2];
+    this.listData[0].amps = currents[0];
+    this.listData[1].amps = currents[1];
+    this.listData[2].amps = currents[2];
   }
 
   newData = new EventEmitter<any>();
@@ -56,7 +54,7 @@ export class ElectricityComponent implements OnDestroy, OnInit {
     //   .subscribe(([listData, chartData]: [Electricity, ElectricityChart[]]) => {
     //     this.listData = listData;
     //     //this.chartData = chartData;
-	//   });
+    //   });
   }
 
   ngOnInit() {
