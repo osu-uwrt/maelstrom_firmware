@@ -3,13 +3,12 @@
     <div class="table-header">
       <div>Power draw</div>
     </div>
-
-        <div class="stats-month" *ngFor="let component of listData.components">
+        <div class="stats-month" *ngFor="let current of listData">
           <div>
-            <span class="month">{{ component.name }}</span>
+            <span class="month">{{ current.name }}</span>
           </div>
           <div class="results">
-            <b>{{ component.amps }}</b> A
+            <b>{{ current.amps | number:'1.3-3' }}</b> A
           </div>
         </div>
   </div>
