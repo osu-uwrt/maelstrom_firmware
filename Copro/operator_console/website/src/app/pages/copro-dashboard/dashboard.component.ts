@@ -116,7 +116,6 @@ export class DashboardComponent implements OnDestroy {
     .subscribe(i => {
 	  //in order of 3.3, 5, 12
 	  this.logicCurrents = i;
-	  console.log(this.logicCurrents);
   });
   setTimeout(() => this.getLogicCurrents(), 1000);
 }

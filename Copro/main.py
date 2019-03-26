@@ -21,6 +21,7 @@ incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 incomingConnection.bind(('0.0.0.0', 50000))
 incomingConnection.listen(1)
 connections = [incomingConnection]
+connectionsBuffers = [[]]
 print('Listening for connections...')
 
 
@@ -35,6 +36,7 @@ async def mainLoop():
 					conn, addr = incomingConnection.accept()
 					print("Connected to "+str(addr))
 					connections.append(conn)
+					connectionsBuffers.append([])
 				else:
 					try:
 						data = s.recv(1024)
@@ -47,11 +49,14 @@ async def mainLoop():
 						print("Lost connection")
 						continue
 
+					connectionIndex = connections.index(s)
+
 					# Command structure: Length, Command, Args...
 					# Response structure: Length, values
 					# Below code allows for multiple or partial commands to be received
 					if not onCopro and sys.version_info < (3, 0):
 						data = list(map(ord, data))
+					inputBuffer = connectionsBuffers[connectionIndex] 
 					inputBuffer += data
 
 					# While there is a whole command in the buffer
@@ -65,6 +70,8 @@ async def mainLoop():
 
 						# Remove the command from the buffer
 						inputBuffer = inputBuffer[inputBuffer[0]:]
+
+					connectionsBuffers[connectionIndex] = inputBuffer
 			
 			if not onCopro:
 				sleep(0.01)

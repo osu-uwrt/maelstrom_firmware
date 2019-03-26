@@ -286,6 +286,7 @@ Status = StatusBoard()
 class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
+	_pressure = 0
 
 	def __init__(self):
 		try:
