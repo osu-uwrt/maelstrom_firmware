@@ -119,6 +119,23 @@ class StatusBoard():
 
 Status = StatusBoard()
 
+class DepthSensor():
+	deviceAddress = 0x76
+	_fluidDensity = 997
+	_pressure = 0
+
+	def pressure(self):
+		return self._pressure
+		
+	def temperature(self):
+		degC = self._temperature / 100.0
+		return degC
+		
+	# Depth relative to MSL pressure in given fluid density
+	def depth(self):
+		return (random.uniform(0, 2))
+
+Depth = DepthSensor()
 
 killSwitch = Pin()
 switch1 = Pin()
