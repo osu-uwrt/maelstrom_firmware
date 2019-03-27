@@ -24,6 +24,7 @@ export class DashboardComponent implements OnDestroy {
   stbdCurrent = 0;
   portCurrent = 0.45;
   logicCurrents = [0, 0, 0];
+  depthValue = 0;
   totalCurrentEmitter = new EventEmitter<number>();
   temp = 82;
 
@@ -85,6 +86,7 @@ export class DashboardComponent implements OnDestroy {
     this.getBattery();
 	this.getTemperature();
 	this.getLogicCurrents();
+	this.getDepthValue();
     this.coproService.coproDisconnected.subscribe(() =>
       alert("Copro disconnected")
     );
@@ -119,6 +121,11 @@ export class DashboardComponent implements OnDestroy {
   });
   setTimeout(() => this.getLogicCurrents(), 1000);
 }
+
+  getDepthValue() {
+	  this.coproService.getDepth().subscribe(d => (this.depthValue = d));
+	  setTimeout(() => this.getDepthValue(), 1000);
+  }
 
   ngOnDestroy() {
     this.alive = false;
