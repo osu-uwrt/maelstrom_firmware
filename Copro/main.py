@@ -101,7 +101,9 @@ if onCopro:
 	loop.run_forever()
 	loop.close()
 else:
-	asyncio.run(mainLoop())
+	loop = asyncio.get_event_loop()
+	loop.run_until_complete(mainLoop())
+	loop.close()
 
 
 	
