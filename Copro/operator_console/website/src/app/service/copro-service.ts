@@ -59,6 +59,12 @@ export class CoproService {
     return this.command(6).pipe(map(x => (x[0] * 256 + x[1]) / 10.0));
   }
 
+  getDepth(): Observable<number> {
+	  return this.command(11).pipe(
+		  map(x=> (x[0]*65536+x[1]*256+x[2])/100000.0)
+	  );
+  }
+
   private command(...args: number[]): Observable<number[]> {
     return this.http.post<number[]>(COPRO_URL, [...args]).pipe(
       catchError(err => {

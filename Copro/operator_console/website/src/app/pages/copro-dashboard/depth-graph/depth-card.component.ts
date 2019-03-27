@@ -1,74 +1,75 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import { interval , Subscription } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 import { switchMap, takeWhile } from 'rxjs/operators';
 import { LiveUpdateChart, EarningData } from '../../../@core/data/earning';
+import { pipe } from '@angular/core/src/render3';
 
 @Component({
-  selector: 'ngx-depth-card',
-  styleUrls: ['./depth-card.component.scss'],
-  templateUrl: './depth-card.component.html',
+	selector: 'ngx-depth-card',
+	styleUrls: ['./depth-card.component.scss'],
+	templateUrl: './depth-card.component.html',
 })
 export class DepthCardComponent {
 
-  private alive = true;
+	private alive = true;
+	private date = new Date;
 
-  @Input() selectedCurrency: string = 'Bitcoin';
+	@Input() depthValue: number;
 
-  intervalSubscription: Subscription;
-  currencies: string[] = ['Bitcoin', 'Tether', 'Ethereum'];
-  currentTheme: string;
-  earningLiveUpdateCardData: LiveUpdateChart;
-  liveUpdateChartData: { value: [string, number] }[];
+	intervalSubscription: Subscription;
+	currentTheme: string;
+	liveUpdateChartData: { value: [string, number] }[] = [];
 
-  constructor(private themeService: NbThemeService,
-              private earningService: EarningData) {
-    this.themeService.getJsTheme()
-      .pipe(takeWhile(() => this.alive))
-      .subscribe(theme => {
-        this.currentTheme = theme.name;
-      });
-  }
+	constructor(private themeService: NbThemeService) {
+		this.themeService.getJsTheme()
+			.pipe(takeWhile(() => this.alive))
+			.subscribe(theme => {
+				this.currentTheme = theme.name;
+			});
+	}
 
-  ngOnInit() {
-    this.getEarningCardData(this.selectedCurrency);
-  }
+	ngOnInit() {
+		this.addDepthValue();
+	}
 
-  changeCurrency(currency) {
-    if (this.selectedCurrency !== currency) {
-      this.selectedCurrency = currency;
+	private addDepthValue() {
+		this.liveUpdateChartData.push({
+			value: [
+				[
+					this.date.getDay(),
+					this.date.getHours(),
+					this.date.getMinutes(),
+					this.date.getSeconds()
+				].join('/'),
+				this.depthValue
+			]
+		});
+		this.startReceivingDepthValues();
+	}
 
-      this.getEarningCardData(this.selectedCurrency);
-    }
-  }
+	startReceivingDepthValues() {
+		if (this.intervalSubscription){
+			this.intervalSubscription.unsubscribe();
+		}
+		console.log(this.liveUpdateChartData);
+		this.intervalSubscription = interval(200)
+			.subscribe(() => {
+				this.liveUpdateChartData.push({
+					value: [
+						[
+							this.date.getDay(),
+							this.date.getHours(),
+							this.date.getMinutes(),
+							this.date.getSeconds()
+						].join('/'),
+						this.depthValue
+					]
+				});
+			});
+	}
 
-  private getEarningCardData(currency) {
-    this.earningService.getEarningCardData(currency)
-      .pipe(takeWhile(() => this.alive))
-      .subscribe((earningLiveUpdateCardData: LiveUpdateChart) => {
-        this.earningLiveUpdateCardData = earningLiveUpdateCardData;
-        this.liveUpdateChartData = earningLiveUpdateCardData.liveChart;
-
-        this.startReceivingLiveData(currency);
-      });
-  }
-
-  startReceivingLiveData(currency) {
-    if (this.intervalSubscription) {
-      this.intervalSubscription.unsubscribe();
-    }
-
-    this.intervalSubscription = interval(200)
-      .pipe(
-        takeWhile(() => this.alive),
-        switchMap(() => this.earningService.getEarningLiveUpdateCardData(currency)),
-      )
-      .subscribe((liveUpdateChartData: any[]) => {
-        this.liveUpdateChartData.push({value: ["string", 12]});
-      });
-  }
-
-  ngOnDestroy() {
-    this.alive = false;
-  }
+	ngOnDestroy() {
+		this.alive = false;
+	}
 }
