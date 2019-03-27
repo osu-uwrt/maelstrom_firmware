@@ -87,7 +87,7 @@ async def mainLoop():
 async def depthLoop():
 	await asyncio.sleep(1)
 	print("Collecting depth")
-	while True:
+	while hal.DepthSensor.initialized:
 		try:
 			await hal.Depth.read()
 		except Exception as e:
