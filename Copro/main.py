@@ -28,7 +28,7 @@ print('Listening for connections...')
 async def mainLoop():
 	inputBuffer = []
 	try:
-		while 1:
+		while True:
 			readable, writable, exceptional = select.select(connections, [], connections, 0)
 
 			for s in readable:
@@ -63,10 +63,14 @@ async def mainLoop():
 					while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
 						command = inputBuffer[1 : inputBuffer[0]]
 
-						# Act on the command
-						response = commands.runCommand(command)
-						response = [len(response) + 1] + response
-						s.send(bytearray(response))
+						# Act on the command. Terminate connection on command length of 0
+						if inputBuffer[0] == 0:
+							print('Terminating a connection')
+							s.close()
+						else:
+							response = commands.runCommand(command)
+							response = [len(response) + 1] + response
+							s.send(bytearray(response))
 
 						# Remove the command from the buffer
 						inputBuffer = inputBuffer[inputBuffer[0]:]
@@ -85,9 +89,9 @@ async def mainLoop():
 			s.close()
 
 async def depthLoop():
-	await asyncio.sleep(1)
+	await asyncio.sleep(5.0)
 	print("Collecting depth")
-	while hal.DepthSensor.initialized:
+	while hal.Depth.initialized:
 		try:
 			await hal.Depth.read()
 		except Exception as e:
