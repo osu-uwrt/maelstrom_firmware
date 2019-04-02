@@ -197,16 +197,14 @@ class ESCBoard():
 				t.pulse_width_percent(60)		
 
 	def setThrusters(self, thrusts):
-		if self.thrustersEnabled:
+		if self.thrustersEnabled and killSwitch.value() == 0:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
 			self.thrusts = thrusts
 
 	def setThrusterEnable(self, enable):
-		self.thrustersEnabled = 0
-		if killSwitch.value() == 0:
-			self.thrustersEnabled = enable
+		self.thrustersEnabled = enable
 		self.stopThrusters()
 
 	currents = Sensor(collectCurrents)
@@ -287,6 +285,7 @@ class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
+	initialized = False
 
 	def __init__(self):
 		try:
@@ -302,6 +301,8 @@ class DepthSensor():
 				self._C.append(c)
 							
 			assert (self._C[0] & 0xF000) >> 12 == self.crc4(self._C), "PROM read error, CRC failed!"
+
+			self.initialized = True
 		except Exception as e: print("Error on Depth init: " + str(e))
 
 	# Cribbed from datasheet
@@ -409,7 +410,7 @@ switch4 = machine.Pin('C4', machine.Pin.IN, machine.Pin.PULL_UP)
 switch5 = machine.Pin('B1', machine.Pin.IN, machine.Pin.PULL_UP)
 
 def killSwitchChanged(pin):
-	ESC.setThrusterEnable(not pin.value())
+	ESC.stopThrusters()
 
 killSwitch.irq(killSwitchChanged)
 killSwitchChanged(killSwitch)
