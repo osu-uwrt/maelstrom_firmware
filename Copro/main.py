@@ -66,14 +66,16 @@ async def mainLoop():
 						# Act on the command. Terminate connection on command length of 0
 						if inputBuffer[0] == 0:
 							print('Terminating a connection')
+							connections.remove(s)
 							s.close()
+							# Remove the command from the buffer
+							inputBuffer = inputBuffer[1:]
 						else:
 							response = commands.runCommand(command)
 							response = [len(response) + 1] + response
 							s.send(bytearray(response))
-
-						# Remove the command from the buffer
-						inputBuffer = inputBuffer[inputBuffer[0]:]
+							# Remove the command from the buffer
+							inputBuffer = inputBuffer[inputBuffer[0]:]
 
 					connectionsBuffers[connectionIndex] = inputBuffer
 			
