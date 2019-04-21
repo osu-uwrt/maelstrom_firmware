@@ -93,6 +93,12 @@ def depth(args):
 	data = int(hal.Depth.depth()*100000)
 	return [(data >> 16), (data >> 8) & 0xFF, data & 0xFF]
 
+def getThrusterCurrents(args):
+	values = hal.ESC.currents.value()
+	print(values) # for debugging
+	return values
+
+
 commandList = [
 	moboPower,			#0
 	jetsonPower,		#1
@@ -105,5 +111,6 @@ commandList = [
 	logicCurrents,		#8
 	logicVoltages,		#9
 	switches,			#10
-	depth				#11
+	depth,				#11
+	getThrusterCurrents #12
 ]
