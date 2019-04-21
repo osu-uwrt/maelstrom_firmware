@@ -103,9 +103,10 @@ class ESC():
 	thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 
 	def collectCurrents():
-		currents = []
-		for i in range(7):
-			currents[i] = random.uniform(0,10)
+		current_vals = []
+		for i in range(8):
+			current_vals.append(int(random.uniform(0,10)*25))
+		return current_vals
 
 	currents = Sensor(collectCurrents)
 
