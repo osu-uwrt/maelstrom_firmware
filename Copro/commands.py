@@ -93,6 +93,18 @@ def depth(args):
 	data = int(hal.Depth.depth()*100000)
 	return [(data >> 16), (data >> 8) & 0xFF, data & 0xFF]
 
+def twelvePower(args):
+	if len(args) == 1:
+		hal.Converter.twelvePower.value(args[0])
+		return [1]
+	return [hal.Converter.twelvePower.value()]
+
+def fivePower(args):
+	if len(args) == 1:
+		hal.Converter.fivePower.value(args[0])
+		return [1]
+	return [hal.Converter.fivePower.value()]
+
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
 	print(values) # for debugging
@@ -112,5 +124,7 @@ commandList = [
 	logicVoltages,		#9
 	switches,			#10
 	depth,				#11
-	getThrusterCurrents #12
+	getThrusterCurrents,#12
+	twelvePower,		#13
+	fivePower			#14
 ]
