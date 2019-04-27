@@ -91,7 +91,9 @@ async def mainLoop():
 			s.close()
 
 async def depthLoop():
-	await asyncio.sleep(5.0)
+	await asyncio.sleep(1.0)
+	print("Zeroing depth")
+	await hal.Depth.zeroDepth()
 	print("Collecting depth")
 	while hal.Depth.initialized:
 		try:

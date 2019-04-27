@@ -9,7 +9,7 @@ nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machi
 nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8')) 
 
 backplaneI2C = I2C(1, I2C.MASTER)
-robotI2C = I2C(2, I2C.MASTER)
+robotI2C = I2C(2, I2C.MASTER, baudrate=200000)
 
 blueLed = machine.Pin('B4', machine.Pin.OUT)
 greenLed = machine.Pin('A15', machine.Pin.OUT)
@@ -279,12 +279,13 @@ class StatusBoard():
 	def write(self, text):
 		robotI2C.send(chr(0x40)+text, self.screenAddress)
 
-Status = StatusBoard()
+Status = None #StatusBoard()
 
 class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
+	surfacePressure = 1013
 	initialized = False
 
 	def __init__(self):
@@ -296,6 +297,7 @@ class DepthSensor():
 			# Read calibration and crc
 			for i in range(7):
 				c = robotI2C.mem_read(2, self.deviceAddress, 0xA0 + 2*i)
+				time.sleep(0.01)
 				c = (c[0] << 8) + c[1]
 				#c =  ((c & 0xFF) << 8) | (c >> 8) # SMBus is little-endian for word transfers, we need to swap MSB and LSB
 				self._C.append(c)
@@ -362,7 +364,7 @@ class DepthSensor():
 		SENS2 = SENS-SENSi
 
 		self._temperature = (self._temperature-Ti)
-		self._pressure = (((self._D1*SENS2)/2097152-OFF2)/8192)/10.0   
+		self._pressure = (((self._D1*SENS2)/2097152-OFF2)/8192)/10.0
 
 	async def read(self):
 		oversampling = 5
@@ -398,7 +400,13 @@ class DepthSensor():
 		
 	# Depth relative to MSL pressure in given fluid density
 	def depth(self):
-		return (self.pressure()*100-101300)/(self._fluidDensity*9.80665)
+		return ((self.pressure() - self.surfacePressure)*100)/(self._fluidDensity*9.80665)
+
+	async def zeroDepth(self):
+		await self.read()
+		self.surfacePressure = self._pressure
+
+
 
 Depth = DepthSensor()
 
