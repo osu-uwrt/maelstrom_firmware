@@ -105,6 +105,12 @@ def fivePower(args):
 		return [1]
 	return [hal.Converter.fivePower.value()]
 
+def getThrusterCurrents(args):
+	values = hal.ESC.currents.value()
+	print(values) # for debugging
+	return values
+
+
 commandList = [
 	moboPower,			#0
 	jetsonPower,		#1
@@ -118,6 +124,7 @@ commandList = [
 	logicVoltages,		#9
 	switches,			#10
 	depth,				#11
-	twelvePower,		#12
-	fivePower			#13
+	getThrusterCurrents,#12
+	twelvePower,		#13
+	fivePower			#14
 ]

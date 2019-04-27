@@ -1,27 +1,15 @@
-# riptide_firmware
+# maelstrom_firmware
 
-This holds two main things for right now, all of the firmware running on the Arduinos in *Maelstrom* and all of the firmware running on the main co-processing board on *Maelstrom*. The co-processing board is an STM32F4 based MCU that was custom made to work with the 2018 Robosub vehicle.   
+This repository holds the code for the embedded systems and other tools running on Maelstrom. There are two primary parts to this: the acoustics code, and the the coprocessor code/console. A brief overview of each of the systems is below. For detailed install instructions, see the acoustics and [copro](/Copro/README.md) README files. For more information about the hardware of these devices, see github.com/osu-uwrt/uwrt_electronics
 
-## STM32 Spinup
-All STM projects are built initially with STM32CubeMX software.  The master branch has the *Riptide* specific code sitting outside of its project.  To view the entire project and code running on the robot, switch branches.
-### Makefile spinup:
+## Coprocessor
+The coprocessor has several primary tasks:
 
-In the STM32CubeMX software, in project settings, set the IDE to **Makefile**. These projects are geared towards using MacOS or a specific flavor of Linux, Ubuntu 16.04 in our case. To compile you need to edit the Makefile and change the bin path in line 127 to point to wherever:
+- read sensor values
+- control thrusters
+- communicate with the main computer
 
-`gcc-arm-none-eabi-6-2017-q2-update/bin`
-
-is stored. Type the command `make -f Makefile`, in the project directory.  The -f forces the Makefile to run.
-
-To be able to program, you need either a windows environment with **STLink Utility** installed or with MacOS or ubuntu follow this [STLink Utility](https://github.com/texane/stlink) to get a command line version.
-
-#### Using STLink Command Line
-With the project compiled and built, go to the directory where the **STLink Utility** was installed. Plug in the STLink programmer and run the following command:
-
-`./st-flash --format ihex write ~/path/to/project/build/project.hex`
-
-And you should now have a programmed STM32 chip. The **st-flash** can take many formats so you need to specify `--formate ihex` and the `write` command writes the actual hexfile to the chip.
+It does this with an onboard microcontroller, an STM32F405RGT6. This microcontroller board is loosely based on the pyboard from the micropython project. As such, the microcontroller is programmed using micropython. It is programmed using a USB connection, and talks with the main computer over the local network via websocket. Additionally, there is an operator console web app that shows current status of the coprocessor and allows the device to be controlled without having to open up the vehicle.
 
 ## Acoustics
-To compile, open in quartus, compile, and make .rbf programming file.
-
-This configuration interacts with the ADCs on the acoustics board and will record and report data at request from a PC.
+The acoustics system is designed to be able to determine the direction and distance of an acoustic ping (between 20kHz - 40kHz frequency). This is used to navigate towards a pinger in the robot. Thus, the device has a lot of signal processing and alignment code

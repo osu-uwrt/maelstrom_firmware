@@ -66,11 +66,11 @@ export class CoproService {
 	}
 
 	setTwelvePower(state: boolean): Observable<any> {
-		return this.command(12, state ? 1 : 0);
+		return this.command(13, state ? 1 : 0);
 	}
 
 	setFivePower(state: boolean): Observable<any> {
-		return this.command(13, state ? 1 : 0);
+		return this.command(14, state ? 1 : 0);
 	}
 
 	private command(...args: number[]): Observable<number[]> {
