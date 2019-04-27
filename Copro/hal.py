@@ -185,11 +185,12 @@ class ESCBoard():
 		except Exception as e: print("Error on ESC init: " + str(e))
 
 	def collectCurrents():
-		currents = []
+		current_vals = []
 		for i in range(8):
 			data = backplaneI2C.mem_read(2, ESCBoard.deviceAddress, 0x20 + i)
 			voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
-			currents[i] = max((voltage - .33) / .066, 0)
+			current_vals.append(max((voltage - .33) / .066, 0))
+		return current_vals
 
 	def stopThrusters(self):
 		self.thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
