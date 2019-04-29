@@ -27,6 +27,8 @@ class Pin:
 		pass
 	def value(self):
 		return 1
+	def value(self, a):
+		pass
 
 
 
@@ -61,18 +63,13 @@ BatteryBalancer = BatteryBalancer()
 class Converter:
 	deviceAddress = 0x37
 
-	def setMoboPower(self, power):
-		pass
-	def setJetsonPower(self, power):
-		pass
-	def setPeltierPower(self, power):
-		pass
-	def setThreePower(self, power):
-		pass
-	def setFivePower(self, power):
-		pass
-	def setTwelvePower(self, power):
-		pass
+	moboPower = Pin()
+	jetsonPower = Pin()
+	peltierPower = Pin()
+	threePower = Pin()
+	fivePower = Pin()
+	twelvePower = Pin()
+
 	def collectFiveCurrent():
 		return random.uniform(0,10)
 	def collectThreeCurrent():
