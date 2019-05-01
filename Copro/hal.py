@@ -405,11 +405,18 @@ class DepthSensor():
 
 	async def zeroDepth(self):
 		await self.read()
+		await self.read()
+		
 		self.surfacePressure = self._pressure
 
-
-
 Depth = DepthSensor()
+
+class CoproBoard():
+	def restart():
+		machine.reset()
+
+Copro = CoproBoard()
+
 
 killSwitch = machine.Pin('B12', machine.Pin.IN, machine.Pin.PULL_UP)
 switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)
