@@ -107,8 +107,10 @@ def fivePower(args):
 
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
-	print(values) # for debugging
 	return values
+
+def reset(args):
+	hal.Copro.restart()
 
 
 commandList = [
