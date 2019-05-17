@@ -107,7 +107,10 @@ def fivePower(args):
 
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
-	return values
+	data = []
+	for i in values:
+		data.append(int(i*25))
+	return data
 
 def reset(args):
 	hal.Copro.restart()
@@ -128,5 +131,6 @@ commandList = [
 	depth,				#11
 	getThrusterCurrents,#12
 	twelvePower,		#13
-	fivePower			#14
+	fivePower,			#14
+	reset				#15
 ]

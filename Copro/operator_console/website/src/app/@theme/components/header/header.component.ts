@@ -4,6 +4,7 @@ import { NbMenuService, NbSidebarService } from '@nebular/theme';
 import { UserData } from '../../../@core/data/users';
 import { AnalyticsService } from '../../../@core/utils';
 import { LayoutService } from '../../../@core/utils';
+import { CoproService } from '../../../service/copro-service';
 
 @Component({
   selector: 'ngx-header',
@@ -22,7 +23,8 @@ export class HeaderComponent implements OnInit {
               private menuService: NbMenuService,
               private userService: UserData,
               private analyticsService: AnalyticsService,
-              private layoutService: LayoutService) {
+              private layoutService: LayoutService,
+              private coproService: CoproService) {
   }
 
   ngOnInit() {
@@ -43,5 +45,9 @@ export class HeaderComponent implements OnInit {
 
   startSearch() {
     this.analyticsService.trackEvent('startSearch');
+  }
+
+  reset() {
+    this.coproService.reset().subscribe()
   }
 }

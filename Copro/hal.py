@@ -412,7 +412,7 @@ class DepthSensor():
 Depth = DepthSensor()
 
 class CoproBoard():
-	def restart():
+	def restart(self):
 		machine.reset()
 
 Copro = CoproBoard()
