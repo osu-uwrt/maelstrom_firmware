@@ -86,7 +86,7 @@ def switches(args):
 	data = (data << 1) + hal.switch2.value()
 	data = (data << 1) + hal.switch3.value()
 	data = (data << 1) + hal.switch4.value()
-	data = (data << 1) + hal.switch5.value()
+	data = (data << 1) + hal.resetSwitch.value()
 	return [0x3F - data]
 
 def depth(args):
