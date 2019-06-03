@@ -18,8 +18,8 @@ import select
 
 print('Setting up socket...')
 incomingConnection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-incomingConnection.bind(('0.0.0.0', 50000))
-incomingConnection.listen(1)
+incomingConnection.bind(('', 50000))
+incomingConnection.listen(5)
 connections = [incomingConnection]
 connectionsBuffers = [[]]
 print('Listening for connections...')
@@ -92,15 +92,17 @@ async def mainLoop():
 
 async def depthLoop():
 	await asyncio.sleep(1.0)
-	print("Zeroing depth")
-	await hal.Depth.zeroDepth()
-	print("Collecting depth")
-	while hal.Depth.initialized:
-		try:
-			await hal.Depth.read()
-		except Exception as e:
-			print("Depth error: " + str(e))
-			await asyncio.sleep_ms(50)
+	if (hal.Depth.initialized):
+		print("Zeroing depth")
+		for i in range(1, 20):
+			await hal.Depth.zeroDepth()
+		print("Collecting depth")
+		while True:
+			try:
+				await hal.Depth.read()
+			except Exception as e:
+				print("Depth error: " + str(e))
+				await asyncio.sleep_ms(50)
 
 if onCopro:
 	loop = asyncio.get_event_loop()

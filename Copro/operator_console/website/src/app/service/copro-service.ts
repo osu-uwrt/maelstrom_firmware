@@ -67,7 +67,7 @@ export class CoproService {
     return this.command(11).pipe(
       map(x => {
         let val = x[0] * 65536 + x[1] * 256 + x[2];
-        if (x[0] & 0b10000000) val = 1 << (24 - val);
+        if (x[0] & 0b10000000) val = val - (1 << 24);
         return val / 100000;
       })
     );
@@ -79,6 +79,10 @@ export class CoproService {
 
   setFivePower(state: boolean): Observable<any> {
     return this.command(14, state ? 1 : 0);
+  }
+
+  reset(): Observable<any> {
+    return this.command(15);
   }
 
   private command(...args: number[]): Observable<number[]> {

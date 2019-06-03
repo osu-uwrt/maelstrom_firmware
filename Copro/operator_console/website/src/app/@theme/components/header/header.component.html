@@ -1,9 +1,13 @@
-<div class="header-container"
-     [class.left]="position === 'normal'"
-     [class.right]="position === 'inverse'">
+<div
+  class="header-container"
+  [class.left]="position === 'normal'"
+  [class.right]="position === 'inverse'">
   <div class="logo-containter">
     <div class="logo">Copro&nbsp;<span>Dashboard</span></div>
   </div>
 </div>
-
-
+<div class="header-container">
+  <div class="right reset" (click)="reset()">
+    Reset
+  </div>
+</div>

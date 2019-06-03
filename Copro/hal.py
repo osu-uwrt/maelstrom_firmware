@@ -189,7 +189,7 @@ class ESCBoard():
 		for i in range(8):
 			data = backplaneI2C.mem_read(2, ESCBoard.deviceAddress, 0x20 + i)
 			voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
-			current_vals.append(max((voltage - .33) / .066, 0))
+			current_vals.append(max((voltage - .33) / .264, 0))
 		return current_vals
 
 	def stopThrusters(self):
@@ -412,7 +412,7 @@ class DepthSensor():
 Depth = DepthSensor()
 
 class CoproBoard():
-	def restart():
+	def restart(self):
 		machine.reset()
 
 Copro = CoproBoard()
@@ -423,12 +423,21 @@ switch1 = machine.Pin('B13', machine.Pin.IN, machine.Pin.PULL_UP)
 switch2 = machine.Pin('C6', machine.Pin.IN, machine.Pin.PULL_UP)
 switch3 = machine.Pin('C7', machine.Pin.IN, machine.Pin.PULL_UP)
 switch4 = machine.Pin('C4', machine.Pin.IN, machine.Pin.PULL_UP)
-switch5 = machine.Pin('B1', machine.Pin.IN, machine.Pin.PULL_UP)
+resetSwitch = machine.Pin('B1', machine.Pin.IN, machine.Pin.PULL_UP)
+
+while (not resetSwitch.value()):
+	time.sleep(0.1)
 
 def killSwitchChanged(pin):
 	ESC.stopThrusters()
 
 killSwitch.irq(killSwitchChanged)
 killSwitchChanged(killSwitch)
+
+def resetSwitchChanged(pin):
+	if (not pin.value()):
+		Copro.restart()
+
+resetSwitch.irq(resetSwitchChanged)
 
 

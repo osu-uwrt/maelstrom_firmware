@@ -86,7 +86,7 @@ def switches(args):
 	data = (data << 1) + hal.switch2.value()
 	data = (data << 1) + hal.switch3.value()
 	data = (data << 1) + hal.switch4.value()
-	data = (data << 1) + hal.switch5.value()
+	data = (data << 1) + hal.resetSwitch.value()
 	return [0x3F - data]
 
 def depth(args):
@@ -107,7 +107,10 @@ def fivePower(args):
 
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
-	return values
+	data = []
+	for i in values:
+		data.append(int(i*25))
+	return data
 
 def reset(args):
 	hal.Copro.restart()
@@ -128,5 +131,6 @@ commandList = [
 	depth,				#11
 	getThrusterCurrents,#12
 	twelvePower,		#13
-	fivePower			#14
+	fivePower,			#14
+	reset				#15
 ]

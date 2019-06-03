@@ -101,14 +101,14 @@ export class DashboardComponent implements OnDestroy {
 			this.stbdCurrent = i[1];
 			this.totalCurrentEmitter.emit(i[0] + i[1]);
 		});
-		setTimeout(() => this.getBattery(), 1000);
+		setTimeout(() => this.getBattery(), 500);
 	}
 
 	getTemperature() {
 		this.coproService
 			.getTemperature()
 			.subscribe(t => (this.temp = Number(((t * 9) / 5 + 32).toFixed(2))));
-		setTimeout(() => this.getTemperature(), 1000);
+		setTimeout(() => this.getTemperature(), 500);
 	}
 
 	getLogicCurrents() {
@@ -118,12 +118,12 @@ export class DashboardComponent implements OnDestroy {
 				//in order of 3.3, 5, 12
 				this.logicCurrents = i;
 			});
-		setTimeout(() => this.getLogicCurrents(), 1000);
+		setTimeout(() => this.getLogicCurrents(), 500);
 	}
 
 	getDepthValue() {
 		this.coproService.getDepth().subscribe(d => (this.depthValue = d));
-		setTimeout(() => this.getDepthValue(), 1000);
+		setTimeout(() => this.getDepthValue(), 500);
 	}
 
 	ngOnDestroy() {
