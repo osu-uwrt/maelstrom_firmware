@@ -6,7 +6,7 @@ from pyb import Timer, Pin, I2C
 import uasyncio as asyncio
 
 nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machine.Pin('C5', machine.Pin.OUT))
-nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8')) 
+nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8'))
 
 backplaneI2C = I2C(1, I2C.MASTER)
 robotI2C = I2C(2, I2C.MASTER, baudrate=200000)
@@ -25,7 +25,7 @@ class Sensor:
 		self.collectFunction = collectFunction
 
 	def value(self):
-		if getTime() - self.lastCollectionTime > self.cacheDuration:
+		if time.ticks_diff(getTime(), self.lastCollectionTime) > self.cacheDuration:
 			self.collect()
 		return self.data
 
@@ -177,11 +177,14 @@ class ESCBoard():
 			# Set continuous conversion
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x07)
 			# Disable unused channels
-			backplaneI2C.mem_write(chr(0b00000000), ESCBoard.deviceAddress, 0x08)	
+			backplaneI2C.mem_write(chr(0b00000000), ESCBoard.deviceAddress, 0x08)
 			# Mask all interrupts
 			backplaneI2C.mem_write(chr(0xFF), ESCBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x00)
+
+			# Set the time when the kill switch position is changed
+			self.timeChange = 0
 		except Exception as e: print("Error on ESC init: " + str(e))
 
 	def collectCurrents():
@@ -195,10 +198,10 @@ class ESCBoard():
 	def stopThrusters(self):
 		self.thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 		for t in self.thrusters:
-				t.pulse_width_percent(60)		
+				t.pulse_width_percent(60)
 
 	def setThrusters(self, thrusts):
-		if self.thrustersEnabled and killSwitch.value() == 0:
+		if self.thrustersEnabled and killSwitch.value() == 0 and time.ticks_diff(getTime(), self.timeChange) > 5000:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
@@ -246,7 +249,7 @@ class StatusBoard():
 			self.green = 1
 			self.updateLights()
 			time.sleep(.33)
-			self.green = 0 
+			self.green = 0
 			self.blue = 1
 			self.updateLights()
 			time.sleep(.33)
@@ -266,7 +269,7 @@ class StatusBoard():
 		self.blue = state
 		self.updateLights()
 
-	def setBlink(self, state):	
+	def setBlink(self, state):
 		self.blink = state
 		self.updateLights()
 
@@ -286,7 +289,7 @@ class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
-	surfacePressure = 1013
+	surfacePressure = -1
 	initialized = False
 
 	def __init__(self):
@@ -302,7 +305,7 @@ class DepthSensor():
 				c = (c[0] << 8) + c[1]
 				#c =  ((c & 0xFF) << 8) | (c >> 8) # SMBus is little-endian for word transfers, we need to swap MSB and LSB
 				self._C.append(c)
-							
+
 			assert (self._C[0] & 0xF000) >> 12 == self.crc4(self._C), "PROM read error, CRC failed!"
 
 			self.initialized = True
@@ -320,7 +323,7 @@ class DepthSensor():
 				n_rem ^= ((n_prom[i>>1]) & 0x00FF)
 			else:
 				n_rem ^= (n_prom[i>>1] >> 8)
-				
+
 			for n_bit in range(8,0,-1):
 				if n_rem & 0x8000:
 					n_rem = (n_rem << 1) ^ 0x3000
@@ -394,11 +397,11 @@ class DepthSensor():
 
 	def pressure(self):
 		return self._pressure
-		
+
 	def temperature(self):
 		degC = self._temperature / 100.0
 		return degC
-		
+
 	# Depth relative to MSL pressure in given fluid density
 	def depth(self):
 		return ((self.pressure() - self.surfacePressure)*100)/(self._fluidDensity*9.80665)
@@ -406,8 +409,11 @@ class DepthSensor():
 	async def zeroDepth(self):
 		await self.read()
 		await self.read()
-		
-		self.surfacePressure = self._pressure
+
+		if self.surfacePressure == -1:
+			self.surfacePressure = self._pressure
+
+		self.surfacePressure = self.surfacePressure * .7 + self._pressure * .3
 
 Depth = DepthSensor()
 
@@ -430,6 +436,7 @@ while (not resetSwitch.value()):
 
 def killSwitchChanged(pin):
 	ESC.stopThrusters()
+	ESC.timeChange = getTime()
 
 killSwitch.irq(killSwitchChanged)
 killSwitchChanged(killSwitch)
@@ -439,5 +446,3 @@ def resetSwitchChanged(pin):
 		Copro.restart()
 
 resetSwitch.irq(resetSwitchChanged)
-
-
