@@ -25,7 +25,7 @@ class Sensor:
 		self.collectFunction = collectFunction
 
 	def value(self):
-		if getTime() - self.lastCollectionTime > self.cacheDuration:
+		if time.ticks_diff(getTime(), self.lastCollectionTime) > self.cacheDuration:
 			self.collect()
 		return self.data
 
@@ -201,7 +201,7 @@ class ESCBoard():
 				t.pulse_width_percent(60)
 
 	def setThrusters(self, thrusts):
-		if self.thrustersEnabled and killSwitch.value() == 0 and getTime()-self.timeChange > 5000:
+		if self.thrustersEnabled and killSwitch.value() == 0 and time.ticks_diff(getTime(), self.timeChange) > 5000:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
