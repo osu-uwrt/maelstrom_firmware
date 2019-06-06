@@ -289,7 +289,7 @@ class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
-	surfacePressure = 1013
+	surfacePressure = -1
 	initialized = False
 
 	def __init__(self):
@@ -410,7 +410,10 @@ class DepthSensor():
 		await self.read()
 		await self.read()
 
-		self.surfacePressure = self._pressure
+		if self.surfacePressure == -1:
+			self.surfacePressure = self._pressure
+
+		self.surfacePressure = self.surfacePressure * .7 + self._pressure * .3
 
 Depth = DepthSensor()
 
