@@ -3,6 +3,8 @@ try:
 except:
 	import halSimulated as hal
 
+import time
+
 def runCommand(data):
 	commandNum = data.pop(0)
 	hal.greenLed.on()
