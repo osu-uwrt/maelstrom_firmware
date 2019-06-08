@@ -25,10 +25,9 @@ class Pin:
 		pass
 	def off(self):
 		pass
-	def value(self):
-		return 1
-	def value(self, a):
-		pass
+	def value(self, a=None):
+		if a is None:
+			return 1
 
 
 
@@ -140,4 +139,4 @@ switch1 = Pin()
 switch2 = Pin()
 switch3 = Pin()
 switch4 = Pin()
-switch5 = Pin()
+resetSwitch = Pin()
