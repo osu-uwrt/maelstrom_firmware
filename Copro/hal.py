@@ -25,7 +25,7 @@ class Sensor:
 		self.collectFunction = collectFunction
 
 	def value(self):
-		if getTime() - self.lastCollectionTime > self.cacheDuration:
+		if time.ticks_diff(getTime(), self.lastCollectionTime) > self.cacheDuration:
 			self.collect()
 		return self.data
 
@@ -183,8 +183,8 @@ class ESCBoard():
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x00)
 
-            # Set the time when the kill switch position is changed
-            timeChange = 0
+			# Set the time when the kill switch position is changed
+			self.timeChange = 0
 		except Exception as e: print("Error on ESC init: " + str(e))
 
 	def collectCurrents():
@@ -201,7 +201,7 @@ class ESCBoard():
 				t.pulse_width_percent(60)
 
 	def setThrusters(self, thrusts):
-		if self.thrustersEnabled and killSwitch.value() == 0 and getTime()-timeChange > 5000:
+		if self.thrustersEnabled and killSwitch.value() == 0 and time.ticks_diff(getTime(), self.timeChange) > 5000:
 			for i in range(8):
 				value = thrusts[i] / 25
 				self.thrusters[i].pulse_width_percent(value)
@@ -289,7 +289,7 @@ class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
-	surfacePressure = 1013
+	surfacePressure = -1
 	initialized = False
 
 	def __init__(self):
@@ -410,7 +410,10 @@ class DepthSensor():
 		await self.read()
 		await self.read()
 
-		self.surfacePressure = self._pressure
+		if self.surfacePressure == -1:
+			self.surfacePressure = self._pressure
+
+		self.surfacePressure = self.surfacePressure * .7 + self._pressure * .3
 
 Depth = DepthSensor()
 
@@ -433,7 +436,7 @@ while (not resetSwitch.value()):
 
 def killSwitchChanged(pin):
 	ESC.stopThrusters()
-    timeChange = getTime()
+	ESC.timeChange = getTime()
 
 killSwitch.irq(killSwitchChanged)
 killSwitchChanged(killSwitch)
