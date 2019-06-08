@@ -39,7 +39,7 @@ def processIncomingData(s):
 		connectionsBuffers.append([])
 	else:
 		try:
-			data = s.recv(1024)
+			data = s.recv(50)
 		except:
 			dropConnection(s)
 			return
