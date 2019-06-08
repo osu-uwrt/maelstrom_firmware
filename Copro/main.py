@@ -3,7 +3,6 @@ try:
 	import socket
 	from time import sleep
 	import halSimulated
-	import sys
 	import traceback
 	import asyncio
 except:
@@ -12,7 +11,7 @@ except:
 	import usocket as socket
 	import uasyncio as asyncio
 	
-
+import sys
 import commands
 import select
 
@@ -25,60 +24,73 @@ connectionsBuffers = [[]]
 print('Listening for connections...')
 
 
+def dropConnection(s):
+	s.close()
+	connectionIndex = connections.index(s)
+	del connectionsBuffers[connectionIndex] 
+	connections.remove(s)
+	print("Lost connection")
+
+def processIncomingData(s):
+	if s == incomingConnection:
+		conn, addr = incomingConnection.accept()
+		print("Connected to "+str(addr))
+		connections.append(conn)
+		connectionsBuffers.append([])
+	else:
+		try:
+			data = s.recv(1024)
+		except:
+			dropConnection(s)
+			return
+		if not data:
+			dropConnection(s)
+			return
+
+		connectionIndex = connections.index(s)
+
+		# Command structure: Length, Command, Args...
+		# Response structure: Length, values
+		# Below code allows for multiple or partial commands to be received
+		if not onCopro and sys.version_info < (3, 0):
+			data = list(map(ord, data))
+		inputBuffer = connectionsBuffers[connectionIndex] 
+		inputBuffer += data
+
+		# While there is a whole command in the buffer
+		while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
+			command = inputBuffer[1 : inputBuffer[0]]
+
+			# Act on the command. Terminate connection on command length of 0
+			if inputBuffer[0] == 0:
+				print('Terminating a connection')
+				connections.remove(s)
+				s.close()
+				# Remove the command from the buffer
+				inputBuffer = inputBuffer[1:]
+			else:
+				response = commands.runCommand(command)
+				response = [len(response) + 1] + response
+				try:	
+					s.send(bytearray(response))
+				except:
+					dropConnection(s)
+					return
+					
+				# Remove the command from the buffer
+				inputBuffer = inputBuffer[inputBuffer[0]:]
+
+		connectionsBuffers[connectionIndex] = inputBuffer
+			
+
 async def mainLoop():
-	inputBuffer = []
 	try:
 		while True:
-			readable, writable, exceptional = select.select(connections, [], connections, 0)
+			readable, _, _ = select.select(connections, [], connections, 0)
 
 			for s in readable:
-				if s == incomingConnection:
-					conn, addr = incomingConnection.accept()
-					print("Connected to "+str(addr))
-					connections.append(conn)
-					connectionsBuffers.append([])
-				else:
-					try:
-						data = s.recv(1024)
-					except:
-						connections.remove(s)
-						print("Lost connection")
-						continue
-					if not data:
-						connections.remove(s)
-						print("Lost connection")
-						continue
+				processIncomingData(s)
 
-					connectionIndex = connections.index(s)
-
-					# Command structure: Length, Command, Args...
-					# Response structure: Length, values
-					# Below code allows for multiple or partial commands to be received
-					if not onCopro and sys.version_info < (3, 0):
-						data = list(map(ord, data))
-					inputBuffer = connectionsBuffers[connectionIndex] 
-					inputBuffer += data
-
-					# While there is a whole command in the buffer
-					while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
-						command = inputBuffer[1 : inputBuffer[0]]
-
-						# Act on the command. Terminate connection on command length of 0
-						if inputBuffer[0] == 0:
-							print('Terminating a connection')
-							connections.remove(s)
-							s.close()
-							# Remove the command from the buffer
-							inputBuffer = inputBuffer[1:]
-						else:
-							response = commands.runCommand(command)
-							response = [len(response) + 1] + response
-							s.send(bytearray(response))
-							# Remove the command from the buffer
-							inputBuffer = inputBuffer[inputBuffer[0]:]
-
-					connectionsBuffers[connectionIndex] = inputBuffer
-			
 			if not onCopro:
 				sleep(0.01)
 			else:
@@ -86,7 +98,9 @@ async def mainLoop():
 	except Exception as exc:
 		if not onCopro:
 			traceback.print_exc()
-		print(exc)
+			print(exc)
+		else:
+			sys.print_exception(exc)
 		for s in connections:
 			s.close()
 
