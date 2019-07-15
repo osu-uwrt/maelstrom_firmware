@@ -149,7 +149,7 @@ Converter = ConverterBoard()
 
 class ESCBoard():
 	deviceAddress = 0x2F
-	thrustersEnabled = 0
+	thrustersEnabled = 1
 	thrusts = []
 
 	def __init__(self):
@@ -169,6 +169,8 @@ class ESCBoard():
 				self.tim2.channel(4, Timer.PWM, pin=Pin('A3'))
 			]
 			self.stopThrusters()
+			# Set the time when the kill switch position is changed
+			self.timeChange = 0
 
 			while backplaneI2C.mem_read(1, ESCBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
@@ -182,9 +184,6 @@ class ESCBoard():
 			backplaneI2C.mem_write(chr(0xFF), ESCBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x00)
-
-			# Set the time when the kill switch position is changed
-			self.timeChange = 0
 		except Exception as e: print("Error on ESC init: " + str(e))
 
 	def collectCurrents():
