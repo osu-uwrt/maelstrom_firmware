@@ -1,14 +1,16 @@
 try:
-	import hal 
+	import hal
 except:
 	import halSimulated as hal
+
+import time
 
 def runCommand(data):
 	commandNum = data.pop(0)
 	hal.greenLed.on()
 	try:
 		response = commandList[commandNum](data)
-	except Exception as e: 
+	except Exception as e:
 		print("Error on command "+str(commandNum)+": " + str(e))
 		response = []
 	hal.greenLed.off()
@@ -99,11 +101,12 @@ def twelvePower(args):
 		return [1]
 	return [hal.Converter.twelvePower.value()]
 
-def fivePower(args):
-	if len(args) == 1:
-		hal.Converter.fivePower.value(args[0])
-		return [1]
-	return [hal.Converter.fivePower.value()]
+def fiveReset(args):
+	hal.Converter.fivePower.value(0)
+	time.sleep(1)
+	hal.Converter.fivePower.value(1)
+	return [1]
+
 
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
@@ -131,6 +134,6 @@ commandList = [
 	depth,				#11
 	getThrusterCurrents,#12
 	twelvePower,		#13
-	fivePower,			#14
+	fiveReset,			#14
 	reset				#15
 ]
