@@ -42,18 +42,18 @@ def peltierPower(args):
 		return [1]
 	return [hal.Converter.peltierPower.value()]
 
-def getBatVoltages(args):
-	portVoltage = int(hal.BatteryBalancer.portVoltage.value() * 100)
-	stbdVoltage = int(hal.BatteryBalancer.stbdVoltage.value() * 100)
-	return [portVoltage // 256, portVoltage % 256, stbdVoltage // 256, stbdVoltage % 256]
+def getBatVolts(args):
+	portVolt = int(hal.BB.portVolt.value() * 100)
+	stbdVolt = int(hal.BB.stbdVolt.value() * 100)
+	return [portVolt // 256, portVolt % 256, stbdVolt // 256, stbdVolt % 256]
 
 def getBatCurrents(args):
-	portCurrent = int(hal.BatteryBalancer.portCurrent.value() * 100)
-	stbdCurrent = int(hal.BatteryBalancer.stbdCurrent.value() * 100)
+	portCurrent = int(hal.BB.portCurrent.value() * 100)
+	stbdCurrent = int(hal.BB.stbdCurrent.value() * 100)
 	return [portCurrent // 256, portCurrent % 256, stbdCurrent // 256, stbdCurrent % 256]
 
 def getTemperature(args):
-	temp = int(hal.BatteryBalancer.temp.value() * 10)
+	temp = int(hal.BB.temp.value() * 10)
 	return [temp // 256, temp % 256]
 
 def thrusterForce(args):
@@ -76,11 +76,11 @@ def logicCurrents(args):
 	twelveCurrent = int(hal.Converter.twelveCurrent.value() * 1000)
 	return [threeCurrent // 256, threeCurrent % 256, fiveCurrent // 256, fiveCurrent % 256, twelveCurrent // 256, twelveCurrent % 256, ]
 
-def logicVoltages(args):
-	threeVoltage = int(hal.Converter.threeVoltage.value() * 1000)
-	fiveVoltage = int(hal.Converter.fiveVoltage.value() * 1000)
-	twelveVoltage = int(hal.Converter.twelveVoltage.value() * 500)
-	return [threeVoltage // 256, threeVoltage % 256, fiveVoltage // 256, fiveVoltage % 256, twelveVoltage // 256, twelveVoltage % 256, ]
+def logicVolts(args):
+	threeVolt = int(hal.Converter.threeVolt.value() * 1000)
+	fiveVolt = int(hal.Converter.fiveVolt.value() * 1000)
+	twelveVolt = int(hal.Converter.twelveVolt.value() * 500)
+	return [threeVolt // 256, threeVolt % 256, fiveVolt // 256, fiveVolt % 256, twelveVolt // 256, twelveVolt % 256, ]
 
 def switches(args):
 	data = hal.killSwitch.value()
@@ -124,12 +124,12 @@ commandList = [
 	jetsonPower,		#1
 	thrusterEnable,		#2
 	peltierPower,		#3
-	getBatVoltages,		#4
+	getBatVolts,		#4
 	getBatCurrents,		#5
 	getTemperature,		#6
 	thrusterForce,		#7
 	logicCurrents,		#8
-	logicVoltages,		#9
+	logicVolts,			#9
 	switches,			#10
 	depth,				#11
 	getThrusterCurrents,#12

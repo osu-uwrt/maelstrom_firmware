@@ -35,57 +35,58 @@ class Sensor:
 
 
 
-class BatteryBalancerBoard:
+class BBBoard:
 	deviceAddress = 0x1F
 
 	def __init__(self):
 		try:
-			while robotI2C.mem_read(1, BatteryBalancerBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
+			while robotI2C.mem_read(1, BBBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
 			# Operational mode 0 (includes temperature) and external vref
-			robotI2C.mem_write(chr(0b001), BatteryBalancerBoard.deviceAddress, 0x0B)
+			robotI2C.mem_write(chr(0b001), BBBoard.deviceAddress, 0x0B)
 			# Set continuous conversion
-			robotI2C.mem_write(chr(1), BatteryBalancerBoard.deviceAddress, 0x07)
+			robotI2C.mem_write(chr(1), BBBoard.deviceAddress, 0x07)
 			# Disable unused channels
-			robotI2C.mem_write(chr(0b01100000), BatteryBalancerBoard.deviceAddress, 0x08)
+			robotI2C.mem_write(chr(0b01100000), BBBoard.deviceAddress, 0x08)
 			# Mask all interrupts
-			robotI2C.mem_write(chr(0xFF), BatteryBalancerBoard.deviceAddress, 0x03)
+			robotI2C.mem_write(chr(0xFF), BBBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
-			robotI2C.mem_write(chr(1), BatteryBalancerBoard.deviceAddress, 0x00)
-		except Exception as e: print("Error on BB init: " + str(e))
+			robotI2C.mem_write(chr(1), BBBoard.deviceAddress, 0x00)
+		except Exception as e: 
+			print("Error on BB init: " + str(e))
 
-	def collectStbdCurrent():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x20)
+	def getStbdCurrent():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x20)
 		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
 		return max((voltage - .33) / .066, 0)
-	def collectPortCurrent():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x21)
+	def getPortCurrent():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x21)
 		voltage = (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096
 		return max((voltage - .33) / .066, 0)
-	def collectBalancedVoltage():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x22)
+	def getBalancedVolt():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x22)
 		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
-	def collectStbdVoltage():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x23)
+	def getStbdVolt():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x23)
 		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .988
-	def collectPortVoltage():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x24)
+	def getPortVolt():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x24)
 		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .986
-	def collectTemp():
-		data = robotI2C.mem_read(2, BatteryBalancerBoard.deviceAddress, 0x27)
+	def getTemp():
+		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
 
-	stbdCurrent = Sensor(collectStbdCurrent)
-	portCurrent = Sensor(collectPortCurrent)
-	balancedVoltage = Sensor(collectBalancedVoltage)
-	stbdVoltage = Sensor(collectStbdVoltage)
-	portVoltage = Sensor(collectPortVoltage)
-	temp = Sensor(collectTemp)
+	stbdCurrent = Sensor(getStbdCurrent)
+	portCurrent = Sensor(getPortCurrent)
+	balancedVolt = Sensor(getBalancedVolt)
+	stbdVolt = Sensor(getStbdVolt)
+	portVolt = Sensor(getPortVolt)
+	temp = Sensor(getTemp)
 
-BatteryBalancer = BatteryBalancerBoard()
+BB = BBBoard()
 
 
-class ConverterBoard:
+class ConvBoard:
 	deviceAddress = 0x37
 
 	def __init__(self):
@@ -97,59 +98,59 @@ class ConverterBoard:
 			self.fivePower = machine.Pin('C13', machine.Pin.OUT, value=1)
 			self.twelvePower = machine.Pin('B0', machine.Pin.OUT, value=1)
 
-			while backplaneI2C.mem_read(1, ConverterBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
+			while backplaneI2C.mem_read(1, ConvBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
 			# Operational mode 0 (includes temperature) and internal vref
-			backplaneI2C.mem_write(chr(0b000), ConverterBoard.deviceAddress, 0x0B)
+			backplaneI2C.mem_write(chr(0b000), ConvBoard.deviceAddress, 0x0B)
 			# Set continuous conversion
-			backplaneI2C.mem_write(chr(1), ConverterBoard.deviceAddress, 0x07)
+			backplaneI2C.mem_write(chr(1), ConvBoard.deviceAddress, 0x07)
 			# Disable unused channels
-			backplaneI2C.mem_write(chr(0b01000000), ConverterBoard.deviceAddress, 0x08)
+			backplaneI2C.mem_write(chr(0b01000000), ConvBoard.deviceAddress, 0x08)
 			# Mask all interrupts
-			backplaneI2C.mem_write(chr(0xFF), ConverterBoard.deviceAddress, 0x03)
+			backplaneI2C.mem_write(chr(0xFF), ConvBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
-			backplaneI2C.mem_write(chr(1), ConverterBoard.deviceAddress, 0x00)
+			backplaneI2C.mem_write(chr(1), ConvBoard.deviceAddress, 0x00)
 		except Exception as e: print("Error on Conv init: " + str(e))
 
-	def collectFiveCurrent():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x20)
+	def getFiveCurrent():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x20)
 		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
-	def collectThreeCurrent():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x21)
+	def getThreeCurrent():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x21)
 		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
-	def collectTwelveCurrent():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x22)
+	def getTwelveCurrent():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x22)
 		voltage = (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096
 		return max((voltage - .33) / .264, 0)
-	def collectTwelveVoltage():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x23)
+	def getTwelveVolt():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x23)
 		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (12.4 / 2.4)
-	def collectFiveVoltage():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x24)
+	def getFiveVolt():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x24)
 		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (18 / 8)
-	def collectThreeVoltage():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x25)
+	def getThreeVolt():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x25)
 		return (((data[0] << 8) + data[1]) >> 4) * 2.56 / 4096 * (30 / 20)
-	def collectTemp():
-		data = backplaneI2C.mem_read(2, ConverterBoard.deviceAddress, 0x27)
+	def getTemp():
+		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
 
-	fiveVoltage = Sensor(collectFiveVoltage)
-	threeVoltage = Sensor(collectThreeVoltage)
-	twelveVoltage = Sensor(collectTwelveVoltage)
-	fiveCurrent = Sensor(collectFiveCurrent)
-	threeCurrent = Sensor(collectThreeCurrent)
-	twelveCurrent = Sensor(collectTwelveCurrent)
-	temp = Sensor(collectTemp)
+	fiveVolt = Sensor(getFiveVolt)
+	threeVolt = Sensor(getThreeVolt)
+	twelveVolt = Sensor(getTwelveVolt)
+	fiveCurrent = Sensor(getFiveCurrent)
+	threeCurrent = Sensor(getThreeCurrent)
+	twelveCurrent = Sensor(getTwelveCurrent)
+	temp = Sensor(getTemp)
 
-Converter = ConverterBoard()
+Converter = ConvBoard()
 
 
 class ESCBoard():
 	deviceAddress = 0x2F
-	thrustersEnabled = 0
+	thrustersEnabled = 1
 	thrusts = []
 
 	def __init__(self):
@@ -187,7 +188,7 @@ class ESCBoard():
 			self.timeChange = 0
 		except Exception as e: print("Error on ESC init: " + str(e))
 
-	def collectCurrents():
+	def getCurrents():
 		current_vals = []
 		for i in range(8):
 			data = backplaneI2C.mem_read(2, ESCBoard.deviceAddress, 0x20 + i)
@@ -211,7 +212,7 @@ class ESCBoard():
 		self.thrustersEnabled = enable
 		self.stopThrusters()
 
-	currents = Sensor(collectCurrents)
+	currents = Sensor(getCurrents)
 
 ESC = ESCBoard()
 
