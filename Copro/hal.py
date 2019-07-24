@@ -8,7 +8,7 @@ import uasyncio as asyncio
 nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machine.Pin('C5', machine.Pin.OUT))
 nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8'))
 
-backplaneI2C = I2C(1, I2C.MASTER)
+backplaneI2C = I2C(1, I2C.MASTER, baudrate=200000)
 robotI2C = I2C(2, I2C.MASTER, baudrate=200000)
 
 blueLed = machine.Pin('B4', machine.Pin.OUT)
@@ -140,8 +140,8 @@ class ConvBoard:
 
 	def actuators(self, args):
 		backplaneI2C.send("".join([chr(x) for x in args]), ConvBoard.actuatorAddress)
-		data = backplaneI2C.recv(1)
-		return data
+		#data = backplaneI2C.recv(1, ConvBoard.actuatorAddress)
+		return [1]
 
 
 
