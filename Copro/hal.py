@@ -88,6 +88,7 @@ BB = BBBoard()
 
 class ConvBoard:
 	deviceAddress = 0x37
+	actuatorAddress = 0x1C
 
 	def __init__(self):
 		try:
@@ -136,6 +137,13 @@ class ConvBoard:
 	def getTemp():
 		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
+
+	def actuators(self, args):
+		backplaneI2C.send("".join([chr(x) for x in args]), ConvBoard.actuatorAddress)
+		data = backplaneI2C.recv(1)
+		return data
+
+
 
 	fiveVolt = Sensor(getFiveVolt)
 	threeVolt = Sensor(getThreeVolt)

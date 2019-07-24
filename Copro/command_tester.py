@@ -13,7 +13,7 @@ try:
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     if '--local' in sys.argv:
         print('Connecting to the simulator')
-        s.connect(('0.0.0.0', 50000))
+        s.connect(('127.0.0.1', 50000))
         print('Connected')
     else:
         print('Connecting to robot. Use the --local flag to connect to the simulator')
@@ -35,7 +35,7 @@ while True:
         print(byte_array)
         s.sendall(byte_array)
         resp = s.recv(1024)
-        resp = [r/25 for r in resp]
+        resp = [r for r in resp]
         print('The response is: {}'.format(resp))
 
     except:

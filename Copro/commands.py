@@ -22,6 +22,7 @@ def moboPower(args):
 	if len(args) == 1:
 		hal.Converter.moboPower.value(args[0])
 		return [1]
+
 	return [hal.Converter.moboPower.value()]
 
 def jetsonPower(args):
@@ -118,6 +119,11 @@ def getThrusterCurrents(args):
 def reset(args):
 	hal.Copro.restart()
 
+def actuator(args):
+	return hal.Converter.actuators(args)
+	
+
+
 
 commandList = [
 	moboPower,			#0
@@ -135,5 +141,6 @@ commandList = [
 	getThrusterCurrents,#12
 	twelvePower,		#13
 	fiveReset,			#14
-	reset				#15
+	reset,				#15
+	actuator			#16
 ]
