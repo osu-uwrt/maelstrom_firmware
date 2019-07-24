@@ -51,7 +51,7 @@ class Actuators {
         void CheckStatus();
 
     private:
-        float _torpedoTimings[2][6][2];
+        int _torpedoTimings[2][6][2];
         int _capStatus;
         int _coilPins[6] = {CS_GATE, C1_GATE, C2_GATE, C3_GATE, C4_GATE, C5_GATE};
 };

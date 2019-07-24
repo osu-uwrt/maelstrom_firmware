@@ -24,8 +24,8 @@ void handleReceive(int numBytes)
         {
             int torpId = (raw[0] & 0x08) >> 3;
             int coilId = (raw[0] & 0x07);
-            float start = (float)raw[1];
-            float end = (float)raw[2];
+            int start = raw[1];
+            int end = raw[2];
             acts.SetTorpedoTiming(torpId, coilId, start, end);
             break;
         }
@@ -34,14 +34,9 @@ void handleReceive(int numBytes)
             acts.ResetBoard();
             break;
         }
-        case GET_TORPEDO_STATUS:
-        {
-            acts.GetTorpedoStatus();
-            break;
-        }
         case ARM_TORPEDO:
         {
-            bool shouldArm = (raw[0] & 0x04); // select bit 2
+            bool shouldArm = (raw[0] & 0x08) >> 3; // select bit 2
             acts.ArmTorpedo(shouldArm);
             break;
         }
@@ -70,7 +65,7 @@ void handleReceive(int numBytes)
 
 void handleRequest()
 {
-    acts.GetTorpedoStatus();\
+    acts.GetTorpedoStatus();
 }
 
 void loop() {
