@@ -38,7 +38,8 @@ while True:
         resp = [r for r in resp]
         print('The response is: {}'.format(resp))
 
-    except:
+    except Exception as e:
+        print(e)
         break
 
 print('')
