@@ -64,10 +64,11 @@ def processIncomingData(s):
 			# Act on the command. Terminate connection on command length of 0
 			if inputBuffer[0] == 0:
 				print('Terminating a connection')
-				connections.remove(s)
+				# TODO: Test below code  vvvv
+				connections.pop(connectionIndex)
+				connectionsBuffers.pop(connectionIndex)
+				# ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 				s.close()
-				# Remove the command from the buffer
-				inputBuffer = inputBuffer[1:]
 			else:
 				response = commands.runCommand(command)
 				response = [len(response) + 1] + response
@@ -80,7 +81,7 @@ def processIncomingData(s):
 				# Remove the command from the buffer
 				inputBuffer = inputBuffer[inputBuffer[0]:]
 
-		connectionsBuffers[connectionIndex] = inputBuffer
+				connectionsBuffers[connectionIndex] = inputBuffer
 
 
 async def mainLoop():
@@ -122,14 +123,17 @@ async def depthLoop():
 
 
 async def lowVolt():
-	while hal.BB.portVolt.value() < 18.5 or hal.BB.stbdVolt.value() < 18.5:
-		await asyncio.sleep(1.0)
-	while True:
-		await asyncio.sleep(1.0)
-		if hal.BB.portVolt.value() < 18.5 or hal.BB.stbdVolt.value() < 18.5:
-			hal.ESC.stopThrusters()
-			hal.blueLed.on()
-			print("Low Battery")
+	try:
+		while hal.BB.portVolt.value() < 18.5 or hal.BB.stbdVolt.value() < 18.5:
+			await asyncio.sleep(1.0)
+		while True:
+			await asyncio.sleep(1.0)
+			if hal.BB.portVolt.value() < 18.5 or hal.BB.stbdVolt.value() < 18.5:
+				hal.ESC.stopThrusters()
+				hal.blueLed.on()
+				print("Low Battery")
+	except:
+		pass
 
 
 

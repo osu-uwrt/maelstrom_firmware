@@ -139,9 +139,10 @@ class ConvBoard:
 		return ((data[0] << 8) + data[1]) / 256
 
 	def actuators(self, args):
-		backplaneI2C.send("".join([chr(x) for x in args]), ConvBoard.actuatorAddress)
+		print(args)
+		backplaneI2C.send(bytearray(args), ConvBoard.actuatorAddress)
 		#data = backplaneI2C.recv(1, ConvBoard.actuatorAddress)
-		return [1]
+		return [1]#list(backplaneI2C.recv(1, ConvBoard.actuatorAddress))
 
 
 
