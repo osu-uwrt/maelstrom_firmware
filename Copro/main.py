@@ -64,11 +64,10 @@ def processIncomingData(s):
 			# Act on the command. Terminate connection on command length of 0
 			if inputBuffer[0] == 0:
 				print('Terminating a connection')
-				# TODO: Test below code  vvvv
 				connections.pop(connectionIndex)
 				connectionsBuffers.pop(connectionIndex)
-				# ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 				s.close()
+				return
 			else:
 				response = commands.runCommand(command)
 				response = [len(response) + 1] + response
