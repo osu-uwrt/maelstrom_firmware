@@ -21,13 +21,16 @@ class Sensor:
 		self.lastgetionTime = getTime()
 
 class Pin:
+	state = 0
 	def on(self):
 		pass
 	def off(self):
 		pass
 	def value(self, a=None):
 		if a is None:
-			return 1
+			return self.state
+		else:
+			self.state = a
 
 
 
