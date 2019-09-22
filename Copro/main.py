@@ -65,7 +65,8 @@ def processIncomingData(s):
 			if inputBuffer[0] == 0:
 				print('Terminating a connection')
 				connections.pop(connectionIndex)
-				connectionsBuffers.pop(connectionIndex)
+				connectionsBuffers.pop(connectionIndex) hshshsh
+				
 				s.close()
 				return
 			else:
@@ -105,20 +106,24 @@ async def mainLoop():
 			s.close()
 
 async def depthLoop():
-	await asyncio.sleep(1.0)
-	if (hal.Depth.initialized):
-		print("Zeroing depth")
-		for i in range(1, 20):
-			await hal.Depth.read()
-		for i in range(1, 20):
-			await hal.Depth.zeroDepth()
-		print("Collecting depth")
-		while True:
-			try:
+	try:
+		await asyncio.sleep(1.0)
+		if (hal.Depth.initialized):
+			print("Zeroing depth")
+			for i in range(1, 20):
 				await hal.Depth.read()
-			except Exception as e:
-				print("Depth error: " + str(e))
-				await asyncio.sleep_ms(50)
+			for i in range(1, 20):
+				await hal.Depth.zeroDepth()
+			print("Collecting depth")
+			while True:
+				try:
+					await hal.Depth.read()
+				except Exception as e:
+					print("Depth error: " + str(e))
+					await asyncio.sleep_ms(50)
+	except Exception as exc:
+		print("Depth loop error:")
+		sys.print_exception(exc)
 
 
 async def lowVolt():
@@ -131,8 +136,9 @@ async def lowVolt():
 				hal.ESC.stopThrusters()
 				hal.blueLed.on()
 				print("Low Battery")
-	except:
-		pass
+	except Exception as exc:
+		print("Battery Checker error:")
+		sys.print_exception(exc)
 
 
 
