@@ -108,9 +108,9 @@ async def depthLoop():
 	await asyncio.sleep(1.0)
 	if (hal.Depth.initialized):
 		print("Zeroing depth")
-		for i in range(1, 20):
+		for _ in range(1, 20):
 			await hal.Depth.read()
-		for i in range(1, 20):
+		for _ in range(1, 20):
 			await hal.Depth.zeroDepth()
 		print("Collecting depth")
 		while True:
