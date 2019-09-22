@@ -133,8 +133,19 @@ async def lowVolt():
 				print("Low Battery")
 	except:
 		pass
-
-
+#<------------Create A self-check Temperature and cooling system Code-------->
+async def auto_cooling():
+	try:
+        while True:
+        	current_temp = getTemperature()
+			if current_temp > 40:
+				hal.Converter.peltierPower.value(1)
+			else:
+				hal.Converter.peltierPower.value(0)
+			await asyncio.sleep(0)
+	except Exception as exc:
+		print ("Auto Cooling Error ")
+		sys.print_exception(exc)
 
 if onCopro:
 	loop = asyncio.get_event_loop()
