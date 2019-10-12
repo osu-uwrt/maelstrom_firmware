@@ -283,8 +283,6 @@ class StatusBoard():
 		self.blink = state
 		self.updateLights()
 
-
-
 	def updateLights(self):
 		# blink, red, blue, green
 		code = 8 * self.blink + 4 * self.red + 2 * self.blue + self.green
