@@ -139,8 +139,9 @@ async def lowVolt():
 	except Exception as exc:
 		print("Battery Checker error:")
 		sys.print_exception(exc)
-#<------------Create A self-check Temperature and cooling system Code-------->
-async def auto_cooling():
+		
+#<------------TODO : Create A self-check Temperature and cooling system Code-------->
+'''async def auto_cooling():
 	try:
         while True:
         	current_temp = getTemperature()
@@ -151,7 +152,7 @@ async def auto_cooling():
 			await asyncio.sleep(0)
 	except Exception as exc:
 		print ("Auto Cooling Error ")
-		sys.print_exception(exc)
+		sys.print_exception(exc)'''
 
 if onCopro:
 	loop = asyncio.get_event_loop()

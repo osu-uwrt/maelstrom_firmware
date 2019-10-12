@@ -148,6 +148,20 @@ class DepthSensor():
 
 Depth = DepthSensor()
 
+class CoproBoard():
+
+#<--TODO: check The memory usage-->
+    '''def memory_usage(self):
+		gc.collect()
+		free_memory = gc.mem_free()
+        occupy_memory = gc.mem_alloc()
+		total_memory = free_memory+occupy_memory
+		percent_usage = '{0:.2f}%'.format(free_memory/occupy_memory*100)
+		return percent_usage'''
+
+Copro = CoproBoard()
+
+
 killSwitch = Pin()
 switch1 = Pin()
 switch2 = Pin()
