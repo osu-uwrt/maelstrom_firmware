@@ -151,9 +151,8 @@ Depth = DepthSensor()
 
 class CoproBoard():
 
-#<--TODO: check The memory usage-->
 	def memory_usage(self):
-		return 1
+		return random.uniform(0, 1)
 
 Copro = CoproBoard()
 
