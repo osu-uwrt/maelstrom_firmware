@@ -2,7 +2,7 @@ onCopro = False
 try:
 	import socket
 	from time import sleep
-	import halSimulated
+	import halSimulated as hal
 	import traceback
 	import asyncio
 except:
@@ -65,7 +65,7 @@ def processIncomingData(s):
 			if inputBuffer[0] == 0:
 				print('Terminating a connection')
 				connections.pop(connectionIndex)
-				connectionsBuffers.pop(connectionIndex) hshshsh
+				connectionsBuffers.pop(connectionIndex) 
 				
 				s.close()
 				return
@@ -141,10 +141,10 @@ async def lowVolt():
 		sys.print_exception(exc)
 		
 #<------------TODO : Create A self-check Temperature and cooling system Code-------->
-'''async def auto_cooling():
+async def auto_cooling():
 	try:
-        while True:
-        	current_temp = getTemperature()
+		while True:
+			current_temp = hal.BB.temp.value()
 			if current_temp > 40:
 				hal.Converter.peltierPower.value(1)
 			else:
@@ -152,16 +152,13 @@ async def lowVolt():
 			await asyncio.sleep(0)
 	except Exception as exc:
 		print ("Auto Cooling Error ")
-		sys.print_exception(exc)'''
+		sys.print_exception(exc)
 
-if onCopro:
-	loop = asyncio.get_event_loop()
-	loop.create_task(depthLoop())
-	loop.create_task(mainLoop())
-	loop.create_task(lowVolt())
-	loop.run_forever()
-	loop.close()
-else:
-	loop = asyncio.get_event_loop()
-	loop.run_until_complete(mainLoop())
-	loop.close()
+
+loop = asyncio.get_event_loop()
+loop.create_task(depthLoop())
+loop.create_task(mainLoop())
+loop.create_task(lowVolt())
+loop.create_task(auto_cooling())
+loop.run_forever()
+loop.close()

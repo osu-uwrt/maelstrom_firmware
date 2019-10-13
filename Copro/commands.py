@@ -124,8 +124,9 @@ def latency_check(args):
 	return [1]
 
 #<------TODO: check if it is work----->
-def memory_usage(args):
-	return hal.Copro.memory_usage(args)
+def memory_check(args):
+	usage = hal.Copro.memory_usage()*(256*256-1)
+	return [usage// 256,  usage % 256]
 
 
 commandList = [
@@ -147,5 +148,5 @@ commandList = [
 	reset,				#15
 	actuator,	     	#16
 	latency_check,      #17 TODO: Check this
-	memory_usage        #18 TODO: Check this
+	memory_check        #18 TODO: Check this
 ]
