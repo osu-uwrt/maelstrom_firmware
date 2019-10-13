@@ -10,6 +10,12 @@
   font-size: 17px;
 }
 
+.data {
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: 15px;
+}
+
 @include nb-install-component() {
   display: flex;
   justify-content: space-between;

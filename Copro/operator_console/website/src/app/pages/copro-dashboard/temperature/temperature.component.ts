@@ -16,7 +16,7 @@ export class TemperatureComponent implements OnDestroy {
 
   @Input() currentTemp: number;
   temperatureData: Temperature;
-  temperature: number;
+  temperature: number = 104;
   temperatureOff = false;
   temperatureMode = 'cool';
 
@@ -31,20 +31,19 @@ export class TemperatureComponent implements OnDestroy {
       .subscribe(config => {
       this.colors = config.variables;
     });
-
-    forkJoin(
-      this.temperatureHumidityService.getTemperatureData(),
-      this.temperatureHumidityService.getHumidityData(),
-    )
-      .subscribe(([temperatureData, humidityData]: [Temperature, Temperature]) => {
-        this.temperatureData = temperatureData;
-        this.temperature = this.temperatureData.value;
-      });
   }
 
   togglePower() {
-    this.coproService.setPeltierPower(this.temperatureOff).subscribe(() => {});
     this.temperatureOff = !this.temperatureOff;
+    if (this.temperatureOff) {
+      this.coproService.setThermostat(255).subscribe(() => {});
+    } else {
+      this.updateThermostat()
+    }
+  }
+
+  updateThermostat() {
+    this.coproService.setThermostat((this.temperature - 32) / 9 * 5).subscribe(() => {});
   }
 
   ngOnDestroy() {
