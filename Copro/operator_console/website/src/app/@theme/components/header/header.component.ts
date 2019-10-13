@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   @Input() position = 'normal';
 
   user: any;
+  memory: number = .4;
 
   userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
 
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
               private analyticsService: AnalyticsService,
               private layoutService: LayoutService,
               private coproService: CoproService) {
+    this.getMemory();
   }
 
   ngOnInit() {
@@ -43,9 +45,12 @@ export class HeaderComponent implements OnInit {
     this.menuService.navigateHome();
   }
 
-  startSearch() {
-    this.analyticsService.trackEvent('startSearch');
-  }
+  getMemory() {
+		this.coproService
+			.getMemory()
+			.subscribe(t => (this.memory = t));
+		setTimeout(() => this.getMemory(), 500);
+	}
 
   reset() {
     this.coproService.reset().subscribe()

@@ -40,10 +40,10 @@ while True:
         resp = [r for r in resp]
         print('The response is: {}'.format(resp))
 
-    except Exception as e:
+    except (KeyboardInterrupt, Exception) as e:
         print(e)
         break
 
-print('')
-s.sendall(bytes(1))
+print('Closing')
+s.sendall(bytearray([0]))
 s.close()
