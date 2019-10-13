@@ -27,7 +27,9 @@ while True:
     try:
         command = int(input("command number -> "))
         args = input("args -> ")
-        args = str(args).replace(" ", "").split(",")
+        args = str(args).replace(" ", "").split(", ")
+        if "" in args:
+            args.remove("")
         args_array = [int(arg) for arg in args]
         args_array.insert(0, len(args_array) + 2)
         args_array.insert(1, command)
