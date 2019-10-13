@@ -69,10 +69,10 @@ class BBBoard:
 		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
 	def getStbdVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x23)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .988
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
 	def getPortVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x24)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18) / .986
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
 	def getTemp():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
@@ -435,6 +435,7 @@ class CoproBoard():
         occupy_memory = gc.mem_alloc()
         total_memory = free_memory+occupy_memory
         percent_usage = free_memory/total_memory
+
         return percent_usage
 
 Copro = CoproBoard()

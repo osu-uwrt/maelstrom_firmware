@@ -105,6 +105,7 @@ async def mainLoop():
 		for s in connections:
 			s.close()
 
+
 async def depthLoop():
 	try:
 		await asyncio.sleep(1.0)
@@ -140,7 +141,6 @@ async def lowVolt():
 		print("Battery Checker error:")
 		sys.print_exception(exc)
 		
-#<------------TODO : Create A self-check Temperature and cooling system Code-------->
 async def auto_cooling():
 	try:
 		while True:
