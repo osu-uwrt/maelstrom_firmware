@@ -119,14 +119,22 @@ def reset(args):
 def actuator(args):
 	return hal.Converter.actuators(args)
 
-#<------TODO: to check------>
 def latency_check(args):
 	return [1]
 
-#<------TODO: check if it is work----->
+
 def memory_check(args):
-	usage = hal.Copro.memory_usage()*(256*256-1)
+	usage = int(hal.Copro.memory_usage()*(256*256-1))
 	return [usage// 256,  usage % 256]
+
+temp = 40
+def temp_threshold(args):
+    global temp
+    if len(args) == 1:
+        temp = args[0]
+    return [temp]
+    
+       
 
 
 commandList = [
@@ -147,6 +155,7 @@ commandList = [
 	fiveReset,			#14
 	reset,				#15
 	actuator,	     	#16
-	latency_check,      #17 TODO: Check this
-	memory_check        #18 TODO: Check this
+	latency_check,      #17 
+	memory_check,       #18 
+    temp_threshold      #19 
 ]
