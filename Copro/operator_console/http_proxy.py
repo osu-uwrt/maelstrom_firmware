@@ -69,13 +69,13 @@ toBeSentQueue = []
 toBeReceivedQueue = []
 
 def processCommand(byteArray):
-	global coproConection
-	global toBeSentQueue
+    global coproConection
+    global toBeSentQueue
 
-	waiter = commandWaiter(byteArray)
-	toBeSentQueue += [waiter]   # Enqueue data to be sent later
-	waiter.event.wait(.5)    # Wait for a response
-	return waiter.response
+    waiter = commandWaiter(byteArray)
+    toBeSentQueue += [waiter]   # Enqueue data to be sent later
+    waiter.event.wait(.5)    # Wait for a response
+    return waiter.response
 
 
 def background():
@@ -95,6 +95,8 @@ def background():
                         toBeSent = toBeSentQueue.pop(0)    
                         command = toBeSent.command          # Send command with length prefix
                         command = [len(command) + 1] + command
+                        if command[1] == 17:
+                            startTime = time.time_ns()
                         coproConection.sendall(bytearray(command))
                         toBeReceivedQueue += [toBeSent]     # Wait for response
                 
@@ -110,6 +112,8 @@ def background():
                     while len(inputBuffer) > 0 and inputBuffer[0] <= len(inputBuffer):
                         w = toBeReceivedQueue.pop(0)                # Get the request this belongs to
                         response = inputBuffer[1 : inputBuffer[0]]
+                        if w.command[0] == 17:
+                            response = [time.time_ns() - startTime]
                         w.response = response      # Send a response to the http protocol
                         w.event.set()
                         inputBuffer = inputBuffer[inputBuffer[0]:]

@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
 
   user: any;
   memory: number = .4;
+  latency: number = 5;
 
   userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
 
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit {
               private layoutService: LayoutService,
               private coproService: CoproService) {
     this.getMemory();
+    this.getLatency();
   }
 
   ngOnInit() {
@@ -49,7 +51,14 @@ export class HeaderComponent implements OnInit {
 		this.coproService
 			.getMemory()
 			.subscribe(t => (this.memory = t));
-		setTimeout(() => this.getMemory(), 500);
+		setTimeout(() => this.getMemory(), 1000);
+  }
+
+  getLatency() {
+		this.coproService
+			.getLatency()
+			.subscribe(t => (this.latency = t / 1000000));
+		setTimeout(() => this.getLatency(), 1000);
 	}
 
   reset() {

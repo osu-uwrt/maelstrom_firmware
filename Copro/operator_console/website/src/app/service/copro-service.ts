@@ -91,6 +91,16 @@ export class CoproService {
     )
   }
 
+  setThermostat(tempC: number): Observable<any> {
+    return this.command(19, Math.floor(tempC))
+  }
+
+  getLatency(): Observable<number> {
+    return this.command(17).pipe(
+      map(x => x[0])
+    );
+  }
+
   private command(...args: number[]): Observable<number[]> {
     return this.http.post<number[]>(COPRO_URL, [...args]).pipe(
       catchError(err => {
