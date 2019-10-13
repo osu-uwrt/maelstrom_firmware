@@ -105,6 +105,7 @@ async def mainLoop():
 		for s in connections:
 			s.close()
 
+
 async def depthLoop():
 	try:
 		await asyncio.sleep(1.0)
@@ -140,12 +141,12 @@ async def lowVolt():
 		print("Battery Checker error:")
 		sys.print_exception(exc)
 		
-#<------------TODO : Create A self-check Temperature and cooling system Code-------->
 async def auto_cooling():
 	try:
 		while True:
 			current_temp = hal.BB.temp.value()
-			if current_temp > 40:
+			temp_thresh = commands.temp_threshold([])[0]
+			if current_temp > temp_thresh:
 				hal.Converter.peltierPower.value(1)
 			else:
 				hal.Converter.peltierPower.value(0)
