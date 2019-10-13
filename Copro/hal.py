@@ -435,7 +435,6 @@ class CoproBoard():
         occupy_memory = gc.mem_alloc()
         total_memory = free_memory+occupy_memory
         percent_usage = free_memory/total_memory
-        print(percent_usage)
         return percent_usage
 
 Copro = CoproBoard()
