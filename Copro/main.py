@@ -145,7 +145,8 @@ async def auto_cooling():
 	try:
 		while True:
 			current_temp = hal.BB.temp.value()
-			if current_temp > 40:
+			temp_thresh = commands.temp_threshold([])[0]
+			if current_temp > temp_thresh:
 				hal.Converter.peltierPower.value(1)
 			else:
 				hal.Converter.peltierPower.value(0)
