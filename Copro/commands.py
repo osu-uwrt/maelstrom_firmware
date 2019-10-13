@@ -1,5 +1,5 @@
 try:
-	import hal
+    import hal
 except:
 	import halSimulated as hal
 
@@ -15,8 +15,6 @@ def runCommand(data):
 		response = []
 	hal.greenLed.off()
 	return response
-
-
 
 def moboPower(args):
 	if len(args) == 1:
@@ -108,7 +106,6 @@ def fiveReset(args):
 	hal.Converter.fivePower.value(1)
 	return [1]
 
-
 def getThrusterCurrents(args):
 	values = hal.ESC.currents.value()
 	data = []
@@ -121,8 +118,15 @@ def reset(args):
 
 def actuator(args):
 	return hal.Converter.actuators(args)
-	
 
+#<------TODO: to check------>
+def latency_check(args):
+	return [1]
+
+#<------TODO: check if it is work----->
+def memory_check(args):
+	usage = hal.Copro.memory_usage()*(256*256-1)
+	return [usage// 256,  usage % 256]
 
 
 commandList = [
@@ -142,5 +146,7 @@ commandList = [
 	twelvePower,		#13
 	fiveReset,			#14
 	reset,				#15
-	actuator			#16
+	actuator,	     	#16
+	latency_check,      #17 TODO: Check this
+	memory_check        #18 TODO: Check this
 ]

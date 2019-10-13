@@ -4,6 +4,7 @@ import network
 import pyb
 from pyb import Timer, Pin, I2C
 import uasyncio as asyncio
+import gc
 
 nic = network.WIZNET5K(machine.SPI(1), machine.Pin('A4', machine.Pin.OUT), machine.Pin('C5', machine.Pin.OUT))
 nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8'))
@@ -282,8 +283,6 @@ class StatusBoard():
 		self.blink = state
 		self.updateLights()
 
-
-
 	def updateLights(self):
 		# blink, red, blue, green
 		code = 8 * self.blink + 4 * self.red + 2 * self.blue + self.green
@@ -429,6 +428,14 @@ Depth = DepthSensor()
 class CoproBoard():
 	def restart(self):
 		machine.reset()
+#<--TODO: check The memory usage-->
+	def memory_usage(self):
+		gc.collect()
+		free_memory = gc.mem_free()
+		occupy_memory = gc.mem_alloc()
+		total_memory = free_memory+occupy_memory
+		percent_usage = '{0:.2f}%'.format(free_memory/total_memory*100)
+		return percent_usage
 
 Copro = CoproBoard()
 

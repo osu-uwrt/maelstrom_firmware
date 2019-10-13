@@ -1,5 +1,6 @@
 import random
 import time
+import gc
 
 def getTime():
     return int(time.time()*1000)
@@ -147,6 +148,15 @@ class DepthSensor():
 		return (random.uniform(0, 2))
 
 Depth = DepthSensor()
+
+class CoproBoard():
+
+#<--TODO: check The memory usage-->
+	def memory_usage(self):
+		return 1
+
+Copro = CoproBoard()
+
 
 killSwitch = Pin()
 switch1 = Pin()
