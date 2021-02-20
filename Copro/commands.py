@@ -13,6 +13,7 @@ def runCommand(data):
 	except Exception as e:
 		print("Error on command "+str(commandNum)+": " + str(e))
 		response = []
+		hal.raiseFault(hal.COMMAND_EXEC_CRASH_FLAG + commandNum)
 	hal.greenLed.off()
 	return response
 
@@ -44,7 +45,8 @@ def peltierPower(args):
 def getBatVolts(args):
 	portVolt = int(hal.BB.portVolt.value() * 100)
 	stbdVolt = int(hal.BB.stbdVolt.value() * 100)
-	return [portVolt // 256, portVolt % 256, stbdVolt // 256, stbdVolt % 256]
+	balancedVolt = int(hal.BB.balancedVolt.value() * 100)
+	return [portVolt // 256, portVolt % 256, stbdVolt // 256, stbdVolt % 256, balancedVolt // 256, balancedVolt % 256]
 
 def getBatCurrents(args):
 	portCurrent = int(hal.BB.portCurrent.value() * 100)
@@ -91,8 +93,11 @@ def switches(args):
 	return [0x3F - data]
 
 def depth(args):
-	data = int(hal.Depth.depth()*100000)
-	return [(data >> 16), (data >> 8) & 0xFF, data & 0xFF]
+	if hal.Depth.initialized:
+		data = int(hal.Depth.depth()*100000)
+		return [1, (data >> 16), (data >> 8) & 0xFF, data & 0xFF]
+	else:
+		return [0, 0, 0, 0]
 
 def twelvePower(args):
 	if len(args) == 1:
@@ -134,7 +139,18 @@ def temp_threshold(args):
         temp = args[0]
     return [temp]
     
-       
+def get_fault_state(args):
+	if len(hal.faultList) != 0:
+		# Make sure that the fault list doesn't have an invalid message causing the connection to drop
+		if len(hal.faultList) > 254:
+			return [1, hal.FAULT_STATE_INVALID]
+		
+		for entry in hal.faultList:
+			if type(entry) != int or entry < 0 or entry > 255:
+				return [1, hal.FAULT_STATE_INVALID]
+		return [1] + hal.faultList
+	else:
+		return [0]
 
 
 commandList = [
@@ -157,5 +173,6 @@ commandList = [
 	actuator,	     	#16
 	latency_check,      #17 
 	memory_check,       #18 
-    temp_threshold      #19 
+    temp_threshold,     #19 
+	get_fault_state,	#20
 ]

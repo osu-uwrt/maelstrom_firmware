@@ -33,7 +33,29 @@ class Pin:
 		else:
 			self.state = a
 
+faultLed = Pin()
+faultLed.off()
 
+PROGRAM_TERMINATED = 1
+MAIN_LOOP_CRASH = 2
+DEPTH_LOOP_CRASH = 3
+BATTERY_CHECKER_CRASH = 4
+AUTO_COOLING_CRASH = 5
+BB_INIT_FAIL = 6
+ESC_INIT_FAIL = 7
+DEPTH_INIT_FAIL = 8
+BACKPLANE_INIT_FAIL = 9
+FAULT_STATE_INVALID = 10
+CONV_BOARD_INIT_FAIL = 11
+
+# When this bit it set, the following 7 bits are the command number for fault
+COMMAND_EXEC_CRASH_FLAG = (1<<7)
+
+faultList = []
+def raiseFault(faultId: int):
+	faultLed.on()
+	if faultId not in faultList:
+		faultList.append(faultId)
 
 blueLed = Pin()
 greenLed = Pin()
@@ -107,7 +129,7 @@ class ESCBoard():
 	def getCurrents():
 		current_vals = []
 		for i in range(8):
-			current_vals.append(int(random.uniform(0,10)*25))
+			current_vals.append(random.uniform(0,10))
 		return current_vals
 
 	def stopThrusters(self):
@@ -135,6 +157,7 @@ class DepthSensor():
 	deviceAddress = 0x76
 	_fluidDensity = 997
 	_pressure = 0
+	initialized = True
 
 	def pressure(self):
 		return self._pressure

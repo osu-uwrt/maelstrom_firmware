@@ -102,6 +102,7 @@ async def mainLoop():
 			print(exc)
 		else:
 			sys.print_exception(exc)
+			hal.raiseFault(hal.MAIN_LOOP_CRASH)
 		for s in connections:
 			s.close()
 
@@ -125,6 +126,7 @@ async def depthLoop():
 	except Exception as exc:
 		print("Depth loop error:")
 		sys.print_exception(exc)
+		hal.raiseFault(hal.DEPTH_LOOP_CRASH)
 
 
 async def lowVolt():
@@ -140,6 +142,7 @@ async def lowVolt():
 	except Exception as exc:
 		print("Battery Checker error:")
 		sys.print_exception(exc)
+		hal.raiseFault(hal.BATTERY_CHECKER_CRASH)
 		
 async def auto_cooling():
 	try:
@@ -154,6 +157,7 @@ async def auto_cooling():
 	except Exception as exc:
 		print ("Auto Cooling Error ")
 		sys.print_exception(exc)
+		hal.raiseFault(hal.AUTO_COOLING_CRASH)
 
 
 loop = asyncio.get_event_loop()
@@ -163,3 +167,5 @@ loop.create_task(lowVolt())
 loop.create_task(auto_cooling())
 loop.run_forever()
 loop.close()
+
+hal.raiseFault(hal.PROGRAM_TERMINATED)
