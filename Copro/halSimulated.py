@@ -46,7 +46,9 @@ ESC_INIT_FAIL = 7
 DEPTH_INIT_FAIL = 8
 BACKPLANE_INIT_FAIL = 9
 FAULT_STATE_INVALID = 10
-CONV_BOARD_INIT_FAIL = 11
+BATT_LOW = 11
+WATCHDOG_RESET = 12
+CONV_BOARD_INIT_FAIL = 13
 
 # When this bit it set, the following 7 bits are the command number for fault
 COMMAND_EXEC_CRASH_FLAG = (1<<7)
@@ -57,11 +59,18 @@ def raiseFault(faultId: int):
 	if faultId not in faultList:
 		faultList.append(faultId)
 
+def lowerFault(faultId: int):
+	if faultId in faultList:
+		faultList.remove(faultId)
+	if len(faultList) == 0:
+		faultLed.off()
+
 blueLed = Pin()
 greenLed = Pin()
 
 class BBBoard:
 	deviceAddress = 0x1F
+	initialized = True
 
 	def getStbdCurrent():
 		return random.uniform(0,35)
@@ -87,6 +96,7 @@ BB = BBBoard()
 
 class ConvBoard:
 	deviceAddress = 0x37
+	initialized = True
 
 	moboPower = Pin()
 	jetsonPower = Pin()
@@ -124,6 +134,7 @@ Converter = ConvBoard()
 
 class ESCBoard():
 	deviceAddress = 0x2F
+	initialized = True
 	thrusts = [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
 
 	def getCurrents():
@@ -146,6 +157,7 @@ class ESCBoard():
 ESC = ESCBoard()
 
 class StatusBoard():
+	initialized = True
 	screenAddress = 0x78
 
 	def write(self, text):
@@ -173,6 +185,11 @@ class DepthSensor():
 Depth = DepthSensor()
 
 class CoproBoard():
+	def start_watchdog(self):
+		pass
+
+	def feed_watchdog(self):
+		pass
 
 	def memory_usage(self):
 		return random.uniform(0, 1)
