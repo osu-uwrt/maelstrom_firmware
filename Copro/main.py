@@ -90,7 +90,7 @@ async def mainLoop():
 			f = open("watchdog_enable", "r")
 			f.close()
 			print("Enabling Watchdog Timer")
-			hal.copro.start_watchdog()
+			hal.Copro.start_watchdog()
 		except OSError:
 			print("Disabling Watchdog Timer")
 		while True:
