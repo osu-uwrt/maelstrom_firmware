@@ -86,6 +86,12 @@ def processIncomingData(s):
 
 async def mainLoop():
 	try:
+		try:
+			f = open("watchdog_enable", "r")
+			f.close()
+			hal.copro.start_watchdog()
+		except OSError:
+			pass
 		while True:
 			readable, _, _ = select.select(connections, [], connections, 0)
 
