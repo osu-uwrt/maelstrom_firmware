@@ -89,9 +89,10 @@ async def mainLoop():
 		try:
 			f = open("watchdog_enable", "r")
 			f.close()
+			print("Enabling Watchdog Timer")
 			hal.copro.start_watchdog()
 		except OSError:
-			pass
+			print("Disabling Watchdog Timer")
 		while True:
 			readable, _, _ = select.select(connections, [], connections, 0)
 
