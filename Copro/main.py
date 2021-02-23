@@ -34,6 +34,13 @@ def dropConnection(s):
 def processIncomingData(s):
 	if s == incomingConnection:
 		conn, addr = incomingConnection.accept()
+
+		hello = conn.recv(8)
+
+		if hello != b"\010UWRT_Hi":
+			print("Invalid Hello Message")
+			dropConnection(s)
+			return
 		
 		# Send hello message
 		conn.sendall(b"\010UWRT_Hi")
