@@ -480,7 +480,7 @@ class CoproBoard():
         machine.reset()
 
     def start_watchdog(self):
-        self.wdt = machine.WDT(timeout=2000)
+        self.wdt = machine.WDT(timeout=5000)
 
     def feed_watchdog(self):
         if self.wdt is not None:
