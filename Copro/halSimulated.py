@@ -5,6 +5,9 @@ import gc
 def getTime():
     return int(time.time()*1000)
 
+def getTimeDifference(end, start):
+	return end - start
+
 class Sensor:
 	def __init__(self, getFunction):
 		self.data = 0

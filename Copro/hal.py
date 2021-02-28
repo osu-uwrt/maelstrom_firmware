@@ -53,6 +53,9 @@ greenLed = machine.Pin('A15', machine.Pin.OUT)
 def getTime():
     return time.ticks_ms()
 
+def getTimeDifference(end, start):
+	return time.ticks_diff(end, start)
+
 class Sensor:
 	def __init__(self, collectFunction):
 		self.data = 0
