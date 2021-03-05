@@ -142,6 +142,8 @@ class ConvBoard:
 			self.fivePower = machine.Pin('C13', machine.Pin.OUT, value=1)
 			self.twelvePower = machine.Pin('B0', machine.Pin.OUT, value=1)
 
+			# Disable ADC on converter board
+			"""
 			while backplaneI2C.mem_read(1, ConvBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
 			# Operational mode 0 (includes temperature) and internal vref
@@ -154,6 +156,7 @@ class ConvBoard:
 			backplaneI2C.mem_write(chr(0xFF), ConvBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ConvBoard.deviceAddress, 0x00)
+			"""
 			self.initialized = True
 		except Exception as e:
 			print("Error on Conv init: " + str(e))
