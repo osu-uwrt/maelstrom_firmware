@@ -107,13 +107,13 @@ class BBBoard:
 		return max((voltage - .33) / .066, 0)
 	def getBalancedVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x22)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getStbdVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x23)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getPortVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x24)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getTemp():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
@@ -271,7 +271,8 @@ class ESCBoard():
 
 	def setThrusterEnable(self, enable):
 		self.thrustersEnabled = enable
-		self.stopThrusters()
+		if not enable:
+			self.stopThrusters()
 
 	currents = Sensor(getCurrents)
 

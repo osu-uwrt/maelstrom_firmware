@@ -109,12 +109,12 @@ def logicVolts(args):
 		return [0]
 
 def switches(args):
-	data = hal.killSwitch.value()
-	data = (data << 1) + hal.switch1.value()
-	data = (data << 1) + hal.switch2.value()
-	data = (data << 1) + hal.switch3.value()
+	data = hal.resetSwitch.value()
 	data = (data << 1) + hal.switch4.value()
-	data = (data << 1) + hal.resetSwitch.value()
+	data = (data << 1) + hal.switch3.value()
+	data = (data << 1) + hal.switch2.value()
+	data = (data << 1) + hal.switch1.value()
+	data = (data << 1) + hal.killSwitch.value()
 	return [0x3F - data]
 
 def depth(args):
@@ -152,7 +152,8 @@ def reset(args):
 	hal.Copro.restart()
 
 def actuator(args):
-	return hal.Converter.actuators(args)
+	#return hal.Converter.actuators(args)
+	return [1]
 
 def latency_check(args):
 	return [1]

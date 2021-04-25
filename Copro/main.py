@@ -187,6 +187,7 @@ async def lowVolt():
 			await asyncio.sleep(1.0)
 			if hal.BB.portVolt.value() < 18.5 or hal.BB.stbdVolt.value() < 18.5:
 				hal.ESC.setThrusterEnable(False)
+				hal.raiseFault(hal.BATT_LOW)
 				hal.blueLed.on()
 				print("Low Battery")
 			else:
