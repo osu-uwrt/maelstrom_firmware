@@ -2,7 +2,7 @@ import machine
 import utime as time
 import network
 import pyb
-from pyb import Timer, Pin, I2C
+from pyb import Timer, Pin, I2C, LED
 import uasyncio as asyncio
 import gc
 
@@ -12,11 +12,49 @@ nic.ifconfig(('192.168.1.42', '255.255.255.0', '192.168.1.1', '8.8.8.8'))
 backplaneI2C = I2C(1, I2C.MASTER, baudrate=200000)
 robotI2C = I2C(2, I2C.MASTER, baudrate=200000)
 
+faultLed = LED(1)
+faultLed.off()
+
+PROGRAM_TERMINATED = 1
+MAIN_LOOP_CRASH = 2
+DEPTH_LOOP_CRASH = 3
+BATTERY_CHECKER_CRASH = 4
+AUTO_COOLING_CRASH = 5
+BB_INIT_FAIL = 6
+ESC_INIT_FAIL = 7
+DEPTH_INIT_FAIL = 8
+BACKPLANE_INIT_FAIL = 9
+FAULT_STATE_INVALID = 10
+BATT_LOW = 11
+WATCHDOG_RESET = 12
+CONV_BOARD_INIT_FAIL = 13
+
+# When this bit it set, the following 7 bits are the command number for fault
+COMMAND_EXEC_CRASH_FLAG = (1<<7)
+
+faultList = []
+def raiseFault(faultId: int):
+	faultLed.on()
+	if faultId not in faultList:
+		faultList.append(faultId)
+
+def lowerFault(faultId: int):
+	if faultId in faultList:
+		faultList.remove(faultId)
+	if len(faultList) == 0:
+		faultLed.off()
+
+if machine.reset_cause() == machine.WDT_RESET:
+	raiseFault(WATCHDOG_RESET)
+
 blueLed = machine.Pin('B4', machine.Pin.OUT)
 greenLed = machine.Pin('A15', machine.Pin.OUT)
 
 def getTime():
     return time.ticks_ms()
+
+def getTimeDifference(end, start):
+	return time.ticks_diff(end, start)
 
 class Sensor:
 	def __init__(self, collectFunction):
@@ -38,6 +76,7 @@ class Sensor:
 
 class BBBoard:
 	deviceAddress = 0x1F
+	initialized = False
 
 	def __init__(self):
 		try:
@@ -53,8 +92,10 @@ class BBBoard:
 			robotI2C.mem_write(chr(0xFF), BBBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			robotI2C.mem_write(chr(1), BBBoard.deviceAddress, 0x00)
+			self.initialized = True
 		except Exception as e: 
 			print("Error on BB init: " + str(e))
+			raiseFault(BB_INIT_FAIL)
 
 	def getStbdCurrent():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x20)
@@ -66,13 +107,13 @@ class BBBoard:
 		return max((voltage - .33) / .066, 0)
 	def getBalancedVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x22)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getStbdVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x23)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getPortVolt():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x24)
-		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .984
+		return (((data[0] << 8) + data[1]) >> 4) * 3.3 / 4096 * (118 / 18)* .958
 	def getTemp():
 		data = robotI2C.mem_read(2, BBBoard.deviceAddress, 0x27)
 		return ((data[0] << 8) + data[1]) / 256
@@ -90,6 +131,7 @@ BB = BBBoard()
 class ConvBoard:
 	deviceAddress = 0x37
 	actuatorAddress = 0x1C
+	initialized = False
 
 	def __init__(self):
 		try:
@@ -100,6 +142,8 @@ class ConvBoard:
 			self.fivePower = machine.Pin('C13', machine.Pin.OUT, value=1)
 			self.twelvePower = machine.Pin('B0', machine.Pin.OUT, value=1)
 
+			# Disable ADC on converter board
+			"""
 			while backplaneI2C.mem_read(1, ConvBoard.deviceAddress, 0x0C)[0] & 0b00000010 != 0:
 				pass
 			# Operational mode 0 (includes temperature) and internal vref
@@ -112,7 +156,11 @@ class ConvBoard:
 			backplaneI2C.mem_write(chr(0xFF), ConvBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ConvBoard.deviceAddress, 0x00)
-		except Exception as e: print("Error on Conv init: " + str(e))
+			"""
+			self.initialized = True
+		except Exception as e:
+			print("Error on Conv init: " + str(e))
+			raiseFault(CONV_BOARD_INIT_FAIL)
 
 	def getFiveCurrent():
 		data = backplaneI2C.mem_read(2, ConvBoard.deviceAddress, 0x20)
@@ -162,6 +210,7 @@ class ESCBoard():
 	deviceAddress = 0x2F
 	thrustersEnabled = 1
 	thrusts = []
+	initialized = False
 
 	def __init__(self):
 		try:
@@ -195,7 +244,10 @@ class ESCBoard():
 			backplaneI2C.mem_write(chr(0xFF), ESCBoard.deviceAddress, 0x03)
 			# Start ADC and disable interrupts
 			backplaneI2C.mem_write(chr(1), ESCBoard.deviceAddress, 0x00)
-		except Exception as e: print("Error on ESC init: " + str(e))
+			self.initialized = True
+		except Exception as e:
+			print("Error on ESC init: " + str(e))
+			raiseFault(ESC_INIT_FAIL)
 
 	def getCurrents():
 		current_vals = []
@@ -219,7 +271,8 @@ class ESCBoard():
 
 	def setThrusterEnable(self, enable):
 		self.thrustersEnabled = enable
-		self.stopThrusters()
+		if not enable:
+			self.stopThrusters()
 
 	currents = Sensor(getCurrents)
 
@@ -317,7 +370,9 @@ class DepthSensor():
 			assert (self._C[0] & 0xF000) >> 12 == self.crc4(self._C), "PROM read error, CRC failed!"
 
 			self.initialized = True
-		except Exception as e: print("Error on Depth init: " + str(e))
+		except Exception as e:
+			raiseFault(DEPTH_INIT_FAIL)
+			print("Error on Depth init: " + str(e))
 
 	# Cribbed from datasheet
 	def crc4(self, n_prom):
@@ -426,9 +481,18 @@ class DepthSensor():
 Depth = DepthSensor()
 
 class CoproBoard():
+    wdt = None
+
     def restart(self):
         machine.reset()
-#<--TODO: check The memory usage-->
+
+    def start_watchdog(self):
+        self.wdt = machine.WDT(timeout=5000)
+
+    def feed_watchdog(self):
+        if self.wdt is not None:
+            self.wdt.feed()
+
     def memory_usage(self):
         gc.collect()
         free_memory = gc.mem_free()

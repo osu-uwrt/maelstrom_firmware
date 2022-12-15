@@ -13,6 +13,7 @@ def runCommand(data):
 	except Exception as e:
 		print("Error on command "+str(commandNum)+": " + str(e))
 		response = []
+		hal.raiseFault(hal.COMMAND_EXEC_CRASH_FLAG + commandNum)
 	hal.greenLed.off()
 	return response
 
@@ -42,18 +43,34 @@ def peltierPower(args):
 	return [hal.Converter.peltierPower.value()]
 
 def getBatVolts(args):
-	portVolt = int(hal.BB.portVolt.value() * 100)
-	stbdVolt = int(hal.BB.stbdVolt.value() * 100)
-	return [portVolt // 256, portVolt % 256, stbdVolt // 256, stbdVolt % 256]
+	if not hal.BB.initialized:
+		return [0]
+	try:
+		portVolt = int(hal.BB.portVolt.value() * 100)
+		stbdVolt = int(hal.BB.stbdVolt.value() * 100)
+		balancedVolt = int(hal.BB.balancedVolt.value() * 100)
+		return [1, portVolt // 256, portVolt % 256, stbdVolt // 256, stbdVolt % 256, balancedVolt // 256, balancedVolt % 256]
+	except OSError:
+		return [0]
 
 def getBatCurrents(args):
-	portCurrent = int(hal.BB.portCurrent.value() * 100)
-	stbdCurrent = int(hal.BB.stbdCurrent.value() * 100)
-	return [portCurrent // 256, portCurrent % 256, stbdCurrent // 256, stbdCurrent % 256]
+	if not hal.BB.initialized:
+		return [0]
+	try:
+		portCurrent = int(hal.BB.portCurrent.value() * 100)
+		stbdCurrent = int(hal.BB.stbdCurrent.value() * 100)
+		return [1, portCurrent // 256, portCurrent % 256, stbdCurrent // 256, stbdCurrent % 256]
+	except OSError:
+		return [0]
 
 def getTemperature(args):
-	temp = int(hal.BB.temp.value() * 10)
-	return [temp // 256, temp % 256]
+	if not hal.BB.initialized:
+		return [0]
+	try:
+		temp = int(hal.BB.temp.value() * 10)
+		return [1, temp // 256, temp % 256]
+	except OSError:
+		return [0]
 
 def thrusterForce(args):
 	if len(args) == 16:
@@ -70,29 +87,42 @@ def thrusterForce(args):
 	return values
 
 def logicCurrents(args):
-	threeCurrent = int(hal.Converter.threeCurrent.value() * 1000)
-	fiveCurrent = int(hal.Converter.fiveCurrent.value() * 1000)
-	twelveCurrent = int(hal.Converter.twelveCurrent.value() * 1000)
-	return [threeCurrent // 256, threeCurrent % 256, fiveCurrent // 256, fiveCurrent % 256, twelveCurrent // 256, twelveCurrent % 256, ]
+	if not hal.Converter.initialized:
+		return [0]
+	try:
+		threeCurrent = int(hal.Converter.threeCurrent.value() * 1000)
+		fiveCurrent = int(hal.Converter.fiveCurrent.value() * 1000)
+		twelveCurrent = int(hal.Converter.twelveCurrent.value() * 1000)
+		return [1, threeCurrent // 256, threeCurrent % 256, fiveCurrent // 256, fiveCurrent % 256, twelveCurrent // 256, twelveCurrent % 256, ]
+	except OSError:
+		return [0]
 
 def logicVolts(args):
-	threeVolt = int(hal.Converter.threeVolt.value() * 1000)
-	fiveVolt = int(hal.Converter.fiveVolt.value() * 1000)
-	twelveVolt = int(hal.Converter.twelveVolt.value() * 500)
-	return [threeVolt // 256, threeVolt % 256, fiveVolt // 256, fiveVolt % 256, twelveVolt // 256, twelveVolt % 256, ]
+	if not hal.Converter.initialized:
+		return [0]
+	try:
+		threeVolt = int(hal.Converter.threeVolt.value() * 1000)
+		fiveVolt = int(hal.Converter.fiveVolt.value() * 1000)
+		twelveVolt = int(hal.Converter.twelveVolt.value() * 500)
+		return [1, threeVolt // 256, threeVolt % 256, fiveVolt // 256, fiveVolt % 256, twelveVolt // 256, twelveVolt % 256, ]
+	except OSError:
+		return [0]
 
 def switches(args):
-	data = hal.killSwitch.value()
-	data = (data << 1) + hal.switch1.value()
-	data = (data << 1) + hal.switch2.value()
-	data = (data << 1) + hal.switch3.value()
+	data = hal.resetSwitch.value()
 	data = (data << 1) + hal.switch4.value()
-	data = (data << 1) + hal.resetSwitch.value()
+	data = (data << 1) + hal.switch3.value()
+	data = (data << 1) + hal.switch2.value()
+	data = (data << 1) + hal.switch1.value()
+	data = (data << 1) + hal.killSwitch.value()
 	return [0x3F - data]
 
 def depth(args):
-	data = int(hal.Depth.depth()*100000)
-	return [(data >> 16), (data >> 8) & 0xFF, data & 0xFF]
+	if hal.Depth.initialized:
+		data = int(hal.Depth.depth()*100000)
+		return [1, (data >> 16), (data >> 8) & 0xFF, data & 0xFF]
+	else:
+		return [0, 0, 0, 0]
 
 def twelvePower(args):
 	if len(args) == 1:
@@ -107,17 +137,23 @@ def fiveReset(args):
 	return [1]
 
 def getThrusterCurrents(args):
-	values = hal.ESC.currents.value()
-	data = []
-	for i in values:
-		data.append(int(i*25))
-	return data
+	if not hal.ESC.initialized:
+		return [0]
+	try:
+		values = hal.ESC.currents.value()
+		data = [1]
+		for i in values:
+			data.append(min(int(i*25), 255))
+		return data
+	except OSError:
+		return [0]
 
 def reset(args):
 	hal.Copro.restart()
 
 def actuator(args):
-	return hal.Converter.actuators(args)
+	#return hal.Converter.actuators(args)
+	return [1]
 
 def latency_check(args):
 	return [1]
@@ -134,7 +170,18 @@ def temp_threshold(args):
         temp = args[0]
     return [temp]
     
-       
+def get_fault_state(args):
+	if len(hal.faultList) != 0:
+		# Make sure that the fault list doesn't have an invalid message causing the connection to drop
+		if len(hal.faultList) > 254:
+			return [1, hal.FAULT_STATE_INVALID]
+		
+		for entry in hal.faultList:
+			if type(entry) != int or entry < 0 or entry > 255:
+				return [1, hal.FAULT_STATE_INVALID]
+		return [1] + hal.faultList
+	else:
+		return [0]
 
 
 commandList = [
@@ -157,5 +204,6 @@ commandList = [
 	actuator,	     	#16
 	latency_check,      #17 
 	memory_check,       #18 
-    temp_threshold      #19 
+    temp_threshold,     #19 
+	get_fault_state,	#20
 ]
